@@ -25,6 +25,11 @@ namespace DS_Gadget
             Hook.Start();
         }
 
+        internal GadgetTabStats GetTabStats()
+        {
+            return gadgetTabStats;
+        }
+
         private void Hook_OnHooked(object sender, PropertyHook.PHEventArgs e)
         {
             Invoke(new Action(() =>

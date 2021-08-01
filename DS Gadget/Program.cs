@@ -12,8 +12,6 @@ namespace DS_Gadget
         [STAThread]
         static void Main()
         {
-            var summary = BenchmarkRunner.Run<SavedStatsBenchmark>();
-            //var summary = BenchmarkRunner.Run<LoadSavedStatsBenchmark>();
             //Properties.Settings settings = Properties.Settings.Default;
             //if (settings.UpgradeRequired)
             //{
@@ -26,6 +24,8 @@ namespace DS_Gadget
             //Application.Run(new MainForm());
 
             //settings.Save();
+            var summary = BenchmarkRunner.Run<SavedStatsBenchmark>();
+            //var summary = BenchmarkRunner.Run<LoadSavedStatsBenchmark>();
         }
     }
 }

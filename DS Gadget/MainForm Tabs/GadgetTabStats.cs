@@ -15,7 +15,7 @@ namespace DS_Gadget
         public override void InitTab(MainForm parent)
         {
             base.InitTab(parent);
-            MakeDicts();
+            MakeDictsPub();
             foreach (DSSex sex in DSSex.All)
                 cmbSex.Items.Add(sex);
             foreach (DSClass charClass in DSClass.All)
@@ -30,7 +30,11 @@ namespace DS_Gadget
             ResetPage();
         }
 
-        
+        public void MakeDictsPub()
+        {
+            MakeDicts();
+        }
+
         /// <summary>
         /// One init function to make all of the dictionaries
         /// </summary>
@@ -67,6 +71,7 @@ namespace DS_Gadget
             NudDict.Add(nudCovSunlight.Name, val => { Hook.WarriorOfSunlightPoints = (byte)val; });
         }
 
+        
         internal void LoadSavedStatsIf(SavedStats savedStats)
         {
             SavedStats = savedStats;
@@ -358,7 +363,12 @@ namespace DS_Gadget
         }
 
         private Dictionary<string, Action<decimal?>> StatsDict = new Dictionary<string, Action<decimal?>>();
-        
+
+        internal void SavedStatsDict(NumericUpDown numericUpDown)
+        {
+            SaveStats(numericUpDown);
+        }
+
         /// <summary>
         /// Takes Sender as NumericUpDown and retrieves set Action from StatsDict
         /// </summary>

@@ -10,6 +10,13 @@ namespace DS_Gadget
     [RankColumn]
     public class SavedStatsBenchmark
     {
+        private readonly GadgetTabStats gadgetTabStats = new GadgetTabStats();
+
+        public SavedStatsBenchmark()
+        {
+            gadgetTabStats.MakeDictsPub();
+        }
+
         private readonly string[] NudNames = new string[]
         {
             "nudHumanity", "nudSouls", "nudVit", "nudAtt", "nudEnd", "nudStr",
@@ -17,8 +24,6 @@ namespace DS_Gadget
             "nudCovDarkwraith", "nudCovForest", "nudCovGravelord", "nudCovDragon",
             "nudCovSunlight"
         };
-
-        private readonly GadgetTabStats gadgetTabStats = new GadgetTabStats();
 
         private readonly Random rand = new Random();
 
@@ -32,7 +37,8 @@ namespace DS_Gadget
         [Benchmark]
         public void SaveStatsDictBenchmark()
         {
-
+            var i = rand.Next(NudNames.Length);
+            gadgetTabStats.SavedStatsDict(new NumericUpDown() { Name = NudNames[i], Value = 69 });
         }
     }
 }
