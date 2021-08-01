@@ -510,6 +510,12 @@ namespace DS_Gadget
             return (value < min) ? min : (value > max) ? max : value;
         }
 
+        public void LoadSavedStatsIf(SavedStats testStats)
+        {
+            SavedStats = testStats;
+            LoadSavedStats();
+        }
+
         private void LoadSavedStats()
         {
             if (Hook.Loaded)

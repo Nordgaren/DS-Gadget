@@ -26,8 +26,7 @@ namespace DS_Gadget
         public void SaveStatsSwitch()
         {
             var i = rand.Next(NudNames.Length);
-            var v = rand.Next(1, 100);
-            gadgetTabStats.SaveStatsBenchmark(new NumericUpDown() {Name = NudNames[i], Value = v});
+            gadgetTabStats.SaveStatsBenchmark(new NumericUpDown() {Name = NudNames[i], Value = 69});
         }
     }
 }
