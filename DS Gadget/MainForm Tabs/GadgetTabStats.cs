@@ -30,6 +30,7 @@ namespace DS_Gadget
             ResetPage();
         }
 
+        
         /// <summary>
         /// One init function to make all of the dictionaries
         /// </summary>
@@ -64,6 +65,12 @@ namespace DS_Gadget
             NudDict.Add(nudCovGravelord.Name, val => { Hook.GravelordServantPoints = (byte)val; });
             NudDict.Add(nudCovDragon.Name, val => { Hook.PathOfTheDragonPoints = (byte)val; });
             NudDict.Add(nudCovSunlight.Name, val => { Hook.WarriorOfSunlightPoints = (byte)val; });
+        }
+
+        internal void LoadSavedStatsIf(SavedStats savedStats)
+        {
+            SavedStats = savedStats;
+            LoadSavedStats();
         }
 
         public override void ReloadTab()
@@ -362,6 +369,12 @@ namespace DS_Gadget
             StatsDict[nud.Name].Invoke(nud.Value); //Invoke takes nud.Value and sets it via the function in the dictionary using nud.Name
             nud.Text = nud.Value.ToString(); //Update the text incase the value was the same as the previous value
         }
+
+        internal void SaveStatsSwitch(NumericUpDown numericUpDown)
+        {
+            SaveStatsOld(numericUpDown);
+        }
+
 
         private void SaveStatsOld(object sender)
         {

@@ -23,10 +23,17 @@ namespace DS_Gadget
         private readonly Random rand = new Random();
 
         [Benchmark]
-        public void SaveStatsSwitch()
+        [BaselineColumn]
+        public void SaveStatsSwitchBenchmark()
         {
             var i = rand.Next(NudNames.Length);
-            gadgetTabStats.SaveStatsBenchmark(new NumericUpDown() {Name = NudNames[i], Value = 69});
+            gadgetTabStats.SaveStatsSwitch(new NumericUpDown() {Name = NudNames[i], Value = 69});
+        }
+
+        [Benchmark]
+        public void SaveStatsDictBenchmark()
+        {
+
         }
     }
 }
