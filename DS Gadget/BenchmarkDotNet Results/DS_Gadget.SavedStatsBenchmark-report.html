@@ -2,7 +2,7 @@
 <html lang='en'>
 <head>
 <meta charset='utf-8' />
-<title>DS_Gadget.SavedStatsBenchmark-20210731-183356</title>
+<title>DS_Gadget.SavedStatsBenchmark-20210801-131536</title>
 
 <style type="text/css">
 	table { border-collapse: collapse; display: block; width: 100%; overflow: auto; }
@@ -15,15 +15,16 @@
 <pre><code>
 BenchmarkDotNet=v0.13.0, OS=Windows 10.0.19041.1110 (2004/May2020Update/20H1)
 AMD Ryzen 9 3900X, 1 CPU, 24 logical and 12 physical cores
-  [Host]     : .NET Framework 4.8 (4.8.4390.0), X86 LegacyJIT
+  [Host]     : .NET Framework 4.8 (4.8.4390.0), X86 LegacyJIT  [AttachedDebugger]
   DefaultJob : .NET Framework 4.8 (4.8.4390.0), X86 LegacyJIT
 </code></pre>
 <pre><code></code></pre>
 
 <table>
-<thead><tr><th>   Method</th><th>Mean</th><th>Error</th><th>StdDev</th><th>Median</th><th>Rank</th><th>Gen 0</th><th>Gen 1</th><th>Gen 2</th><th>Allocated</th>
+<thead><tr><th>            Method</th><th>    Mean</th><th>  Error</th><th> StdDev</th><th>  Median</th><th>Ratio</th><th>Rank</th><th>Gen 0</th><th>Gen 1</th><th>Gen 2</th><th>Allocated</th>
 </tr>
-</thead><tbody><tr><td>SaveStatsSwitch</td><td>83.19 &mu;s</td><td>4.471 &mu;s</td><td>12.61 &mu;s</td><td>77.33 &mu;s</td><td>1</td><td>1.4648</td><td>0.7324</td><td>-</td><td>2 KB</td>
+</thead><tbody><tr><td>SaveStatsDictBenchmark</td><td>0.0028 ns</td><td>0.0022 ns</td><td>0.0020 ns</td><td>0.0028 ns</td><td>0.000</td><td>1</td><td>-</td><td>-</td><td>-</td><td>-</td>
+</tr><tr><td>SaveStatsSwitchBenchmark</td><td>81,330.6030 ns</td><td>1,595.8761 ns</td><td>2,437.0713 ns</td><td>79,855.1147 ns</td><td>1.000</td><td>2</td><td>1.4648</td><td>0.7324</td><td>-</td><td>2,479 B</td>
 </tr></tbody></table>
 </body>
 </html>

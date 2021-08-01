@@ -22,8 +22,7 @@ namespace DS_Gadget
 
         private readonly Random rand = new Random();
 
-        [Benchmark]
-        [BaselineColumn]
+        [Benchmark(Baseline = true)]
         public void SaveStatsSwitchBenchmark()
         {
             var i = rand.Next(NudNames.Length);
