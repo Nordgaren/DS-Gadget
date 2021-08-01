@@ -1,5 +1,7 @@
 ﻿using System;
+using System.Collections.Generic;
 using System.Linq;
+using System.Windows.Forms;
 
 namespace DS_Gadget
 {
@@ -13,6 +15,7 @@ namespace DS_Gadget
         public override void InitTab(MainForm parent)
         {
             base.InitTab(parent);
+            MakeDicts();
             foreach (DSSex sex in DSSex.All)
                 cmbSex.Items.Add(sex);
             foreach (DSClass charClass in DSClass.All)
@@ -25,6 +28,42 @@ namespace DS_Gadget
             foreach (DSCovenant covenant in DSCovenant.All)
                 cmbCovenant.Items.Add(covenant);
             ResetPage();
+        }
+
+        /// <summary>
+        /// One init function to make all of the dictionaries
+        /// </summary>
+        private void MakeDicts()
+        {
+            //StatsDict entries
+            StatsDict.Add(nudHumanity.Name, val => { SavedStats.Humanity = (decimal)val; });
+            StatsDict.Add(nudSouls.Name, val => { SavedStats.Souls = (decimal)val; });
+            StatsDict.Add(nudVit.Name, val => { SavedStats.Vit = (decimal)val; });
+            StatsDict.Add(nudAtt.Name, val => { SavedStats.Att = (decimal)val; });
+            StatsDict.Add(nudEnd.Name, val => { SavedStats.End = (decimal)val; });
+            StatsDict.Add(nudStr.Name, val => { SavedStats.Str = (decimal)val; });
+            StatsDict.Add(nudDex.Name, val => { SavedStats.Dex = (decimal)val; });
+            StatsDict.Add(nudRes.Name, val => { SavedStats.Res = (decimal)val; });
+            StatsDict.Add(nudInt.Name, val => { SavedStats.Int = (decimal)val; });
+            StatsDict.Add(nudFth.Name, val => { SavedStats.Fth = (decimal)val; });
+            StatsDict.Add(nudCovChaos.Name, val => { SavedStats.CovChaos = (decimal)val; });
+            StatsDict.Add(nudCovDarkmoon.Name, val => { SavedStats.CovDarkmoon = (decimal)val; });
+            StatsDict.Add(nudCovDarkwraith.Name, val => { SavedStats.CovDarkwraith = (decimal)val; });
+            StatsDict.Add(nudCovForest.Name, val => { SavedStats.CovForest = (decimal)val; });
+            StatsDict.Add(nudCovGravelord.Name, val => { SavedStats.CovGravelord = (decimal)val; });
+            StatsDict.Add(nudCovDragon.Name, val => { SavedStats.CovDragon = (decimal)val; });
+            StatsDict.Add(nudCovSunlight.Name, val => { SavedStats.CovSunlight = (decimal)val; });
+
+            //NudDict entries
+            NudDict.Add(nudHumanity.Name, val => { Hook.Humanity = val; });
+            NudDict.Add(nudSouls.Name, val => { Hook.Souls = val; });
+            NudDict.Add(nudCovChaos.Name, val => { Hook.ChaosServantPoints = (byte)val; });
+            NudDict.Add(nudCovDarkmoon.Name, val => { Hook.DarkmoonBladePoints = (byte)val; });
+            NudDict.Add(nudCovDarkwraith.Name, val => { Hook.DarkwraithPoints = (byte)val; });
+            NudDict.Add(nudCovForest.Name, val => { Hook.ForestHunterPoints = (byte)val; });
+            NudDict.Add(nudCovGravelord.Name, val => { Hook.GravelordServantPoints = (byte)val; });
+            NudDict.Add(nudCovDragon.Name, val => { Hook.PathOfTheDragonPoints = (byte)val; });
+            NudDict.Add(nudCovSunlight.Name, val => { Hook.WarriorOfSunlightPoints = (byte)val; });
         }
 
         public override void ReloadTab()
@@ -105,6 +144,8 @@ namespace DS_Gadget
         {
             if (enable)
             {
+                CheckTextChange();
+
                 if (cbxLoad.Checked)
                 {
                     if (SavedStats.GetType().GetProperties().Select(pi => pi.GetValue(SavedStats)).Any(value => value != null))
@@ -113,25 +154,6 @@ namespace DS_Gadget
                         LoadSavedStats();
                     }
                 }
-                if(nudHumanity.Text == "")
-                    nudHumanity.Text = Hook.Humanity.ToString();
-                if (nudSouls.Text == "")
-                    nudSouls.Text = Hook.Souls.ToString();
-                if (nudCovChaos.Text == "")
-                    nudCovChaos.Text = Hook.ChaosServantPoints.ToString();
-                if (nudCovDarkmoon.Text == "")
-                    nudCovDarkmoon.Text = Hook.DarkmoonBladePoints.ToString();
-                if (nudCovDarkwraith.Text == "")
-                    nudCovDarkwraith.Text = Hook.DarkwraithPoints.ToString();
-                if (nudCovForest.Text == "")
-                    nudCovForest.Text = Hook.ForestHunterPoints.ToString();
-                if (nudCovGravelord.Text == "")
-                    nudCovGravelord.Text = Hook.GravelordServantPoints.ToString();
-                if (nudCovDragon.Text == "")
-                    nudCovDragon.Text = Hook.PathOfTheDragonPoints.ToString();
-                if (nudCovSunlight.Text == "")
-                    nudCovSunlight.Text = Hook.WarriorOfSunlightPoints.ToString();
-
             }
             else
             {
@@ -140,6 +162,74 @@ namespace DS_Gadget
                     ResetPage();
                 }
             }
+        }
+
+        /// <summary>
+        /// Checks if the nuds value is null or not. Loads correct value if it is, and saves correct value if it isn't. Prevents numbers not showing up and not saving
+        /// </summary>
+        private void CheckTextChange()
+        {
+            if (nudHumanity.Text == "")
+                nudHumanity.Text = Hook.Humanity.ToString();
+            else
+                SavedStats.Humanity = nudHumanity.Value;
+
+            if (nudSouls.Text == "")
+                nudSouls.Text = Hook.Souls.ToString();
+            else
+                SavedStats.Souls = nudSouls.Value;
+
+            if (nudCovChaos.Text == "")
+                nudCovChaos.Text = Hook.ChaosServantPoints.ToString();
+            else
+                SavedStats.CovChaos = nudCovChaos.Value;
+
+            if (nudCovDarkmoon.Text == "")
+                nudCovDarkmoon.Text = Hook.DarkmoonBladePoints.ToString();
+            else
+                SavedStats.CovDarkmoon = nudCovDarkmoon.Value;
+
+            if (nudCovDarkwraith.Text == "")
+                nudCovDarkwraith.Text = Hook.DarkwraithPoints.ToString();
+            else
+                SavedStats.CovDarkwraith = nudCovDarkwraith.Value;
+
+            if (nudCovForest.Text == "")
+                nudCovForest.Text = Hook.ForestHunterPoints.ToString();
+            else
+                SavedStats.CovForest = nudCovForest.Value;
+
+            if (nudCovGravelord.Text == "")
+                nudCovGravelord.Text = Hook.GravelordServantPoints.ToString();
+            else
+                SavedStats.CovGravelord = nudCovGravelord.Value;
+
+            if (nudCovDragon.Text == "")
+                nudCovDragon.Text = Hook.PathOfTheDragonPoints.ToString();
+            else
+                SavedStats.CovDragon = nudCovDragon.Value;
+
+            if (nudCovSunlight.Text == "")
+                nudCovSunlight.Text = Hook.WarriorOfSunlightPoints.ToString();
+            else
+                SavedStats.CovSunlight = nudCovSunlight.Value;
+
+            if (nudVit.Text != "")
+                SavedStats.Vit = nudVit.Value;
+            if (nudAtt.Text != "")
+                SavedStats.Att = nudAtt.Value;
+            if (nudEnd.Text != "")
+                SavedStats.End = nudEnd.Value;
+            if (nudStr.Text != "")
+                SavedStats.Str = nudStr.Value;
+            if (nudDex.Text != "")
+                SavedStats.Dex = nudDex.Value;
+            if (nudRes.Text != "")
+                SavedStats.Res = nudRes.Value;
+            if (nudInt.Text != "")
+                SavedStats.Int = nudInt.Value;
+            if (nudFth.Text != "")
+                SavedStats.Fth = nudFth.Value;
         }
 
         private void txtName_TextChanged(object sender, EventArgs e)
@@ -229,36 +319,6 @@ namespace DS_Gadget
             
         }
 
-        private void nudHumanity_ValueChanged(object sender, EventArgs e)
-        {
-            if (!Reading)
-            {
-                if (Hook.Loaded)
-                {
-                    Hook.Humanity = (int)nudHumanity.Value;
-                }
-                else
-                {
-                    SavedStats.Humanity = nudHumanity.Value;
-                }
-            }
-        }
-
-        private void nudSouls_ValueChanged(object sender, EventArgs e)
-        {
-            if (!Reading)
-            {
-                if (Hook.Loaded)
-                {
-                    Hook.Souls = (int)nudSouls.Value;
-                }
-                else
-                {
-                    SavedStats.Souls = nudSouls.Value;
-                }
-            }
-        }
-
         private SavedStats SavedStats = new SavedStats();
 
         public bool Updating { get; private set; }
@@ -290,14 +350,22 @@ namespace DS_Gadget
             }
         }
 
-        public void SaveStatsBenchmark(object sender)
-        {
-            SaveStats(sender);
-        }
-
+        private Dictionary<string, Action<decimal?>> StatsDict = new Dictionary<string, Action<decimal?>>();
+        
+        /// <summary>
+        /// Takes Sender as NumericUpDown and retrieves set Action from StatsDict
+        /// </summary>
+        /// <param name="sender"></param>
         private void SaveStats(object sender)
         {
-            var stat = sender as System.Windows.Forms.NumericUpDown;
+            var nud = sender as NumericUpDown;
+            StatsDict[nud.Name].Invoke(nud.Value); //Invoke takes nud.Value and sets it via the function in the dictionary using nud.Name
+            nud.Text = nud.Value.ToString(); //Update the text incase the value was the same as the previous value
+        }
+
+        private void SaveStatsOld(object sender)
+        {
+            var stat = sender as NumericUpDown;
             switch (stat.Name)
             {
                 case "nudHumanity":
@@ -389,131 +457,29 @@ namespace DS_Gadget
                     }
                 }
             }
-            
-                
         }
 
-        private void nudCovChaos_ValueChanged(object sender, EventArgs e)
+        private Dictionary<string, Action<int>> NudDict = new Dictionary<string, Action<int>>();
+
+        private void nud_ValueChanged(object sender, EventArgs e)
         {
             if (!Reading)
             {
+                var nud = sender as NumericUpDown;
                 if (Hook.Loaded)
                 {
-                    Hook.ChaosServantPoints = (byte)nudCovChaos.Value;
+                    NudDict[nud.Name].Invoke((int)nud.Value);
                 }
                 else
                 {
-                    SavedStats.CovChaos = nudCovChaos.Value;
+                    SaveStats(sender);
                 }
             }
-                
-        }
-
-        private void nudCovDarkmoon_ValueChanged(object sender, EventArgs e)
-        {
-            if (!Reading)
-            {
-                if (Hook.Loaded)
-                {
-                    Hook.DarkmoonBladePoints = (byte)nudCovDarkmoon.Value;
-                }
-                else
-                {
-                    SavedStats.CovDarkmoon = nudCovDarkmoon.Value;
-                }
-            }
-                
-        }
-
-        private void nudCovDarkwraith_ValueChanged(object sender, EventArgs e)
-        {
-            if (!Reading)
-            {
-                if (Hook.Loaded)
-                {
-                    Hook.DarkwraithPoints = (byte)nudCovDarkwraith.Value;
-                }
-                else
-                {
-                    SavedStats.CovDarkwraith = nudCovDarkwraith.Value;
-                }
-            }
-                
-        }
-
-        private void nudCovForest_ValueChanged(object sender, EventArgs e)
-        {
-            if (!Reading)
-            {
-                if (Hook.Loaded)
-                {
-                    Hook.ForestHunterPoints = (byte)nudCovForest.Value;
-                }
-                else
-                {
-                    SavedStats.CovForest = nudCovForest.Value;
-                }
-            }
-                
-        }
-
-        private void nudCovGravelord_ValueChanged(object sender, EventArgs e)
-        {
-            if (!Reading)
-            {
-                if (Hook.Loaded)
-                {
-                    Hook.GravelordServantPoints = (byte)nudCovGravelord.Value;
-                }
-                else
-                {
-                    SavedStats.CovGravelord = nudCovGravelord.Value;
-                }
-            }
-                
-        }
-
-        private void nudCovDragon_ValueChanged(object sender, EventArgs e)
-        {
-            if (!Reading)
-            {
-                if (Hook.Loaded)
-                {
-                    Hook.PathOfTheDragonPoints = (byte)nudCovDragon.Value;
-                }
-                else
-                {
-                    SavedStats.CovDragon = nudCovDragon.Value;
-                }
-            }
-                
-        }
-
-        private void nudCovSunlight_ValueChanged(object sender, EventArgs e)
-        {
-            if (!Reading)
-            {
-                if (Hook.Loaded)
-                {
-                    Hook.WarriorOfSunlightPoints = (byte)nudCovSunlight.Value;
-                }
-                else
-                {
-                    SavedStats.CovSunlight = nudCovSunlight.Value;
-                }
-            }
-
         }
 
         public static decimal Clamp(decimal value, decimal min, decimal max)
         {
             return (value < min) ? min : (value > max) ? max : value;
-        }
-
-        public void LoadSavedStatsIf(SavedStats testStats)
-        {
-            SavedStats = testStats;
-            LoadSavedStats();
         }
 
         private void LoadSavedStats()
@@ -546,13 +512,13 @@ namespace DS_Gadget
                 if (SavedStats.Humanity.HasValue)
                 {
                     nudHumanity.Value = SavedStats.Humanity.Value;
-                    nudHumanity_ValueChanged(null, null);
+                    nud_ValueChanged(nudHumanity, null);
                 }
 
                 if (SavedStats.Souls.HasValue)
                 {
                     nudSouls.Value = SavedStats.Souls.Value;
-                    nudSouls_ValueChanged(null, null);
+                    nud_ValueChanged(nudSouls, null);
                 }
 
                 if (SavedStats.Vit.HasValue)
@@ -606,113 +572,93 @@ namespace DS_Gadget
                 if (SavedStats.CovChaos.HasValue)
                 {
                     nudCovChaos.Value = SavedStats.CovChaos.Value;
-                    nudCovChaos_ValueChanged(null, null);
+                    nud_ValueChanged(nudCovChaos, null);
                 }
 
                 if (SavedStats.CovDarkmoon.HasValue)
                 {
                     nudCovDarkmoon.Value = SavedStats.CovDarkmoon.Value;
-                    nudCovDarkmoon_ValueChanged(null, null);
+                    nud_ValueChanged(nudCovDarkmoon, null);
 
                 }
 
                 if (SavedStats.CovDarkwraith.HasValue)
                 {
                     nudCovDarkwraith.Value = SavedStats.CovDarkwraith.Value;
-                    nudCovDarkwraith_ValueChanged(null, null);
+                    nud_ValueChanged(nudCovDarkwraith, null);
 
                 }
 
                 if (SavedStats.CovForest.HasValue)
                 {
                     nudCovForest.Value = SavedStats.CovForest.Value;
-                    nudCovForest_ValueChanged(null, null);
+                    nud_ValueChanged(nudCovForest, null);
                 }
 
                 if (SavedStats.CovGravelord.HasValue)
                 {
                     nudCovGravelord.Value = SavedStats.CovGravelord.Value;
-                    nudCovGravelord_ValueChanged(null, null);
+                    nud_ValueChanged(nudCovGravelord, null);
                 }
 
                 if (SavedStats.CovDragon.HasValue)
                 {
                     nudCovDragon.Value = SavedStats.CovDragon.Value;
-                    nudCovDragon_ValueChanged(null, null);
+                    nud_ValueChanged(nudCovDragon, null);
                 }
 
                 if (SavedStats.CovSunlight.HasValue)
                 {
                     nudCovSunlight.Value = SavedStats.CovSunlight.Value;
-                    nudCovSunlight_ValueChanged(null, null);
+                    nud_ValueChanged(nudCovSunlight, null);
                 }
             }
 
         }
 
+        /// <summary>
+        /// Resets all values on page to a blank state
+        /// </summary>
         private void ResetPage()
         {
             txtName.Text = null;
-            cmbSex.SelectedIndex = -1;
-            cmbClass.SelectedIndex = -1;
-            cmbPhysique.SelectedIndex = -1;
-            nudHumanity.Value = 0;
-            nudHumanity.Text = "";
-            nudSouls.Value = 0;
-            nudSouls.Text = "";
-            nudVit.Minimum = 0;
-            nudVit.Value = 0;
-            nudVit.Text = "";
-            nudAtt.Minimum = 0;
-            nudAtt.Value = 0;
-            nudAtt.Text = "";
-            nudEnd.Minimum = 0;
-            nudEnd.Value = 0;
-            nudEnd.Text = "";
-            nudStr.Minimum = 0;
-            nudStr.Value = 0;
-            nudStr.Text = "";
-            nudDex.Minimum = 0;
-            nudDex.Value = 0;
-            nudDex.Text = "";
-            nudRes.Minimum = 0;
-            nudRes.Value = 0;
-            nudRes.Text = "";
-            nudInt.Minimum = 0;
-            nudInt.Value = 0;
-            nudInt.Text = "";
-            nudFth.Minimum = 0;
-            nudFth.Value = 0;
-            nudFth.Text = "";
-            txtSoulLevel.Text = "";
-            cmbCovenant.SelectedIndex = -1;
-            nudCovChaos.Value = 0;
-            nudCovChaos.Text = "";
-            nudCovDarkmoon.Value = 0;
-            nudCovDarkmoon.Text = "";
-            nudCovDarkwraith.Value = 0;
-            nudCovDarkwraith.Text = "";
-            nudCovForest.Value = 0;
-            nudCovForest.Text = "";
-            nudCovGravelord.Value = 0;
-            nudCovGravelord.Text = "";
-            nudCovDragon.Value = 0;
-            nudCovDragon.Text = "";
-            nudCovSunlight.Value = 0;
-            nudCovSunlight.Text = "";
-            SavedStats = new SavedStats();
+            SavedStats.Name = null;
+            NullCMB(cmbSex);
+            NullCMB(cmbClass);
+            NullCMB(cmbPhysique);
+            NullStat(nudHumanity);
+            NullStat(nudSouls);
+            NullStat(nudVit);
+            NullStat(nudAtt);
+            NullStat(nudEnd);
+            NullStat(nudStr);
+            NullStat(nudDex);
+            NullStat(nudRes);
+            NullStat(nudInt);
+            NullStat(nudFth);
+            NullCMB(cmbCovenant);
+            NullStat(nudCovChaos);
+            NullStat(nudCovDarkmoon);
+            NullStat(nudCovDarkwraith);
+            NullStat(nudCovForest);
+            NullStat(nudCovGravelord);
+            NullStat(nudCovDragon);
+            NullStat(nudCovSunlight);
         }
 
-        private void nudKeyDown(object sender, System.Windows.Forms.KeyEventArgs e)
+        
+        private void nudKeyDown(object sender, KeyEventArgs e)
         {
             if (!Hook.Loaded)
             {
-                if (e.KeyCode == System.Windows.Forms.Keys.Enter)
+                //If Enter Save stats
+                if (e.KeyCode == Keys.Enter)
                 {
                     SaveStats(sender);
                 }
 
-                if (e.KeyCode == System.Windows.Forms.Keys.Escape)
+                //If Escape Null stats
+                if (e.KeyCode == Keys.Escape)
                 {
                     NullStat(sender);
                 }
@@ -720,9 +666,13 @@ namespace DS_Gadget
 
         }
 
+        /// <summary>
+        /// Null Stats based on sender name
+        /// </summary>
+        /// <param name="sender"></param>
         private void NullStat(object sender)
         {
-            var stat = sender as System.Windows.Forms.NumericUpDown;
+            var stat = sender as NumericUpDown;
             switch (stat.Name)
             {
                 case "nudHumanity":
@@ -736,41 +686,49 @@ namespace DS_Gadget
                     SavedStats.Souls = null;
                     break;
                 case "nudVit":
+                    nudVit.Minimum = 0;
                     nudVit.Value = 0;
                     nudVit.Text = "";
                     SavedStats.Vit = null;
                     break;
                 case "nudAtt":
+                    nudAtt.Minimum = 0;
                     nudAtt.Value = 0;
                     nudAtt.Text = "";
                     SavedStats.Att = null;
                     break;
                 case "nudEnd":
+                    nudEnd.Minimum = 0;
                     nudEnd.Value = 0;
                     nudEnd.Text = "";
                     SavedStats.End = null;
                     break;
                 case "nudStr":
+                    nudStr.Minimum = 0;
                     nudStr.Value = 0;
                     nudStr.Text = "";
                     SavedStats.Str = null;
                     break;
                 case "nudDex":
+                    nudDex.Minimum = 0;
                     nudDex.Value = 0;
                     nudDex.Text = "";
                     SavedStats.Dex = null;
                     break;
                 case "nudRes":
+                    nudRes.Minimum = 0;
                     nudRes.Value = 0;
                     nudRes.Text = "";
                     SavedStats.Res = null;
                     break;
                 case "nudInt":
+                    nudInt.Minimum = 0;
                     nudInt.Value = 0;
                     nudInt.Text = "";
                     SavedStats.Int = null;
                     break;
                 case "nudFth":
+                    nudFth.Minimum = 0;
                     nudFth.Value = 0;
                     nudFth.Text = "";
                     SavedStats.Fth = null;
@@ -808,11 +766,11 @@ namespace DS_Gadget
             }
         }
 
-        private void txtName_KeyDown(object sender, System.Windows.Forms.KeyEventArgs e)
+        private void txtName_KeyDown(object sender, KeyEventArgs e)
         {
             if (!Hook.Loaded)
             {
-                if (e.KeyCode == System.Windows.Forms.Keys.Escape)
+                if (e.KeyCode == Keys.Escape)
                 {
                     txtName.Text = null;
                     SavedStats.Name = null;
@@ -821,20 +779,20 @@ namespace DS_Gadget
 
         }
 
-        private void cmbKeyDown(object sender, System.Windows.Forms.KeyEventArgs e)
+        private void cmbKeyDown(object sender, KeyEventArgs e)
         {
             if (!Hook.Loaded)
             {
-                if (e.KeyCode == System.Windows.Forms.Keys.Escape)
+                if (e.KeyCode == Keys.Escape)
                 {
-                    cmbNull(sender);
+                    NullCMB(sender);
                 }
             }
         }
 
-        private void cmbNull(object sender)
+        private void NullCMB(object sender)
         {
-            var cmb = sender as System.Windows.Forms.ComboBox;
+            var cmb = sender as ComboBox;
             switch (cmb.Name)
             {
                 case "cmbSex":

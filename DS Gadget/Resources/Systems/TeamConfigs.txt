@@ -1,9 +1,9 @@
-//Format: Chr Type; Team Type; Name
+//Format: Chr Type; Team Type; Name [arbitrary]
 //Forest Darkmoon and Dragon do not change your color, but that is the correct chr and team type for them.
 0 1 Human
 8 4 Hollow
 2 16 Invader
-1 2 White
+1 2 White/Sunlight Phantom
 2 17 Forest Hunter
 2 17 Blade of the Dark Moon
 2 18 Path of the Dragon

@@ -128,7 +128,7 @@
             lblSex.AutoSize = true;
             lblSex.Location = new System.Drawing.Point(6, 63);
             lblSex.Name = "lblSex";
-            lblSex.Size = new System.Drawing.Size(25, 13);
+            lblSex.Size = new System.Drawing.Size(36, 20);
             lblSex.TabIndex = 30;
             lblSex.Text = "Sex";
             // 
@@ -138,7 +138,7 @@
             lblSouls.Location = new System.Drawing.Point(185, 63);
             lblSouls.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             lblSouls.Name = "lblSouls";
-            lblSouls.Size = new System.Drawing.Size(33, 13);
+            lblSouls.Size = new System.Drawing.Size(49, 20);
             lblSouls.TabIndex = 33;
             lblSouls.Text = "Souls";
             // 
@@ -147,7 +147,7 @@
             lblPhysique.AutoSize = true;
             lblPhysique.Location = new System.Drawing.Point(6, 157);
             lblPhysique.Name = "lblPhysique";
-            lblPhysique.Size = new System.Drawing.Size(50, 13);
+            lblPhysique.Size = new System.Drawing.Size(73, 20);
             lblPhysique.TabIndex = 28;
             lblPhysique.Text = "Physique";
             // 
@@ -157,7 +157,7 @@
             lblHumanity.Location = new System.Drawing.Point(185, 17);
             lblHumanity.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             lblHumanity.Name = "lblHumanity";
-            lblHumanity.Size = new System.Drawing.Size(51, 13);
+            lblHumanity.Size = new System.Drawing.Size(76, 20);
             lblHumanity.TabIndex = 28;
             lblHumanity.Text = "Humanity";
             // 
@@ -166,7 +166,7 @@
             lblName.AutoSize = true;
             lblName.Location = new System.Drawing.Point(6, 18);
             lblName.Name = "lblName";
-            lblName.Size = new System.Drawing.Size(35, 13);
+            lblName.Size = new System.Drawing.Size(51, 20);
             lblName.TabIndex = 27;
             lblName.Text = "Name";
             // 
@@ -176,7 +176,7 @@
             lblClass.Location = new System.Drawing.Point(7, 110);
             lblClass.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             lblClass.Name = "lblClass";
-            lblClass.Size = new System.Drawing.Size(32, 13);
+            lblClass.Size = new System.Drawing.Size(48, 20);
             lblClass.TabIndex = 26;
             lblClass.Text = "Class";
             // 
@@ -212,7 +212,7 @@
             lblCovSunlight.Location = new System.Drawing.Point(87, 249);
             lblCovSunlight.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             lblCovSunlight.Name = "lblCovSunlight";
-            lblCovSunlight.Size = new System.Drawing.Size(94, 13);
+            lblCovSunlight.Size = new System.Drawing.Size(140, 20);
             lblCovSunlight.TabIndex = 62;
             lblCovSunlight.Text = "Warrior of Sunlight";
             // 
@@ -224,7 +224,7 @@
             this.cmbCovenant.FormattingEnabled = true;
             this.cmbCovenant.Location = new System.Drawing.Point(6, 21);
             this.cmbCovenant.Name = "cmbCovenant";
-            this.cmbCovenant.Size = new System.Drawing.Size(208, 21);
+            this.cmbCovenant.Size = new System.Drawing.Size(208, 28);
             this.cmbCovenant.TabIndex = 43;
             this.cmbCovenant.SelectedIndexChanged += new System.EventHandler(this.cmbCovenant_SelectedIndexChanged);
             this.cmbCovenant.KeyDown += new System.Windows.Forms.KeyEventHandler(this.cmbKeyDown);
@@ -240,9 +240,9 @@
             0,
             0});
             this.nudCovSunlight.Name = "nudCovSunlight";
-            this.nudCovSunlight.Size = new System.Drawing.Size(72, 20);
+            this.nudCovSunlight.Size = new System.Drawing.Size(72, 26);
             this.nudCovSunlight.TabIndex = 50;
-            this.nudCovSunlight.ValueChanged += new System.EventHandler(this.nudCovSunlight_ValueChanged);
+            this.nudCovSunlight.ValueChanged += new System.EventHandler(this.nud_ValueChanged);
             this.nudCovSunlight.KeyDown += new System.Windows.Forms.KeyEventHandler(this.nudKeyDown);
             // 
             // nudCovChaos
@@ -256,9 +256,9 @@
             0,
             0});
             this.nudCovChaos.Name = "nudCovChaos";
-            this.nudCovChaos.Size = new System.Drawing.Size(72, 20);
+            this.nudCovChaos.Size = new System.Drawing.Size(72, 26);
             this.nudCovChaos.TabIndex = 44;
-            this.nudCovChaos.ValueChanged += new System.EventHandler(this.nudCovChaos_ValueChanged);
+            this.nudCovChaos.ValueChanged += new System.EventHandler(this.nud_ValueChanged);
             this.nudCovChaos.KeyDown += new System.Windows.Forms.KeyEventHandler(this.nudKeyDown);
             // 
             // nudCovForest
@@ -272,9 +272,9 @@
             0,
             0});
             this.nudCovForest.Name = "nudCovForest";
-            this.nudCovForest.Size = new System.Drawing.Size(72, 20);
+            this.nudCovForest.Size = new System.Drawing.Size(72, 26);
             this.nudCovForest.TabIndex = 47;
-            this.nudCovForest.ValueChanged += new System.EventHandler(this.nudCovForest_ValueChanged);
+            this.nudCovForest.ValueChanged += new System.EventHandler(this.nud_ValueChanged);
             this.nudCovForest.KeyDown += new System.Windows.Forms.KeyEventHandler(this.nudKeyDown);
             // 
             // lvlCovDragon
@@ -283,7 +283,7 @@
             lvlCovDragon.Location = new System.Drawing.Point(87, 217);
             lvlCovDragon.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             lvlCovDragon.Name = "lvlCovDragon";
-            lvlCovDragon.Size = new System.Drawing.Size(97, 13);
+            lvlCovDragon.Size = new System.Drawing.Size(144, 20);
             lvlCovDragon.TabIndex = 60;
             lvlCovDragon.Text = "Path of the Dragon";
             // 
@@ -293,7 +293,7 @@
             lblCovDarkwraith.Location = new System.Drawing.Point(87, 121);
             lblCovDarkwraith.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             lblCovDarkwraith.Name = "lblCovDarkwraith";
-            lblCovDarkwraith.Size = new System.Drawing.Size(58, 13);
+            lblCovDarkwraith.Size = new System.Drawing.Size(85, 20);
             lblCovDarkwraith.TabIndex = 54;
             lblCovDarkwraith.Text = "Darkwraith";
             // 
@@ -303,7 +303,7 @@
             lblCovChaos.Location = new System.Drawing.Point(87, 57);
             lblCovChaos.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             lblCovChaos.Name = "lblCovChaos";
-            lblCovChaos.Size = new System.Drawing.Size(77, 13);
+            lblCovChaos.Size = new System.Drawing.Size(114, 20);
             lblCovChaos.TabIndex = 50;
             lblCovChaos.Text = "Chaos Servant";
             // 
@@ -313,7 +313,7 @@
             lblCovForest.Location = new System.Drawing.Point(87, 153);
             lblCovForest.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             lblCovForest.Name = "lblCovForest";
-            lblCovForest.Size = new System.Drawing.Size(71, 13);
+            lblCovForest.Size = new System.Drawing.Size(108, 20);
             lblCovForest.TabIndex = 56;
             lblCovForest.Text = "Forest Hunter";
             // 
@@ -328,9 +328,9 @@
             0,
             0});
             this.nudCovDragon.Name = "nudCovDragon";
-            this.nudCovDragon.Size = new System.Drawing.Size(72, 20);
+            this.nudCovDragon.Size = new System.Drawing.Size(72, 26);
             this.nudCovDragon.TabIndex = 49;
-            this.nudCovDragon.ValueChanged += new System.EventHandler(this.nudCovDragon_ValueChanged);
+            this.nudCovDragon.ValueChanged += new System.EventHandler(this.nud_ValueChanged);
             this.nudCovDragon.KeyDown += new System.Windows.Forms.KeyEventHandler(this.nudKeyDown);
             // 
             // nudCovDarkwraith
@@ -344,9 +344,9 @@
             0,
             0});
             this.nudCovDarkwraith.Name = "nudCovDarkwraith";
-            this.nudCovDarkwraith.Size = new System.Drawing.Size(72, 20);
+            this.nudCovDarkwraith.Size = new System.Drawing.Size(72, 26);
             this.nudCovDarkwraith.TabIndex = 46;
-            this.nudCovDarkwraith.ValueChanged += new System.EventHandler(this.nudCovDarkwraith_ValueChanged);
+            this.nudCovDarkwraith.ValueChanged += new System.EventHandler(this.nud_ValueChanged);
             this.nudCovDarkwraith.KeyDown += new System.Windows.Forms.KeyEventHandler(this.nudKeyDown);
             // 
             // nudCovDarkmoon
@@ -360,9 +360,9 @@
             0,
             0});
             this.nudCovDarkmoon.Name = "nudCovDarkmoon";
-            this.nudCovDarkmoon.Size = new System.Drawing.Size(72, 20);
+            this.nudCovDarkmoon.Size = new System.Drawing.Size(72, 26);
             this.nudCovDarkmoon.TabIndex = 45;
-            this.nudCovDarkmoon.ValueChanged += new System.EventHandler(this.nudCovDarkmoon_ValueChanged);
+            this.nudCovDarkmoon.ValueChanged += new System.EventHandler(this.nud_ValueChanged);
             this.nudCovDarkmoon.KeyDown += new System.Windows.Forms.KeyEventHandler(this.nudKeyDown);
             // 
             // nudCovGravelord
@@ -376,9 +376,9 @@
             0,
             0});
             this.nudCovGravelord.Name = "nudCovGravelord";
-            this.nudCovGravelord.Size = new System.Drawing.Size(72, 20);
+            this.nudCovGravelord.Size = new System.Drawing.Size(72, 26);
             this.nudCovGravelord.TabIndex = 48;
-            this.nudCovGravelord.ValueChanged += new System.EventHandler(this.nudCovGravelord_ValueChanged);
+            this.nudCovGravelord.ValueChanged += new System.EventHandler(this.nud_ValueChanged);
             this.nudCovGravelord.KeyDown += new System.Windows.Forms.KeyEventHandler(this.nudKeyDown);
             // 
             // lblCovGravelord
@@ -387,7 +387,7 @@
             lblCovGravelord.Location = new System.Drawing.Point(87, 185);
             lblCovGravelord.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             lblCovGravelord.Name = "lblCovGravelord";
-            lblCovGravelord.Size = new System.Drawing.Size(93, 13);
+            lblCovGravelord.Size = new System.Drawing.Size(137, 20);
             lblCovGravelord.TabIndex = 58;
             lblCovGravelord.Text = "Gravelord Servant";
             // 
@@ -397,7 +397,7 @@
             lblCovDarkmoon.Location = new System.Drawing.Point(87, 89);
             lblCovDarkmoon.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             lblCovDarkmoon.Name = "lblCovDarkmoon";
-            lblCovDarkmoon.Size = new System.Drawing.Size(86, 13);
+            lblCovDarkmoon.Size = new System.Drawing.Size(128, 20);
             lblCovDarkmoon.TabIndex = 52;
             lblCovDarkmoon.Text = "Darkmoon Blade";
             // 
@@ -445,7 +445,7 @@
             0,
             0});
             this.nudVit.Name = "nudVit";
-            this.nudVit.Size = new System.Drawing.Size(72, 20);
+            this.nudVit.Size = new System.Drawing.Size(72, 26);
             this.nudVit.TabIndex = 35;
             this.nudVit.Value = new decimal(new int[] {
             99,
@@ -461,7 +461,7 @@
             lblFth.Location = new System.Drawing.Point(87, 279);
             lblFth.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             lblFth.Name = "lblFth";
-            lblFth.Size = new System.Drawing.Size(30, 13);
+            lblFth.Size = new System.Drawing.Size(45, 20);
             lblFth.TabIndex = 48;
             lblFth.Text = "Faith";
             // 
@@ -471,7 +471,7 @@
             lblVit.Location = new System.Drawing.Point(87, 55);
             lblVit.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             lblVit.Name = "lblVit";
-            lblVit.Size = new System.Drawing.Size(37, 13);
+            lblVit.Size = new System.Drawing.Size(55, 20);
             lblVit.TabIndex = 34;
             lblVit.Text = "Vitality";
             // 
@@ -491,7 +491,7 @@
             0,
             0});
             this.nudFth.Name = "nudFth";
-            this.nudFth.Size = new System.Drawing.Size(72, 20);
+            this.nudFth.Size = new System.Drawing.Size(72, 26);
             this.nudFth.TabIndex = 42;
             this.nudFth.Value = new decimal(new int[] {
             99,
@@ -508,7 +508,7 @@
             lblSoulLevel.Location = new System.Drawing.Point(87, 23);
             lblSoulLevel.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             lblSoulLevel.Name = "lblSoulLevel";
-            lblSoulLevel.Size = new System.Drawing.Size(57, 13);
+            lblSoulLevel.Size = new System.Drawing.Size(82, 20);
             lblSoulLevel.TabIndex = 30;
             lblSoulLevel.Text = "Soul Level";
             // 
@@ -528,7 +528,7 @@
             0,
             0});
             this.nudAtt.Name = "nudAtt";
-            this.nudAtt.Size = new System.Drawing.Size(72, 20);
+            this.nudAtt.Size = new System.Drawing.Size(72, 26);
             this.nudAtt.TabIndex = 36;
             this.nudAtt.Value = new decimal(new int[] {
             99,
@@ -545,7 +545,7 @@
             this.txtSoulLevel.Margin = new System.Windows.Forms.Padding(4);
             this.txtSoulLevel.Name = "txtSoulLevel";
             this.txtSoulLevel.ReadOnly = true;
-            this.txtSoulLevel.Size = new System.Drawing.Size(72, 20);
+            this.txtSoulLevel.Size = new System.Drawing.Size(72, 26);
             this.txtSoulLevel.TabIndex = 0;
             this.txtSoulLevel.TabStop = false;
             // 
@@ -555,7 +555,7 @@
             lblInt.Location = new System.Drawing.Point(87, 247);
             lblInt.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             lblInt.Name = "lblInt";
-            lblInt.Size = new System.Drawing.Size(61, 13);
+            lblInt.Size = new System.Drawing.Size(90, 20);
             lblInt.TabIndex = 46;
             lblInt.Text = "Intelligence";
             // 
@@ -565,7 +565,7 @@
             lblAtt.Location = new System.Drawing.Point(87, 87);
             lblAtt.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             lblAtt.Name = "lblAtt";
-            lblAtt.Size = new System.Drawing.Size(61, 13);
+            lblAtt.Size = new System.Drawing.Size(93, 20);
             lblAtt.TabIndex = 36;
             lblAtt.Text = "Attunement";
             // 
@@ -585,7 +585,7 @@
             0,
             0});
             this.nudInt.Name = "nudInt";
-            this.nudInt.Size = new System.Drawing.Size(72, 20);
+            this.nudInt.Size = new System.Drawing.Size(72, 26);
             this.nudInt.TabIndex = 41;
             this.nudInt.Value = new decimal(new int[] {
             99,
@@ -611,7 +611,7 @@
             0,
             0});
             this.nudEnd.Name = "nudEnd";
-            this.nudEnd.Size = new System.Drawing.Size(72, 20);
+            this.nudEnd.Size = new System.Drawing.Size(72, 26);
             this.nudEnd.TabIndex = 37;
             this.nudEnd.Value = new decimal(new int[] {
             99,
@@ -627,7 +627,7 @@
             lblRes.Location = new System.Drawing.Point(87, 215);
             lblRes.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             lblRes.Name = "lblRes";
-            lblRes.Size = new System.Drawing.Size(60, 13);
+            lblRes.Size = new System.Drawing.Size(89, 20);
             lblRes.TabIndex = 44;
             lblRes.Text = "Resistance";
             // 
@@ -637,7 +637,7 @@
             lblEnd.Location = new System.Drawing.Point(87, 119);
             lblEnd.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             lblEnd.Name = "lblEnd";
-            lblEnd.Size = new System.Drawing.Size(59, 13);
+            lblEnd.Size = new System.Drawing.Size(87, 20);
             lblEnd.TabIndex = 38;
             lblEnd.Text = "Endurance";
             // 
@@ -657,7 +657,7 @@
             0,
             0});
             this.nudRes.Name = "nudRes";
-            this.nudRes.Size = new System.Drawing.Size(72, 20);
+            this.nudRes.Size = new System.Drawing.Size(72, 26);
             this.nudRes.TabIndex = 40;
             this.nudRes.Value = new decimal(new int[] {
             99,
@@ -683,7 +683,7 @@
             0,
             0});
             this.nudStr.Name = "nudStr";
-            this.nudStr.Size = new System.Drawing.Size(72, 20);
+            this.nudStr.Size = new System.Drawing.Size(72, 26);
             this.nudStr.TabIndex = 38;
             this.nudStr.Value = new decimal(new int[] {
             99,
@@ -699,7 +699,7 @@
             lblDex.Location = new System.Drawing.Point(87, 183);
             lblDex.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             lblDex.Name = "lblDex";
-            lblDex.Size = new System.Drawing.Size(48, 13);
+            lblDex.Size = new System.Drawing.Size(71, 20);
             lblDex.TabIndex = 42;
             lblDex.Text = "Dexterity";
             // 
@@ -709,7 +709,7 @@
             lblStr.Location = new System.Drawing.Point(87, 151);
             lblStr.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             lblStr.Name = "lblStr";
-            lblStr.Size = new System.Drawing.Size(47, 13);
+            lblStr.Size = new System.Drawing.Size(71, 20);
             lblStr.TabIndex = 40;
             lblStr.Text = "Strength";
             // 
@@ -729,7 +729,7 @@
             0,
             0});
             this.nudDex.Name = "nudDex";
-            this.nudDex.Size = new System.Drawing.Size(72, 20);
+            this.nudDex.Size = new System.Drawing.Size(72, 26);
             this.nudDex.TabIndex = 39;
             this.nudDex.Value = new decimal(new int[] {
             99,
@@ -743,11 +743,11 @@
             // 
             this.cbxLoad.AutoSize = true;
             this.cbxLoad.Font = new System.Drawing.Font("Microsoft Sans Serif", 8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.cbxLoad.Location = new System.Drawing.Point(10, 565);
+            this.cbxLoad.Location = new System.Drawing.Point(9, 579);
             this.cbxLoad.Name = "cbxLoad";
-            this.cbxLoad.Size = new System.Drawing.Size(208, 17);
+            this.cbxLoad.Size = new System.Drawing.Size(242, 24);
             this.cbxLoad.TabIndex = 51;
-            this.cbxLoad.Text = "Apply changed stats on character load";
+            this.cbxLoad.Text = "Apply Changes After Loading";
             this.cbxLoad.UseVisualStyleBackColor = true;
             // 
             // groupBox1
@@ -769,7 +769,7 @@
             this.groupBox1.Controls.Add(this.cmbClass);
             this.groupBox1.Location = new System.Drawing.Point(3, 3);
             this.groupBox1.Name = "groupBox1";
-            this.groupBox1.Size = new System.Drawing.Size(410, 222);
+            this.groupBox1.Size = new System.Drawing.Size(410, 230);
             this.groupBox1.TabIndex = 1;
             this.groupBox1.TabStop = false;
             this.groupBox1.Text = "Character";
@@ -780,7 +780,7 @@
             this.cmbPhysique.FormattingEnabled = true;
             this.cmbPhysique.Location = new System.Drawing.Point(6, 177);
             this.cmbPhysique.Name = "cmbPhysique";
-            this.cmbPhysique.Size = new System.Drawing.Size(161, 21);
+            this.cmbPhysique.Size = new System.Drawing.Size(161, 28);
             this.cmbPhysique.TabIndex = 32;
             this.cmbPhysique.SelectedIndexChanged += new System.EventHandler(this.cmbPhysique_SelectedIndexChanged);
             this.cmbPhysique.KeyDown += new System.Windows.Forms.KeyEventHandler(this.cmbKeyDown);
@@ -791,7 +791,7 @@
             this.cmbSex.FormattingEnabled = true;
             this.cmbSex.Location = new System.Drawing.Point(6, 83);
             this.cmbSex.Name = "cmbSex";
-            this.cmbSex.Size = new System.Drawing.Size(161, 21);
+            this.cmbSex.Size = new System.Drawing.Size(161, 28);
             this.cmbSex.TabIndex = 30;
             this.cmbSex.SelectedIndexChanged += new System.EventHandler(this.cmbSex_SelectedIndexChanged);
             this.cmbSex.KeyDown += new System.Windows.Forms.KeyEventHandler(this.cmbKeyDown);
@@ -800,7 +800,7 @@
             // 
             this.txtName.Location = new System.Drawing.Point(6, 38);
             this.txtName.Name = "txtName";
-            this.txtName.Size = new System.Drawing.Size(161, 20);
+            this.txtName.Size = new System.Drawing.Size(161, 26);
             this.txtName.TabIndex = 29;
             this.txtName.TextChanged += new System.EventHandler(this.txtName_TextChanged);
             this.txtName.KeyDown += new System.Windows.Forms.KeyEventHandler(this.txtName_KeyDown);
@@ -815,14 +815,14 @@
             0,
             0});
             this.nudSouls.Name = "nudSouls";
-            this.nudSouls.Size = new System.Drawing.Size(105, 20);
+            this.nudSouls.Size = new System.Drawing.Size(105, 26);
             this.nudSouls.TabIndex = 34;
             this.nudSouls.Value = new decimal(new int[] {
             999999999,
             0,
             0,
             0});
-            this.nudSouls.ValueChanged += new System.EventHandler(this.nudSouls_ValueChanged);
+            this.nudSouls.ValueChanged += new System.EventHandler(this.nud_ValueChanged);
             this.nudSouls.KeyDown += new System.Windows.Forms.KeyEventHandler(this.nudKeyDown);
             // 
             // nudHumanity
@@ -835,9 +835,9 @@
             0,
             0});
             this.nudHumanity.Name = "nudHumanity";
-            this.nudHumanity.Size = new System.Drawing.Size(105, 20);
+            this.nudHumanity.Size = new System.Drawing.Size(105, 26);
             this.nudHumanity.TabIndex = 33;
-            this.nudHumanity.ValueChanged += new System.EventHandler(this.nudHumanity_ValueChanged);
+            this.nudHumanity.ValueChanged += new System.EventHandler(this.nud_ValueChanged);
             this.nudHumanity.KeyDown += new System.Windows.Forms.KeyEventHandler(this.nudKeyDown);
             // 
             // cmbClass
@@ -846,7 +846,7 @@
             this.cmbClass.FormattingEnabled = true;
             this.cmbClass.Location = new System.Drawing.Point(6, 130);
             this.cmbClass.Name = "cmbClass";
-            this.cmbClass.Size = new System.Drawing.Size(163, 21);
+            this.cmbClass.Size = new System.Drawing.Size(163, 28);
             this.cmbClass.TabIndex = 31;
             this.cmbClass.SelectedIndexChanged += new System.EventHandler(this.cmbClass_SelectedIndexChanged);
             this.cmbClass.KeyDown += new System.Windows.Forms.KeyEventHandler(this.cmbKeyDown);
