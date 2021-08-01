@@ -1,61 +1,9 @@
-'DS Gadget.exe' (CLR v4.0.30319: DefaultDomain): Loaded 'C:\WINDOWS\Microsoft.Net\assembly\GAC_32\mscorlib\v4.0_4.0.0.0__b77a5c561934e089\mscorlib.dll'. Skipped loading symbols. Module is optimized and the debugger option 'Just My Code' is enabled.
-'DS Gadget.exe' (CLR v4.0.30319: DefaultDomain): Loaded 'C:\Users\Tor\source\repos\DS-Gadget-for-Remastest\DS Gadget\bin\x86\Release\DS Gadget.exe'. Skipped loading symbols. Module is optimized and the debugger option 'Just My Code' is enabled.
-Symbols for the module 'DS Gadget.exe' were not loaded.
-
-1. Use a debug build configuration or disable the debug option 'Enable Just My Code'. 
-2. Check the 'Symbols' settings under debugging options.'DS Gadget.exe' (CLR v4.0.30319: DS Gadget.exe): Loaded 'C:\Users\Tor\source\repos\DS-Gadget-for-Remastest\DS Gadget\bin\x86\Release\BenchmarkDotNet.dll'. Skipped loading symbols. Module is optimized and the debugger option 'Just My Code' is enabled.
-'DS Gadget.exe' (CLR v4.0.30319: DS Gadget.exe): Loaded 'C:\WINDOWS\Microsoft.Net\assembly\GAC_MSIL\netstandard\v4.0_2.0.0.0__cc7b13ffcd2ddd51\netstandard.dll'. Skipped loading symbols. Module is optimized and the debugger option 'Just My Code' is enabled.
-'DS Gadget.exe' (CLR v4.0.30319: DS Gadget.exe): Loaded 'C:\Users\Tor\source\repos\DS-Gadget-for-Remastest\DS Gadget\bin\x86\Release\System.Collections.Immutable.dll'. Skipped loading symbols. Module is optimized and the debugger option 'Just My Code' is enabled.
-'DS Gadget.exe' (CLR v4.0.30319: DS Gadget.exe): Loaded 'C:\Users\Tor\source\repos\DS-Gadget-for-Remastest\DS Gadget\bin\x86\Release\BenchmarkDotNet.Annotations.dll'. Skipped loading symbols. Module is optimized and the debugger option 'Just My Code' is enabled.
-'DS Gadget.exe' (CLR v4.0.30319: DS Gadget.exe): Loaded 'C:\WINDOWS\Microsoft.Net\assembly\GAC_MSIL\System.Core\v4.0_4.0.0.0__b77a5c561934e089\System.Core.dll'. Skipped loading symbols. Module is optimized and the debugger option 'Just My Code' is enabled.
-'DS Gadget.exe' (CLR v4.0.30319: DS Gadget.exe): Loaded 'C:\WINDOWS\Microsoft.Net\assembly\GAC_MSIL\System\v4.0_4.0.0.0__b77a5c561934e089\System.dll'. Skipped loading symbols. Module is optimized and the debugger option 'Just My Code' is enabled.
-'DS Gadget.exe' (CLR v4.0.30319: DS Gadget.exe): Loaded 'C:\Users\Tor\source\repos\DS-Gadget-for-Remastest\DS Gadget\bin\x86\Release\Perfolizer.dll'. Skipped loading symbols. Module is optimized and the debugger option 'Just My Code' is enabled.
-'DS Gadget.exe' (CLR v4.0.30319: DS Gadget.exe): Loaded 'C:\Users\Tor\source\repos\DS-Gadget-for-Remastest\DS Gadget\bin\x86\Release\Microsoft.CodeAnalysis.CSharp.dll'. Skipped loading symbols. Module is optimized and the debugger option 'Just My Code' is enabled.
-'DS Gadget.exe' (CLR v4.0.30319: DS Gadget.exe): Loaded 'C:\Users\Tor\source\repos\DS-Gadget-for-Remastest\DS Gadget\bin\x86\Release\System.Runtime.dll'. 
-'DS Gadget.exe' (CLR v4.0.30319: DS Gadget.exe): Loaded 'C:\Users\Tor\source\repos\DS-Gadget-for-Remastest\DS Gadget\bin\x86\Release\System.ValueTuple.dll'. Skipped loading symbols. Module is optimized and the debugger option 'Just My Code' is enabled.
-'DS Gadget.exe' (CLR v4.0.30319: DS Gadget.exe): Loaded 'C:\WINDOWS\Microsoft.Net\assembly\GAC_MSIL\System.Windows.Forms\v4.0_4.0.0.0__b77a5c561934e089\System.Windows.Forms.dll'. Skipped loading symbols. Module is optimized and the debugger option 'Just My Code' is enabled.
-'DS Gadget.exe' (CLR v4.0.30319: DS Gadget.exe): Loaded 'C:\WINDOWS\Microsoft.Net\assembly\GAC_MSIL\System.Drawing\v4.0_4.0.0.0__b03f5f7f11d50a3a\System.Drawing.dll'. Skipped loading symbols. Module is optimized and the debugger option 'Just My Code' is enabled.
-'DS Gadget.exe' (CLR v4.0.30319: DS Gadget.exe): Loaded 'C:\Users\Tor\source\repos\DS-Gadget-for-Remastest\DS Gadget\bin\x86\Release\System.Runtime.InteropServices.RuntimeInformation.dll'. Skipped loading symbols. Module is optimized and the debugger option 'Just My Code' is enabled.
-'DS Gadget.exe' (CLR v4.0.30319: DS Gadget.exe): Loaded 'C:\Users\Tor\source\repos\DS-Gadget-for-Remastest\DS Gadget\bin\x86\Release\Microsoft.Win32.Registry.dll'. Skipped loading symbols. Module is optimized and the debugger option 'Just My Code' is enabled.
-'DS Gadget.exe' (CLR v4.0.30319: DS Gadget.exe): Loaded 'C:\Users\Tor\source\repos\DS-Gadget-for-Remastest\DS Gadget\bin\x86\Release\Microsoft.CodeAnalysis.dll'. Skipped loading symbols. Module is optimized and the debugger option 'Just My Code' is enabled.
 // Validating benchmarks:
-'DS Gadget.exe' (CLR v4.0.30319: DS Gadget.exe): Loaded 'C:\Users\Tor\source\repos\DS-Gadget-for-Remastest\DS Gadget\bin\x86\Release\PropertyHook.dll'. Skipped loading symbols. Module is optimized and the debugger option 'Just My Code' is enabled.
-'DS Gadget.exe' (CLR v4.0.30319: DS Gadget.exe): Loaded 'C:\Users\Tor\source\repos\DS-Gadget-for-Remastest\DS Gadget\bin\x86\Release\LowLevelHooking.dll'. Skipped loading symbols. Module is optimized and the debugger option 'Just My Code' is enabled.
-'DS Gadget.exe' (CLR v4.0.30319: DS Gadget.exe): Loaded 'C:\Users\Tor\source\repos\DS-Gadget-for-Remastest\DS Gadget\bin\x86\Release\Octokit.dll'. 
-'DS Gadget.exe' (CLR v4.0.30319: DS Gadget.exe): Loaded 'C:\WINDOWS\Microsoft.Net\assembly\GAC_MSIL\System.Xml\v4.0_4.0.0.0__b77a5c561934e089\System.Xml.dll'. Skipped loading symbols. Module is optimized and the debugger option 'Just My Code' is enabled.
-'DS Gadget.exe' (CLR v4.0.30319: DS Gadget.exe): Loaded 'C:\Users\Tor\source\repos\DS-Gadget-for-Remastest\DS Gadget\bin\x86\Release\Fasm.NET.dll'. Skipped loading symbols. Module is optimized and the debugger option 'Just My Code' is enabled.
-'DS Gadget.exe' (CLR v4.0.30319: DS Gadget.exe): Loaded 'C:\Users\Tor\source\repos\DS-Gadget-for-Remastest\DS Gadget\bin\x86\Release\Semver.dll'. Skipped loading symbols. Module is optimized and the debugger option 'Just My Code' is enabled.
-'DS Gadget.exe' (CLR v4.0.30319: DS Gadget.exe): Loaded 'C:\Users\Tor\source\repos\DS-Gadget-for-Remastest\DS Gadget\bin\x86\Release\System.Net.Http.dll'. Skipped loading symbols. Module is optimized and the debugger option 'Just My Code' is enabled.
-'DS Gadget.exe' (CLR v4.0.30319: DS Gadget.exe): Loaded 'C:\Users\Tor\source\repos\DS-Gadget-for-Remastest\DS Gadget\bin\x86\Release\System.Threading.Tasks.Extensions.dll'. Skipped loading symbols. Module is optimized and the debugger option 'Just My Code' is enabled.
 // ***** BenchmarkRunner: Start   *****
 // ***** Found 1 benchmark(s) in total *****
 // ***** Building 1 exe(s) in Parallel: Start   *****
-'DS Gadget.exe' (CLR v4.0.30319: DS Gadget.exe): Loaded 'C:\Users\Tor\source\repos\DS-Gadget-for-Remastest\DS Gadget\bin\x86\Release\System.Memory.dll'. Skipped loading symbols. Module is optimized and the debugger option 'Just My Code' is enabled.
-'DS Gadget.exe' (CLR v4.0.30319: DS Gadget.exe): Loaded 'C:\Users\Tor\source\repos\DS-Gadget-for-Remastest\DS Gadget\bin\x86\Release\System.Runtime.CompilerServices.Unsafe.dll'. Module was built without symbols.
-'DS Gadget.exe' (CLR v4.0.30319: DS Gadget.exe): Loaded 'C:\Users\Tor\source\repos\DS-Gadget-for-Remastest\DS Gadget\bin\x86\Release\System.Threading.Tasks.dll'. 
-'DS Gadget.exe' (CLR v4.0.30319: DS Gadget.exe): Loaded 'C:\Users\Tor\source\repos\DS-Gadget-for-Remastest\DS Gadget\bin\x86\Release\System.Text.Encoding.dll'. 
-BuildScript: C:\Users\Tor\source\repos\DS-Gadget-for-Remastest\DS Gadget\bin\x86\Release\73aa3ba4-60c1-42ee-95ce-7f6424bcc30d.bat
-'DS Gadget.exe' (CLR v4.0.30319: DS Gadget.exe): Loaded 'C:\Users\Tor\source\repos\DS-Gadget-for-Remastest\DS Gadget\bin\x86\Release\System.IO.dll'. 
-'DS Gadget.exe' (CLR v4.0.30319: DS Gadget.exe): Loaded 'C:\Users\Tor\source\repos\DS-Gadget-for-Remastest\DS Gadget\bin\x86\Release\System.Runtime.Extensions.dll'. 
-'DS Gadget.exe' (CLR v4.0.30319: DS Gadget.exe): Loaded 'C:\Users\Tor\source\repos\DS-Gadget-for-Remastest\DS Gadget\bin\x86\Release\System.Threading.dll'. 
-'DS Gadget.exe' (CLR v4.0.30319: DS Gadget.exe): Loaded 'C:\Users\Tor\source\repos\DS-Gadget-for-Remastest\DS Gadget\bin\x86\Release\System.Collections.dll'. 
-'DS Gadget.exe' (CLR v4.0.30319: DS Gadget.exe): Loaded 'C:\Users\Tor\source\repos\DS-Gadget-for-Remastest\DS Gadget\bin\x86\Release\System.Globalization.dll'. 
-'DS Gadget.exe' (CLR v4.0.30319: DS Gadget.exe): Loaded 'C:\Users\Tor\source\repos\DS-Gadget-for-Remastest\DS Gadget\bin\x86\Release\System.Linq.dll'. 
-'DS Gadget.exe' (CLR v4.0.30319: DS Gadget.exe): Loaded 'C:\Users\Tor\source\repos\DS-Gadget-for-Remastest\DS Gadget\bin\x86\Release\System.Security.Cryptography.Algorithms.dll'. Skipped loading symbols. Module is optimized and the debugger option 'Just My Code' is enabled.
-'DS Gadget.exe' (CLR v4.0.30319: DS Gadget.exe): Loaded 'C:\Users\Tor\source\repos\DS-Gadget-for-Remastest\DS Gadget\bin\x86\Release\System.Reflection.Metadata.dll'. Skipped loading symbols. Module is optimized and the debugger option 'Just My Code' is enabled.
-'DS Gadget.exe' (CLR v4.0.30319: DS Gadget.exe): Loaded 'C:\Users\Tor\source\repos\DS-Gadget-for-Remastest\DS Gadget\bin\x86\Release\System.IO.FileSystem.dll'. 
-'DS Gadget.exe' (CLR v4.0.30319: DS Gadget.exe): Loaded 'C:\Users\Tor\source\repos\DS-Gadget-for-Remastest\DS Gadget\bin\x86\Release\System.Reflection.dll'. 
-'DS Gadget.exe' (CLR v4.0.30319: DS Gadget.exe): Loaded 'C:\Users\Tor\source\repos\DS-Gadget-for-Remastest\DS Gadget\bin\x86\Release\System.Threading.Tasks.Parallel.dll'. 
-'DS Gadget.exe' (CLR v4.0.30319: DS Gadget.exe): Loaded 'C:\Users\Tor\source\repos\DS-Gadget-for-Remastest\DS Gadget\bin\x86\Release\System.Reflection.Primitives.dll'. 
-'DS Gadget.exe' (CLR v4.0.30319: DS Gadget.exe): Loaded 'C:\Users\Tor\source\repos\DS-Gadget-for-Remastest\DS Gadget\bin\x86\Release\System.Runtime.InteropServices.dll'. 
-'DS Gadget.exe' (CLR v4.0.30319: DS Gadget.exe): Loaded 'C:\Users\Tor\source\repos\DS-Gadget-for-Remastest\DS Gadget\bin\x86\Release\System.Security.Cryptography.Primitives.dll'. 
-'DS Gadget.exe' (CLR v4.0.30319: DS Gadget.exe): Loaded 'C:\Users\Tor\source\repos\DS-Gadget-for-Remastest\DS Gadget\bin\x86\Release\System.Collections.Concurrent.dll'. 
-'DS Gadget.exe' (CLR v4.0.30319: DS Gadget.exe): Loaded 'C:\Users\Tor\source\repos\DS-Gadget-for-Remastest\DS Gadget\bin\x86\Release\System.Resources.ResourceManager.dll'. 
-'DS Gadget.exe' (CLR v4.0.30319: DS Gadget.exe): Loaded 'C:\Users\Tor\source\repos\DS-Gadget-for-Remastest\DS Gadget\bin\x86\Release\System.Text.Encoding.Extensions.dll'. 
-'DS Gadget.exe' (CLR v4.0.30319: DS Gadget.exe): Loaded 'C:\Users\Tor\source\repos\DS-Gadget-for-Remastest\DS Gadget\bin\x86\Release\System.Xml.XDocument.dll'. 
-'DS Gadget.exe' (CLR v4.0.30319: DS Gadget.exe): Loaded 'C:\WINDOWS\Microsoft.Net\assembly\GAC_MSIL\System.Xml.Linq\v4.0_4.0.0.0__b77a5c561934e089\System.Xml.Linq.dll'. Skipped loading symbols. Module is optimized and the debugger option 'Just My Code' is enabled.
-'DS Gadget.exe' (CLR v4.0.30319: DS Gadget.exe): Loaded 'C:\Users\Tor\source\repos\DS-Gadget-for-Remastest\DS Gadget\bin\x86\Release\System.Xml.ReaderWriter.dll'. 
-// ***** Done, took 00:00:02 (2.15 sec)   *****
+BuildScript: C:\Users\Tor\source\repos\DS-Gadget-for-Remastest\DS Gadget\bin\x86\Release\7fd56789-32fe-4756-8c29-6ff179de4d0b.bat
+// ***** Done, took 00:00:01 (1.67 sec)   *****
 // Found 1 benchmarks:
 //   SavedStatsBenchmark.SaveStatsSwitch: DefaultJob
 
@@ -63,7 +11,7 @@ BuildScript: C:\Users\Tor\source\repos\DS-Gadget-for-Remastest\DS Gadget\bin\x86
 // Benchmark: SavedStatsBenchmark.SaveStatsSwitch: DefaultJob
 // *** Execute ***
 // Launch: 1 / 1
-// Execute: C:\Users\Tor\source\repos\DS-Gadget-for-Remastest\DS Gadget\bin\x86\Release\73aa3ba4-60c1-42ee-95ce-7f6424bcc30d.exe --benchmarkName "DS_Gadget.SavedStatsBenchmark.SaveStatsSwitch" --job "Default" --benchmarkId 0 in 
+// Execute: C:\Users\Tor\source\repos\DS-Gadget-for-Remastest\DS Gadget\bin\x86\Release\7fd56789-32fe-4756-8c29-6ff179de4d0b.exe --benchmarkName "DS_Gadget.SavedStatsBenchmark.SaveStatsSwitch" --job "Default" --benchmarkId 0 in 
 // BeforeAnythingElse
 
 // Benchmark Process Environment Information:
@@ -71,333 +19,301 @@ BuildScript: C:\Users\Tor\source\repos\DS-Gadget-for-Remastest\DS Gadget\bin\x86
 // GC=Concurrent Workstation
 // Job: DefaultJob
 
-OverheadJitting  1: 1 op, 156200.00 ns, 156.2000 us/op
-WorkloadJitting  1: 1 op, 2865900.00 ns, 2.8659 ms/op
+OverheadJitting  1: 1 op, 151900.00 ns, 151.9000 us/op
+WorkloadJitting  1: 1 op, 2254700.00 ns, 2.2547 ms/op
 
-OverheadJitting  2: 16 op, 120300.00 ns, 7.5188 us/op
-WorkloadJitting  2: 16 op, 1927000.00 ns, 120.4375 us/op
+OverheadJitting  2: 16 op, 120400.00 ns, 7.5250 us/op
+WorkloadJitting  2: 16 op, 2253400.00 ns, 140.8375 us/op
 
-WorkloadPilot    1: 16 op, 1556000.00 ns, 97.2500 us/op
-WorkloadPilot    2: 32 op, 2383100.00 ns, 74.4719 us/op
-WorkloadPilot    3: 64 op, 9136300.00 ns, 142.7547 us/op
-WorkloadPilot    4: 128 op, 12631500.00 ns, 98.6836 us/op
-WorkloadPilot    5: 256 op, 28600500.00 ns, 111.7207 us/op
-WorkloadPilot    6: 512 op, 42020500.00 ns, 82.0713 us/op
-WorkloadPilot    7: 1024 op, 103064800.00 ns, 100.6492 us/op
-WorkloadPilot    8: 2048 op, 158765800.00 ns, 77.5224 us/op
-WorkloadPilot    9: 4096 op, 364683600.00 ns, 89.0341 us/op
-WorkloadPilot   10: 8192 op, 680227800.00 ns, 83.0356 us/op
+WorkloadPilot    1: 16 op, 1328100.00 ns, 83.0063 us/op
+WorkloadPilot    2: 32 op, 2352600.00 ns, 73.5188 us/op
+WorkloadPilot    3: 64 op, 4760200.00 ns, 74.3781 us/op
+WorkloadPilot    4: 128 op, 9836400.00 ns, 76.8469 us/op
+WorkloadPilot    5: 256 op, 18890300.00 ns, 73.7902 us/op
+WorkloadPilot    6: 512 op, 36751300.00 ns, 71.7799 us/op
+WorkloadPilot    7: 1024 op, 75497200.00 ns, 73.7277 us/op
+WorkloadPilot    8: 2048 op, 157917200.00 ns, 77.1080 us/op
+WorkloadPilot    9: 4096 op, 306411000.00 ns, 74.8074 us/op
+WorkloadPilot   10: 8192 op, 613995300.00 ns, 74.9506 us/op
 
-OverheadWarmup   1: 8192 op, 12000.00 ns, 1.4648 ns/op
-OverheadWarmup   2: 8192 op, 10600.00 ns, 1.2939 ns/op
+OverheadWarmup   1: 8192 op, 12500.00 ns, 1.5259 ns/op
+OverheadWarmup   2: 8192 op, 10500.00 ns, 1.2817 ns/op
 OverheadWarmup   3: 8192 op, 10600.00 ns, 1.2939 ns/op
 OverheadWarmup   4: 8192 op, 10500.00 ns, 1.2817 ns/op
 OverheadWarmup   5: 8192 op, 10500.00 ns, 1.2817 ns/op
 OverheadWarmup   6: 8192 op, 10600.00 ns, 1.2939 ns/op
 
-OverheadActual   1: 8192 op, 10600.00 ns, 1.2939 ns/op
+OverheadActual   1: 8192 op, 12700.00 ns, 1.5503 ns/op
 OverheadActual   2: 8192 op, 10600.00 ns, 1.2939 ns/op
-OverheadActual   3: 8192 op, 10600.00 ns, 1.2939 ns/op
-OverheadActual   4: 8192 op, 12600.00 ns, 1.5381 ns/op
+OverheadActual   3: 8192 op, 10700.00 ns, 1.3062 ns/op
+OverheadActual   4: 8192 op, 10600.00 ns, 1.2939 ns/op
 OverheadActual   5: 8192 op, 10600.00 ns, 1.2939 ns/op
-OverheadActual   6: 8192 op, 11700.00 ns, 1.4282 ns/op
-OverheadActual   7: 8192 op, 10500.00 ns, 1.2817 ns/op
-OverheadActual   8: 8192 op, 10600.00 ns, 1.2939 ns/op
-OverheadActual   9: 8192 op, 10500.00 ns, 1.2817 ns/op
+OverheadActual   6: 8192 op, 10500.00 ns, 1.2817 ns/op
+OverheadActual   7: 8192 op, 10700.00 ns, 1.3062 ns/op
+OverheadActual   8: 8192 op, 10500.00 ns, 1.2817 ns/op
+OverheadActual   9: 8192 op, 10600.00 ns, 1.2939 ns/op
 OverheadActual  10: 8192 op, 10500.00 ns, 1.2817 ns/op
-OverheadActual  11: 8192 op, 10500.00 ns, 1.2817 ns/op
-OverheadActual  12: 8192 op, 10500.00 ns, 1.2817 ns/op
-OverheadActual  13: 8192 op, 10500.00 ns, 1.2817 ns/op
-OverheadActual  14: 8192 op, 10600.00 ns, 1.2939 ns/op
-OverheadActual  15: 8192 op, 10600.00 ns, 1.2939 ns/op
+OverheadActual  11: 8192 op, 10600.00 ns, 1.2939 ns/op
+OverheadActual  12: 8192 op, 10700.00 ns, 1.3062 ns/op
+OverheadActual  13: 8192 op, 10600.00 ns, 1.2939 ns/op
+OverheadActual  14: 8192 op, 10500.00 ns, 1.2817 ns/op
+OverheadActual  15: 8192 op, 10700.00 ns, 1.3062 ns/op
 
-WorkloadWarmup   1: 8192 op, 965071000.00 ns, 117.8065 us/op
-WorkloadWarmup   2: 8192 op, 828734200.00 ns, 101.1638 us/op
-WorkloadWarmup   3: 8192 op, 819831000.00 ns, 100.0770 us/op
-WorkloadWarmup   4: 8192 op, 760507900.00 ns, 92.8354 us/op
-WorkloadWarmup   5: 8192 op, 952746000.00 ns, 116.3020 us/op
-WorkloadWarmup   6: 8192 op, 746738400.00 ns, 91.1546 us/op
-WorkloadWarmup   7: 8192 op, 696314000.00 ns, 84.9993 us/op
-WorkloadWarmup   8: 8192 op, 643650400.00 ns, 78.5706 us/op
-WorkloadWarmup   9: 8192 op, 617297100.00 ns, 75.3536 us/op
-WorkloadWarmup  10: 8192 op, 693867900.00 ns, 84.7007 us/op
-WorkloadWarmup  11: 8192 op, 676242900.00 ns, 82.5492 us/op
+WorkloadWarmup   1: 8192 op, 649309300.00 ns, 79.2614 us/op
+WorkloadWarmup   2: 8192 op, 615170200.00 ns, 75.0940 us/op
+WorkloadWarmup   3: 8192 op, 610824500.00 ns, 74.5635 us/op
+WorkloadWarmup   4: 8192 op, 631680800.00 ns, 77.1095 us/op
+WorkloadWarmup   5: 8192 op, 772862500.00 ns, 94.3436 us/op
+WorkloadWarmup   6: 8192 op, 612174300.00 ns, 74.7283 us/op
+WorkloadWarmup   7: 8192 op, 639676000.00 ns, 78.0854 us/op
+WorkloadWarmup   8: 8192 op, 614333700.00 ns, 74.9919 us/op
 
 // BeforeActualRun
-WorkloadActual   1: 8192 op, 1156816900.00 ns, 141.2130 us/op
-WorkloadActual   2: 8192 op, 1513218000.00 ns, 184.7190 us/op
-WorkloadActual   3: 8192 op, 1116069500.00 ns, 136.2390 us/op
-WorkloadActual   4: 8192 op, 904136200.00 ns, 110.3682 us/op
-WorkloadActual   5: 8192 op, 823585000.00 ns, 100.5353 us/op
-WorkloadActual   6: 8192 op, 717046900.00 ns, 87.5301 us/op
-WorkloadActual   7: 8192 op, 640909900.00 ns, 78.2361 us/op
-The thread 0x78bc has exited with code 0 (0x0).
-The thread 0xd760 has exited with code 0 (0x0).
-The thread 0x6864 has exited with code 0 (0x0).
-The thread 0xc12c has exited with code 0 (0x0).
-WorkloadActual   8: 8192 op, 1050738900.00 ns, 128.2640 us/op
-WorkloadActual   9: 8192 op, 885626400.00 ns, 108.1087 us/op
-The thread 0x6f58 has exited with code 0 (0x0).
-The thread 0x86e0 has exited with code 0 (0x0).
-The thread 0xb3c8 has exited with code 0 (0x0).
-The thread 0x5454 has exited with code 0 (0x0).
-The thread 0x54c has exited with code 0 (0x0).
-The thread 0x32ac has exited with code 0 (0x0).
-The thread 0x48dc has exited with code 0 (0x0).
-The thread 0x79f8 has exited with code 0 (0x0).
-The thread 0xccac has exited with code 0 (0x0).
-The thread 0x9c64 has exited with code 0 (0x0).
-WorkloadActual  10: 8192 op, 881849400.00 ns, 107.6476 us/op
-The thread 0x962c has exited with code 0 (0x0).
-The thread 0xacd0 has exited with code 0 (0x0).
-WorkloadActual  11: 8192 op, 899751200.00 ns, 109.8329 us/op
-WorkloadActual  12: 8192 op, 1184684300.00 ns, 144.6148 us/op
-WorkloadActual  13: 8192 op, 784980300.00 ns, 95.8228 us/op
-WorkloadActual  14: 8192 op, 1304399500.00 ns, 159.2285 us/op
-WorkloadActual  15: 8192 op, 1164431700.00 ns, 142.1425 us/op
-WorkloadActual  16: 8192 op, 794157600.00 ns, 96.9431 us/op
-WorkloadActual  17: 8192 op, 628589200.00 ns, 76.7321 us/op
-WorkloadActual  18: 8192 op, 642330500.00 ns, 78.4095 us/op
-WorkloadActual  19: 8192 op, 695116400.00 ns, 84.8531 us/op
-WorkloadActual  20: 8192 op, 627608500.00 ns, 76.6124 us/op
-WorkloadActual  21: 8192 op, 645165600.00 ns, 78.7556 us/op
-WorkloadActual  22: 8192 op, 1051309100.00 ns, 128.3336 us/op
-WorkloadActual  23: 8192 op, 648380200.00 ns, 79.1480 us/op
-WorkloadActual  24: 8192 op, 973026200.00 ns, 118.7776 us/op
-WorkloadActual  25: 8192 op, 661771400.00 ns, 80.7826 us/op
-WorkloadActual  26: 8192 op, 882989300.00 ns, 107.7868 us/op
-WorkloadActual  27: 8192 op, 772695200.00 ns, 94.3231 us/op
-WorkloadActual  28: 8192 op, 722610100.00 ns, 88.2092 us/op
-WorkloadActual  29: 8192 op, 1111290400.00 ns, 135.6556 us/op
-WorkloadActual  30: 8192 op, 666173100.00 ns, 81.3200 us/op
-WorkloadActual  31: 8192 op, 654772300.00 ns, 79.9283 us/op
-WorkloadActual  32: 8192 op, 881235800.00 ns, 107.5727 us/op
-WorkloadActual  33: 8192 op, 782319100.00 ns, 95.4979 us/op
-WorkloadActual  34: 8192 op, 719697200.00 ns, 87.8537 us/op
-WorkloadActual  35: 8192 op, 680696900.00 ns, 83.0929 us/op
-WorkloadActual  36: 8192 op, 669974100.00 ns, 81.7839 us/op
-WorkloadActual  37: 8192 op, 1042157900.00 ns, 127.2165 us/op
-WorkloadActual  38: 8192 op, 621506900.00 ns, 75.8675 us/op
-WorkloadActual  39: 8192 op, 635769600.00 ns, 77.6086 us/op
-WorkloadActual  40: 8192 op, 686964900.00 ns, 83.8580 us/op
-WorkloadActual  41: 8192 op, 619461000.00 ns, 75.6178 us/op
-WorkloadActual  42: 8192 op, 632782900.00 ns, 77.2440 us/op
-WorkloadActual  43: 8192 op, 697595400.00 ns, 85.1557 us/op
-WorkloadActual  44: 8192 op, 625533600.00 ns, 76.3591 us/op
-WorkloadActual  45: 8192 op, 860489400.00 ns, 105.0402 us/op
-WorkloadActual  46: 8192 op, 1485746400.00 ns, 181.3655 us/op
-WorkloadActual  47: 8192 op, 1270594400.00 ns, 155.1019 us/op
-WorkloadActual  48: 8192 op, 1259755600.00 ns, 153.7788 us/op
-WorkloadActual  49: 8192 op, 701540600.00 ns, 85.6373 us/op
-WorkloadActual  50: 8192 op, 659507700.00 ns, 80.5063 us/op
-WorkloadActual  51: 8192 op, 765664300.00 ns, 93.4649 us/op
-WorkloadActual  52: 8192 op, 883181900.00 ns, 107.8103 us/op
-WorkloadActual  53: 8192 op, 634627700.00 ns, 77.4692 us/op
-WorkloadActual  54: 8192 op, 689176600.00 ns, 84.1280 us/op
-WorkloadActual  55: 8192 op, 619589100.00 ns, 75.6334 us/op
-WorkloadActual  56: 8192 op, 643106800.00 ns, 78.5042 us/op
-WorkloadActual  57: 8192 op, 689888200.00 ns, 84.2149 us/op
-WorkloadActual  58: 8192 op, 613684400.00 ns, 74.9126 us/op
-WorkloadActual  59: 8192 op, 643555300.00 ns, 78.5590 us/op
-WorkloadActual  60: 8192 op, 1029728700.00 ns, 125.6993 us/op
-WorkloadActual  61: 8192 op, 619333400.00 ns, 75.6022 us/op
-WorkloadActual  62: 8192 op, 641427300.00 ns, 78.2992 us/op
-WorkloadActual  63: 8192 op, 690940700.00 ns, 84.3433 us/op
-WorkloadActual  64: 8192 op, 618593600.00 ns, 75.5119 us/op
-WorkloadActual  65: 8192 op, 636715700.00 ns, 77.7241 us/op
-WorkloadActual  66: 8192 op, 681655300.00 ns, 83.2099 us/op
-WorkloadActual  67: 8192 op, 619853300.00 ns, 75.6657 us/op
-WorkloadActual  68: 8192 op, 820257200.00 ns, 100.1291 us/op
-WorkloadActual  69: 8192 op, 847769200.00 ns, 103.4875 us/op
-WorkloadActual  70: 8192 op, 640202200.00 ns, 78.1497 us/op
-WorkloadActual  71: 8192 op, 617632600.00 ns, 75.3946 us/op
-WorkloadActual  72: 8192 op, 686145200.00 ns, 83.7580 us/op
-WorkloadActual  73: 8192 op, 638530200.00 ns, 77.9456 us/op
-WorkloadActual  74: 8192 op, 623225000.00 ns, 76.0773 us/op
-WorkloadActual  75: 8192 op, 682414900.00 ns, 83.3026 us/op
-WorkloadActual  76: 8192 op, 642273200.00 ns, 78.4025 us/op
-WorkloadActual  77: 8192 op, 1006457100.00 ns, 122.8585 us/op
-WorkloadActual  78: 8192 op, 617950900.00 ns, 75.4335 us/op
-WorkloadActual  79: 8192 op, 641496200.00 ns, 78.3076 us/op
-WorkloadActual  80: 8192 op, 617924400.00 ns, 75.4302 us/op
-WorkloadActual  81: 8192 op, 683270700.00 ns, 83.4071 us/op
-WorkloadActual  82: 8192 op, 639790100.00 ns, 78.0994 us/op
-WorkloadActual  83: 8192 op, 618544300.00 ns, 75.5059 us/op
-WorkloadActual  84: 8192 op, 699829300.00 ns, 85.4284 us/op
-WorkloadActual  85: 8192 op, 901937600.00 ns, 110.0998 us/op
-WorkloadActual  86: 8192 op, 747133400.00 ns, 91.2028 us/op
-WorkloadActual  87: 8192 op, 617311100.00 ns, 75.3554 us/op
-WorkloadActual  88: 8192 op, 641847100.00 ns, 78.3505 us/op
-WorkloadActual  89: 8192 op, 686869600.00 ns, 83.8464 us/op
-WorkloadActual  90: 8192 op, 618132300.00 ns, 75.4556 us/op
-WorkloadActual  91: 8192 op, 637010500.00 ns, 77.7601 us/op
-WorkloadActual  92: 8192 op, 688254600.00 ns, 84.0155 us/op
-WorkloadActual  93: 8192 op, 701717200.00 ns, 85.6588 us/op
-WorkloadActual  94: 8192 op, 889084100.00 ns, 108.5308 us/op
-WorkloadActual  95: 8192 op, 693554700.00 ns, 84.6624 us/op
-WorkloadActual  96: 8192 op, 644125100.00 ns, 78.6286 us/op
-WorkloadActual  97: 8192 op, 620025500.00 ns, 75.6867 us/op
-WorkloadActual  98: 8192 op, 687999000.00 ns, 83.9843 us/op
-WorkloadActual  99: 8192 op, 640945000.00 ns, 78.2404 us/op
-WorkloadActual  100: 8192 op, 622872600.00 ns, 76.0343 us/op
+WorkloadActual   1: 8192 op, 612025200.00 ns, 74.7101 us/op
+WorkloadActual   2: 8192 op, 1044187400.00 ns, 127.4643 us/op
+WorkloadActual   3: 8192 op, 817729100.00 ns, 99.8204 us/op
+WorkloadActual   4: 8192 op, 775954600.00 ns, 94.7210 us/op
+WorkloadActual   5: 8192 op, 672305300.00 ns, 82.0685 us/op
+WorkloadActual   6: 8192 op, 979296900.00 ns, 119.5431 us/op
+WorkloadActual   7: 8192 op, 763859700.00 ns, 93.2446 us/op
+WorkloadActual   8: 8192 op, 617114100.00 ns, 75.3313 us/op
+WorkloadActual   9: 8192 op, 616303800.00 ns, 75.2324 us/op
+WorkloadActual  10: 8192 op, 651715100.00 ns, 79.5551 us/op
+WorkloadActual  11: 8192 op, 616234400.00 ns, 75.2239 us/op
+WorkloadActual  12: 8192 op, 616092900.00 ns, 75.2067 us/op
+WorkloadActual  13: 8192 op, 641640600.00 ns, 78.3253 us/op
+WorkloadActual  14: 8192 op, 618932300.00 ns, 75.5533 us/op
+WorkloadActual  15: 8192 op, 617426000.00 ns, 75.3694 us/op
+WorkloadActual  16: 8192 op, 613784500.00 ns, 74.9249 us/op
+WorkloadActual  17: 8192 op, 650833100.00 ns, 79.4474 us/op
+WorkloadActual  18: 8192 op, 621852800.00 ns, 75.9098 us/op
+WorkloadActual  19: 8192 op, 616430900.00 ns, 75.2479 us/op
+WorkloadActual  20: 8192 op, 649182800.00 ns, 79.2459 us/op
+WorkloadActual  21: 8192 op, 614708800.00 ns, 75.0377 us/op
+WorkloadActual  22: 8192 op, 612452500.00 ns, 74.7623 us/op
+WorkloadActual  23: 8192 op, 662505500.00 ns, 80.8723 us/op
+WorkloadActual  24: 8192 op, 617052800.00 ns, 75.3238 us/op
+WorkloadActual  25: 8192 op, 612823400.00 ns, 74.8075 us/op
+WorkloadActual  26: 8192 op, 642033000.00 ns, 78.3732 us/op
+WorkloadActual  27: 8192 op, 613264500.00 ns, 74.8614 us/op
+WorkloadActual  28: 8192 op, 612669800.00 ns, 74.7888 us/op
+WorkloadActual  29: 8192 op, 1007395000.00 ns, 122.9730 us/op
+WorkloadActual  30: 8192 op, 1282040900.00 ns, 156.4991 us/op
+WorkloadActual  31: 8192 op, 969835100.00 ns, 118.3881 us/op
+WorkloadActual  32: 8192 op, 1011032500.00 ns, 123.4171 us/op
+WorkloadActual  33: 8192 op, 950503600.00 ns, 116.0283 us/op
+WorkloadActual  34: 8192 op, 1104968500.00 ns, 134.8839 us/op
+WorkloadActual  35: 8192 op, 734568600.00 ns, 89.6690 us/op
+WorkloadActual  36: 8192 op, 624194900.00 ns, 76.1957 us/op
+WorkloadActual  37: 8192 op, 625556700.00 ns, 76.3619 us/op
+WorkloadActual  38: 8192 op, 854763300.00 ns, 104.3412 us/op
+WorkloadActual  39: 8192 op, 840955700.00 ns, 102.6557 us/op
+WorkloadActual  40: 8192 op, 755136700.00 ns, 92.1798 us/op
+WorkloadActual  41: 8192 op, 1109533100.00 ns, 135.4411 us/op
+WorkloadActual  42: 8192 op, 741239900.00 ns, 90.4834 us/op
+WorkloadActual  43: 8192 op, 815316000.00 ns, 99.5259 us/op
+WorkloadActual  44: 8192 op, 852806300.00 ns, 104.1023 us/op
+WorkloadActual  45: 8192 op, 900677300.00 ns, 109.9460 us/op
+WorkloadActual  46: 8192 op, 772973200.00 ns, 94.3571 us/op
+WorkloadActual  47: 8192 op, 635317700.00 ns, 77.5534 us/op
+WorkloadActual  48: 8192 op, 1364142400.00 ns, 166.5213 us/op
+WorkloadActual  49: 8192 op, 925090800.00 ns, 112.9261 us/op
+WorkloadActual  50: 8192 op, 709666800.00 ns, 86.6292 us/op
+WorkloadActual  51: 8192 op, 646835400.00 ns, 78.9594 us/op
+WorkloadActual  52: 8192 op, 870757700.00 ns, 106.2937 us/op
+WorkloadActual  53: 8192 op, 1034851500.00 ns, 126.3246 us/op
+WorkloadActual  54: 8192 op, 985569600.00 ns, 120.3088 us/op
+WorkloadActual  55: 8192 op, 687111500.00 ns, 83.8759 us/op
+WorkloadActual  56: 8192 op, 613310100.00 ns, 74.8670 us/op
+WorkloadActual  57: 8192 op, 789768300.00 ns, 96.4073 us/op
+WorkloadActual  58: 8192 op, 966241300.00 ns, 117.9494 us/op
+WorkloadActual  59: 8192 op, 796168100.00 ns, 97.1885 us/op
+WorkloadActual  60: 8192 op, 637153200.00 ns, 77.7775 us/op
+WorkloadActual  61: 8192 op, 612628500.00 ns, 74.7838 us/op
+WorkloadActual  62: 8192 op, 658105400.00 ns, 80.3351 us/op
+WorkloadActual  63: 8192 op, 614876200.00 ns, 75.0581 us/op
+WorkloadActual  64: 8192 op, 652819700.00 ns, 79.6899 us/op
+WorkloadActual  65: 8192 op, 762475200.00 ns, 93.0756 us/op
+WorkloadActual  66: 8192 op, 608791300.00 ns, 74.3153 us/op
+WorkloadActual  67: 8192 op, 631651300.00 ns, 77.1059 us/op
+WorkloadActual  68: 8192 op, 613360100.00 ns, 74.8731 us/op
+WorkloadActual  69: 8192 op, 654906200.00 ns, 79.9446 us/op
+WorkloadActual  70: 8192 op, 614409200.00 ns, 75.0011 us/op
+WorkloadActual  71: 8192 op, 607456300.00 ns, 74.1524 us/op
+WorkloadActual  72: 8192 op, 649706800.00 ns, 79.3099 us/op
+WorkloadActual  73: 8192 op, 619250700.00 ns, 75.5921 us/op
+WorkloadActual  74: 8192 op, 615892500.00 ns, 75.1822 us/op
+WorkloadActual  75: 8192 op, 644040900.00 ns, 78.6183 us/op
+WorkloadActual  76: 8192 op, 611910500.00 ns, 74.6961 us/op
+WorkloadActual  77: 8192 op, 615121500.00 ns, 75.0881 us/op
+WorkloadActual  78: 8192 op, 677453800.00 ns, 82.6970 us/op
+WorkloadActual  79: 8192 op, 611214600.00 ns, 74.6112 us/op
+WorkloadActual  80: 8192 op, 614893200.00 ns, 75.0602 us/op
+WorkloadActual  81: 8192 op, 654482600.00 ns, 79.8929 us/op
+WorkloadActual  82: 8192 op, 607793800.00 ns, 74.1936 us/op
+WorkloadActual  83: 8192 op, 612907200.00 ns, 74.8178 us/op
+WorkloadActual  84: 8192 op, 608085100.00 ns, 74.2291 us/op
+WorkloadActual  85: 8192 op, 647107200.00 ns, 78.9926 us/op
+WorkloadActual  86: 8192 op, 616402000.00 ns, 75.2444 us/op
+WorkloadActual  87: 8192 op, 628197500.00 ns, 76.6843 us/op
+WorkloadActual  88: 8192 op, 667907600.00 ns, 81.5317 us/op
+WorkloadActual  89: 8192 op, 622022700.00 ns, 75.9305 us/op
+WorkloadActual  90: 8192 op, 613113700.00 ns, 74.8430 us/op
+WorkloadActual  91: 8192 op, 658432700.00 ns, 80.3751 us/op
+WorkloadActual  92: 8192 op, 615618300.00 ns, 75.1487 us/op
+WorkloadActual  93: 8192 op, 614034000.00 ns, 74.9553 us/op
+WorkloadActual  94: 8192 op, 644052000.00 ns, 78.6196 us/op
+WorkloadActual  95: 8192 op, 612401500.00 ns, 74.7560 us/op
+WorkloadActual  96: 8192 op, 613182800.00 ns, 74.8514 us/op
+WorkloadActual  97: 8192 op, 648391900.00 ns, 79.1494 us/op
+WorkloadActual  98: 8192 op, 618815300.00 ns, 75.5390 us/op
+WorkloadActual  99: 8192 op, 629699300.00 ns, 76.8676 us/op
+WorkloadActual  100: 8192 op, 613210800.00 ns, 74.8548 us/op
 
 // AfterActualRun
-WorkloadResult   1: 8192 op, 1156806300.00 ns, 141.2117 us/op
-WorkloadResult   2: 8192 op, 1116058900.00 ns, 136.2377 us/op
-WorkloadResult   3: 8192 op, 904125600.00 ns, 110.3669 us/op
-WorkloadResult   4: 8192 op, 823574400.00 ns, 100.5340 us/op
-WorkloadResult   5: 8192 op, 717036300.00 ns, 87.5288 us/op
-WorkloadResult   6: 8192 op, 640899300.00 ns, 78.2348 us/op
-WorkloadResult   7: 8192 op, 1050728300.00 ns, 128.2627 us/op
-WorkloadResult   8: 8192 op, 885615800.00 ns, 108.1074 us/op
-WorkloadResult   9: 8192 op, 881838800.00 ns, 107.6463 us/op
-WorkloadResult  10: 8192 op, 899740600.00 ns, 109.8316 us/op
-WorkloadResult  11: 8192 op, 1184673700.00 ns, 144.6135 us/op
-WorkloadResult  12: 8192 op, 784969700.00 ns, 95.8215 us/op
-WorkloadResult  13: 8192 op, 1164421100.00 ns, 142.1412 us/op
-WorkloadResult  14: 8192 op, 794147000.00 ns, 96.9418 us/op
-WorkloadResult  15: 8192 op, 628578600.00 ns, 76.7308 us/op
-WorkloadResult  16: 8192 op, 642319900.00 ns, 78.4082 us/op
-WorkloadResult  17: 8192 op, 695105800.00 ns, 84.8518 us/op
-WorkloadResult  18: 8192 op, 627597900.00 ns, 76.6111 us/op
-WorkloadResult  19: 8192 op, 645155000.00 ns, 78.7543 us/op
-WorkloadResult  20: 8192 op, 1051298500.00 ns, 128.3323 us/op
-WorkloadResult  21: 8192 op, 648369600.00 ns, 79.1467 us/op
-WorkloadResult  22: 8192 op, 973015600.00 ns, 118.7763 us/op
-WorkloadResult  23: 8192 op, 661760800.00 ns, 80.7813 us/op
-WorkloadResult  24: 8192 op, 882978700.00 ns, 107.7855 us/op
-WorkloadResult  25: 8192 op, 772684600.00 ns, 94.3219 us/op
-WorkloadResult  26: 8192 op, 722599500.00 ns, 88.2079 us/op
-WorkloadResult  27: 8192 op, 1111279800.00 ns, 135.6543 us/op
-WorkloadResult  28: 8192 op, 666162500.00 ns, 81.3187 us/op
-WorkloadResult  29: 8192 op, 654761700.00 ns, 79.9270 us/op
-WorkloadResult  30: 8192 op, 881225200.00 ns, 107.5714 us/op
-WorkloadResult  31: 8192 op, 782308500.00 ns, 95.4966 us/op
-WorkloadResult  32: 8192 op, 719686600.00 ns, 87.8524 us/op
-WorkloadResult  33: 8192 op, 680686300.00 ns, 83.0916 us/op
-WorkloadResult  34: 8192 op, 669963500.00 ns, 81.7827 us/op
-WorkloadResult  35: 8192 op, 1042147300.00 ns, 127.2152 us/op
-WorkloadResult  36: 8192 op, 621496300.00 ns, 75.8662 us/op
-WorkloadResult  37: 8192 op, 635759000.00 ns, 77.6073 us/op
-WorkloadResult  38: 8192 op, 686954300.00 ns, 83.8567 us/op
-WorkloadResult  39: 8192 op, 619450400.00 ns, 75.6165 us/op
-WorkloadResult  40: 8192 op, 632772300.00 ns, 77.2427 us/op
-WorkloadResult  41: 8192 op, 697584800.00 ns, 85.1544 us/op
-WorkloadResult  42: 8192 op, 625523000.00 ns, 76.3578 us/op
-WorkloadResult  43: 8192 op, 860478800.00 ns, 105.0389 us/op
-WorkloadResult  44: 8192 op, 701530000.00 ns, 85.6360 us/op
-WorkloadResult  45: 8192 op, 659497100.00 ns, 80.5050 us/op
-WorkloadResult  46: 8192 op, 765653700.00 ns, 93.4636 us/op
-WorkloadResult  47: 8192 op, 883171300.00 ns, 107.8090 us/op
-WorkloadResult  48: 8192 op, 634617100.00 ns, 77.4679 us/op
-WorkloadResult  49: 8192 op, 689166000.00 ns, 84.1267 us/op
-WorkloadResult  50: 8192 op, 619578500.00 ns, 75.6321 us/op
-WorkloadResult  51: 8192 op, 643096200.00 ns, 78.5030 us/op
-WorkloadResult  52: 8192 op, 689877600.00 ns, 84.2136 us/op
-WorkloadResult  53: 8192 op, 613673800.00 ns, 74.9114 us/op
-WorkloadResult  54: 8192 op, 643544700.00 ns, 78.5577 us/op
-WorkloadResult  55: 8192 op, 1029718100.00 ns, 125.6980 us/op
-WorkloadResult  56: 8192 op, 619322800.00 ns, 75.6009 us/op
-WorkloadResult  57: 8192 op, 641416700.00 ns, 78.2979 us/op
-WorkloadResult  58: 8192 op, 690930100.00 ns, 84.3421 us/op
-WorkloadResult  59: 8192 op, 618583000.00 ns, 75.5106 us/op
-WorkloadResult  60: 8192 op, 636705100.00 ns, 77.7228 us/op
-WorkloadResult  61: 8192 op, 681644700.00 ns, 83.2086 us/op
-WorkloadResult  62: 8192 op, 619842700.00 ns, 75.6644 us/op
-WorkloadResult  63: 8192 op, 820246600.00 ns, 100.1278 us/op
-WorkloadResult  64: 8192 op, 847758600.00 ns, 103.4862 us/op
-WorkloadResult  65: 8192 op, 640191600.00 ns, 78.1484 us/op
-WorkloadResult  66: 8192 op, 617622000.00 ns, 75.3933 us/op
-WorkloadResult  67: 8192 op, 686134600.00 ns, 83.7567 us/op
-WorkloadResult  68: 8192 op, 638519600.00 ns, 77.9443 us/op
-WorkloadResult  69: 8192 op, 623214400.00 ns, 76.0760 us/op
-WorkloadResult  70: 8192 op, 682404300.00 ns, 83.3013 us/op
-WorkloadResult  71: 8192 op, 642262600.00 ns, 78.4012 us/op
-WorkloadResult  72: 8192 op, 1006446500.00 ns, 122.8572 us/op
-WorkloadResult  73: 8192 op, 617940300.00 ns, 75.4322 us/op
-WorkloadResult  74: 8192 op, 641485600.00 ns, 78.3063 us/op
-WorkloadResult  75: 8192 op, 617913800.00 ns, 75.4289 us/op
-WorkloadResult  76: 8192 op, 683260100.00 ns, 83.4058 us/op
-WorkloadResult  77: 8192 op, 639779500.00 ns, 78.0981 us/op
-WorkloadResult  78: 8192 op, 618533700.00 ns, 75.5046 us/op
-WorkloadResult  79: 8192 op, 699818700.00 ns, 85.4271 us/op
-WorkloadResult  80: 8192 op, 901927000.00 ns, 110.0985 us/op
-WorkloadResult  81: 8192 op, 747122800.00 ns, 91.2015 us/op
-WorkloadResult  82: 8192 op, 617300500.00 ns, 75.3541 us/op
-WorkloadResult  83: 8192 op, 641836500.00 ns, 78.3492 us/op
-WorkloadResult  84: 8192 op, 686859000.00 ns, 83.8451 us/op
-WorkloadResult  85: 8192 op, 618121700.00 ns, 75.4543 us/op
-WorkloadResult  86: 8192 op, 636999900.00 ns, 77.7588 us/op
-WorkloadResult  87: 8192 op, 688244000.00 ns, 84.0142 us/op
-WorkloadResult  88: 8192 op, 701706600.00 ns, 85.6575 us/op
-WorkloadResult  89: 8192 op, 889073500.00 ns, 108.5295 us/op
-WorkloadResult  90: 8192 op, 693544100.00 ns, 84.6611 us/op
-WorkloadResult  91: 8192 op, 644114500.00 ns, 78.6273 us/op
-WorkloadResult  92: 8192 op, 620014900.00 ns, 75.6854 us/op
-WorkloadResult  93: 8192 op, 687988400.00 ns, 83.9830 us/op
-WorkloadResult  94: 8192 op, 640934400.00 ns, 78.2391 us/op
-WorkloadResult  95: 8192 op, 622862000.00 ns, 76.0330 us/op
-GC:  12 6 0 20308648 8192
+WorkloadResult   1: 8192 op, 612014600.00 ns, 74.7088 us/op
+WorkloadResult   2: 8192 op, 817718500.00 ns, 99.8192 us/op
+WorkloadResult   3: 8192 op, 775944000.00 ns, 94.7197 us/op
+WorkloadResult   4: 8192 op, 672294700.00 ns, 82.0672 us/op
+WorkloadResult   5: 8192 op, 979286300.00 ns, 119.5418 us/op
+WorkloadResult   6: 8192 op, 763849100.00 ns, 93.2433 us/op
+WorkloadResult   7: 8192 op, 617103500.00 ns, 75.3300 us/op
+WorkloadResult   8: 8192 op, 616293200.00 ns, 75.2311 us/op
+WorkloadResult   9: 8192 op, 651704500.00 ns, 79.5538 us/op
+WorkloadResult  10: 8192 op, 616223800.00 ns, 75.2226 us/op
+WorkloadResult  11: 8192 op, 616082300.00 ns, 75.2054 us/op
+WorkloadResult  12: 8192 op, 641630000.00 ns, 78.3240 us/op
+WorkloadResult  13: 8192 op, 618921700.00 ns, 75.5520 us/op
+WorkloadResult  14: 8192 op, 617415400.00 ns, 75.3681 us/op
+WorkloadResult  15: 8192 op, 613773900.00 ns, 74.9236 us/op
+WorkloadResult  16: 8192 op, 650822500.00 ns, 79.4461 us/op
+WorkloadResult  17: 8192 op, 621842200.00 ns, 75.9085 us/op
+WorkloadResult  18: 8192 op, 616420300.00 ns, 75.2466 us/op
+WorkloadResult  19: 8192 op, 649172200.00 ns, 79.2447 us/op
+WorkloadResult  20: 8192 op, 614698200.00 ns, 75.0364 us/op
+WorkloadResult  21: 8192 op, 612441900.00 ns, 74.7610 us/op
+WorkloadResult  22: 8192 op, 662494900.00 ns, 80.8710 us/op
+WorkloadResult  23: 8192 op, 617042200.00 ns, 75.3225 us/op
+WorkloadResult  24: 8192 op, 612812800.00 ns, 74.8063 us/op
+WorkloadResult  25: 8192 op, 642022400.00 ns, 78.3719 us/op
+WorkloadResult  26: 8192 op, 613253900.00 ns, 74.8601 us/op
+WorkloadResult  27: 8192 op, 612659200.00 ns, 74.7875 us/op
+WorkloadResult  28: 8192 op, 969824500.00 ns, 118.3868 us/op
+WorkloadResult  29: 8192 op, 950493000.00 ns, 116.0270 us/op
+WorkloadResult  30: 8192 op, 734558000.00 ns, 89.6677 us/op
+WorkloadResult  31: 8192 op, 624184300.00 ns, 76.1944 us/op
+WorkloadResult  32: 8192 op, 625546100.00 ns, 76.3606 us/op
+WorkloadResult  33: 8192 op, 854752700.00 ns, 104.3399 us/op
+WorkloadResult  34: 8192 op, 840945100.00 ns, 102.6544 us/op
+WorkloadResult  35: 8192 op, 755126100.00 ns, 92.1785 us/op
+WorkloadResult  36: 8192 op, 741229300.00 ns, 90.4821 us/op
+WorkloadResult  37: 8192 op, 815305400.00 ns, 99.5246 us/op
+WorkloadResult  38: 8192 op, 852795700.00 ns, 104.1010 us/op
+WorkloadResult  39: 8192 op, 900666700.00 ns, 109.9447 us/op
+WorkloadResult  40: 8192 op, 772962600.00 ns, 94.3558 us/op
+WorkloadResult  41: 8192 op, 635307100.00 ns, 77.5521 us/op
+WorkloadResult  42: 8192 op, 925080200.00 ns, 112.9248 us/op
+WorkloadResult  43: 8192 op, 709656200.00 ns, 86.6280 us/op
+WorkloadResult  44: 8192 op, 646824800.00 ns, 78.9581 us/op
+WorkloadResult  45: 8192 op, 870747100.00 ns, 106.2924 us/op
+WorkloadResult  46: 8192 op, 985559000.00 ns, 120.3075 us/op
+WorkloadResult  47: 8192 op, 687100900.00 ns, 83.8746 us/op
+WorkloadResult  48: 8192 op, 613299500.00 ns, 74.8657 us/op
+WorkloadResult  49: 8192 op, 789757700.00 ns, 96.4060 us/op
+WorkloadResult  50: 8192 op, 966230700.00 ns, 117.9481 us/op
+WorkloadResult  51: 8192 op, 796157500.00 ns, 97.1872 us/op
+WorkloadResult  52: 8192 op, 637142600.00 ns, 77.7762 us/op
+WorkloadResult  53: 8192 op, 612617900.00 ns, 74.7825 us/op
+WorkloadResult  54: 8192 op, 658094800.00 ns, 80.3338 us/op
+WorkloadResult  55: 8192 op, 614865600.00 ns, 75.0568 us/op
+WorkloadResult  56: 8192 op, 652809100.00 ns, 79.6886 us/op
+WorkloadResult  57: 8192 op, 762464600.00 ns, 93.0743 us/op
+WorkloadResult  58: 8192 op, 608780700.00 ns, 74.3141 us/op
+WorkloadResult  59: 8192 op, 631640700.00 ns, 77.1046 us/op
+WorkloadResult  60: 8192 op, 613349500.00 ns, 74.8718 us/op
+WorkloadResult  61: 8192 op, 654895600.00 ns, 79.9433 us/op
+WorkloadResult  62: 8192 op, 614398600.00 ns, 74.9998 us/op
+WorkloadResult  63: 8192 op, 607445700.00 ns, 74.1511 us/op
+WorkloadResult  64: 8192 op, 649696200.00 ns, 79.3086 us/op
+WorkloadResult  65: 8192 op, 619240100.00 ns, 75.5908 us/op
+WorkloadResult  66: 8192 op, 615881900.00 ns, 75.1809 us/op
+WorkloadResult  67: 8192 op, 644030300.00 ns, 78.6170 us/op
+WorkloadResult  68: 8192 op, 611899900.00 ns, 74.6948 us/op
+WorkloadResult  69: 8192 op, 615110900.00 ns, 75.0868 us/op
+WorkloadResult  70: 8192 op, 677443200.00 ns, 82.6957 us/op
+WorkloadResult  71: 8192 op, 611204000.00 ns, 74.6099 us/op
+WorkloadResult  72: 8192 op, 614882600.00 ns, 75.0589 us/op
+WorkloadResult  73: 8192 op, 654472000.00 ns, 79.8916 us/op
+WorkloadResult  74: 8192 op, 607783200.00 ns, 74.1923 us/op
+WorkloadResult  75: 8192 op, 612896600.00 ns, 74.8165 us/op
+WorkloadResult  76: 8192 op, 608074500.00 ns, 74.2278 us/op
+WorkloadResult  77: 8192 op, 647096600.00 ns, 78.9913 us/op
+WorkloadResult  78: 8192 op, 616391400.00 ns, 75.2431 us/op
+WorkloadResult  79: 8192 op, 628186900.00 ns, 76.6830 us/op
+WorkloadResult  80: 8192 op, 667897000.00 ns, 81.5304 us/op
+WorkloadResult  81: 8192 op, 622012100.00 ns, 75.9292 us/op
+WorkloadResult  82: 8192 op, 613103100.00 ns, 74.8417 us/op
+WorkloadResult  83: 8192 op, 658422100.00 ns, 80.3738 us/op
+WorkloadResult  84: 8192 op, 615607700.00 ns, 75.1474 us/op
+WorkloadResult  85: 8192 op, 614023400.00 ns, 74.9540 us/op
+WorkloadResult  86: 8192 op, 644041400.00 ns, 78.6183 us/op
+WorkloadResult  87: 8192 op, 612390900.00 ns, 74.7547 us/op
+WorkloadResult  88: 8192 op, 613172200.00 ns, 74.8501 us/op
+WorkloadResult  89: 8192 op, 648381300.00 ns, 79.1481 us/op
+WorkloadResult  90: 8192 op, 618804700.00 ns, 75.5377 us/op
+WorkloadResult  91: 8192 op, 629688700.00 ns, 76.8663 us/op
+WorkloadResult  92: 8192 op, 613200200.00 ns, 74.8535 us/op
+GC:  12 6 0 20309492 8192
 Threading:  0 0 8192
 
 // AfterAll
-// Benchmark Process 29004 has exited with code 0
+// Benchmark Process 18700 has exited with code 0
 
-Mean = 90.445 us, StdErr = 1.882 us (2.08%), N = 95, StdDev = 18.345 us
-Min = 74.911 us, Q1 = 77.852 us, Median = 83.406 us, Q3 = 98.535 us, Max = 144.613 us
-IQR = 20.683 us, LowerFence = 46.827 us, UpperFence = 129.560 us
-ConfidenceInterval = [84.051 us; 96.839 us] (CI 99.9%), Margin = 6.394 us (7.07% of Mean)
-Skewness = 1.42, Kurtosis = 3.97, MValue = 2.37
+Mean = 83.185 μs, StdErr = 1.315 μs (1.58%), N = 92, StdDev = 12.611 μs
+Min = 74.151 μs, Q1 = 75.052 μs, Median = 77.328 μs, Q3 = 84.563 μs, Max = 120.307 μs
+IQR = 9.511 μs, LowerFence = 60.785 μs, UpperFence = 98.830 μs
+ConfidenceInterval = [78.714 μs; 87.656 μs] (CI 99.9%), Margin = 4.471 μs (5.37% of Mean)
+Skewness = 1.62, Kurtosis = 4.47, MValue = 2.22
 
 // ***** BenchmarkRunner: Finish  *****
 
 // * Export *
   BenchmarkDotNet.Artifacts\results\DS_Gadget.SavedStatsBenchmark-report.csv
-'DS Gadget.exe' (CLR v4.0.30319: DS Gadget.exe): Loaded 'C:\WINDOWS\Microsoft.Net\assembly\GAC_MSIL\System.Management\v4.0_4.0.0.0__b03f5f7f11d50a3a\System.Management.dll'. Skipped loading symbols. Module is optimized and the debugger option 'Just My Code' is enabled.
-The thread 0x3a40 has exited with code 0 (0x0).
-'DS Gadget.exe' (CLR v4.0.30319: DS Gadget.exe): Loaded 'C:\Users\Tor\source\repos\DS-Gadget-for-Remastest\DS Gadget\bin\x86\Release\Microsoft.DotNet.PlatformAbstractions.dll'. Skipped loading symbols. Module is optimized and the debugger option 'Just My Code' is enabled.
-The thread 0xa048 has exited with code 0 (0x0).
   BenchmarkDotNet.Artifacts\results\DS_Gadget.SavedStatsBenchmark-report-github.md
   BenchmarkDotNet.Artifacts\results\DS_Gadget.SavedStatsBenchmark-report.html
 
 // * Detailed results *
 SavedStatsBenchmark.SaveStatsSwitch: DefaultJob
 Runtime = .NET Framework 4.8 (4.8.4390.0), X86 LegacyJIT; GC = Concurrent Workstation
-Mean = 90.445 us, StdErr = 1.882 us (2.08%), N = 95, StdDev = 18.345 us
-Min = 74.911 us, Q1 = 77.852 us, Median = 83.406 us, Q3 = 98.535 us, Max = 144.613 us
-IQR = 20.683 us, LowerFence = 46.827 us, UpperFence = 129.560 us
-ConfidenceInterval = [84.051 us; 96.839 us] (CI 99.9%), Margin = 6.394 us (7.07% of Mean)
-Skewness = 1.42, Kurtosis = 3.97, MValue = 2.37
+Mean = 83.185 μs, StdErr = 1.315 μs (1.58%), N = 92, StdDev = 12.611 μs
+Min = 74.151 μs, Q1 = 75.052 μs, Median = 77.328 μs, Q3 = 84.563 μs, Max = 120.307 μs
+IQR = 9.511 μs, LowerFence = 60.785 μs, UpperFence = 98.830 μs
+ConfidenceInterval = [78.714 μs; 87.656 μs] (CI 99.9%), Margin = 4.471 μs (5.37% of Mean)
+Skewness = 1.62, Kurtosis = 4.47, MValue = 2.22
 -------------------- Histogram --------------------
-[ 69.634 us ;  75.229 us) | @
-[ 75.229 us ;  85.783 us) | @@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@
-[ 85.783 us ;  97.512 us) | @@@@@@@@@
-[ 97.512 us ; 110.524 us) | @@@@@@@@@@@@@
-[110.524 us ; 118.277 us) | 
-[118.277 us ; 128.831 us) | @@@@@@
-[128.831 us ; 134.857 us) | 
-[134.857 us ; 145.411 us) | @@@@@
+[ 73.845 μs ;  81.178 μs) | @@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@
+[ 81.178 μs ;  90.168 μs) | @@@@@@
+[ 90.168 μs ;  97.501 μs) | @@@@@@@@
+[ 97.501 μs ; 106.575 μs) | @@@@@@
+[106.575 μs ; 114.501 μs) | @@
+[114.501 μs ; 121.834 μs) | @@@@@
 ---------------------------------------------------
 
 // * Summary *
 
 BenchmarkDotNet=v0.13.0, OS=Windows 10.0.19041.1110 (2004/May2020Update/20H1)
 AMD Ryzen 9 3900X, 1 CPU, 24 logical and 12 physical cores
-  [Host]     : .NET Framework 4.8 (4.8.4390.0), X86 LegacyJIT  [AttachedDebugger]
+  [Host]     : .NET Framework 4.8 (4.8.4390.0), X86 LegacyJIT
   DefaultJob : .NET Framework 4.8 (4.8.4390.0), X86 LegacyJIT
 
 
 |          Method |     Mean |    Error |   StdDev |   Median | Rank |  Gen 0 |  Gen 1 | Gen 2 | Allocated |
 |---------------- |---------:|---------:|---------:|---------:|-----:|-------:|-------:|------:|----------:|
-| SaveStatsSwitch | 90.45 us | 6.394 us | 18.35 us | 83.41 us |    1 | 1.4648 | 0.7324 |     - |      2 KB |
-
-// * Warnings *
-Environment
-  Summary -> Benchmark was executed with attached debugger
+| SaveStatsSwitch | 83.19 μs | 4.471 μs | 12.61 μs | 77.33 μs |    1 | 1.4648 | 0.7324 |     - |      2 KB |
 
 // * Hints *
 Outliers
-  SavedStatsBenchmark.SaveStatsSwitch: Default -> 5 outliers were removed (153.78 us..184.72 us)
+  SavedStatsBenchmark.SaveStatsSwitch: Default -> 8 outliers were removed (122.97 μs..166.52 μs)
 
 // * Legends *
   Mean      : Arithmetic mean of all measurements
@@ -409,15 +325,14 @@ Outliers
   Gen 1     : GC Generation 1 collects per 1000 operations
   Gen 2     : GC Generation 2 collects per 1000 operations
   Allocated : Allocated memory per single operation (managed only, inclusive, 1KB = 1024B)
-  1 us      : 1 Microsecond (0.000001 sec)
+  1 μs      : 1 Microsecond (0.000001 sec)
 
 // * Diagnostic Output - MemoryDiagnoser *
 
 
 // ***** BenchmarkRunner: End *****
 // ** Remained 0 benchmark(s) to run **
-Run time: 00:01:29 (89.68 sec), executed benchmarks: 1
+Run time: 00:01:20 (80.65 sec), executed benchmarks: 1
 
-Global total time: 00:01:31 (91.84 sec), executed benchmarks: 1
+Global total time: 00:01:22 (82.33 sec), executed benchmarks: 1
 // * Artifacts cleanup *
-The program '[19140] DS Gadget.exe' has exited with code 0 (0x0).
