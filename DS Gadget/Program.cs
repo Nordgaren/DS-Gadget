@@ -1,4 +1,5 @@
-﻿using System;
+﻿using BenchmarkDotNet.Running;
+using System;
 using System.Windows.Forms;
 
 namespace DS_Gadget
@@ -11,18 +12,19 @@ namespace DS_Gadget
         [STAThread]
         static void Main()
         {
-            Properties.Settings settings = Properties.Settings.Default;
-            if (settings.UpgradeRequired)
-            {
-                settings.Upgrade();
-                settings.UpgradeRequired = false;
-            }
+            var summary = BenchmarkRunner.Run<SavedStatsBenchmark>();
+            //Properties.Settings settings = Properties.Settings.Default;
+            //if (settings.UpgradeRequired)
+            //{
+            //    settings.Upgrade();
+            //    settings.UpgradeRequired = false;
+            //}
 
-            Application.EnableVisualStyles();
-            Application.SetCompatibleTextRenderingDefault(false);
-            Application.Run(new MainForm());
+            //Application.EnableVisualStyles();
+            //Application.SetCompatibleTextRenderingDefault(false);
+            //Application.Run(new MainForm());
 
-            settings.Save();
+            //settings.Save();
         }
     }
 }

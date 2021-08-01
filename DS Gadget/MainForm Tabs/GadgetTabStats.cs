@@ -290,6 +290,11 @@ namespace DS_Gadget
             }
         }
 
+        public void SaveStatsBenchmark(object sender)
+        {
+            SaveStats(sender);
+        }
+
         private void SaveStats(object sender)
         {
             var stat = sender as System.Windows.Forms.NumericUpDown;
