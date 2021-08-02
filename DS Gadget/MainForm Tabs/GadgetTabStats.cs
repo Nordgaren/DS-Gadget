@@ -364,6 +364,7 @@ namespace DS_Gadget
 
         private Dictionary<string, Action<decimal?>> StatsDict = new Dictionary<string, Action<decimal?>>();
 
+        //Benchmarking Methos
         internal void SavedStatsDict(NumericUpDown numericUpDown)
         {
             SaveStats(numericUpDown);
@@ -380,6 +381,7 @@ namespace DS_Gadget
             nud.Text = nud.Value.ToString(); //Update the text incase the value was the same as the previous value
         }
 
+        //Benchmarkin Method
         internal void SaveStatsSwitch(NumericUpDown numericUpDown)
         {
             SaveStatsOld(numericUpDown);
