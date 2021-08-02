@@ -1,6 +1,7 @@
 ﻿using BenchmarkDotNet.Attributes;
 using BenchmarkDotNet.Order;
 using System;
+using System.Collections.Generic;
 using System.Windows.Forms;
 
 namespace DS_Gadget
@@ -24,14 +25,14 @@ namespace DS_Gadget
             "nudCovDarkwraith", "nudCovForest", "nudCovGravelord", "nudCovDragon",
             "nudCovSunlight"
         };
-
+        
         private readonly Random rand = new Random();
 
         [Benchmark(Baseline = true)]
         public void SaveStatsSwitchBenchmark()
         {
             var i = rand.Next(NudNames.Length);
-            gadgetTabStats.SaveStatsSwitch(new NumericUpDown() {Name = NudNames[i], Value = 69});
+            gadgetTabStats.SaveStatsSwitch(new NumericUpDown() { Name = NudNames[i], Value = 69 });
         }
 
         [Benchmark]
