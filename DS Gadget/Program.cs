@@ -12,19 +12,19 @@ namespace DS_Gadget
         [STAThread]
         static void Main()
         {
-            //Properties.Settings settings = Properties.Settings.Default;
-            //if (settings.UpgradeRequired)
-            //{
-            //    settings.Upgrade();
-            //    settings.UpgradeRequired = false;
-            //}
+            Properties.Settings settings = Properties.Settings.Default;
+            if (settings.UpgradeRequired)
+            {
+                settings.Upgrade();
+                settings.UpgradeRequired = false;
+            }
 
-            //Application.EnableVisualStyles();
-            //Application.SetCompatibleTextRenderingDefault(false);
-            //Application.Run(new MainForm());
+            Application.EnableVisualStyles();
+            Application.SetCompatibleTextRenderingDefault(false);
+            Application.Run(new MainForm());
 
-            //settings.Save();
-            var summary = BenchmarkRunner.Run<SavedStatsBenchmark>();
+            settings.Save();
+            //var summary = BenchmarkRunner.Run<SavedStatsBenchmark>();
             //var summary = BenchmarkRunner.Run<LoadSavedStatsBenchmark>();
         }
     }

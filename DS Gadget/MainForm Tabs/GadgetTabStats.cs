@@ -368,10 +368,10 @@ namespace DS_Gadget
 
         public void SaveStatsReflectionLinq(NumericUpDown numericUpDown)
         {
-            SaveStatsNudLinq(numericUpDown);
+            SaveStatsNud(numericUpDown);
         }
 
-        private void SaveStatsNudLinq(object sender)
+        private void SaveStatsNud(object sender)
         {
             var nud = sender as NumericUpDown;
             SavedStatsLinq[nud.Name] = (int)nud.Value;
@@ -384,7 +384,7 @@ namespace DS_Gadget
             SaveStatsNud(numericUpDown);
         }
 
-        private void SaveStatsNud(object sender)
+        private void SaveStatsNudRef(object sender)
         {
             var nud = sender as NumericUpDown;
             SavedStats[nud.Name] = (int)nud.Value;
