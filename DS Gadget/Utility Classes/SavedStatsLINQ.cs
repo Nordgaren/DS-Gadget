@@ -6,6 +6,7 @@ namespace DS_Gadget
 {
     class SavedStatsLinq
     {
+        [Control("txtName")]
         public string Name { get; set; }
         [Control("cmbSex")]
         public int? Sex { get; set; }
