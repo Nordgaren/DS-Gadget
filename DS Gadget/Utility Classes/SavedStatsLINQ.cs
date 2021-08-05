@@ -25,7 +25,7 @@ namespace DS_Gadget
         [Control("nudEnd")]
         public int? End { get; set; }
         [Control("nudStr")]
-        public int? Str{ get; set; }
+        public int? Str { get; set; }
         [Control("nudDex")]
         public int? Dex { get; set; }
         [Control("nudRes")]
@@ -57,13 +57,13 @@ namespace DS_Gadget
             get
             {
                 //Get each property
-                var prop = typeof(SavedStats).GetProperties().FirstOrDefault(pi => pi.GetCustomAttribute<ControlAttribute>().Name == attributeName);
+                var prop = typeof(SavedStatsLinq).GetProperties().FirstOrDefault(pi => pi.GetCustomAttribute<ControlAttribute>().Name == attributeName);
                 return (int?)prop.GetValue(this, null); //Return matching Control Attribute as int?
             }
             set
             {
                 //Get each property
-                var prop = typeof(SavedStats).GetProperties().FirstOrDefault(pi => pi.GetCustomAttribute<ControlAttribute>().Name == attributeName);
+                var prop = typeof(SavedStatsLinq).GetProperties().FirstOrDefault(pi => pi.GetCustomAttribute<ControlAttribute>().Name == attributeName);
                 prop.SetValue(this, value, null); //Set the properties value
             }
         }

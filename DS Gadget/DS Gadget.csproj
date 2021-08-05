@@ -355,7 +355,7 @@
     </Compile>
     <Compile Include="Utility Classes\SavedPos.cs" />
     <Compile Include="Utility Classes\SavedStats.cs" />
-    <Compile Include="Utility Classes\SavedStatsLINQ.cs" />
+    <Compile Include="Utility Classes\SavedStatsLinq.cs" />
     <Compile Include="Utility Classes\TeamConfig.cs" />
     <Compile Include="Utility Classes\User32.cs" />
     <Compile Include="Utility Classes\VariableReference.cs" />
