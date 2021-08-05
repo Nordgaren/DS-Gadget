@@ -364,6 +364,21 @@ namespace DS_Gadget
             }
         }
 
+        SavedStatsLinq SavedStatsLinq = new SavedStatsLinq();
+
+        public void SaveStatsReflectionLinq(NumericUpDown numericUpDown)
+        {
+            SaveStatsNudLinq(numericUpDown);
+        }
+
+        private void SaveStatsNudLinq(object sender)
+        {
+            var nud = sender as NumericUpDown;
+            SavedStatsLinq[nud.Name] = (int)nud.Value;
+            nud.Text = nud.Value.ToString(); //Update the text incase the value was the same as the previous value
+        }
+
+
         public void SaveStatsReflection(NumericUpDown numericUpDown)
         {
             SaveStatsNud(numericUpDown);

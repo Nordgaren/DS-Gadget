@@ -48,5 +48,12 @@ namespace DS_Gadget
             var i = rand.Next(NudNames.Length);
             gadgetTabStats.SaveStatsReflection(new NumericUpDown() { Name = NudNames[i], Value = 69 });
         }
+
+        [Benchmark]
+        public void SaveStatsReflectLinqBenchmark()
+        {
+            var i = rand.Next(NudNames.Length);
+            gadgetTabStats.SaveStatsReflectionLinq(new NumericUpDown() { Name = NudNames[i], Value = 69 });
+        }
     }
 }
