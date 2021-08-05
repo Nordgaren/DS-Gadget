@@ -60,11 +60,23 @@ namespace DS_Gadget
 
         private readonly MainForm Main = new MainForm();
 
-        [Benchmark]
-        public void LoadSavedStatsIfStatementsAll ()
+        //public LoadSavedStatsBenchmark()
+        //{
+        //    //gadgetTabStats.MakeCollectionsPub();
+        //    gadgetTabStats.InitTab(Main);
+        //}
+
+        [Benchmark(Baseline = true)]
+        public void LoadSavedStatsIfStatementsBenchmark()
         {
             gadgetTabStats.InitTab(Main);
-            gadgetTabStats.LoadSavedStatsIf(SavedStats);
+            gadgetTabStats.LoadSavedStatsIfBenchmark(SavedStats);
         }
+
+        //[Benchmark]
+        //public void LoadSavedStatsReflectionBenchmarkl()
+        //{
+        //    gadgetTabStats.LoadSavedStatsReflection(SavedStats);
+        //}
     }
 }

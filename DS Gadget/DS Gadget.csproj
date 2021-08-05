@@ -277,6 +277,7 @@
     <Compile Include="Benchmarks\LoadSavedStatsBenchmark.cs" />
     <Compile Include="Benchmarks\_TemplateBenchmark.cs" />
     <Compile Include="Benchmarks\SavedStatsBenchmark.cs" />
+    <Compile Include="Utility Classes\ControlAttribute.cs" />
     <Compile Include="Utility Classes\DSHook.cs" />
     <Compile Include="Utility Classes\GadgetHotkey.cs" />
     <Compile Include="Utility Classes\GetTxtResourceClass.cs" />
