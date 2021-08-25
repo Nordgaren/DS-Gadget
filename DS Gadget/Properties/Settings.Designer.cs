@@ -418,5 +418,17 @@ namespace DS_Gadget.Properties {
                 this["HotkeyAI"] = value;
             }
         }
+        
+        [global::System.Configuration.UserScopedSettingAttribute()]
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+        [global::System.Configuration.DefaultSettingValueAttribute("1")]
+        public decimal HealInterval {
+            get {
+                return ((decimal)(this["HealInterval"]));
+            }
+            set {
+                this["HealInterval"] = value;
+            }
+        }
     }
 }

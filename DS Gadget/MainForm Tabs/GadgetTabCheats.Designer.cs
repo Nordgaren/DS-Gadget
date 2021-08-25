@@ -236,6 +236,7 @@
             0,
             0,
             0});
+            this.nudHealInterval.ValueChanged += new System.EventHandler(this.nudHealInterval_ValueChanged);
             // 
             // cbxRefill
             // 

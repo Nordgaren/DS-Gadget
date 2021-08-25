@@ -1,5 +1,4 @@
 ﻿using System;
-using System.Diagnostics;
 using System.Threading;
 using System.Threading.Tasks;
 using System.Timers;
@@ -13,6 +12,7 @@ namespace DS_Gadget
             InitializeComponent();
             Timer.Elapsed += RefillHP; // Timer elapsed method to call when triggered
             Timer.AutoReset = false; // Do not reset the timer when it is finished
+            nudHealInterval.Value = Settings.HealInterval;
         }
 
         public override void ResetTab()
@@ -259,6 +259,11 @@ namespace DS_Gadget
         private void cbxAllNoMove_CheckedChanged(object sender, EventArgs e)
         {
             Hook.SetAllNoMove(cbxAllNoMove.Checked);
+        }
+
+        private void nudHealInterval_ValueChanged(object sender, EventArgs e)
+        {
+            Settings.HealInterval = nudHealInterval.Value;
         }
     }
 }
