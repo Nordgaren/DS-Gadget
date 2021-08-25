@@ -129,7 +129,6 @@ namespace DS_Gadget
         {
             try
             {
-                throw new NullReferenceException();
                 DSClass charClass = cmbClass.SelectedItem as DSClass;
                 int sl = charClass.SoulLevel;
                 sl += vitality - charClass.Vitality;
