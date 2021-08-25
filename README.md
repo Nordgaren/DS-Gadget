@@ -31,6 +31,12 @@ You can also try adding DS Gadget as an exception to your antivirus
 **[Stagmattica](https://github.com/Stagmattica)** Helped me get started with DS Gadget   
 
 # Change Log  
+###  Prerelease 0.14.4.1)  
+* Hotfix for Heal Timer which allows the heal timer to heal to full HP when HP is buffed  
+
+* Heal timer saves value  
+
+* Bug hunting code - If you get a pop up about a log file, please post said log file to the Issues page (It will be in your DS Gadget Folder) 
 
 ###  Prerelease 0.14.4)  
 **Update to Resources/Systems/Bonfires.txt, Resources/Equipment/Rings/Rings.txt, Resources/Equipment/Items/Spells.txt, Resources/Equipment/Items/UsableItems.txt, /Equipment/Weapons/SpellTools.txt and Resources/Equipment/Weapons/Shields.txt**  
