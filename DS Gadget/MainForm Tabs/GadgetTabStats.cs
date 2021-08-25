@@ -127,17 +127,36 @@ namespace DS_Gadget
 
         private int CalculateSL(int vitality, int attunement, int endurance, int strength, int dexterity, int resistance, int intelligence, int faith)
         {
-            DSClass charClass = cmbClass.SelectedItem as DSClass;
-            int sl = charClass.SoulLevel;
-            sl += vitality - charClass.Vitality;
-            sl += attunement - charClass.Attunement;
-            sl += endurance - charClass.Endurance;
-            sl += strength - charClass.Strength;
-            sl += dexterity - charClass.Dexterity;
-            sl += resistance - charClass.Resistance;
-            sl += intelligence - charClass.Intelligence;
-            sl += faith - charClass.Faith;
-            return sl;
+            try
+            {
+                throw new NullReferenceException();
+                DSClass charClass = cmbClass.SelectedItem as DSClass;
+                int sl = charClass.SoulLevel;
+                sl += vitality - charClass.Vitality;
+                sl += attunement - charClass.Attunement;
+                sl += endurance - charClass.Endurance;
+                sl += strength - charClass.Strength;
+                sl += dexterity - charClass.Dexterity;
+                sl += resistance - charClass.Resistance;
+                sl += intelligence - charClass.Intelligence;
+                sl += faith - charClass.Faith;
+                return sl;
+            }
+            catch (NullReferenceException eX)
+            {
+                DSClass charClass = cmbClass.SelectedItem as DSClass;
+                GadgetLogger.Log($"NullReferenceException{eX.StackTrace}");
+                foreach (var stat in typeof(DSClass).GetFields())
+                {
+                    GadgetLogger.Log($"{stat.Name} = {stat.GetValue(charClass) == null}");
+                }
+                GadgetLogger.Flush();
+
+                MessageBox.Show("NullReferenceException. Please see GadgetLog.txt for more information!", "NullReferenceException", MessageBoxButtons.OK, MessageBoxIcon.Error);
+
+                throw;
+            }
+            
         }
 
         //Get's run from MainForm when character is loaded and unloaded
