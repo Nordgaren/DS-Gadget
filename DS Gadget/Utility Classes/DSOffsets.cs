@@ -378,5 +378,9 @@ namespace DS_Gadget
 
         public const string NewGameCycleAoB = "A1 ? ? ? ? 8B 40 34 53 32";
         public const int NewGameCycleAoBOffset = 0x1;
+        public enum Misc
+        {
+            NewGame = 0x0E84192C,
+        }
     }
 }

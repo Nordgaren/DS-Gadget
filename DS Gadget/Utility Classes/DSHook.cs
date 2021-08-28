@@ -43,7 +43,6 @@ namespace DS_Gadget
         private PHPointer Unknown3;
         private PHPointer Unknown4;
         private PHPointer NewGameCycleBase;
-        private PHPointer NewGameCyclePointer;
 
         private PHPointer FuncItemGet;
         private PHPointer FuncLevelUp;
@@ -126,8 +125,6 @@ namespace DS_Gadget
                     Version = $"Unknown 0x{version:X8}";
                     break;
             }
-
-            NewGameCyclePointer = CreateBasePointer(NewGameCycleBase.ReadIntPtr(0x0));
         }
 
         private void DSHook_OnUnhooked(object sender, PHEventArgs e)
@@ -295,11 +292,6 @@ namespace DS_Gadget
             AnimData.WriteSingle((int)DSOffsets.AnimData.PlaySpeed, speed);
         }
 
-        public int NewGame
-        {
-            get => NewGameCyclePointer.ReadInt32(0x3C);
-            set => NewGameCyclePointer.WriteInt32(0x3C, value);
-        }
         #endregion
 
         #region Stats Tab
@@ -871,6 +863,12 @@ namespace DS_Gadget
                 // But I don't, strictly speaking, really care
                 Gestures.WriteFlag32(offset, 1, true);
             }
+        }
+
+        public int NewGame
+        {
+            get => NewGameCycleBase.ReadInt32((int)DSOffsets.Misc.NewGame);
+            set => NewGameCycleBase.WriteInt32((int)DSOffsets.Misc.NewGame, value);
         }
         #endregion
 
