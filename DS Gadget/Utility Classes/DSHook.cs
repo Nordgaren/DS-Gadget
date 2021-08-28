@@ -42,7 +42,8 @@ namespace DS_Gadget
         private PHPointer Unknown2;
         private PHPointer Unknown3;
         private PHPointer Unknown4;
-        private PHPointer NewGameCycleBase;
+        public PHPointer NewGameCycleBase;
+        public PHPointer NewGameCyclePointer;
 
         private PHPointer FuncItemGet;
         private PHPointer FuncLevelUp;
@@ -125,6 +126,7 @@ namespace DS_Gadget
                     Version = $"Unknown 0x{version:X8}";
                     break;
             }
+            NewGameCyclePointer = CreateBasePointer(NewGameCycleBase.ReadIntPtr(0x0));
         }
 
         private void DSHook_OnUnhooked(object sender, PHEventArgs e)
@@ -867,8 +869,8 @@ namespace DS_Gadget
 
         public int NewGame
         {
-            get => NewGameCycleBase.ReadInt32((int)DSOffsets.Misc.NewGame);
-            set => NewGameCycleBase.WriteInt32((int)DSOffsets.Misc.NewGame, value);
+            get => NewGameCyclePointer.ReadInt32((int)DSOffsets.Misc.NewGame);
+            set => NewGameCyclePointer.WriteInt32((int)DSOffsets.Misc.NewGame, value);
         }
         #endregion
 
