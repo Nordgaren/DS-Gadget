@@ -43,11 +43,14 @@
             this.SearchAllCheckbox = new System.Windows.Forms.CheckBox();
             this.lblSearch = new System.Windows.Forms.Label();
             this.searchBox = new System.Windows.Forms.TextBox();
+            this.nudNewGame = new System.Windows.Forms.NumericUpDown();
+            this.lblNewGame = new System.Windows.Forms.Label();
             gbxEventFlags = new System.Windows.Forms.GroupBox();
             lblEventFlagsID = new System.Windows.Forms.Label();
             label1 = new System.Windows.Forms.Label();
             gbxEventFlags.SuspendLayout();
             this.groupBoxHair.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.nudNewGame)).BeginInit();
             this.SuspendLayout();
             // 
             // gbxEventFlags
@@ -240,10 +243,30 @@
             this.searchBox.TextChanged += new System.EventHandler(this.searchBox_TextChanged);
             this.searchBox.KeyDown += new System.Windows.Forms.KeyEventHandler(this.KeyPressed);
             // 
+            // nudNewGame
+            // 
+            this.nudNewGame.Location = new System.Drawing.Point(420, 132);
+            this.nudNewGame.Name = "nudNewGame";
+            this.nudNewGame.Size = new System.Drawing.Size(50, 26);
+            this.nudNewGame.TabIndex = 30;
+            this.nudNewGame.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
+            this.nudNewGame.ValueChanged += new System.EventHandler(this.nudNewGame_ValueChanged);
+            // 
+            // lblNewGame
+            // 
+            this.lblNewGame.AutoSize = true;
+            this.lblNewGame.Location = new System.Drawing.Point(378, 136);
+            this.lblNewGame.Name = "lblNewGame";
+            this.lblNewGame.Size = new System.Drawing.Size(42, 20);
+            this.lblNewGame.TabIndex = 31;
+            this.lblNewGame.Text = "NG+";
+            // 
             // GadgetTabMisc
             // 
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Inherit;
             this.AutoSize = true;
+            this.Controls.Add(this.lblNewGame);
+            this.Controls.Add(this.nudNewGame);
             this.Controls.Add(this.groupBoxHair);
             this.Controls.Add(this.btnUnlockGestures);
             this.Controls.Add(gbxEventFlags);
@@ -253,7 +276,9 @@
             gbxEventFlags.PerformLayout();
             this.groupBoxHair.ResumeLayout(false);
             this.groupBoxHair.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.nudNewGame)).EndInit();
             this.ResumeLayout(false);
+            this.PerformLayout();
 
         }
 
@@ -271,5 +296,7 @@
         private System.Windows.Forms.TextBox searchBox;
         private System.Windows.Forms.Label lblSearch;
         private System.Windows.Forms.CheckBox SearchAllCheckbox;
+        private System.Windows.Forms.NumericUpDown nudNewGame;
+        private System.Windows.Forms.Label lblNewGame;
     }
 }

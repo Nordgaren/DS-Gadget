@@ -254,6 +254,10 @@ namespace DS_Gadget
                     lbxItems.SelectedIndex = lbxItems.Items.Count - 1; //-1 because Selected Index is 0 based and Count isn't
                     return;
                 }
+
+                //One liner meme that does the exact same thing as the code above
+                //lbxItems.SelectedIndex = ((lbxItems.SelectedIndex - 1) + lbxItems.Items.Count) % lbxItems.Items.Count;
+                //return;
             }
 
             //Scroll down through Items listbox and go back to top at end
@@ -273,6 +277,11 @@ namespace DS_Gadget
                     lbxItems.SelectedIndex = 0;
                     return;
                 }
+
+                //One liner meme that does the exact same thing as the code above
+                //lbxItems.SelectedIndex = (lbxItems.SelectedIndex + 1) % lbxItems.Items.Count;
+                //return;
+
             }
 
 

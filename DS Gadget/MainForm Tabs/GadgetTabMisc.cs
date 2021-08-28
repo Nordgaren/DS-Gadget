@@ -38,6 +38,11 @@ namespace DS_Gadget
             cmbCategory.SelectedIndex = 0;
         }
 
+        public override void UpdateTab()
+        {
+            nudNewGame.Value = Hook.NewGame;
+        }
+
         private void cmbCategory_SelectedIndexChanged(object sender, EventArgs e)
         {
             lbxItems.Items.Clear();
@@ -233,6 +238,12 @@ namespace DS_Gadget
             //checkbox changed, refresh search filter (if searchBox is not empty)
             if (searchBox.Text != "")
                 FilterItems();
+        }
+
+        private void nudNewGame_ValueChanged(object sender, EventArgs e)
+        {
+            if (!Reading)
+                Hook.NewGame = (int)nudNewGame.Value;
         }
     }
 }
