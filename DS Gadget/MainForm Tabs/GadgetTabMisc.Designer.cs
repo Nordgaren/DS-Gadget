@@ -246,6 +246,11 @@
             // nudNewGame
             // 
             this.nudNewGame.Location = new System.Drawing.Point(420, 132);
+            this.nudNewGame.Maximum = new decimal(new int[] {
+            8,
+            0,
+            0,
+            0});
             this.nudNewGame.Name = "nudNewGame";
             this.nudNewGame.Size = new System.Drawing.Size(50, 26);
             this.nudNewGame.TabIndex = 30;
