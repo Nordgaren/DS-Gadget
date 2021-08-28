@@ -31,6 +31,9 @@ You can also try adding DS Gadget as an exception to your antivirus
 **[Stagmattica](https://github.com/Stagmattica)** Helped me get started with DS Gadget   
 
 # Change Log  
+### Prerelease 0.14.5
+* NG+ support in the misc tab. Allows user to modify NG+  
+
 ###  Prerelease 0.14.4.2)  
 * Hotfix for Heal Timer which allows the heal timer to heal to full HP when HP is buffed  
 
