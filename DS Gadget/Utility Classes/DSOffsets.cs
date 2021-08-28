@@ -377,7 +377,8 @@ namespace DS_Gadget
         public const int FuncItemDropUnknown2AOBOffset = 4;
 
         public const string NewGameCycleAoB = "A1 ? ? ? ? 8B 40 34 53 32";
-        public readonly int[] NewGameCycleAoBOffset = new int[] { 0x1, 0x0 };
+        public const int NewGameCycleAoBOffset1 = 0x1;
+        public const int NewGameCycleAoBOffset2 = 0x0;
         public enum Misc
         {
             NewGame = 0x3C,
