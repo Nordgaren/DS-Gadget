@@ -5,7 +5,7 @@ namespace DS_Gadget
 {
     class GetTxtResourceClass
     {
-        private static string ExeDir = Path.GetDirectoryName(System.Reflection.Assembly.GetExecutingAssembly().Location);
+        public static readonly string ExeDir = Path.GetDirectoryName(System.Reflection.Assembly.GetExecutingAssembly().Location);
 
         public static string GetTxtResource(string filePath)
         {
