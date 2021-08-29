@@ -11,7 +11,7 @@ namespace DS_Gadget
 {
     public class SavedPos : IComparable<SavedPos>
     {
-        
+        private static string ExeDir = Path.GetDirectoryName(System.Reflection.Assembly.GetExecutingAssembly().Location);
 
         [XmlAnyElement("NameXmlComment")]
         public XmlComment NameXmlComment { get { return GetType().GetXmlComment(); } set { } }
@@ -45,7 +45,7 @@ namespace DS_Gadget
 
         private static XmlSerializer XML = new XmlSerializer(typeof(List<SavedPos>));
 
-        private static string SavedPositions = "Resources/SavedPositions.xml";
+        private static string SavedPositions = $"{ExeDir}/Resources/SavedPositions.xml";
 
         public static List<SavedPos> GetSavedPositions()
         {
