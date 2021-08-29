@@ -31,6 +31,7 @@ namespace DS_Gadget
         private PHPointer CharMapData;
         private PHPointer AnimData;
         private PHPointer CharPosData;
+        private PHPointer NewGameCycle;
         private PHPointer CharData2;
         private PHPointer Gestures;
         private PHPointer GraphicsData;
@@ -42,7 +43,6 @@ namespace DS_Gadget
         private PHPointer Unknown2;
         private PHPointer Unknown3;
         private PHPointer Unknown4;
-        private PHPointer NewGameCycle;
 
         private PHPointer FuncItemGet;
         private PHPointer FuncLevelUp;
@@ -79,7 +79,8 @@ namespace DS_Gadget
             CharMapData = CreateChildPointer(CharData1, (int)DSOffsets.CharData1.CharMapDataPtr);
             AnimData = CreateChildPointer(CharMapData, (int)DSOffsets.CharMapData.AnimDataPtr);
             CharPosData = CreateChildPointer(CharMapData, (int)DSOffsets.CharMapData.CharPosDataPtr);
-            CharData2 = RegisterAbsoluteAOB(DSOffsets.CharData2AOB, DSOffsets.CharData2AOBOffset, DSOffsets.CharData2Offset1, DSOffsets.CharData2Offset2);
+            NewGameCycle = RegisterAbsoluteAOB(DSOffsets.CharData2AOB, DSOffsets.CharData2AOBOffset, DSOffsets.CharData2Offset1);
+            CharData2 = CreateChildPointer(NewGameCycle, DSOffsets.CharData2Offset2);
             Gestures = CreateChildPointer(CharData2, (int)DSOffsets.CharData2.GesturesUnlockedPtr);
             GraphicsData = RegisterAbsoluteAOB(DSOffsets.GraphicsDataAOB, DSOffsets.GraphicsDataAOBOffset, DSOffsets.GraphicsDataOffset1, DSOffsets.GraphicsDataOffset2);
             WorldState = RegisterAbsoluteAOB(DSOffsets.WorldStateAOB, DSOffsets.WorldStateAOBOffset, DSOffsets.WorldStateOffset1);
@@ -90,7 +91,6 @@ namespace DS_Gadget
             Unknown2 = RegisterAbsoluteAOB(DSOffsets.Unknown2AOB, DSOffsets.Unknown2AOBOffset, DSOffsets.Unknown2Offset1);
             Unknown3 = RegisterAbsoluteAOB(DSOffsets.Unknown3AOB, DSOffsets.Unknown3AOBOffset, DSOffsets.Unknown3Offset1);
             Unknown4 = RegisterAbsoluteAOB(DSOffsets.Unknown4AOB, DSOffsets.Unknown4AOBOffset, DSOffsets.Unknown4Offset1, DSOffsets.Unknown4Offset2);
-            NewGameCycle = RegisterAbsoluteAOB(DSOffsets.CharData2AOB, DSOffsets.CharData2AOBOffset, DSOffsets.CharData2Offset1);
 
             FuncItemGet = RegisterAbsoluteAOB(DSOffsets.FuncItemGetAOB);
             FuncLevelUp = RegisterAbsoluteAOB(DSOffsets.FuncLevelUpAOB);
