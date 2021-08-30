@@ -32,7 +32,11 @@ You can also try adding DS Gadget as an exception to your antivirus
 
 # Change Log  
 ### Prerelease 0.14.5
+* **Update to Resources/Equipment/Weapons/MeleeWeapons.txt**
+
 * NG+ support in the misc tab. Allows user to modify NG+  
+
+* Added 4 king sword and stick to weapons
 
 ###  Prerelease 0.14.4.2)  
 * Hotfix for Heal Timer which allows the heal timer to heal to full HP when HP is buffed  
