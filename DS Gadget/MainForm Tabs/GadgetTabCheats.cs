@@ -135,12 +135,12 @@ namespace DS_Gadget
 
         System.Timers.Timer Timer = new System.Timers.Timer();
 
-        private void RefillTimer()
+        private bool RefillTimer()
         {
             double time = (double)nudHealInterval.Value;
 
             //Set interval in ms, record hp and start the timer
-            Timer.Interval = time * 1000; 
+            Timer.Interval = time * 1000;
             var hp = Hook.Health;
             Timer.Start();
 
@@ -153,6 +153,8 @@ namespace DS_Gadget
                     hp = Hook.Health;
                 }
             }
+            //Hope returning bool fixes random crashes
+            return true;
         }
 
         private void RefillHP(object sender, ElapsedEventArgs e)
