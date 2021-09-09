@@ -141,31 +141,20 @@ namespace DS_Gadget
 
         private int CalculateSL(int vitality, int attunement, int endurance, int strength, int dexterity, int resistance, int intelligence, int faith)
         {
+            DSClass charClass = cmbClass.SelectedItem as DSClass;
+            if (charClass == null)
+                return 0;
 
-            try
-            {
-                DSClass charClass = cmbClass.SelectedItem as DSClass;
-                if (charClass == null)
-                    return 0;
-
-                int sl = charClass.SoulLevel;
-                sl += vitality - charClass.Vitality;
-                sl += attunement - charClass.Attunement;
-                sl += endurance - charClass.Endurance;
-                sl += strength - charClass.Strength;
-                sl += dexterity - charClass.Dexterity;
-                sl += resistance - charClass.Resistance;
-                sl += intelligence - charClass.Intelligence;
-                sl += faith - charClass.Faith;
-                return sl;
-
-            }
-            catch (NullReferenceException eX)
-            {
-                GadgetLogger.Log($"Exception{eX.StackTrace}");
-                MessageBox.Show("Exception. Please see GadgetLog.txt for more information!", "Exception", MessageBoxButtons.OK, MessageBoxIcon.Error);
-                throw eX;
-            }
+            int sl = charClass.SoulLevel;
+            sl += vitality - charClass.Vitality;
+            sl += attunement - charClass.Attunement;
+            sl += endurance - charClass.Endurance;
+            sl += strength - charClass.Strength;
+            sl += dexterity - charClass.Dexterity;
+            sl += resistance - charClass.Resistance;
+            sl += intelligence - charClass.Intelligence;
+            sl += faith - charClass.Faith;
+            return sl;
         }
 
         //Get's run from MainForm when character is loaded and unloaded
