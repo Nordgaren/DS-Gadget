@@ -139,6 +139,7 @@ namespace DS_Gadget
         {
             _ = ChangeColor(Color.DarkGray);
             ApplyItem();
+            SetIdLabel();
         }
 
         private void ApplyItem()
