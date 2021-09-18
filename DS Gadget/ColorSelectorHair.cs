@@ -35,11 +35,6 @@ namespace DS_Gadget
                 cbxGlow.Checked = true;
             else
                 cbxGlow.Checked = false;
-
-            if (Hook.EyeColorRed > 1 || Hook.EyeColorGreen > 1 || Hook.EyeColorBlue > 1)
-                cbxGlow.Checked = true;
-            else
-                cbxGlow.Checked = false;
         }
 
         private void pbxColorSelector_MouseMove(object sender, MouseEventArgs e)
