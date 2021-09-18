@@ -21,6 +21,18 @@ namespace DS_Gadget
             G = Hook.HairColorGreen;
             B = Hook.HairColorBlue;
             SetGlowStatus();
+            CenterGBXLabel();
+        }
+
+        private void CenterGBXLabel()
+        {
+            Label label = new Label();
+            label.Text = gbxColorSelector.Text;
+            gbxColorSelector.Text = "";
+            label.Left = gbxColorSelector.Left + (gbxColorSelector.Width - label.Width) / 2;
+            label.Top = gbxColorSelector.Top + 2; // 2 is an example : adjust the constant
+            label.Parent = gbxColorSelector.Parent;
+            label.BringToFront();
         }
 
         Bitmap PixelData;
