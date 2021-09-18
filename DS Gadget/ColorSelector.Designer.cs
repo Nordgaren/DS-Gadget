@@ -40,9 +40,11 @@ namespace DS_Gadget
             this.nudBlue = new System.Windows.Forms.NumericUpDown();
             this.nudGreen = new System.Windows.Forms.NumericUpDown();
             this.nudRed = new System.Windows.Forms.NumericUpDown();
-            this.lblHexValue = new System.Windows.Forms.Label();
             this.lblsmallScreen = new System.Windows.Forms.Label();
             this.groupBox1 = new System.Windows.Forms.GroupBox();
+            this.txtHexColor = new System.Windows.Forms.TextBox();
+            this.label1 = new System.Windows.Forms.Label();
+            this.lblHexColor = new System.Windows.Forms.Label();
             this.btnApply = new System.Windows.Forms.Button();
             this.btnCancel = new System.Windows.Forms.Button();
             ((System.ComponentModel.ISupportInitialize)(this.pbxColorSelector)).BeginInit();
@@ -68,11 +70,11 @@ namespace DS_Gadget
             // 
             this.pbxColorSelector.Anchor = System.Windows.Forms.AnchorStyles.Left;
             this.pbxColorSelector.ErrorImage = null;
-            this.pbxColorSelector.Image = global::DS_Gadget.Properties.Resources.rgbSpectrum;
+            this.pbxColorSelector.Image = global::DS_Gadget.Properties.Resources.rgbSpectrum1;
             this.pbxColorSelector.InitialImage = global::DS_Gadget.Properties.Resources.rgbSpectrum;
-            this.pbxColorSelector.Location = new System.Drawing.Point(75, 25);
+            this.pbxColorSelector.Location = new System.Drawing.Point(75, 15);
             this.pbxColorSelector.Name = "pbxColorSelector";
-            this.pbxColorSelector.Size = new System.Drawing.Size(226, 156);
+            this.pbxColorSelector.Size = new System.Drawing.Size(226, 166);
             this.pbxColorSelector.SizeMode = System.Windows.Forms.PictureBoxSizeMode.AutoSize;
             this.pbxColorSelector.TabIndex = 1;
             this.pbxColorSelector.TabStop = false;
@@ -93,13 +95,13 @@ namespace DS_Gadget
             this.gbxColorSelector.Size = new System.Drawing.Size(499, 144);
             this.gbxColorSelector.TabIndex = 2;
             this.gbxColorSelector.TabStop = false;
-            this.gbxColorSelector.Text = "7";
+            this.gbxColorSelector.Text = "Selected Color";
             // 
             // pnlSelectedScreen
             // 
-            this.pnlSelectedScreen.Location = new System.Drawing.Point(293, 36);
+            this.pnlSelectedScreen.Location = new System.Drawing.Point(327, 34);
             this.pnlSelectedScreen.Name = "pnlSelectedScreen";
-            this.pnlSelectedScreen.Size = new System.Drawing.Size(183, 100);
+            this.pnlSelectedScreen.Size = new System.Drawing.Size(83, 90);
             this.pnlSelectedScreen.TabIndex = 6;
             // 
             // lblBlue
@@ -141,6 +143,7 @@ namespace DS_Gadget
             this.nudBlue.Size = new System.Drawing.Size(120, 26);
             this.nudBlue.TabIndex = 2;
             this.nudBlue.ValueChanged += new System.EventHandler(this.nudBlue_ValueChanged);
+            this.nudBlue.Leave += new System.EventHandler(this.nud_Leave);
             // 
             // nudGreen
             // 
@@ -154,6 +157,7 @@ namespace DS_Gadget
             this.nudGreen.Size = new System.Drawing.Size(120, 26);
             this.nudGreen.TabIndex = 1;
             this.nudGreen.ValueChanged += new System.EventHandler(this.nudGreen_ValueChanged);
+            this.nudGreen.Leave += new System.EventHandler(this.nud_Leave);
             // 
             // nudRed
             // 
@@ -167,35 +171,56 @@ namespace DS_Gadget
             this.nudRed.Size = new System.Drawing.Size(120, 26);
             this.nudRed.TabIndex = 0;
             this.nudRed.ValueChanged += new System.EventHandler(this.nudRed_ValueChanged);
-            // 
-            // lblHexValue
-            // 
-            this.lblHexValue.Anchor = System.Windows.Forms.AnchorStyles.Left;
-            this.lblHexValue.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.lblHexValue.Location = new System.Drawing.Point(75, 295);
-            this.lblHexValue.Name = "lblHexValue";
-            this.lblHexValue.Size = new System.Drawing.Size(176, 30);
-            this.lblHexValue.TabIndex = 3;
+            this.nudRed.Leave += new System.EventHandler(this.nud_Leave);
             // 
             // lblsmallScreen
             // 
             this.lblsmallScreen.Anchor = System.Windows.Forms.AnchorStyles.Right;
             this.lblsmallScreen.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.lblsmallScreen.Location = new System.Drawing.Point(311, 295);
+            this.lblsmallScreen.Location = new System.Drawing.Point(327, 295);
             this.lblsmallScreen.Name = "lblsmallScreen";
             this.lblsmallScreen.Size = new System.Drawing.Size(83, 30);
             this.lblsmallScreen.TabIndex = 4;
             // 
             // groupBox1
             // 
+            this.groupBox1.Controls.Add(this.txtHexColor);
+            this.groupBox1.Controls.Add(this.label1);
+            this.groupBox1.Controls.Add(this.lblHexColor);
             this.groupBox1.Controls.Add(this.lblsmallScreen);
             this.groupBox1.Controls.Add(this.pbxColorSelector);
-            this.groupBox1.Controls.Add(this.lblHexValue);
             this.groupBox1.Location = new System.Drawing.Point(8, 42);
             this.groupBox1.Name = "groupBox1";
             this.groupBox1.Size = new System.Drawing.Size(499, 348);
             this.groupBox1.TabIndex = 5;
             this.groupBox1.TabStop = false;
+            // 
+            // txtHexColor
+            // 
+            this.txtHexColor.Cursor = System.Windows.Forms.Cursors.IBeam;
+            this.txtHexColor.Location = new System.Drawing.Point(75, 298);
+            this.txtHexColor.Name = "txtHexColor";
+            this.txtHexColor.Size = new System.Drawing.Size(100, 26);
+            this.txtHexColor.TabIndex = 9;
+            this.txtHexColor.TextChanged += new System.EventHandler(this.txtHexColor_TextChanged);
+            // 
+            // label1
+            // 
+            this.label1.AutoSize = true;
+            this.label1.Location = new System.Drawing.Point(320, 275);
+            this.label1.Name = "label1";
+            this.label1.Size = new System.Drawing.Size(104, 20);
+            this.label1.TabIndex = 8;
+            this.label1.Text = "Preview Color";
+            // 
+            // lblHexColor
+            // 
+            this.lblHexColor.AutoSize = true;
+            this.lblHexColor.Location = new System.Drawing.Point(71, 275);
+            this.lblHexColor.Name = "lblHexColor";
+            this.lblHexColor.Size = new System.Drawing.Size(82, 20);
+            this.lblHexColor.TabIndex = 7;
+            this.lblHexColor.Text = "Hex Value";
             // 
             // btnApply
             // 
@@ -254,10 +279,12 @@ namespace DS_Gadget
         private System.Windows.Forms.NumericUpDown nudGreen;
         private System.Windows.Forms.NumericUpDown nudRed;
         private System.Windows.Forms.Panel pnlSelectedScreen;
-        private System.Windows.Forms.Label lblHexValue;
         private System.Windows.Forms.Label lblsmallScreen;
         private System.Windows.Forms.GroupBox groupBox1;
         private System.Windows.Forms.Button btnApply;
         private System.Windows.Forms.Button btnCancel;
+        private System.Windows.Forms.Label label1;
+        private System.Windows.Forms.Label lblHexColor;
+        private System.Windows.Forms.TextBox txtHexColor;
     }
 }

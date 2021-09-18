@@ -739,11 +739,19 @@ namespace DS_Gadget
         public int EquipLeft2Idx => CharData2.ReadInt32((int)DSOffsets.CharData2.EquipLeft2Idx);
         public int EquipLeft2ID => CharData2.ReadInt32((int)DSOffsets.CharData2.EquipLeft2ID);
         public int EquipArrow1Idx => CharData2.ReadInt32((int)DSOffsets.CharData2.EquipArrow1Idx);
-        public int EquipArrow1ID => CharData2.ReadInt32((int)DSOffsets.CharData2.EquipArrow1ID);
+        public int EquipArrow1ID
+        {
+            get => CharData2.ReadInt32((int)DSOffsets.CharData2.EquipArrow1ID);
+            set => CharData2.WriteInt32((int)DSOffsets.CharData2.EquipArrow1ID, value);
+        }
         public int EquipArrow2Idx => CharData2.ReadInt32((int)DSOffsets.CharData2.EquipArrow2Idx);
         public int EquipArrow2ID => CharData2.ReadInt32((int)DSOffsets.CharData2.EquipArrow2ID);
         public int EquipBolt1Idx => CharData2.ReadInt32((int)DSOffsets.CharData2.EquipBolt1Idx);
-        public int EquipBolt1ID => CharData2.ReadInt32((int)DSOffsets.CharData2.EquipBolt1ID);
+        public int EquipBolt1ID
+        {
+            get => CharData2.ReadInt32((int)DSOffsets.CharData2.EquipBolt1ID);
+            set => CharData2.WriteInt32((int)DSOffsets.CharData2.EquipBolt1ID, value);
+        }
         public int EquipBolt2Idx => CharData2.ReadInt32((int)DSOffsets.CharData2.EquipBolt2Idx);
         public int EquipBolt2ID => CharData2.ReadInt32((int)DSOffsets.CharData2.EquipBolt2ID);
         public int EquipHelmetIdx => CharData2.ReadInt32((int)DSOffsets.CharData2.EquipHelmetIdx);

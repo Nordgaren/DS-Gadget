@@ -3,3 +3,8 @@ Male Hair, 0x10000000, Resources/Equipment/Armor/MaleHair.txt, false
 Female Hair, 0x10000000, Resources/Equipment/Armor/FemaleHair.txt, false
 Armor, 0x10000000, Resources/Equipment/Armor/Armor.txt, false
 Mystery Armor, 0x10000000, Resources/Equipment/Armor/MysteryArmor.txt, true
+Melee Weapons, 0x00000000, Resources/Equipment/Weapons/MeleeWeapons.txt, false
+Ranged Weapons, 0x00000000, Resources/Equipment/Weapons/RangedWeapons.txt, false
+Ammo, 0x00000000, Resources/Equipment/Weapons/Ammo.txt, false
+Shields, 0x00000000, Resources/Equipment/Weapons/Shields.txt, false
+Spell Tools, 0x00000000, Resources/Equipment/Weapons/SpellTools.txt, false

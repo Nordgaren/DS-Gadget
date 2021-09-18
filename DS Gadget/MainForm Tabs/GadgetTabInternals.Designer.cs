@@ -56,6 +56,8 @@
             System.Windows.Forms.Label lblEquipID1;
             System.Windows.Forms.Label lblEquipIndex1;
             System.Windows.Forms.Label lblStoredItem;
+            this.txtStoredQuantity = new System.Windows.Forms.TextBox();
+            this.txtStoredMagic = new System.Windows.Forms.TextBox();
             this.nudHairID = new System.Windows.Forms.NumericUpDown();
             this.nudHairIdx = new System.Windows.Forms.NumericUpDown();
             this.txtEquipItem5ID = new System.Windows.Forms.TextBox();
@@ -96,12 +98,7 @@
             this.txtEquipRight2Idx = new System.Windows.Forms.TextBox();
             this.txtEquipRight1ID = new System.Windows.Forms.TextBox();
             this.txtEquipRight1Idx = new System.Windows.Forms.TextBox();
-            this.txtStoredQuantity = new System.Windows.Forms.TextBox();
-            this.txtStoredMagic = new System.Windows.Forms.TextBox();
             this.txtStoredItem = new System.Windows.Forms.TextBox();
-            this.cbxGlowyHair = new System.Windows.Forms.CheckBox();
-            this.gbxHairColor = new System.Windows.Forms.GroupBox();
-            this.pnlHairColor = new System.Windows.Forms.Panel();
             lblStoredQuantity = new System.Windows.Forms.Label();
             lblStoredMagic = new System.Windows.Forms.Label();
             gbxEquipment = new System.Windows.Forms.GroupBox();
@@ -133,7 +130,6 @@
             gbxEquipment.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.nudHairID)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.nudHairIdx)).BeginInit();
-            this.gbxHairColor.SuspendLayout();
             this.SuspendLayout();
             // 
             // lblStoredQuantity
@@ -146,6 +142,15 @@
             lblStoredQuantity.TabIndex = 16;
             lblStoredQuantity.Text = "Stored Quantity";
             // 
+            // txtStoredQuantity
+            // 
+            this.txtStoredQuantity.Location = new System.Drawing.Point(287, 401);
+            this.txtStoredQuantity.Margin = new System.Windows.Forms.Padding(4);
+            this.txtStoredQuantity.Name = "txtStoredQuantity";
+            this.txtStoredQuantity.ReadOnly = true;
+            this.txtStoredQuantity.Size = new System.Drawing.Size(132, 26);
+            this.txtStoredQuantity.TabIndex = 15;
+            // 
             // lblStoredMagic
             // 
             lblStoredMagic.AutoSize = true;
@@ -155,6 +160,15 @@
             lblStoredMagic.Size = new System.Drawing.Size(124, 20);
             lblStoredMagic.TabIndex = 14;
             lblStoredMagic.Text = "Stored Magic ID";
+            // 
+            // txtStoredMagic
+            // 
+            this.txtStoredMagic.Location = new System.Drawing.Point(147, 401);
+            this.txtStoredMagic.Margin = new System.Windows.Forms.Padding(4);
+            this.txtStoredMagic.Name = "txtStoredMagic";
+            this.txtStoredMagic.ReadOnly = true;
+            this.txtStoredMagic.Size = new System.Drawing.Size(132, 26);
+            this.txtStoredMagic.TabIndex = 13;
             // 
             // gbxEquipment
             // 
@@ -943,24 +957,6 @@
             lblStoredItem.TabIndex = 11;
             lblStoredItem.Text = "Stored Item ID";
             // 
-            // txtStoredQuantity
-            // 
-            this.txtStoredQuantity.Location = new System.Drawing.Point(287, 401);
-            this.txtStoredQuantity.Margin = new System.Windows.Forms.Padding(4);
-            this.txtStoredQuantity.Name = "txtStoredQuantity";
-            this.txtStoredQuantity.ReadOnly = true;
-            this.txtStoredQuantity.Size = new System.Drawing.Size(132, 26);
-            this.txtStoredQuantity.TabIndex = 15;
-            // 
-            // txtStoredMagic
-            // 
-            this.txtStoredMagic.Location = new System.Drawing.Point(147, 401);
-            this.txtStoredMagic.Margin = new System.Windows.Forms.Padding(4);
-            this.txtStoredMagic.Name = "txtStoredMagic";
-            this.txtStoredMagic.ReadOnly = true;
-            this.txtStoredMagic.Size = new System.Drawing.Size(132, 26);
-            this.txtStoredMagic.TabIndex = 13;
-            // 
             // txtStoredItem
             // 
             this.txtStoredItem.Location = new System.Drawing.Point(7, 401);
@@ -970,41 +966,10 @@
             this.txtStoredItem.Size = new System.Drawing.Size(132, 26);
             this.txtStoredItem.TabIndex = 10;
             // 
-            // cbxGlowyHair
-            // 
-            this.cbxGlowyHair.AutoSize = true;
-            this.cbxGlowyHair.Location = new System.Drawing.Point(0, 121);
-            this.cbxGlowyHair.Name = "cbxGlowyHair";
-            this.cbxGlowyHair.Size = new System.Drawing.Size(111, 24);
-            this.cbxGlowyHair.TabIndex = 20;
-            this.cbxGlowyHair.Text = "Glowy Hair";
-            this.cbxGlowyHair.UseVisualStyleBackColor = true;
-            this.cbxGlowyHair.CheckedChanged += new System.EventHandler(this.cbxGlowyHair_CheckedChanged);
-            // 
-            // gbxHairColor
-            // 
-            this.gbxHairColor.Controls.Add(this.pnlHairColor);
-            this.gbxHairColor.Controls.Add(this.cbxGlowyHair);
-            this.gbxHairColor.Location = new System.Drawing.Point(9, 455);
-            this.gbxHairColor.Name = "gbxHairColor";
-            this.gbxHairColor.Size = new System.Drawing.Size(200, 156);
-            this.gbxHairColor.TabIndex = 19;
-            this.gbxHairColor.TabStop = false;
-            this.gbxHairColor.Text = "Hair Color";
-            // 
-            // pnlHairColor
-            // 
-            this.pnlHairColor.Location = new System.Drawing.Point(16, 25);
-            this.pnlHairColor.Name = "pnlHairColor";
-            this.pnlHairColor.Size = new System.Drawing.Size(102, 84);
-            this.pnlHairColor.TabIndex = 0;
-            this.pnlHairColor.Click += new System.EventHandler(this.pnlHairColor_Click);
-            // 
             // GadgetTabInternals
             // 
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Inherit;
             this.AutoSize = true;
-            this.Controls.Add(this.gbxHairColor);
             this.Controls.Add(lblStoredQuantity);
             this.Controls.Add(this.txtStoredQuantity);
             this.Controls.Add(lblStoredMagic);
@@ -1018,8 +983,6 @@
             gbxEquipment.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.nudHairID)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.nudHairIdx)).EndInit();
-            this.gbxHairColor.ResumeLayout(false);
-            this.gbxHairColor.PerformLayout();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -1070,8 +1033,5 @@
         private System.Windows.Forms.TextBox txtStoredItem;
         private System.Windows.Forms.NumericUpDown nudHairID;
         private System.Windows.Forms.NumericUpDown nudHairIdx;
-        private System.Windows.Forms.CheckBox cbxGlowyHair;
-        private System.Windows.Forms.GroupBox gbxHairColor;
-        private System.Windows.Forms.Panel pnlHairColor;
     }
 }
