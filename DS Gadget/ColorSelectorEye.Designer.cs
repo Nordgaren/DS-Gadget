@@ -29,7 +29,7 @@ namespace DS_Gadget
         /// </summary>
         private void InitializeComponent()
         {
-            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(ColorSelectorHair));
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(ColorSelectorEye));
             this.lblColorSelector = new System.Windows.Forms.Label();
             this.pbxColorSelector = new System.Windows.Forms.PictureBox();
             this.gbxColorSelector = new System.Windows.Forms.GroupBox();
@@ -242,7 +242,7 @@ namespace DS_Gadget
             this.btnCancel.UseVisualStyleBackColor = true;
             this.btnCancel.Click += new System.EventHandler(this.btnCancel_Click);
             // 
-            // ColorSelector
+            // ColorSelectorEye
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(9F, 20F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
@@ -253,8 +253,11 @@ namespace DS_Gadget
             this.Controls.Add(this.lblColorSelector);
             this.Controls.Add(this.groupBox1);
             this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
-            this.Name = "ColorSelector";
-            this.Text = "Color Selector";
+            this.MaximumSize = new System.Drawing.Size(529, 642);
+            this.MinimumSize = new System.Drawing.Size(529, 642);
+            this.Name = "ColorSelectorEye";
+            this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
+            this.Text = "Color Selector Eyes";
             ((System.ComponentModel.ISupportInitialize)(this.pbxColorSelector)).EndInit();
             this.gbxColorSelector.ResumeLayout(false);
             this.gbxColorSelector.PerformLayout();

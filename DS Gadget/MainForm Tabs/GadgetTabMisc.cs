@@ -249,6 +249,7 @@ namespace DS_Gadget
             btnEventFlagRead.Enabled = enable;
             btnEventFlagWrite.Enabled = enable;
             pnlHairColor.Enabled = enable;
+            pnlEyeColor.Enabled = enable;
 
 
 
@@ -257,6 +258,11 @@ namespace DS_Gadget
                 SetIdLabel();
                 SetPanelColor();
                 SetGlowStatus();
+            }
+            else
+            {
+                cbxGlowyHair.Checked = false;
+                cbxGlowyEyes.Checked = false;
             }
         }
 
