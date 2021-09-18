@@ -224,6 +224,7 @@ namespace DS_Gadget
             // 
             // btnApply
             // 
+            this.btnApply.DialogResult = System.Windows.Forms.DialogResult.Cancel;
             this.btnApply.Location = new System.Drawing.Point(128, 535);
             this.btnApply.Name = "btnApply";
             this.btnApply.Size = new System.Drawing.Size(75, 45);
@@ -234,6 +235,7 @@ namespace DS_Gadget
             // 
             // btnCancel
             // 
+            this.btnCancel.DialogResult = System.Windows.Forms.DialogResult.Cancel;
             this.btnCancel.Location = new System.Drawing.Point(301, 535);
             this.btnCancel.Name = "btnCancel";
             this.btnCancel.Size = new System.Drawing.Size(75, 45);
@@ -242,7 +244,7 @@ namespace DS_Gadget
             this.btnCancel.UseVisualStyleBackColor = true;
             this.btnCancel.Click += new System.EventHandler(this.btnCancel_Click);
             // 
-            // ColorSelector
+            // ColorSelectorHair
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(9F, 20F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
@@ -253,8 +255,11 @@ namespace DS_Gadget
             this.Controls.Add(this.lblColorSelector);
             this.Controls.Add(this.groupBox1);
             this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
-            this.Name = "ColorSelector";
-            this.Text = "Color Selector";
+            this.MaximumSize = new System.Drawing.Size(529, 642);
+            this.MinimumSize = new System.Drawing.Size(529, 642);
+            this.Name = "ColorSelectorHair";
+            this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
+            this.Text = "Color Selector Hair";
             ((System.ComponentModel.ISupportInitialize)(this.pbxColorSelector)).EndInit();
             this.gbxColorSelector.ResumeLayout(false);
             this.gbxColorSelector.PerformLayout();
