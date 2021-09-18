@@ -1,11 +1,11 @@
 //Format: Name, Category ID, /Relative/File/Path/Category.txt, Show ID boolean
-Demon Souls Armor, 0x10000000, Resources/Equipment/Armor/DemonSoulsArmor.txt, false
-Dark Souls Armor, 0x10000000, Resources/Equipment/Armor/DarkSoulsArmor.txt, false
-Dark Souls 2 Armor, 0x10000000, Resources/Equipment/Armor/DarkSouls2Armor.txt, false
-Male Hair, 0x10000000, Resources/Equipment/Armor/MaleHair.txt, false
-Female Hair, 0x10000000, Resources/Equipment/Armor/FemaleHair.txt, false
-Melee Weapons, 0x00000000, Resources/Equipment/Weapons/MeleeWeapons.txt, false
-Ranged Weapons, 0x00000000, Resources/Equipment/Weapons/RangedWeapons.txt, false
-Ammo, 0x00000000, Resources/Equipment/Weapons/Ammo.txt, false
-Shields, 0x00000000, Resources/Equipment/Weapons/Shields.txt, false
-Spell Tools, 0x00000000, Resources/Equipment/Weapons/SpellTools.txt, false
+Demon Souls Armor, 0x10000000, Resources/Equipment/Armor/DemonSoulsArmor.txt, true
+Dark Souls Armor, 0x10000000, Resources/Equipment/Armor/DarkSoulsArmor.txt, true
+Dark Souls 2 Armor, 0x10000000, Resources/Equipment/Armor/DarkSouls2Armor.txt, true
+Male Hair, 0x10000000, Resources/Equipment/Armor/MaleHair.txt, true
+Female Hair, 0x10000000, Resources/Equipment/Armor/FemaleHair.txt, true
+Melee Weapons, 0x00000000, Resources/Equipment/Weapons/MeleeWeapons.txt, true
+Ranged Weapons, 0x00000000, Resources/Equipment/Weapons/RangedWeapons.txt, true
+Ammo, 0x00000000, Resources/Equipment/Weapons/Ammo.txt, true
+Shields, 0x00000000, Resources/Equipment/Weapons/Shields.txt, true
+Spell Tools, 0x00000000, Resources/Equipment/Weapons/SpellTools.txt, true
