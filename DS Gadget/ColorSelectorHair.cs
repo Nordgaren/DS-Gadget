@@ -20,6 +20,7 @@ namespace DS_Gadget
             R = Hook.HairColorRed;
             G = Hook.HairColorGreen;
             B = Hook.HairColorBlue;
+            SetGlowStatus();
         }
 
         Bitmap PixelData;
@@ -27,6 +28,19 @@ namespace DS_Gadget
         private float R;
         private float G;
         private float B;
+
+        private void SetGlowStatus()
+        {
+            if (Hook.HairColorRed > 1 || Hook.HairColorGreen > 1 || Hook.HairColorBlue > 1)
+                cbxGlow.Checked = true;
+            else
+                cbxGlow.Checked = false;
+
+            if (Hook.EyeColorRed > 1 || Hook.EyeColorGreen > 1 || Hook.EyeColorBlue > 1)
+                cbxGlow.Checked = true;
+            else
+                cbxGlow.Checked = false;
+        }
 
         private void pbxColorSelector_MouseMove(object sender, MouseEventArgs e)
         {
