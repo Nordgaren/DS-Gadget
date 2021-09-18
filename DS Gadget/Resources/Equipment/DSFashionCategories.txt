@@ -4,6 +4,7 @@ Dark Souls Armor, 0x10000000, Resources/Equipment/Armor/DarkSoulsArmor.txt, true
 Dark Souls 2 Armor, 0x10000000, Resources/Equipment/Armor/DarkSouls2Armor.txt, true
 Male Hair, 0x10000000, Resources/Equipment/Armor/MaleHair.txt, true
 Female Hair, 0x10000000, Resources/Equipment/Armor/FemaleHair.txt, true
+Mystery Armor, 0x10000000, Resources/Equipment/Armor/MysteryArmor.txt, true
 Melee Weapons, 0x00000000, Resources/Equipment/Weapons/MeleeWeapons.txt, true
 Ranged Weapons, 0x00000000, Resources/Equipment/Weapons/RangedWeapons.txt, true
 Ammo, 0x00000000, Resources/Equipment/Weapons/Ammo.txt, true
