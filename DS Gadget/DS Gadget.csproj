@@ -79,6 +79,12 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="ColorSelector.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="ColorSelector.Designer.cs">
+      <DependentUpon>ColorSelector.cs</DependentUpon>
+    </Compile>
     <Compile Include="Utility Classes\ControlAttribute.cs" />
     <Compile Include="Utility Classes\DSHook.cs" />
     <Compile Include="Utility Classes\GadgetHotkey.cs" />
@@ -160,6 +166,9 @@
     <Compile Include="Utility Classes\SavedStats.cs" />
     <Compile Include="Utility Classes\TeamConfig.cs" />
     <Compile Include="Utility Classes\User32.cs" />
+    <EmbeddedResource Include="ColorSelector.resx">
+      <DependentUpon>ColorSelector.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="MainForm Tabs\GadgetTabGraphics.resx">
       <DependentUpon>GadgetTabGraphics.cs</DependentUpon>
     </EmbeddedResource>
@@ -209,6 +218,10 @@
   </ItemGroup>
   <ItemGroup>
     <Content Include="icon.ico" />
+    <None Include="rgbSpectrum.jpg" />
+    <None Include="Resources\Equipment\Items\TTT.txt">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
     <Content Include="Resources\SavedPositions.xml">
       <CopyToOutputDirectory>Always</CopyToOutputDirectory>
     </Content>

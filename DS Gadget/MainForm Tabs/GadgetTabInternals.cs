@@ -1,4 +1,6 @@
 ﻿using System;
+using System.Collections.Generic;
+using System.Drawing;
 
 namespace DS_Gadget
 {
@@ -74,6 +76,18 @@ namespace DS_Gadget
             txtStoredMagic.Text = Hook.StoredMagic.ToString();
             txtStoredItem.Text = Hook.StoredItem.ToString();
             txtStoredQuantity.Text = Hook.StoredQuantity.ToString();
+
+            SetPanelColor();
+            
+        }
+
+        private void SetPanelColor()
+        {
+            var red = Hook.HairColorRed > 1 ? (byte)(((Hook.HairColorRed / 10 )* 255)) : (byte)(Hook.HairColorRed * 255) ;
+            var green = Hook.HairColorGreen > 1 ? (byte)(((Hook.HairColorGreen / 10) * 255)) : (byte)(Hook.HairColorGreen * 255);
+            var blue = Hook.HairColorBlue > 1 ? (byte)(((Hook.HairColorBlue / 10) * 255)) : (byte)(Hook.HairColorBlue * 255);
+
+            pnlHairColor.BackColor = Color.FromArgb(red, green, blue);
         }
 
         private void nudHairIdx_ValueChanged(object sender, EventArgs e)
@@ -86,6 +100,37 @@ namespace DS_Gadget
         {
             if (!Reading)
                 Hook.EquipHairID = (int)nudHairID.Value;
+        }
+
+        internal void EnableStats(bool enable)
+        {
+            pnlHairColor.Enabled = enable;
+
+            if (enable)
+                SetPanelColor();
+        }
+
+        public static bool Check { get; set; }
+
+        private void pnlHairColor_Click(object sender, EventArgs e)
+        {
+            var colorSelector = new ColorSelector(Hook);
+            colorSelector.Disposed += OnColorSelectorDisposed;
+            colorSelector.Show();
+            
+        }
+
+        private void OnColorSelectorDisposed(object sender, EventArgs e)
+        {
+            if (Hook.HairColorRed > 1 || Hook.HairColorGreen > 1 || Hook.HairColorBlue > 1)
+                cbxGlowyHair.Checked = true;
+            else
+                cbxGlowyHair.Checked = false;
+        }
+
+        private void cbxGlowyHair_CheckedChanged(object sender, EventArgs e)
+        {
+            Check = cbxGlowyHair.Checked;
         }
     }
 }
