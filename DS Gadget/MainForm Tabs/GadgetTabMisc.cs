@@ -1,4 +1,5 @@
 ﻿using System;
+using System.Collections.Generic;
 using System.Drawing;
 using System.Threading.Tasks;
 using System.Windows.Forms;
@@ -28,19 +29,37 @@ namespace DS_Gadget
         {
             Hook.UnlockAllGestures();
         }
+        List<DSFashionCategory> Armor = new List<DSFashionCategory>();
+        List<DSFashionCategory> Weapons = new List<DSFashionCategory>();
 
         public override void InitTab(MainForm parent)
         {
             base.InitTab(parent);
             DSFashionCategory.GetItemCategories();
             foreach (DSFashionCategory category in DSFashionCategory.All)
-                cmbCategory.Items.Add(category);
+            {
+                if (category.ID == 0x10000000)
+                {
+                    Armor.Add(category);
+                }
+                else if (category.ID == 0x00000000)
+                {
+                    Weapons.Add(category);
+                }
+            }
+
+            cmbSlot.Items.Add("Hair");
+            cmbSlot.Items.Add("Bolt 1");
+            cmbSlot.Items.Add("Arrow 1");
+
+            cmbSlot.SelectedIndex = 0;
             cmbCategory.SelectedIndex = 0;
         }
 
         public override void UpdateTab()
         {
             nudNewGame.Value = Hook.NewGame;
+            SetPanelColor();
         }
 
         private void cmbCategory_SelectedIndexChanged(object sender, EventArgs e)
@@ -119,7 +138,25 @@ namespace DS_Gadget
         private void btnCreate_Click(object sender, EventArgs e)
         {
             _ = ChangeColor(Color.DarkGray);
-            ApplyHair();
+            ApplyItem();
+        }
+
+        private void ApplyItem()
+        {
+            switch (cmbSlot.SelectedIndex)
+            {
+                case 0:
+                    ApplyHair();
+                    break;
+                case 1:
+                    ApplyBoltOne();
+                    break;
+                case 2:
+                    ApplyArrowOne();
+                    break;
+                default:
+                    break;
+            }
         }
 
         //Apply hair to currently loaded character
@@ -128,10 +165,29 @@ namespace DS_Gadget
             //Check if the button is enabled and the selected item isn't null
             if (btnApplyHair.Enabled == true && lbxItems.SelectedItem != null)
             {
-                _ = ChangeColor(Color.DarkGray);
                 DSItem item = lbxItems.SelectedItem as DSItem;
                 int id = item.ID;
                 Hook.EquipHairID = id;
+            }
+        }
+
+        private void ApplyBoltOne()
+        {
+            if (btnApplyHair.Enabled == true && lbxItems.SelectedItem != null)
+            {
+                DSItem item = lbxItems.SelectedItem as DSItem;
+                int id = item.ID;
+                Hook.EquipBolt1ID = id;
+            }
+        }
+
+        private void ApplyArrowOne()
+        {
+            if (btnApplyHair.Enabled == true && lbxItems.SelectedItem != null)
+            {
+                DSItem item = lbxItems.SelectedItem as DSItem;
+                int id = item.ID;
+                Hook.EquipArrow1ID = id;
             }
         }
 
@@ -191,6 +247,16 @@ namespace DS_Gadget
             btnApplyHair.Enabled = enable;
             btnEventFlagRead.Enabled = enable;
             btnEventFlagWrite.Enabled = enable;
+            pnlHairColor.Enabled = enable;
+
+
+
+            if (enable)
+            {
+                SetIdLabel();
+                SetPanelColor();
+                SetGlowStatus();
+            }
         }
 
         //Changes the color of the Apply button
@@ -216,7 +282,8 @@ namespace DS_Gadget
             if (e.KeyCode == Keys.Enter)
             {
                 e.Handled = true; //Do not pass keypress along
-                ApplyHair();
+                _ = ChangeColor(Color.DarkGray);
+                ApplyItem();
                 return;
             }
 
@@ -244,6 +311,101 @@ namespace DS_Gadget
         {
             if (!Reading)
                 Hook.NewGame = (int)nudNewGame.Value;
+        }
+
+        private void cmbSlot_SelectedIndexChanged(object sender, EventArgs e)
+        {
+            switch (cmbSlot.SelectedIndex)
+            {
+                case 0:
+                    LoadCategory(Armor);
+                    break;
+                case 1:
+                case 2:
+                    LoadCategory(Weapons);
+                    break;
+                default:
+                    break;
+            }
+
+            SetIdLabel();
+        }
+
+        private void SetIdLabel()
+        {
+            if (Hook.Loaded)
+            {
+                switch (cmbSlot.SelectedIndex)
+                {
+                    case 0:
+                        lblID.Text = $"ID = {Hook.EquipHairID}";
+                        break;
+                    case 1:
+                        lblID.Text = $"ID = {Hook.EquipBolt1ID}";
+                        break;
+                    case 2:
+                        lblID.Text = $"ID = {Hook.EquipArrow1ID}";
+                        break;
+                    default:
+                        break;
+                }
+            }
+        }
+
+        private void LoadCategory(List<DSFashionCategory> list)
+        {
+            cmbCategory.Items.Clear();
+            foreach (var category in list)
+            {
+                cmbCategory.Items.Add(category);
+            }
+            cmbCategory.SelectedIndex = 0;
+        }
+
+        private void SetGlowStatus()
+        {
+            if (Hook.HairColorRed > 1 || Hook.HairColorGreen > 1 || Hook.HairColorBlue > 1)
+                cbxGlowyHair.Checked = true;
+            else
+                cbxGlowyHair.Checked = false;
+        }
+
+        public static bool Check { get; set; }
+
+        private bool SelectorOpen;
+
+        private void pnlHairColor_Click(object sender, EventArgs e)
+        {
+            if (! SelectorOpen)
+            {
+                var colorSelector = new ColorSelector(Hook);
+                colorSelector.Disposed += OnColorSelectorDisposed;
+                colorSelector.Show();
+                SelectorOpen = true;
+            }
+        }
+
+        private void OnColorSelectorDisposed(object sender, EventArgs e)
+        {
+            SetGlowStatus();
+            SelectorOpen = false;
+        }
+
+        private void cbxGlowyHair_CheckedChanged(object sender, EventArgs e)
+        {
+            Check = cbxGlowyHair.Checked;
+        }
+
+        private void SetPanelColor()
+        {
+            if (Hook.Loaded)
+            {
+                var red = Hook.HairColorRed > 1 ? (byte)(((Hook.HairColorRed / 10) * 255)) : (byte)(Hook.HairColorRed * 255);
+                var green = Hook.HairColorGreen > 1 ? (byte)(((Hook.HairColorGreen / 10) * 255)) : (byte)(Hook.HairColorGreen * 255);
+                var blue = Hook.HairColorBlue > 1 ? (byte)(((Hook.HairColorBlue / 10) * 255)) : (byte)(Hook.HairColorBlue * 255);
+
+                pnlHairColor.BackColor = Color.FromArgb(red, green, blue);
+            }
         }
     }
 }

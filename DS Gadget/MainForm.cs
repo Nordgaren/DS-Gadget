@@ -109,7 +109,6 @@ namespace DS_Gadget
             gadgetTabItems.EnableStats(enable);
             gadgetTabStats.EnabledStats(enable);
             gadgetTabMisc.EnableStats(enable);
-            gadgetTabInternals.EnableStats(enable);
         }
 
         private void timerUpdateProcess_Tick(object sender, EventArgs e)

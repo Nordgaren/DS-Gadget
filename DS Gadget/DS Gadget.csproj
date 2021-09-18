@@ -218,6 +218,7 @@
   </ItemGroup>
   <ItemGroup>
     <Content Include="icon.ico" />
+    <None Include="rgbSpectrum.png" />
     <None Include="rgbSpectrum.jpg" />
     <None Include="Resources\Equipment\Items\TTT.txt">
       <CopyToOutputDirectory>Always</CopyToOutputDirectory>

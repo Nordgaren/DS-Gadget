@@ -34,14 +34,13 @@ namespace DS_Gadget
             try
             {
                 var clr = PixelData.GetPixel(e.X, e.Y);
+                txtHexColor.Text = $"{clr.R.ToString("X2")}{clr.G.ToString("X2")}{clr.B.ToString("X2")}";
                 lblsmallScreen.BackColor = clr;
-                lblHexValue.Text = $"{clr.R.ToString("X2")}{clr.G.ToString("X2")}{clr.B.ToString("X2")}";
+
 
                 if (e.Button == MouseButtons.Left)
                 {
-                    nudRed.Value = clr.R;
-                    nudGreen.Value = clr.G;
-                    nudBlue.Value = clr.B;
+                    SetHairColor(clr);
                 }
             }
             catch (ArgumentOutOfRangeException)
@@ -51,29 +50,55 @@ namespace DS_Gadget
             
         }
 
-        private void pbxColorSelector_MouseDown(object sender, MouseEventArgs e)
+        private void SetHairColor(Color clr)
         {
-            var clr = PixelData.GetPixel(e.X, e.Y);
+            pnlSelectedScreen.BackColor = clr;
             nudRed.Value = clr.R;
             nudGreen.Value = clr.G;
             nudBlue.Value = clr.B;
         }
 
+        private void pbxColorSelector_MouseDown(object sender, MouseEventArgs e)
+        {
+            var clr = PixelData.GetPixel(e.X, e.Y);
+            SetHairColor(clr);
+        }
 
+
+        private void UpdateTextBox()
+        {
+            var red = ((byte)nudRed.Value).ToString("X2");
+            var green = ((byte)nudGreen.Value).ToString("X2");
+            var blue = ((byte)nudBlue.Value).ToString("X2");
+            txtHexColor.Text = $"{red}{green}{blue}";
+            SetHairColor(Color.FromArgb((byte)nudRed.Value, (byte)nudGreen.Value, (byte)nudBlue.Value));
+        }
 
         private void nudRed_ValueChanged(object sender, EventArgs e)
         {
-            Hook.HairColorRed = GadgetTabInternals.Check ? (float)((nudRed.Value / 255) * 10) : (float)(nudRed.Value / 255);
+            Hook.HairColorRed = GadgetTabMisc.Check ? (float)((nudRed.Value / 255) * 10) : (float)(nudRed.Value / 255);
+            if (ActiveControl == sender)
+            {
+                UpdateTextBox();
+            }
         }
 
         private void nudGreen_ValueChanged(object sender, EventArgs e)
         {
-            Hook.HairColorGreen = GadgetTabInternals.Check ? (float)((nudGreen.Value / 255) * 10) : (float)(nudGreen.Value / 255);
+            Hook.HairColorGreen = GadgetTabMisc.Check ? (float)((nudGreen.Value / 255) * 10) : (float)(nudGreen.Value / 255);
+            if (ActiveControl == sender)
+            {
+                UpdateTextBox();
+            }
         }
 
         private void nudBlue_ValueChanged(object sender, EventArgs e)
         {
-            Hook.HairColorBlue = GadgetTabInternals.Check ? (float)((nudBlue.Value / 255) * 10) : (float)(nudBlue.Value / 255);
+            Hook.HairColorBlue = GadgetTabMisc.Check ? (float)((nudBlue.Value / 255) * 10) : (float)(nudBlue.Value / 255);
+            if (ActiveControl == sender)
+            {
+                UpdateTextBox();
+            }
         }
 
         private void btnCancel_Click(object sender, EventArgs e)
@@ -87,6 +112,28 @@ namespace DS_Gadget
         private void btnApply_Click(object sender, EventArgs e)
         {
             Close();
+        }
+
+        private void txtHexColor_TextChanged(object sender, EventArgs e)
+        {
+            
+            var color = txtHexColor.Text.PadRight(6, '0');
+
+            var red = byte.Parse(color.Substring(0, 2), System.Globalization.NumberStyles.HexNumber);
+            var green = byte.Parse(color.Substring(2, 2), System.Globalization.NumberStyles.HexNumber);
+            var blue = byte.Parse(color.Substring(4, 2), System.Globalization.NumberStyles.HexNumber);
+
+            if (ActiveControl == sender)
+            {
+                var clr = Color.FromArgb(red, green, blue);
+                SetHairColor(clr);
+            }
+            
+        }
+
+        private void nud_Leave(object sender, EventArgs e)
+        {
+            UpdateTextBox();
         }
     }
 }
