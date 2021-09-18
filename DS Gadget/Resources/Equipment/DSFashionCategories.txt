@@ -1,6 +1,6 @@
 //Format: Name, Category ID, /Relative/File/Path/Category.txt, Show ID boolean
 Demon Souls Armor, 0x10000000, Resources/Equipment/Armor/DemonSoulsArmor.txt, false
 Dark Souls Armor, 0x10000000, Resources/Equipment/Armor/DarkSoulsArmor.txt, false
-//Dark Souls 2 Armor, 0x10000000, Resources/Equipment/Armor/DarkSouls2Armor.txt, false
+Dark Souls 2 Armor, 0x10000000, Resources/Equipment/Armor/DarkSouls2Armor.txt, false
 Male Hair, 0x10000000, Resources/Equipment/Armor/MaleHair.txt, false
 Female Hair, 0x10000000, Resources/Equipment/Armor/FemaleHair.txt, false

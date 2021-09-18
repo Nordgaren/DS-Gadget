@@ -79,6 +79,7 @@
  4181000  1 2 Targray's Armor
  4182000  1 2 Targray's Manifers
  4183000  1 2 Targray's Leggings
+ 4184000  1 2 Targray's Plate
  4190000  1 2 Tseldora Hat
  4191000  1 2 Tseldora Robes
  4192000  1 2 Tseldora Gloves

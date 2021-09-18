@@ -1,7 +1,7 @@
 ﻿//Format: Name, Category ID, /Relative/File/Path/Category.txt, Show ID boolean
 Demon Souls Armor, 0x10000000, Resources/Equipment/Armor/DemonSoulsArmor.txt, false
 Dark Souls Armor, 0x10000000, Resources/Equipment/Armor/DarkSoulsArmor.txt, false
-//Dark Souls 2 Armor, 0x10000000, Resources/Equipment/Armor/DarkSouls2Armor.txt, false
+Dark Souls 2 Armor, 0x10000000, Resources/Equipment/Armor/DarkSouls2Armor.txt, false
 Consumables, 0x40000000, Resources/Equipment/Items/Consumables.txt, false
 Key Items, 0x40000000, Resources/Equipment/Items/KeyItems.txt, false
 Melee Weapons, 0x00000000, Resources/Equipment/Weapons/MeleeWeapons.txt, false
