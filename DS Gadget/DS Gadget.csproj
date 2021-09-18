@@ -79,16 +79,16 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="ColorSelectorEye.cs">
+    <Compile Include="Color Pickers\ColorSelectorEye.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="ColorSelectorEye.Designer.cs">
+    <Compile Include="Color Pickers\ColorSelectorEye.Designer.cs">
       <DependentUpon>ColorSelectorEye.cs</DependentUpon>
     </Compile>
-    <Compile Include="ColorSelectorHair.cs">
+    <Compile Include="Color Pickers\ColorSelectorHair.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="ColorSelectorHair.Designer.cs">
+    <Compile Include="Color Pickers\ColorSelectorHair.Designer.cs">
       <DependentUpon>ColorSelectorHair.cs</DependentUpon>
     </Compile>
     <Compile Include="Utility Classes\ControlAttribute.cs" />
@@ -172,10 +172,10 @@
     <Compile Include="Utility Classes\SavedStats.cs" />
     <Compile Include="Utility Classes\TeamConfig.cs" />
     <Compile Include="Utility Classes\User32.cs" />
-    <EmbeddedResource Include="ColorSelectorEye.resx">
+    <EmbeddedResource Include="Color Pickers\ColorSelectorEye.resx">
       <DependentUpon>ColorSelectorEye.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="ColorSelectorHair.resx">
+    <EmbeddedResource Include="Color Pickers\ColorSelectorHair.resx">
       <DependentUpon>ColorSelectorHair.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="MainForm Tabs\GadgetTabGraphics.resx">
