@@ -79,11 +79,17 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="ColorSelector.cs">
+    <Compile Include="ColorSelectorEye.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="ColorSelector.Designer.cs">
-      <DependentUpon>ColorSelector.cs</DependentUpon>
+    <Compile Include="ColorSelectorEye.Designer.cs">
+      <DependentUpon>ColorSelectorEye.cs</DependentUpon>
+    </Compile>
+    <Compile Include="ColorSelectorHair.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="ColorSelectorHair.Designer.cs">
+      <DependentUpon>ColorSelectorHair.cs</DependentUpon>
     </Compile>
     <Compile Include="Utility Classes\ControlAttribute.cs" />
     <Compile Include="Utility Classes\DSHook.cs" />
@@ -166,8 +172,11 @@
     <Compile Include="Utility Classes\SavedStats.cs" />
     <Compile Include="Utility Classes\TeamConfig.cs" />
     <Compile Include="Utility Classes\User32.cs" />
-    <EmbeddedResource Include="ColorSelector.resx">
-      <DependentUpon>ColorSelector.cs</DependentUpon>
+    <EmbeddedResource Include="ColorSelectorEye.resx">
+      <DependentUpon>ColorSelectorEye.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ColorSelectorHair.resx">
+      <DependentUpon>ColorSelectorHair.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="MainForm Tabs\GadgetTabGraphics.resx">
       <DependentUpon>GadgetTabGraphics.cs</DependentUpon>

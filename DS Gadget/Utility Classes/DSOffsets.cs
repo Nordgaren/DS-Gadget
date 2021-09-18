@@ -226,6 +226,9 @@ namespace DS_Gadget
             HairColorRed = 0x380,
             HairColorGreen = 0x384,
             HairColorBlue = 0x388,
+            EyeColorRed = 0x390,
+            EyeColorGreen = 0x394,
+            EyeColorBlue = 0x398,
             GesturesUnlockedPtr = 0x424,
         }
 

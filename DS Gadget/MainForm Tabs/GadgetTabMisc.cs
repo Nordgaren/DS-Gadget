@@ -369,9 +369,16 @@ namespace DS_Gadget
                 cbxGlowyHair.Checked = true;
             else
                 cbxGlowyHair.Checked = false;
+
+            if (Hook.EyeColorRed > 1 || Hook.EyeColorGreen > 1 || Hook.EyeColorBlue > 1)
+                cbxGlowyEyes.Checked = true;
+            else
+                cbxGlowyEyes.Checked = false;
         }
 
-        public static bool Check { get; set; }
+        public static bool HairGlow { get; set; }
+
+        public static bool EyeGlow { get; set; }
 
         private bool SelectorOpen;
 
@@ -379,14 +386,14 @@ namespace DS_Gadget
         {
             if (! SelectorOpen)
             {
-                var colorSelector = new ColorSelector(Hook);
-                colorSelector.Disposed += OnColorSelectorDisposed;
+                var colorSelector = new ColorSelectorHair(Hook);
+                colorSelector.Disposed += OnHairColorSelectorDisposed;
                 colorSelector.Show();
                 SelectorOpen = true;
             }
         }
 
-        private void OnColorSelectorDisposed(object sender, EventArgs e)
+        private void OnHairColorSelectorDisposed(object sender, EventArgs e)
         {
             SetGlowStatus();
             SelectorOpen = false;
@@ -394,7 +401,29 @@ namespace DS_Gadget
 
         private void cbxGlowyHair_CheckedChanged(object sender, EventArgs e)
         {
-            Check = cbxGlowyHair.Checked;
+            HairGlow = cbxGlowyHair.Checked;
+        }
+
+        private void pnlEyeColor_Click(object sender, EventArgs e)
+        {
+            if (!SelectorOpen)
+            {
+                var colorSelector = new ColorSelectorEye(Hook);
+                colorSelector.Disposed += OnEyeColorSelectorDisposed;
+                colorSelector.Show();
+                SelectorOpen = true;
+            }
+        }
+
+        private void OnEyeColorSelectorDisposed(object sender, EventArgs e)
+        {
+            SetGlowStatus();
+            SelectorOpen = false;
+        }
+
+        private void cbxGlowyEye_CheckedChanged(object sender, EventArgs e)
+        {
+            EyeGlow = cbxGlowyEyes.Checked;
         }
 
         private void SetPanelColor()
@@ -406,6 +435,12 @@ namespace DS_Gadget
                 var blue = Hook.HairColorBlue > 1 ? (byte)(((Hook.HairColorBlue / 10) * 255)) : (byte)(Hook.HairColorBlue * 255);
 
                 pnlHairColor.BackColor = Color.FromArgb(red, green, blue);
+
+                red = Hook.EyeColorRed > 1 ? (byte)(((Hook.EyeColorRed / 10) * 255)) : (byte)(Hook.EyeColorRed * 255);
+                green = Hook.EyeColorGreen > 1 ? (byte)(((Hook.EyeColorGreen / 10) * 255)) : (byte)(Hook.EyeColorGreen * 255);
+                blue = Hook.EyeColorBlue > 1 ? (byte)(((Hook.EyeColorBlue / 10) * 255)) : (byte)(Hook.EyeColorBlue * 255);
+
+                pnlEyeColor.BackColor = Color.FromArgb(red, green, blue);
             }
         }
     }

@@ -41,6 +41,9 @@
             this.btnApplyHair = new System.Windows.Forms.Button();
             this.lbxItems = new System.Windows.Forms.ListBox();
             this.groupBoxFashion = new System.Windows.Forms.GroupBox();
+            this.cbxGlowyEyes = new System.Windows.Forms.CheckBox();
+            this.pnlEyeColor = new System.Windows.Forms.Panel();
+            this.lblEye = new System.Windows.Forms.Label();
             this.cbxGlowyHair = new System.Windows.Forms.CheckBox();
             this.pnlHairColor = new System.Windows.Forms.Panel();
             this.lblHair = new System.Windows.Forms.Label();
@@ -212,6 +215,9 @@
             // 
             // groupBoxFashion
             // 
+            this.groupBoxFashion.Controls.Add(this.cbxGlowyEyes);
+            this.groupBoxFashion.Controls.Add(this.pnlEyeColor);
+            this.groupBoxFashion.Controls.Add(this.lblEye);
             this.groupBoxFashion.Controls.Add(this.cbxGlowyHair);
             this.groupBoxFashion.Controls.Add(this.pnlHairColor);
             this.groupBoxFashion.Controls.Add(this.lblHair);
@@ -231,6 +237,36 @@
             this.groupBoxFashion.TabIndex = 29;
             this.groupBoxFashion.TabStop = false;
             this.groupBoxFashion.Text = "Fashion";
+            // 
+            // cbxGlowyEyes
+            // 
+            this.cbxGlowyEyes.AutoSize = true;
+            this.cbxGlowyEyes.CheckAlign = System.Drawing.ContentAlignment.MiddleRight;
+            this.cbxGlowyEyes.Location = new System.Drawing.Point(277, 428);
+            this.cbxGlowyEyes.Name = "cbxGlowyEyes";
+            this.cbxGlowyEyes.Size = new System.Drawing.Size(117, 24);
+            this.cbxGlowyEyes.TabIndex = 46;
+            this.cbxGlowyEyes.Text = "Glowy Eyes";
+            this.cbxGlowyEyes.UseVisualStyleBackColor = true;
+            this.cbxGlowyEyes.CheckedChanged += new System.EventHandler(this.cbxGlowyEye_CheckedChanged);
+            // 
+            // pnlEyeColor
+            // 
+            this.pnlEyeColor.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.pnlEyeColor.Location = new System.Drawing.Point(384, 421);
+            this.pnlEyeColor.Name = "pnlEyeColor";
+            this.pnlEyeColor.Size = new System.Drawing.Size(74, 31);
+            this.pnlEyeColor.TabIndex = 45;
+            this.pnlEyeColor.Click += new System.EventHandler(this.pnlEyeColor_Click);
+            // 
+            // lblEye
+            // 
+            this.lblEye.AutoSize = true;
+            this.lblEye.Location = new System.Drawing.Point(388, 403);
+            this.lblEye.Name = "lblEye";
+            this.lblEye.Size = new System.Drawing.Size(77, 20);
+            this.lblEye.TabIndex = 44;
+            this.lblEye.Text = "Eye Color";
             // 
             // cbxGlowyHair
             // 
@@ -379,5 +415,8 @@
         private System.Windows.Forms.Label lblHair;
         private System.Windows.Forms.CheckBox cbxGlowyHair;
         private System.Windows.Forms.Panel pnlHairColor;
+        private System.Windows.Forms.CheckBox cbxGlowyEyes;
+        private System.Windows.Forms.Panel pnlEyeColor;
+        private System.Windows.Forms.Label lblEye;
     }
 }
