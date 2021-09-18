@@ -1,7 +1,7 @@
 ﻿
 namespace DS_Gadget
 {
-    partial class ColorSelector
+    partial class ColorSelectorHair
     {
         /// <summary>
         /// Required designer variable.
@@ -29,7 +29,7 @@ namespace DS_Gadget
         /// </summary>
         private void InitializeComponent()
         {
-            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(ColorSelector));
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(ColorSelectorHair));
             this.lblColorSelector = new System.Windows.Forms.Label();
             this.pbxColorSelector = new System.Windows.Forms.PictureBox();
             this.gbxColorSelector = new System.Windows.Forms.GroupBox();

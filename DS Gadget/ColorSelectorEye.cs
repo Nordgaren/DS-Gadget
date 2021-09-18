@@ -10,16 +10,16 @@ using System.Windows.Forms;
 
 namespace DS_Gadget
 {
-    public partial class ColorSelector : Form
+    public partial class ColorSelectorEye : Form
     {
-        public ColorSelector(DSHook hook)
+        public ColorSelectorEye(DSHook hook)
         {
             InitializeComponent();
             PixelData = (Bitmap)pbxColorSelector.Image;
             Hook = hook;
-            R = Hook.HairColorRed;
-            G = Hook.HairColorGreen;
-            B = Hook.HairColorBlue;
+            R = Hook.EyeColorRed;
+            G = Hook.EyeColorGreen;
+            B = Hook.EyeColorBlue;
         }
 
         Bitmap PixelData;
@@ -40,7 +40,7 @@ namespace DS_Gadget
 
                 if (e.Button == MouseButtons.Left)
                 {
-                    SetHairColor(clr);
+                    SetEyeColor(clr);
                 }
             }
             catch (ArgumentOutOfRangeException)
@@ -50,7 +50,7 @@ namespace DS_Gadget
             
         }
 
-        private void SetHairColor(Color clr)
+        private void SetEyeColor(Color clr)
         {
             pnlSelectedScreen.BackColor = clr;
             nudRed.Value = clr.R;
@@ -61,7 +61,7 @@ namespace DS_Gadget
         private void pbxColorSelector_MouseDown(object sender, MouseEventArgs e)
         {
             var clr = PixelData.GetPixel(e.X, e.Y);
-            SetHairColor(clr);
+            SetEyeColor(clr);
         }
 
 
@@ -71,12 +71,12 @@ namespace DS_Gadget
             var green = ((byte)nudGreen.Value).ToString("X2");
             var blue = ((byte)nudBlue.Value).ToString("X2");
             txtHexColor.Text = $"{red}{green}{blue}";
-            SetHairColor(Color.FromArgb((byte)nudRed.Value, (byte)nudGreen.Value, (byte)nudBlue.Value));
+            SetEyeColor(Color.FromArgb((byte)nudRed.Value, (byte)nudGreen.Value, (byte)nudBlue.Value));
         }
 
         private void nudRed_ValueChanged(object sender, EventArgs e)
         {
-            Hook.HairColorRed = GadgetTabMisc.Check ? (float)((nudRed.Value / 255) * 10) : (float)(nudRed.Value / 255);
+            Hook.EyeColorRed = GadgetTabMisc.EyeGlow ? (float)((nudRed.Value / 255) * 10) : (float)(nudRed.Value / 255);
             if (ActiveControl == sender)
             {
                 UpdateTextBox();
@@ -85,7 +85,7 @@ namespace DS_Gadget
 
         private void nudGreen_ValueChanged(object sender, EventArgs e)
         {
-            Hook.HairColorGreen = GadgetTabMisc.Check ? (float)((nudGreen.Value / 255) * 10) : (float)(nudGreen.Value / 255);
+            Hook.EyeColorGreen = GadgetTabMisc.EyeGlow ? (float)((nudGreen.Value / 255) * 10) : (float)(nudGreen.Value / 255);
             if (ActiveControl == sender)
             {
                 UpdateTextBox();
@@ -94,7 +94,7 @@ namespace DS_Gadget
 
         private void nudBlue_ValueChanged(object sender, EventArgs e)
         {
-            Hook.HairColorBlue = GadgetTabMisc.Check ? (float)((nudBlue.Value / 255) * 10) : (float)(nudBlue.Value / 255);
+            Hook.EyeColorBlue = GadgetTabMisc.EyeGlow ? (float)((nudBlue.Value / 255) * 10) : (float)(nudBlue.Value / 255);
             if (ActiveControl == sender)
             {
                 UpdateTextBox();
@@ -103,9 +103,9 @@ namespace DS_Gadget
 
         private void btnCancel_Click(object sender, EventArgs e)
         {
-            Hook.HairColorRed = R;
-            Hook.HairColorGreen = G;
-            Hook.HairColorBlue = B;
+            Hook.EyeColorRed = R;
+            Hook.EyeColorGreen = G;
+            Hook.EyeColorBlue = B;
             Close();
         }
 
@@ -126,7 +126,7 @@ namespace DS_Gadget
             if (ActiveControl == sender)
             {
                 var clr = Color.FromArgb(red, green, blue);
-                SetHairColor(clr);
+                SetEyeColor(clr);
             }
             
         }

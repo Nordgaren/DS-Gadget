@@ -811,6 +811,24 @@ namespace DS_Gadget
             get => CharData2.ReadSingle((int)DSOffsets.CharData2.HairColorBlue);
             set => CharData2.WriteSingle((int)DSOffsets.CharData2.HairColorBlue, value);
         }
+
+        public float EyeColorRed
+        {
+            get => CharData2.ReadSingle((int)DSOffsets.CharData2.EyeColorRed);
+            set => CharData2.WriteSingle((int)DSOffsets.CharData2.EyeColorRed, value);
+        }
+
+        public float EyeColorGreen
+        {
+            get => CharData2.ReadSingle((int)DSOffsets.CharData2.EyeColorGreen);
+            set => CharData2.WriteSingle((int)DSOffsets.CharData2.EyeColorGreen, value);
+        }
+
+        public float EyeColorBlue
+        {
+            get => CharData2.ReadSingle((int)DSOffsets.CharData2.EyeColorBlue);
+            set => CharData2.WriteSingle((int)DSOffsets.CharData2.EyeColorBlue, value);
+        }
         #endregion
 
         #region Misc Tab
