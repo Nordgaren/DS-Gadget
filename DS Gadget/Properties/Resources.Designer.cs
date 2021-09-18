@@ -126,5 +126,15 @@ namespace DS_Gadget.Properties {
                 return ResourceManager.GetString("LevelUp", resourceCulture);
             }
         }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap rgbSpectrum {
+            get {
+                object obj = ResourceManager.GetObject("rgbSpectrum", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
     }
 }

@@ -99,6 +99,9 @@
             this.txtStoredQuantity = new System.Windows.Forms.TextBox();
             this.txtStoredMagic = new System.Windows.Forms.TextBox();
             this.txtStoredItem = new System.Windows.Forms.TextBox();
+            this.cbxGlowyHair = new System.Windows.Forms.CheckBox();
+            this.gbxHairColor = new System.Windows.Forms.GroupBox();
+            this.pnlHairColor = new System.Windows.Forms.Panel();
             lblStoredQuantity = new System.Windows.Forms.Label();
             lblStoredMagic = new System.Windows.Forms.Label();
             gbxEquipment = new System.Windows.Forms.GroupBox();
@@ -130,6 +133,7 @@
             gbxEquipment.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.nudHairID)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.nudHairIdx)).BeginInit();
+            this.gbxHairColor.SuspendLayout();
             this.SuspendLayout();
             // 
             // lblStoredQuantity
@@ -138,7 +142,7 @@
             lblStoredQuantity.Location = new System.Drawing.Point(284, 380);
             lblStoredQuantity.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             lblStoredQuantity.Name = "lblStoredQuantity";
-            lblStoredQuantity.Size = new System.Drawing.Size(107, 17);
+            lblStoredQuantity.Size = new System.Drawing.Size(120, 20);
             lblStoredQuantity.TabIndex = 16;
             lblStoredQuantity.Text = "Stored Quantity";
             // 
@@ -148,7 +152,7 @@
             lblStoredMagic.Location = new System.Drawing.Point(144, 380);
             lblStoredMagic.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             lblStoredMagic.Name = "lblStoredMagic";
-            lblStoredMagic.Size = new System.Drawing.Size(108, 17);
+            lblStoredMagic.Size = new System.Drawing.Size(124, 20);
             lblStoredMagic.TabIndex = 14;
             lblStoredMagic.Text = "Stored Magic ID";
             // 
@@ -225,7 +229,7 @@
             gbxEquipment.Margin = new System.Windows.Forms.Padding(4);
             gbxEquipment.Name = "gbxEquipment";
             gbxEquipment.Padding = new System.Windows.Forms.Padding(4);
-            gbxEquipment.Size = new System.Drawing.Size(479, 372);
+            gbxEquipment.Size = new System.Drawing.Size(481, 380);
             gbxEquipment.TabIndex = 12;
             gbxEquipment.TabStop = false;
             gbxEquipment.Text = "Equipment";
@@ -249,7 +253,7 @@
             0,
             -2147483648});
             this.nudHairID.Name = "nudHairID";
-            this.nudHairID.Size = new System.Drawing.Size(65, 22);
+            this.nudHairID.Size = new System.Drawing.Size(65, 26);
             this.nudHairID.TabIndex = 74;
             this.nudHairID.ValueChanged += new System.EventHandler(this.nudHairID_ValueChanged);
             // 
@@ -267,7 +271,7 @@
             0,
             -2147483648});
             this.nudHairIdx.Name = "nudHairIdx";
-            this.nudHairIdx.Size = new System.Drawing.Size(65, 22);
+            this.nudHairIdx.Size = new System.Drawing.Size(65, 26);
             this.nudHairIdx.TabIndex = 73;
             this.nudHairIdx.ValueChanged += new System.EventHandler(this.nudHairIdx_ValueChanged);
             // 
@@ -277,7 +281,7 @@
             lblEquipItem5.Location = new System.Drawing.Point(53, 331);
             lblEquipItem5.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             lblEquipItem5.Name = "lblEquipItem5";
-            lblEquipItem5.Size = new System.Drawing.Size(46, 17);
+            lblEquipItem5.Size = new System.Drawing.Size(54, 20);
             lblEquipItem5.TabIndex = 72;
             lblEquipItem5.Text = "Item 5";
             // 
@@ -287,7 +291,7 @@
             this.txtEquipItem5ID.Margin = new System.Windows.Forms.Padding(4);
             this.txtEquipItem5ID.Name = "txtEquipItem5ID";
             this.txtEquipItem5ID.ReadOnly = true;
-            this.txtEquipItem5ID.Size = new System.Drawing.Size(65, 22);
+            this.txtEquipItem5ID.Size = new System.Drawing.Size(65, 26);
             this.txtEquipItem5ID.TabIndex = 69;
             this.txtEquipItem5ID.Text = "0";
             this.txtEquipItem5ID.TextAlign = System.Windows.Forms.HorizontalAlignment.Right;
@@ -298,7 +302,7 @@
             this.txtEquipItem5Idx.Margin = new System.Windows.Forms.Padding(4);
             this.txtEquipItem5Idx.Name = "txtEquipItem5Idx";
             this.txtEquipItem5Idx.ReadOnly = true;
-            this.txtEquipItem5Idx.Size = new System.Drawing.Size(65, 22);
+            this.txtEquipItem5Idx.Size = new System.Drawing.Size(65, 26);
             this.txtEquipItem5Idx.TabIndex = 68;
             this.txtEquipItem5Idx.Text = "0";
             this.txtEquipItem5Idx.TextAlign = System.Windows.Forms.HorizontalAlignment.Right;
@@ -309,7 +313,7 @@
             lblEquipItem4.Location = new System.Drawing.Point(304, 299);
             lblEquipItem4.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             lblEquipItem4.Name = "lblEquipItem4";
-            lblEquipItem4.Size = new System.Drawing.Size(16, 17);
+            lblEquipItem4.Size = new System.Drawing.Size(18, 20);
             lblEquipItem4.TabIndex = 67;
             lblEquipItem4.Text = "4";
             // 
@@ -319,7 +323,7 @@
             lblEquipItem3.Location = new System.Drawing.Point(53, 299);
             lblEquipItem3.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             lblEquipItem3.Name = "lblEquipItem3";
-            lblEquipItem3.Size = new System.Drawing.Size(46, 17);
+            lblEquipItem3.Size = new System.Drawing.Size(54, 20);
             lblEquipItem3.TabIndex = 66;
             lblEquipItem3.Text = "Item 3";
             // 
@@ -329,7 +333,7 @@
             this.txtEquipItem4ID.Margin = new System.Windows.Forms.Padding(4);
             this.txtEquipItem4ID.Name = "txtEquipItem4ID";
             this.txtEquipItem4ID.ReadOnly = true;
-            this.txtEquipItem4ID.Size = new System.Drawing.Size(65, 22);
+            this.txtEquipItem4ID.Size = new System.Drawing.Size(65, 26);
             this.txtEquipItem4ID.TabIndex = 65;
             this.txtEquipItem4ID.Text = "0";
             this.txtEquipItem4ID.TextAlign = System.Windows.Forms.HorizontalAlignment.Right;
@@ -340,7 +344,7 @@
             this.txtEquipItem4Idx.Margin = new System.Windows.Forms.Padding(4);
             this.txtEquipItem4Idx.Name = "txtEquipItem4Idx";
             this.txtEquipItem4Idx.ReadOnly = true;
-            this.txtEquipItem4Idx.Size = new System.Drawing.Size(65, 22);
+            this.txtEquipItem4Idx.Size = new System.Drawing.Size(65, 26);
             this.txtEquipItem4Idx.TabIndex = 64;
             this.txtEquipItem4Idx.Text = "0";
             this.txtEquipItem4Idx.TextAlign = System.Windows.Forms.HorizontalAlignment.Right;
@@ -351,7 +355,7 @@
             this.txtEquipItem3ID.Margin = new System.Windows.Forms.Padding(4);
             this.txtEquipItem3ID.Name = "txtEquipItem3ID";
             this.txtEquipItem3ID.ReadOnly = true;
-            this.txtEquipItem3ID.Size = new System.Drawing.Size(65, 22);
+            this.txtEquipItem3ID.Size = new System.Drawing.Size(65, 26);
             this.txtEquipItem3ID.TabIndex = 63;
             this.txtEquipItem3ID.Text = "0";
             this.txtEquipItem3ID.TextAlign = System.Windows.Forms.HorizontalAlignment.Right;
@@ -362,7 +366,7 @@
             this.txtEquipItem3Idx.Margin = new System.Windows.Forms.Padding(4);
             this.txtEquipItem3Idx.Name = "txtEquipItem3Idx";
             this.txtEquipItem3Idx.ReadOnly = true;
-            this.txtEquipItem3Idx.Size = new System.Drawing.Size(65, 22);
+            this.txtEquipItem3Idx.Size = new System.Drawing.Size(65, 26);
             this.txtEquipItem3Idx.TabIndex = 62;
             this.txtEquipItem3Idx.Text = "0";
             this.txtEquipItem3Idx.TextAlign = System.Windows.Forms.HorizontalAlignment.Right;
@@ -373,7 +377,7 @@
             lblEquipHair.Location = new System.Drawing.Point(287, 331);
             lblEquipHair.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             lblEquipHair.Name = "lblEquipHair";
-            lblEquipHair.Size = new System.Drawing.Size(34, 17);
+            lblEquipHair.Size = new System.Drawing.Size(38, 20);
             lblEquipHair.TabIndex = 48;
             lblEquipHair.Text = "Hair";
             // 
@@ -383,7 +387,7 @@
             lblEquipItem2.Location = new System.Drawing.Point(304, 267);
             lblEquipItem2.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             lblEquipItem2.Name = "lblEquipItem2";
-            lblEquipItem2.Size = new System.Drawing.Size(16, 17);
+            lblEquipItem2.Size = new System.Drawing.Size(18, 20);
             lblEquipItem2.TabIndex = 61;
             lblEquipItem2.Text = "2";
             // 
@@ -393,7 +397,7 @@
             lblEquipItem1.Location = new System.Drawing.Point(53, 267);
             lblEquipItem1.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             lblEquipItem1.Name = "lblEquipItem1";
-            lblEquipItem1.Size = new System.Drawing.Size(46, 17);
+            lblEquipItem1.Size = new System.Drawing.Size(54, 20);
             lblEquipItem1.TabIndex = 60;
             lblEquipItem1.Text = "Item 1";
             // 
@@ -403,7 +407,7 @@
             this.txtEquipItem2ID.Margin = new System.Windows.Forms.Padding(4);
             this.txtEquipItem2ID.Name = "txtEquipItem2ID";
             this.txtEquipItem2ID.ReadOnly = true;
-            this.txtEquipItem2ID.Size = new System.Drawing.Size(65, 22);
+            this.txtEquipItem2ID.Size = new System.Drawing.Size(65, 26);
             this.txtEquipItem2ID.TabIndex = 59;
             this.txtEquipItem2ID.Text = "0";
             this.txtEquipItem2ID.TextAlign = System.Windows.Forms.HorizontalAlignment.Right;
@@ -414,7 +418,7 @@
             this.txtEquipItem2Idx.Margin = new System.Windows.Forms.Padding(4);
             this.txtEquipItem2Idx.Name = "txtEquipItem2Idx";
             this.txtEquipItem2Idx.ReadOnly = true;
-            this.txtEquipItem2Idx.Size = new System.Drawing.Size(65, 22);
+            this.txtEquipItem2Idx.Size = new System.Drawing.Size(65, 26);
             this.txtEquipItem2Idx.TabIndex = 58;
             this.txtEquipItem2Idx.Text = "0";
             this.txtEquipItem2Idx.TextAlign = System.Windows.Forms.HorizontalAlignment.Right;
@@ -425,7 +429,7 @@
             this.txtEquipItem1ID.Margin = new System.Windows.Forms.Padding(4);
             this.txtEquipItem1ID.Name = "txtEquipItem1ID";
             this.txtEquipItem1ID.ReadOnly = true;
-            this.txtEquipItem1ID.Size = new System.Drawing.Size(65, 22);
+            this.txtEquipItem1ID.Size = new System.Drawing.Size(65, 26);
             this.txtEquipItem1ID.TabIndex = 57;
             this.txtEquipItem1ID.Text = "0";
             this.txtEquipItem1ID.TextAlign = System.Windows.Forms.HorizontalAlignment.Right;
@@ -436,7 +440,7 @@
             this.txtEquipItem1Idx.Margin = new System.Windows.Forms.Padding(4);
             this.txtEquipItem1Idx.Name = "txtEquipItem1Idx";
             this.txtEquipItem1Idx.ReadOnly = true;
-            this.txtEquipItem1Idx.Size = new System.Drawing.Size(65, 22);
+            this.txtEquipItem1Idx.Size = new System.Drawing.Size(65, 26);
             this.txtEquipItem1Idx.TabIndex = 56;
             this.txtEquipItem1Idx.Text = "0";
             this.txtEquipItem1Idx.TextAlign = System.Windows.Forms.HorizontalAlignment.Right;
@@ -447,7 +451,7 @@
             lblEquipRing2.Location = new System.Drawing.Point(304, 235);
             lblEquipRing2.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             lblEquipRing2.Name = "lblEquipRing2";
-            lblEquipRing2.Size = new System.Drawing.Size(16, 17);
+            lblEquipRing2.Size = new System.Drawing.Size(18, 20);
             lblEquipRing2.TabIndex = 55;
             lblEquipRing2.Text = "2";
             // 
@@ -457,7 +461,7 @@
             lblEquipRing1.Location = new System.Drawing.Point(51, 235);
             lblEquipRing1.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             lblEquipRing1.Name = "lblEquipRing1";
-            lblEquipRing1.Size = new System.Drawing.Size(49, 17);
+            lblEquipRing1.Size = new System.Drawing.Size(55, 20);
             lblEquipRing1.TabIndex = 54;
             lblEquipRing1.Text = "Ring 1";
             // 
@@ -467,7 +471,7 @@
             this.txtEquipRing2ID.Margin = new System.Windows.Forms.Padding(4);
             this.txtEquipRing2ID.Name = "txtEquipRing2ID";
             this.txtEquipRing2ID.ReadOnly = true;
-            this.txtEquipRing2ID.Size = new System.Drawing.Size(65, 22);
+            this.txtEquipRing2ID.Size = new System.Drawing.Size(65, 26);
             this.txtEquipRing2ID.TabIndex = 53;
             this.txtEquipRing2ID.Text = "0";
             this.txtEquipRing2ID.TextAlign = System.Windows.Forms.HorizontalAlignment.Right;
@@ -478,7 +482,7 @@
             this.txtEquipRing2Idx.Margin = new System.Windows.Forms.Padding(4);
             this.txtEquipRing2Idx.Name = "txtEquipRing2Idx";
             this.txtEquipRing2Idx.ReadOnly = true;
-            this.txtEquipRing2Idx.Size = new System.Drawing.Size(65, 22);
+            this.txtEquipRing2Idx.Size = new System.Drawing.Size(65, 26);
             this.txtEquipRing2Idx.TabIndex = 52;
             this.txtEquipRing2Idx.Text = "0";
             this.txtEquipRing2Idx.TextAlign = System.Windows.Forms.HorizontalAlignment.Right;
@@ -489,7 +493,7 @@
             this.txtEquipRing1ID.Margin = new System.Windows.Forms.Padding(4);
             this.txtEquipRing1ID.Name = "txtEquipRing1ID";
             this.txtEquipRing1ID.ReadOnly = true;
-            this.txtEquipRing1ID.Size = new System.Drawing.Size(65, 22);
+            this.txtEquipRing1ID.Size = new System.Drawing.Size(65, 26);
             this.txtEquipRing1ID.TabIndex = 51;
             this.txtEquipRing1ID.Text = "0";
             this.txtEquipRing1ID.TextAlign = System.Windows.Forms.HorizontalAlignment.Right;
@@ -500,7 +504,7 @@
             this.txtEquipRing1Idx.Margin = new System.Windows.Forms.Padding(4);
             this.txtEquipRing1Idx.Name = "txtEquipRing1Idx";
             this.txtEquipRing1Idx.ReadOnly = true;
-            this.txtEquipRing1Idx.Size = new System.Drawing.Size(65, 22);
+            this.txtEquipRing1Idx.Size = new System.Drawing.Size(65, 26);
             this.txtEquipRing1Idx.TabIndex = 50;
             this.txtEquipRing1Idx.Text = "0";
             this.txtEquipRing1Idx.TextAlign = System.Windows.Forms.HorizontalAlignment.Right;
@@ -511,7 +515,7 @@
             lblEquipPants.Location = new System.Drawing.Point(304, 203);
             lblEquipPants.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             lblEquipPants.Name = "lblEquipPants";
-            lblEquipPants.Size = new System.Drawing.Size(16, 17);
+            lblEquipPants.Size = new System.Drawing.Size(18, 20);
             lblEquipPants.TabIndex = 43;
             lblEquipPants.Text = "4";
             // 
@@ -521,7 +525,7 @@
             lblEquipGlove.Location = new System.Drawing.Point(44, 203);
             lblEquipGlove.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             lblEquipGlove.Name = "lblEquipGlove";
-            lblEquipGlove.Size = new System.Drawing.Size(58, 17);
+            lblEquipGlove.Size = new System.Drawing.Size(65, 20);
             lblEquipGlove.TabIndex = 42;
             lblEquipGlove.Text = "Armor 3";
             // 
@@ -531,7 +535,7 @@
             this.txtEquipPantsID.Margin = new System.Windows.Forms.Padding(4);
             this.txtEquipPantsID.Name = "txtEquipPantsID";
             this.txtEquipPantsID.ReadOnly = true;
-            this.txtEquipPantsID.Size = new System.Drawing.Size(65, 22);
+            this.txtEquipPantsID.Size = new System.Drawing.Size(65, 26);
             this.txtEquipPantsID.TabIndex = 41;
             this.txtEquipPantsID.Text = "0";
             this.txtEquipPantsID.TextAlign = System.Windows.Forms.HorizontalAlignment.Right;
@@ -542,7 +546,7 @@
             this.txtEquipPantsIdx.Margin = new System.Windows.Forms.Padding(4);
             this.txtEquipPantsIdx.Name = "txtEquipPantsIdx";
             this.txtEquipPantsIdx.ReadOnly = true;
-            this.txtEquipPantsIdx.Size = new System.Drawing.Size(65, 22);
+            this.txtEquipPantsIdx.Size = new System.Drawing.Size(65, 26);
             this.txtEquipPantsIdx.TabIndex = 40;
             this.txtEquipPantsIdx.Text = "0";
             this.txtEquipPantsIdx.TextAlign = System.Windows.Forms.HorizontalAlignment.Right;
@@ -553,7 +557,7 @@
             this.txtEquipGloveID.Margin = new System.Windows.Forms.Padding(4);
             this.txtEquipGloveID.Name = "txtEquipGloveID";
             this.txtEquipGloveID.ReadOnly = true;
-            this.txtEquipGloveID.Size = new System.Drawing.Size(65, 22);
+            this.txtEquipGloveID.Size = new System.Drawing.Size(65, 26);
             this.txtEquipGloveID.TabIndex = 39;
             this.txtEquipGloveID.Text = "0";
             this.txtEquipGloveID.TextAlign = System.Windows.Forms.HorizontalAlignment.Right;
@@ -564,7 +568,7 @@
             this.txtEquipGloveIdx.Margin = new System.Windows.Forms.Padding(4);
             this.txtEquipGloveIdx.Name = "txtEquipGloveIdx";
             this.txtEquipGloveIdx.ReadOnly = true;
-            this.txtEquipGloveIdx.Size = new System.Drawing.Size(65, 22);
+            this.txtEquipGloveIdx.Size = new System.Drawing.Size(65, 26);
             this.txtEquipGloveIdx.TabIndex = 38;
             this.txtEquipGloveIdx.Text = "0";
             this.txtEquipGloveIdx.TextAlign = System.Windows.Forms.HorizontalAlignment.Right;
@@ -575,7 +579,7 @@
             lblEquipChest.Location = new System.Drawing.Point(304, 171);
             lblEquipChest.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             lblEquipChest.Name = "lblEquipChest";
-            lblEquipChest.Size = new System.Drawing.Size(16, 17);
+            lblEquipChest.Size = new System.Drawing.Size(18, 20);
             lblEquipChest.TabIndex = 37;
             lblEquipChest.Text = "2";
             // 
@@ -585,7 +589,7 @@
             lblEquipHelmet.Location = new System.Drawing.Point(44, 171);
             lblEquipHelmet.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             lblEquipHelmet.Name = "lblEquipHelmet";
-            lblEquipHelmet.Size = new System.Drawing.Size(58, 17);
+            lblEquipHelmet.Size = new System.Drawing.Size(65, 20);
             lblEquipHelmet.TabIndex = 36;
             lblEquipHelmet.Text = "Armor 1";
             // 
@@ -595,7 +599,7 @@
             this.txtEquipChestID.Margin = new System.Windows.Forms.Padding(4);
             this.txtEquipChestID.Name = "txtEquipChestID";
             this.txtEquipChestID.ReadOnly = true;
-            this.txtEquipChestID.Size = new System.Drawing.Size(65, 22);
+            this.txtEquipChestID.Size = new System.Drawing.Size(65, 26);
             this.txtEquipChestID.TabIndex = 35;
             this.txtEquipChestID.Text = "0";
             this.txtEquipChestID.TextAlign = System.Windows.Forms.HorizontalAlignment.Right;
@@ -606,7 +610,7 @@
             this.txtEquipChestIdx.Margin = new System.Windows.Forms.Padding(4);
             this.txtEquipChestIdx.Name = "txtEquipChestIdx";
             this.txtEquipChestIdx.ReadOnly = true;
-            this.txtEquipChestIdx.Size = new System.Drawing.Size(65, 22);
+            this.txtEquipChestIdx.Size = new System.Drawing.Size(65, 26);
             this.txtEquipChestIdx.TabIndex = 34;
             this.txtEquipChestIdx.Text = "0";
             this.txtEquipChestIdx.TextAlign = System.Windows.Forms.HorizontalAlignment.Right;
@@ -617,7 +621,7 @@
             this.txtEquipHelmetID.Margin = new System.Windows.Forms.Padding(4);
             this.txtEquipHelmetID.Name = "txtEquipHelmetID";
             this.txtEquipHelmetID.ReadOnly = true;
-            this.txtEquipHelmetID.Size = new System.Drawing.Size(65, 22);
+            this.txtEquipHelmetID.Size = new System.Drawing.Size(65, 26);
             this.txtEquipHelmetID.TabIndex = 33;
             this.txtEquipHelmetID.Text = "0";
             this.txtEquipHelmetID.TextAlign = System.Windows.Forms.HorizontalAlignment.Right;
@@ -628,7 +632,7 @@
             this.txtEquipHelmetIdx.Margin = new System.Windows.Forms.Padding(4);
             this.txtEquipHelmetIdx.Name = "txtEquipHelmetIdx";
             this.txtEquipHelmetIdx.ReadOnly = true;
-            this.txtEquipHelmetIdx.Size = new System.Drawing.Size(65, 22);
+            this.txtEquipHelmetIdx.Size = new System.Drawing.Size(65, 26);
             this.txtEquipHelmetIdx.TabIndex = 32;
             this.txtEquipHelmetIdx.Text = "0";
             this.txtEquipHelmetIdx.TextAlign = System.Windows.Forms.HorizontalAlignment.Right;
@@ -639,7 +643,7 @@
             lblEquipBolt2.Location = new System.Drawing.Point(304, 139);
             lblEquipBolt2.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             lblEquipBolt2.Name = "lblEquipBolt2";
-            lblEquipBolt2.Size = new System.Drawing.Size(16, 17);
+            lblEquipBolt2.Size = new System.Drawing.Size(18, 20);
             lblEquipBolt2.TabIndex = 31;
             lblEquipBolt2.Text = "2";
             // 
@@ -649,7 +653,7 @@
             lblEquipBolt1.Location = new System.Drawing.Point(56, 139);
             lblEquipBolt1.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             lblEquipBolt1.Name = "lblEquipBolt1";
-            lblEquipBolt1.Size = new System.Drawing.Size(44, 17);
+            lblEquipBolt1.Size = new System.Drawing.Size(50, 20);
             lblEquipBolt1.TabIndex = 30;
             lblEquipBolt1.Text = "Bolt 1";
             // 
@@ -659,7 +663,7 @@
             this.txtEquipBolt2ID.Margin = new System.Windows.Forms.Padding(4);
             this.txtEquipBolt2ID.Name = "txtEquipBolt2ID";
             this.txtEquipBolt2ID.ReadOnly = true;
-            this.txtEquipBolt2ID.Size = new System.Drawing.Size(65, 22);
+            this.txtEquipBolt2ID.Size = new System.Drawing.Size(65, 26);
             this.txtEquipBolt2ID.TabIndex = 29;
             this.txtEquipBolt2ID.Text = "0";
             this.txtEquipBolt2ID.TextAlign = System.Windows.Forms.HorizontalAlignment.Right;
@@ -670,7 +674,7 @@
             this.txtEquipBolt2Idx.Margin = new System.Windows.Forms.Padding(4);
             this.txtEquipBolt2Idx.Name = "txtEquipBolt2Idx";
             this.txtEquipBolt2Idx.ReadOnly = true;
-            this.txtEquipBolt2Idx.Size = new System.Drawing.Size(65, 22);
+            this.txtEquipBolt2Idx.Size = new System.Drawing.Size(65, 26);
             this.txtEquipBolt2Idx.TabIndex = 28;
             this.txtEquipBolt2Idx.Text = "0";
             this.txtEquipBolt2Idx.TextAlign = System.Windows.Forms.HorizontalAlignment.Right;
@@ -681,7 +685,7 @@
             this.txtEquipBolt1ID.Margin = new System.Windows.Forms.Padding(4);
             this.txtEquipBolt1ID.Name = "txtEquipBolt1ID";
             this.txtEquipBolt1ID.ReadOnly = true;
-            this.txtEquipBolt1ID.Size = new System.Drawing.Size(65, 22);
+            this.txtEquipBolt1ID.Size = new System.Drawing.Size(65, 26);
             this.txtEquipBolt1ID.TabIndex = 27;
             this.txtEquipBolt1ID.Text = "0";
             this.txtEquipBolt1ID.TextAlign = System.Windows.Forms.HorizontalAlignment.Right;
@@ -692,7 +696,7 @@
             this.txtEquipBolt1Idx.Margin = new System.Windows.Forms.Padding(4);
             this.txtEquipBolt1Idx.Name = "txtEquipBolt1Idx";
             this.txtEquipBolt1Idx.ReadOnly = true;
-            this.txtEquipBolt1Idx.Size = new System.Drawing.Size(65, 22);
+            this.txtEquipBolt1Idx.Size = new System.Drawing.Size(65, 26);
             this.txtEquipBolt1Idx.TabIndex = 26;
             this.txtEquipBolt1Idx.Text = "0";
             this.txtEquipBolt1Idx.TextAlign = System.Windows.Forms.HorizontalAlignment.Right;
@@ -703,7 +707,7 @@
             lblEquipArrow2.Location = new System.Drawing.Point(304, 107);
             lblEquipArrow2.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             lblEquipArrow2.Name = "lblEquipArrow2";
-            lblEquipArrow2.Size = new System.Drawing.Size(16, 17);
+            lblEquipArrow2.Size = new System.Drawing.Size(18, 20);
             lblEquipArrow2.TabIndex = 25;
             lblEquipArrow2.Text = "2";
             // 
@@ -713,7 +717,7 @@
             lblEquipArrow1.Location = new System.Drawing.Point(44, 107);
             lblEquipArrow1.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             lblEquipArrow1.Name = "lblEquipArrow1";
-            lblEquipArrow1.Size = new System.Drawing.Size(56, 17);
+            lblEquipArrow1.Size = new System.Drawing.Size(63, 20);
             lblEquipArrow1.TabIndex = 24;
             lblEquipArrow1.Text = "Arrow 1";
             // 
@@ -723,7 +727,7 @@
             this.txtEquipArrow2ID.Margin = new System.Windows.Forms.Padding(4);
             this.txtEquipArrow2ID.Name = "txtEquipArrow2ID";
             this.txtEquipArrow2ID.ReadOnly = true;
-            this.txtEquipArrow2ID.Size = new System.Drawing.Size(65, 22);
+            this.txtEquipArrow2ID.Size = new System.Drawing.Size(65, 26);
             this.txtEquipArrow2ID.TabIndex = 23;
             this.txtEquipArrow2ID.Text = "0";
             this.txtEquipArrow2ID.TextAlign = System.Windows.Forms.HorizontalAlignment.Right;
@@ -734,7 +738,7 @@
             this.txtEquipArrow2Idx.Margin = new System.Windows.Forms.Padding(4);
             this.txtEquipArrow2Idx.Name = "txtEquipArrow2Idx";
             this.txtEquipArrow2Idx.ReadOnly = true;
-            this.txtEquipArrow2Idx.Size = new System.Drawing.Size(65, 22);
+            this.txtEquipArrow2Idx.Size = new System.Drawing.Size(65, 26);
             this.txtEquipArrow2Idx.TabIndex = 22;
             this.txtEquipArrow2Idx.Text = "0";
             this.txtEquipArrow2Idx.TextAlign = System.Windows.Forms.HorizontalAlignment.Right;
@@ -745,7 +749,7 @@
             this.txtEquipArrow1ID.Margin = new System.Windows.Forms.Padding(4);
             this.txtEquipArrow1ID.Name = "txtEquipArrow1ID";
             this.txtEquipArrow1ID.ReadOnly = true;
-            this.txtEquipArrow1ID.Size = new System.Drawing.Size(65, 22);
+            this.txtEquipArrow1ID.Size = new System.Drawing.Size(65, 26);
             this.txtEquipArrow1ID.TabIndex = 21;
             this.txtEquipArrow1ID.Text = "0";
             this.txtEquipArrow1ID.TextAlign = System.Windows.Forms.HorizontalAlignment.Right;
@@ -756,7 +760,7 @@
             this.txtEquipArrow1Idx.Margin = new System.Windows.Forms.Padding(4);
             this.txtEquipArrow1Idx.Name = "txtEquipArrow1Idx";
             this.txtEquipArrow1Idx.ReadOnly = true;
-            this.txtEquipArrow1Idx.Size = new System.Drawing.Size(65, 22);
+            this.txtEquipArrow1Idx.Size = new System.Drawing.Size(65, 26);
             this.txtEquipArrow1Idx.TabIndex = 20;
             this.txtEquipArrow1Idx.Text = "0";
             this.txtEquipArrow1Idx.TextAlign = System.Windows.Forms.HorizontalAlignment.Right;
@@ -767,7 +771,7 @@
             lblEquipLeft2.Location = new System.Drawing.Point(304, 75);
             lblEquipLeft2.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             lblEquipLeft2.Name = "lblEquipLeft2";
-            lblEquipLeft2.Size = new System.Drawing.Size(16, 17);
+            lblEquipLeft2.Size = new System.Drawing.Size(18, 20);
             lblEquipLeft2.TabIndex = 19;
             lblEquipLeft2.Text = "2";
             // 
@@ -777,7 +781,7 @@
             lblEquipLeft1.Location = new System.Drawing.Point(17, 75);
             lblEquipLeft1.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             lblEquipLeft1.Name = "lblEquipLeft1";
-            lblEquipLeft1.Size = new System.Drawing.Size(82, 17);
+            lblEquipLeft1.Size = new System.Drawing.Size(93, 20);
             lblEquipLeft1.TabIndex = 16;
             lblEquipLeft1.Text = "Left Hand 1";
             // 
@@ -787,7 +791,7 @@
             this.txtEquipLeft2ID.Margin = new System.Windows.Forms.Padding(4);
             this.txtEquipLeft2ID.Name = "txtEquipLeft2ID";
             this.txtEquipLeft2ID.ReadOnly = true;
-            this.txtEquipLeft2ID.Size = new System.Drawing.Size(65, 22);
+            this.txtEquipLeft2ID.Size = new System.Drawing.Size(65, 26);
             this.txtEquipLeft2ID.TabIndex = 13;
             this.txtEquipLeft2ID.Text = "0";
             this.txtEquipLeft2ID.TextAlign = System.Windows.Forms.HorizontalAlignment.Right;
@@ -798,7 +802,7 @@
             this.txtEquipLeft2Idx.Margin = new System.Windows.Forms.Padding(4);
             this.txtEquipLeft2Idx.Name = "txtEquipLeft2Idx";
             this.txtEquipLeft2Idx.ReadOnly = true;
-            this.txtEquipLeft2Idx.Size = new System.Drawing.Size(65, 22);
+            this.txtEquipLeft2Idx.Size = new System.Drawing.Size(65, 26);
             this.txtEquipLeft2Idx.TabIndex = 12;
             this.txtEquipLeft2Idx.Text = "0";
             this.txtEquipLeft2Idx.TextAlign = System.Windows.Forms.HorizontalAlignment.Right;
@@ -809,7 +813,7 @@
             this.txtEquipLeft1ID.Margin = new System.Windows.Forms.Padding(4);
             this.txtEquipLeft1ID.Name = "txtEquipLeft1ID";
             this.txtEquipLeft1ID.ReadOnly = true;
-            this.txtEquipLeft1ID.Size = new System.Drawing.Size(65, 22);
+            this.txtEquipLeft1ID.Size = new System.Drawing.Size(65, 26);
             this.txtEquipLeft1ID.TabIndex = 11;
             this.txtEquipLeft1ID.Text = "0";
             this.txtEquipLeft1ID.TextAlign = System.Windows.Forms.HorizontalAlignment.Right;
@@ -820,7 +824,7 @@
             this.txtEquipLeft1Idx.Margin = new System.Windows.Forms.Padding(4);
             this.txtEquipLeft1Idx.Name = "txtEquipLeft1Idx";
             this.txtEquipLeft1Idx.ReadOnly = true;
-            this.txtEquipLeft1Idx.Size = new System.Drawing.Size(65, 22);
+            this.txtEquipLeft1Idx.Size = new System.Drawing.Size(65, 26);
             this.txtEquipLeft1Idx.TabIndex = 10;
             this.txtEquipLeft1Idx.Text = "0";
             this.txtEquipLeft1Idx.TextAlign = System.Windows.Forms.HorizontalAlignment.Right;
@@ -831,7 +835,7 @@
             lblEquipRight2.Location = new System.Drawing.Point(304, 43);
             lblEquipRight2.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             lblEquipRight2.Name = "lblEquipRight2";
-            lblEquipRight2.Size = new System.Drawing.Size(16, 17);
+            lblEquipRight2.Size = new System.Drawing.Size(18, 20);
             lblEquipRight2.TabIndex = 9;
             lblEquipRight2.Text = "2";
             // 
@@ -841,7 +845,7 @@
             lblEquipID2.Location = new System.Drawing.Point(447, 20);
             lblEquipID2.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             lblEquipID2.Name = "lblEquipID2";
-            lblEquipID2.Size = new System.Drawing.Size(21, 17);
+            lblEquipID2.Size = new System.Drawing.Size(26, 20);
             lblEquipID2.TabIndex = 8;
             lblEquipID2.Text = "ID";
             // 
@@ -851,7 +855,7 @@
             lblEquipIndex2.Location = new System.Drawing.Point(352, 20);
             lblEquipIndex2.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             lblEquipIndex2.Name = "lblEquipIndex2";
-            lblEquipIndex2.Size = new System.Drawing.Size(41, 17);
+            lblEquipIndex2.Size = new System.Drawing.Size(48, 20);
             lblEquipIndex2.TabIndex = 7;
             lblEquipIndex2.Text = "Index";
             // 
@@ -861,7 +865,7 @@
             lblEquipRight1.Location = new System.Drawing.Point(8, 43);
             lblEquipRight1.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             lblEquipRight1.Name = "lblEquipRight1";
-            lblEquipRight1.Size = new System.Drawing.Size(91, 17);
+            lblEquipRight1.Size = new System.Drawing.Size(103, 20);
             lblEquipRight1.TabIndex = 6;
             lblEquipRight1.Text = "Right Hand 1";
             // 
@@ -871,7 +875,7 @@
             lblEquipID1.Location = new System.Drawing.Point(227, 20);
             lblEquipID1.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             lblEquipID1.Name = "lblEquipID1";
-            lblEquipID1.Size = new System.Drawing.Size(21, 17);
+            lblEquipID1.Size = new System.Drawing.Size(26, 20);
             lblEquipID1.TabIndex = 5;
             lblEquipID1.Text = "ID";
             // 
@@ -881,7 +885,7 @@
             lblEquipIndex1.Location = new System.Drawing.Point(132, 20);
             lblEquipIndex1.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             lblEquipIndex1.Name = "lblEquipIndex1";
-            lblEquipIndex1.Size = new System.Drawing.Size(41, 17);
+            lblEquipIndex1.Size = new System.Drawing.Size(48, 20);
             lblEquipIndex1.TabIndex = 4;
             lblEquipIndex1.Text = "Index";
             // 
@@ -891,7 +895,7 @@
             this.txtEquipRight2ID.Margin = new System.Windows.Forms.Padding(4);
             this.txtEquipRight2ID.Name = "txtEquipRight2ID";
             this.txtEquipRight2ID.ReadOnly = true;
-            this.txtEquipRight2ID.Size = new System.Drawing.Size(65, 22);
+            this.txtEquipRight2ID.Size = new System.Drawing.Size(65, 26);
             this.txtEquipRight2ID.TabIndex = 3;
             this.txtEquipRight2ID.Text = "0";
             this.txtEquipRight2ID.TextAlign = System.Windows.Forms.HorizontalAlignment.Right;
@@ -902,7 +906,7 @@
             this.txtEquipRight2Idx.Margin = new System.Windows.Forms.Padding(4);
             this.txtEquipRight2Idx.Name = "txtEquipRight2Idx";
             this.txtEquipRight2Idx.ReadOnly = true;
-            this.txtEquipRight2Idx.Size = new System.Drawing.Size(65, 22);
+            this.txtEquipRight2Idx.Size = new System.Drawing.Size(65, 26);
             this.txtEquipRight2Idx.TabIndex = 2;
             this.txtEquipRight2Idx.Text = "0";
             this.txtEquipRight2Idx.TextAlign = System.Windows.Forms.HorizontalAlignment.Right;
@@ -913,7 +917,7 @@
             this.txtEquipRight1ID.Margin = new System.Windows.Forms.Padding(4);
             this.txtEquipRight1ID.Name = "txtEquipRight1ID";
             this.txtEquipRight1ID.ReadOnly = true;
-            this.txtEquipRight1ID.Size = new System.Drawing.Size(65, 22);
+            this.txtEquipRight1ID.Size = new System.Drawing.Size(65, 26);
             this.txtEquipRight1ID.TabIndex = 1;
             this.txtEquipRight1ID.Text = "0";
             this.txtEquipRight1ID.TextAlign = System.Windows.Forms.HorizontalAlignment.Right;
@@ -924,7 +928,7 @@
             this.txtEquipRight1Idx.Margin = new System.Windows.Forms.Padding(4);
             this.txtEquipRight1Idx.Name = "txtEquipRight1Idx";
             this.txtEquipRight1Idx.ReadOnly = true;
-            this.txtEquipRight1Idx.Size = new System.Drawing.Size(65, 22);
+            this.txtEquipRight1Idx.Size = new System.Drawing.Size(65, 26);
             this.txtEquipRight1Idx.TabIndex = 0;
             this.txtEquipRight1Idx.Text = "0";
             this.txtEquipRight1Idx.TextAlign = System.Windows.Forms.HorizontalAlignment.Right;
@@ -935,7 +939,7 @@
             lblStoredItem.Location = new System.Drawing.Point(4, 380);
             lblStoredItem.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             lblStoredItem.Name = "lblStoredItem";
-            lblStoredItem.Size = new System.Drawing.Size(97, 17);
+            lblStoredItem.Size = new System.Drawing.Size(114, 20);
             lblStoredItem.TabIndex = 11;
             lblStoredItem.Text = "Stored Item ID";
             // 
@@ -945,7 +949,7 @@
             this.txtStoredQuantity.Margin = new System.Windows.Forms.Padding(4);
             this.txtStoredQuantity.Name = "txtStoredQuantity";
             this.txtStoredQuantity.ReadOnly = true;
-            this.txtStoredQuantity.Size = new System.Drawing.Size(132, 22);
+            this.txtStoredQuantity.Size = new System.Drawing.Size(132, 26);
             this.txtStoredQuantity.TabIndex = 15;
             // 
             // txtStoredMagic
@@ -954,7 +958,7 @@
             this.txtStoredMagic.Margin = new System.Windows.Forms.Padding(4);
             this.txtStoredMagic.Name = "txtStoredMagic";
             this.txtStoredMagic.ReadOnly = true;
-            this.txtStoredMagic.Size = new System.Drawing.Size(132, 22);
+            this.txtStoredMagic.Size = new System.Drawing.Size(132, 26);
             this.txtStoredMagic.TabIndex = 13;
             // 
             // txtStoredItem
@@ -963,13 +967,44 @@
             this.txtStoredItem.Margin = new System.Windows.Forms.Padding(4);
             this.txtStoredItem.Name = "txtStoredItem";
             this.txtStoredItem.ReadOnly = true;
-            this.txtStoredItem.Size = new System.Drawing.Size(132, 22);
+            this.txtStoredItem.Size = new System.Drawing.Size(132, 26);
             this.txtStoredItem.TabIndex = 10;
+            // 
+            // cbxGlowyHair
+            // 
+            this.cbxGlowyHair.AutoSize = true;
+            this.cbxGlowyHair.Location = new System.Drawing.Point(0, 121);
+            this.cbxGlowyHair.Name = "cbxGlowyHair";
+            this.cbxGlowyHair.Size = new System.Drawing.Size(111, 24);
+            this.cbxGlowyHair.TabIndex = 20;
+            this.cbxGlowyHair.Text = "Glowy Hair";
+            this.cbxGlowyHair.UseVisualStyleBackColor = true;
+            this.cbxGlowyHair.CheckedChanged += new System.EventHandler(this.cbxGlowyHair_CheckedChanged);
+            // 
+            // gbxHairColor
+            // 
+            this.gbxHairColor.Controls.Add(this.pnlHairColor);
+            this.gbxHairColor.Controls.Add(this.cbxGlowyHair);
+            this.gbxHairColor.Location = new System.Drawing.Point(9, 455);
+            this.gbxHairColor.Name = "gbxHairColor";
+            this.gbxHairColor.Size = new System.Drawing.Size(200, 156);
+            this.gbxHairColor.TabIndex = 19;
+            this.gbxHairColor.TabStop = false;
+            this.gbxHairColor.Text = "Hair Color";
+            // 
+            // pnlHairColor
+            // 
+            this.pnlHairColor.Location = new System.Drawing.Point(16, 25);
+            this.pnlHairColor.Name = "pnlHairColor";
+            this.pnlHairColor.Size = new System.Drawing.Size(102, 84);
+            this.pnlHairColor.TabIndex = 0;
+            this.pnlHairColor.Click += new System.EventHandler(this.pnlHairColor_Click);
             // 
             // GadgetTabInternals
             // 
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Inherit;
             this.AutoSize = true;
+            this.Controls.Add(this.gbxHairColor);
             this.Controls.Add(lblStoredQuantity);
             this.Controls.Add(this.txtStoredQuantity);
             this.Controls.Add(lblStoredMagic);
@@ -978,11 +1013,13 @@
             this.Controls.Add(lblStoredItem);
             this.Controls.Add(this.txtStoredItem);
             this.Name = "GadgetTabInternals";
-            this.Size = new System.Drawing.Size(487, 531);
+            this.Size = new System.Drawing.Size(489, 645);
             gbxEquipment.ResumeLayout(false);
             gbxEquipment.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.nudHairID)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.nudHairIdx)).EndInit();
+            this.gbxHairColor.ResumeLayout(false);
+            this.gbxHairColor.PerformLayout();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -1033,5 +1070,8 @@
         private System.Windows.Forms.TextBox txtStoredItem;
         private System.Windows.Forms.NumericUpDown nudHairID;
         private System.Windows.Forms.NumericUpDown nudHairIdx;
+        private System.Windows.Forms.CheckBox cbxGlowyHair;
+        private System.Windows.Forms.GroupBox gbxHairColor;
+        private System.Windows.Forms.Panel pnlHairColor;
     }
 }

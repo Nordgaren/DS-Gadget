@@ -726,6 +726,7 @@ namespace DS_Gadget
         {
             AllNoStaminaConsume.WriteBoolean((int)DSOffsets.ChrDbg.AllNoUpdateAI, enable);
         }
+
         #endregion
 
         #region Internals Tab
@@ -784,6 +785,24 @@ namespace DS_Gadget
         public int StoredMagic => Unknown4.ReadInt32((int)DSOffsets.Unknown4.StoredMagic);
         public int StoredItem => CharData1.ReadInt32((int)DSOffsets.CharData1.StoredItem);
         public int StoredQuantity => MenuManager.ReadInt32((int)DSOffsets.MenuManager.QuantityDefault);
+
+        public float HairColorRed
+        {
+            get => CharData2.ReadSingle((int)DSOffsets.CharData2.HairColorRed);
+            set => CharData2.WriteSingle((int)DSOffsets.CharData2.HairColorRed, value);
+        }
+
+        public float HairColorGreen
+        {
+            get => CharData2.ReadSingle((int)DSOffsets.CharData2.HairColorGreen);
+            set => CharData2.WriteSingle((int)DSOffsets.CharData2.HairColorGreen, value);
+        }
+
+        public float HairColorBlue
+        {
+            get => CharData2.ReadSingle((int)DSOffsets.CharData2.HairColorBlue);
+            set => CharData2.WriteSingle((int)DSOffsets.CharData2.HairColorBlue, value);
+        }
         #endregion
 
         #region Misc Tab
