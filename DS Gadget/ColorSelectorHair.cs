@@ -72,7 +72,7 @@ namespace DS_Gadget
 
         private void nudRed_ValueChanged(object sender, EventArgs e)
         {
-            Hook.HairColorRed = GadgetTabMisc.HairGlow ? (float)((nudRed.Value / 255) * 10) : (float)(nudRed.Value / 255);
+            Hook.HairColorRed = cbxGlow.Checked ? (float)((nudRed.Value / 255) * 10) : (float)(nudRed.Value / 255);
             if (ActiveControl == sender)
             {
                 UpdateTextBox();
@@ -81,7 +81,7 @@ namespace DS_Gadget
 
         private void nudGreen_ValueChanged(object sender, EventArgs e)
         {
-            Hook.HairColorGreen = GadgetTabMisc.HairGlow ? (float)((nudGreen.Value / 255) * 10) : (float)(nudGreen.Value / 255);
+            Hook.HairColorGreen = cbxGlow.Checked ? (float)((nudGreen.Value / 255) * 10) : (float)(nudGreen.Value / 255);
             if (ActiveControl == sender)
             {
                 UpdateTextBox();
@@ -90,7 +90,7 @@ namespace DS_Gadget
 
         private void nudBlue_ValueChanged(object sender, EventArgs e)
         {
-            Hook.HairColorBlue = GadgetTabMisc.HairGlow ? (float)((nudBlue.Value / 255) * 10) : (float)(nudBlue.Value / 255);
+            Hook.HairColorBlue = cbxGlow.Checked ? (float)((nudBlue.Value / 255) * 10) : (float)(nudBlue.Value / 255);
             if (ActiveControl == sender)
             {
                 UpdateTextBox();
