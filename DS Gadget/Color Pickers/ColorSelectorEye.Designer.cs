@@ -197,11 +197,11 @@ namespace DS_Gadget
             this.groupBox1.TabIndex = 5;
             this.groupBox1.TabStop = false;
             // 
-            // cbxGlowEyes
+            // cbxGlow
             // 
             this.cbxGlow.AutoSize = true;
             this.cbxGlow.Location = new System.Drawing.Point(194, 298);
-            this.cbxGlow.Name = "cbxGlowEyes";
+            this.cbxGlow.Name = "cbxGlow";
             this.cbxGlow.Size = new System.Drawing.Size(71, 24);
             this.cbxGlow.TabIndex = 7;
             this.cbxGlow.Text = "Glow";
