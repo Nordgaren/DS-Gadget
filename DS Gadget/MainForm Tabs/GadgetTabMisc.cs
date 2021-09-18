@@ -257,12 +257,13 @@ namespace DS_Gadget
             {
                 SetIdLabel();
                 SetPanelColor();
-                SetGlowStatus();
+                pnlEyeColor.BorderStyle = BorderStyle.FixedSingle;
+                pnlHairColor.BorderStyle = BorderStyle.FixedSingle;
             }
             else
             {
-                cbxGlowyHair.Checked = false;
-                cbxGlowyEyes.Checked = false;
+                pnlEyeColor.BorderStyle = BorderStyle.None;
+                pnlHairColor.BorderStyle = BorderStyle.None;
             }
         }
 
@@ -369,22 +370,7 @@ namespace DS_Gadget
             cmbCategory.SelectedIndex = 0;
         }
 
-        private void SetGlowStatus()
-        {
-            if (Hook.HairColorRed > 1 || Hook.HairColorGreen > 1 || Hook.HairColorBlue > 1)
-                cbxGlowyHair.Checked = true;
-            else
-                cbxGlowyHair.Checked = false;
-
-            if (Hook.EyeColorRed > 1 || Hook.EyeColorGreen > 1 || Hook.EyeColorBlue > 1)
-                cbxGlowyEyes.Checked = true;
-            else
-                cbxGlowyEyes.Checked = false;
-        }
-
-        public static bool HairGlow { get; set; }
-
-        public static bool EyeGlow { get; set; }
+        
 
         private bool SelectorOpen;
 
@@ -401,13 +387,7 @@ namespace DS_Gadget
 
         private void OnHairColorSelectorDisposed(object sender, EventArgs e)
         {
-            SetGlowStatus();
             SelectorOpen = false;
-        }
-
-        private void cbxGlowyHair_CheckedChanged(object sender, EventArgs e)
-        {
-            HairGlow = cbxGlowyHair.Checked;
         }
 
         private void pnlEyeColor_Click(object sender, EventArgs e)
@@ -423,15 +403,10 @@ namespace DS_Gadget
 
         private void OnEyeColorSelectorDisposed(object sender, EventArgs e)
         {
-            SetGlowStatus();
             SelectorOpen = false;
         }
 
-        private void cbxGlowyEye_CheckedChanged(object sender, EventArgs e)
-        {
-            EyeGlow = cbxGlowyEyes.Checked;
-        }
-
+        
         private void SetPanelColor()
         {
             if (Hook.Loaded)

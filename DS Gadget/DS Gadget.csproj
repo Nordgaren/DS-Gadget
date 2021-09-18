@@ -228,7 +228,6 @@
   <ItemGroup>
     <Content Include="icon.ico" />
     <None Include="rgbSpectrum.png" />
-    <None Include="rgbSpectrum.jpg" />
     <Content Include="Resources\SavedPositions.xml">
       <CopyToOutputDirectory>Always</CopyToOutputDirectory>
     </Content>

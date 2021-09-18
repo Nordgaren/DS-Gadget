@@ -20,6 +20,7 @@ namespace DS_Gadget
             R = Hook.EyeColorRed;
             G = Hook.EyeColorGreen;
             B = Hook.EyeColorBlue;
+            SetGlowStatus();
         }
 
         Bitmap PixelData;
@@ -28,6 +29,18 @@ namespace DS_Gadget
         private float G;
         private float B;
 
+        private void SetGlowStatus()
+        {
+            if (Hook.HairColorRed > 1 || Hook.HairColorGreen > 1 || Hook.HairColorBlue > 1)
+                cbxGlow.Checked = true;
+            else
+                cbxGlow.Checked = false;
+
+            if (Hook.EyeColorRed > 1 || Hook.EyeColorGreen > 1 || Hook.EyeColorBlue > 1)
+                cbxGlow.Checked = true;
+            else
+                cbxGlow.Checked = false;
+        }
 
         private void pbxColorSelector_MouseMove(object sender, MouseEventArgs e)
         {
@@ -76,7 +89,7 @@ namespace DS_Gadget
 
         private void nudRed_ValueChanged(object sender, EventArgs e)
         {
-            Hook.EyeColorRed = GadgetTabMisc.EyeGlow ? (float)((nudRed.Value / 255) * 10) : (float)(nudRed.Value / 255);
+            Hook.EyeColorRed = cbxGlow.Checked ? (float)((nudRed.Value / 255) * 10) : (float)(nudRed.Value / 255);
             if (ActiveControl == sender)
             {
                 UpdateTextBox();
@@ -85,7 +98,7 @@ namespace DS_Gadget
 
         private void nudGreen_ValueChanged(object sender, EventArgs e)
         {
-            Hook.EyeColorGreen = GadgetTabMisc.EyeGlow ? (float)((nudGreen.Value / 255) * 10) : (float)(nudGreen.Value / 255);
+            Hook.EyeColorGreen = cbxGlow.Checked ? (float)((nudGreen.Value / 255) * 10) : (float)(nudGreen.Value / 255);
             if (ActiveControl == sender)
             {
                 UpdateTextBox();
@@ -94,7 +107,7 @@ namespace DS_Gadget
 
         private void nudBlue_ValueChanged(object sender, EventArgs e)
         {
-            Hook.EyeColorBlue = GadgetTabMisc.EyeGlow ? (float)((nudBlue.Value / 255) * 10) : (float)(nudBlue.Value / 255);
+            Hook.EyeColorBlue = cbxGlow.Checked ? (float)((nudBlue.Value / 255) * 10) : (float)(nudBlue.Value / 255);
             if (ActiveControl == sender)
             {
                 UpdateTextBox();
@@ -135,5 +148,7 @@ namespace DS_Gadget
         {
             UpdateTextBox();
         }
+
+        
     }
 }

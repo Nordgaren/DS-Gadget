@@ -130,16 +130,6 @@ namespace DS_Gadget.Properties {
         /// <summary>
         ///   Looks up a localized resource of type System.Drawing.Bitmap.
         /// </summary>
-        internal static System.Drawing.Bitmap rgbSpectrum {
-            get {
-                object obj = ResourceManager.GetObject("rgbSpectrum", resourceCulture);
-                return ((System.Drawing.Bitmap)(obj));
-            }
-        }
-        
-        /// <summary>
-        ///   Looks up a localized resource of type System.Drawing.Bitmap.
-        /// </summary>
         internal static System.Drawing.Bitmap rgbSpectrum1 {
             get {
                 object obj = ResourceManager.GetObject("rgbSpectrum1", resourceCulture);

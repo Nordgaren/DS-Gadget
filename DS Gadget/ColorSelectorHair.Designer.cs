@@ -47,6 +47,7 @@ namespace DS_Gadget
             this.lblHexColor = new System.Windows.Forms.Label();
             this.btnApply = new System.Windows.Forms.Button();
             this.btnCancel = new System.Windows.Forms.Button();
+            this.cbxGlow = new System.Windows.Forms.CheckBox();
             ((System.ComponentModel.ISupportInitialize)(this.pbxColorSelector)).BeginInit();
             this.gbxColorSelector.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.nudBlue)).BeginInit();
@@ -70,8 +71,8 @@ namespace DS_Gadget
             // 
             this.pbxColorSelector.Anchor = System.Windows.Forms.AnchorStyles.Left;
             this.pbxColorSelector.ErrorImage = null;
-            this.pbxColorSelector.Image = global::DS_Gadget.Properties.Resources.rgbSpectrum1;
-            this.pbxColorSelector.InitialImage = global::DS_Gadget.Properties.Resources.rgbSpectrum;
+            this.pbxColorSelector.Image = ((System.Drawing.Image)(resources.GetObject("pbxColorSelector.Image")));
+            this.pbxColorSelector.InitialImage = ((System.Drawing.Image)(resources.GetObject("pbxColorSelector.InitialImage")));
             this.pbxColorSelector.Location = new System.Drawing.Point(75, 15);
             this.pbxColorSelector.Name = "pbxColorSelector";
             this.pbxColorSelector.Size = new System.Drawing.Size(226, 166);
@@ -184,6 +185,7 @@ namespace DS_Gadget
             // 
             // groupBox1
             // 
+            this.groupBox1.Controls.Add(this.cbxGlow);
             this.groupBox1.Controls.Add(this.txtHexColor);
             this.groupBox1.Controls.Add(this.label1);
             this.groupBox1.Controls.Add(this.lblHexColor);
@@ -244,6 +246,16 @@ namespace DS_Gadget
             this.btnCancel.UseVisualStyleBackColor = true;
             this.btnCancel.Click += new System.EventHandler(this.btnCancel_Click);
             // 
+            // cbxGlow
+            // 
+            this.cbxGlow.AutoSize = true;
+            this.cbxGlow.Location = new System.Drawing.Point(194, 298);
+            this.cbxGlow.Name = "cbxGlow";
+            this.cbxGlow.Size = new System.Drawing.Size(71, 24);
+            this.cbxGlow.TabIndex = 8;
+            this.cbxGlow.Text = "Glow";
+            this.cbxGlow.UseVisualStyleBackColor = true;
+            // 
             // ColorSelectorHair
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(9F, 20F);
@@ -291,5 +303,6 @@ namespace DS_Gadget
         private System.Windows.Forms.Label label1;
         private System.Windows.Forms.Label lblHexColor;
         private System.Windows.Forms.TextBox txtHexColor;
+        private System.Windows.Forms.CheckBox cbxGlow;
     }
 }
