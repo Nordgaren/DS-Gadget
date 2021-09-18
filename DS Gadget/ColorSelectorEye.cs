@@ -31,11 +31,6 @@ namespace DS_Gadget
 
         private void SetGlowStatus()
         {
-            if (Hook.HairColorRed > 1 || Hook.HairColorGreen > 1 || Hook.HairColorBlue > 1)
-                cbxGlow.Checked = true;
-            else
-                cbxGlow.Checked = false;
-
             if (Hook.EyeColorRed > 1 || Hook.EyeColorGreen > 1 || Hook.EyeColorBlue > 1)
                 cbxGlow.Checked = true;
             else
