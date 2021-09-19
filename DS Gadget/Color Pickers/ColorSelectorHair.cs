@@ -21,18 +21,11 @@ namespace DS_Gadget
             G = Hook.HairColorGreen;
             B = Hook.HairColorBlue;
 
-            if (SetGlowStatus())
-            {
-                nudRed.Value = (byte)(((R/ 10) * 255));
-                nudGreen.Value = (byte)(((G / 10) * 255));
-                nudBlue.Value = (byte)(((B / 10) * 255));
-            }
-            else
-            {
-                nudRed.Value = (byte)(R * 255);
-                nudGreen.Value = (byte)(G * 255);
-                nudBlue.Value = (byte)(B * 255);
-            }
+            var glow = SetGlowStatus();
+
+            nudRed.Value = glow ? (byte)(((R / 10) * 255)) : (byte)(R * 255);
+            nudGreen.Value = glow ? (byte)(((G / 10) * 255)) : (byte)(G * 255);
+            nudBlue.Value = glow ? (byte)(((B / 10) * 255)) : (byte)(B * 255);
 
             CenterGBXLabel();
         }

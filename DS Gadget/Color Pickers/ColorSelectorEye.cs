@@ -12,6 +12,12 @@ namespace DS_Gadget
 {
     public partial class ColorSelectorEye : Form
     {
+        Bitmap PixelData;
+        private DSHook Hook;
+        private float R;
+        private float G;
+        private float B;
+
         public ColorSelectorEye(DSHook hook)
         {
             InitializeComponent();
@@ -21,18 +27,11 @@ namespace DS_Gadget
             G = Hook.EyeColorGreen;
             B = Hook.EyeColorBlue;
 
-            if (SetGlowStatus())
-            {
-                nudRed.Value = (byte)(((R / 10) * 255));
-                nudGreen.Value = (byte)(((G / 10) * 255));
-                nudBlue.Value = (byte)(((B / 10) * 255));
-            }
-            else
-            {
-                nudRed.Value = (byte)(R * 255);
-                nudGreen.Value = (byte)(G * 255);
-                nudBlue.Value = (byte)(B * 255);
-            }
+            var glow = SetGlowStatus();
+
+            nudRed.Value = glow ? (byte)(((R / 10) * 255)) : (byte)(R * 255);
+            nudGreen.Value = glow ? (byte)(((G / 10) * 255)) : (byte)(G * 255);
+            nudBlue.Value = glow ? (byte)(((B / 10) * 255)) : (byte)(B * 255);
 
             CenterGBXLabel();
         }
@@ -47,12 +46,6 @@ namespace DS_Gadget
             label.Parent = gbxColorSelector.Parent;
             label.BringToFront();
         }
-
-        Bitmap PixelData;
-        private DSHook Hook;
-        private float R;
-        private float G;
-        private float B;
 
         private bool SetGlowStatus()
         {
