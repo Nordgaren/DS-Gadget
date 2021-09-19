@@ -20,7 +20,20 @@ namespace DS_Gadget
             R = Hook.HairColorRed;
             G = Hook.HairColorGreen;
             B = Hook.HairColorBlue;
-            SetGlowStatus();
+
+            if (SetGlowStatus())
+            {
+                nudRed.Value = (byte)(((R/ 10) * 255));
+                nudGreen.Value = (byte)(((G / 10) * 255));
+                nudBlue.Value = (byte)(((B / 10) * 255));
+            }
+            else
+            {
+                nudRed.Value = (byte)(R * 255);
+                nudGreen.Value = (byte)(G * 255);
+                nudBlue.Value = (byte)(B * 255);
+            }
+
             CenterGBXLabel();
         }
 
@@ -41,12 +54,12 @@ namespace DS_Gadget
         private float G;
         private float B;
 
-        private void SetGlowStatus()
+        private bool SetGlowStatus()
         {
             if (Hook.HairColorRed > 1 || Hook.HairColorGreen > 1 || Hook.HairColorBlue > 1)
-                cbxGlow.Checked = true;
+                return cbxGlow.Checked = true;
             else
-                cbxGlow.Checked = false;
+                return cbxGlow.Checked = false;
         }
 
         private void pbxColorSelector_MouseMove(object sender, MouseEventArgs e)
@@ -76,12 +89,6 @@ namespace DS_Gadget
             nudBlue.Value = clr.B;
         }
 
-        private void pbxColorSelector_MouseDown(object sender, MouseEventArgs e)
-        {
-            var clr = PixelData.GetPixel(e.X, e.Y);
-            SetHairColor(clr);
-        }
-
         private void UpdateTextBox()
         {
             var red = ((byte)nudRed.Value).ToString("X2");
@@ -91,31 +98,17 @@ namespace DS_Gadget
             SetHairColor(Color.FromArgb((byte)nudRed.Value, (byte)nudGreen.Value, (byte)nudBlue.Value));
         }
 
-        private void nudRed_ValueChanged(object sender, EventArgs e)
+        private void nud_ValueChanged(object sender, EventArgs e)
+        {
+            RecalulateColors();
+            UpdateTextBox();
+        }
+
+        private void RecalulateColors()
         {
             Hook.HairColorRed = cbxGlow.Checked ? (float)((nudRed.Value / 255) * 10) : (float)(nudRed.Value / 255);
-            if (ActiveControl == sender)
-            {
-                UpdateTextBox();
-            }
-        }
-
-        private void nudGreen_ValueChanged(object sender, EventArgs e)
-        {
             Hook.HairColorGreen = cbxGlow.Checked ? (float)((nudGreen.Value / 255) * 10) : (float)(nudGreen.Value / 255);
-            if (ActiveControl == sender)
-            {
-                UpdateTextBox();
-            }
-        }
-
-        private void nudBlue_ValueChanged(object sender, EventArgs e)
-        {
             Hook.HairColorBlue = cbxGlow.Checked ? (float)((nudBlue.Value / 255) * 10) : (float)(nudBlue.Value / 255);
-            if (ActiveControl == sender)
-            {
-                UpdateTextBox();
-            }
         }
 
         private void btnCancel_Click(object sender, EventArgs e)
@@ -150,6 +143,11 @@ namespace DS_Gadget
         private void nud_Leave(object sender, EventArgs e)
         {
             UpdateTextBox();
+        }
+
+        private void cbxGlow_CheckedChanged(object sender, EventArgs e)
+        {
+            RecalulateColors();
         }
     }
 }

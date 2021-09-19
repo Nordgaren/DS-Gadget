@@ -20,7 +20,20 @@ namespace DS_Gadget
             R = Hook.EyeColorRed;
             G = Hook.EyeColorGreen;
             B = Hook.EyeColorBlue;
-            SetGlowStatus();
+
+            if (SetGlowStatus())
+            {
+                nudRed.Value = (byte)(((R / 10) * 255));
+                nudGreen.Value = (byte)(((G / 10) * 255));
+                nudBlue.Value = (byte)(((B / 10) * 255));
+            }
+            else
+            {
+                nudRed.Value = (byte)(R * 255);
+                nudGreen.Value = (byte)(G * 255);
+                nudBlue.Value = (byte)(B * 255);
+            }
+
             CenterGBXLabel();
         }
 
@@ -41,12 +54,12 @@ namespace DS_Gadget
         private float G;
         private float B;
 
-        private void SetGlowStatus()
+        private bool SetGlowStatus()
         {
             if (Hook.EyeColorRed > 1 || Hook.EyeColorGreen > 1 || Hook.EyeColorBlue > 1)
-                cbxGlow.Checked = true;
+                return cbxGlow.Checked = true;
             else
-                cbxGlow.Checked = false;
+                return cbxGlow.Checked = false;
         }
 
         private void pbxColorSelector_MouseMove(object sender, MouseEventArgs e)
@@ -57,7 +70,6 @@ namespace DS_Gadget
                 txtHexColor.Text = $"{clr.R.ToString("X2")}{clr.G.ToString("X2")}{clr.B.ToString("X2")}";
                 lblsmallScreen.BackColor = clr;
 
-
                 if (e.Button == MouseButtons.Left)
                 {
                     SetEyeColor(clr);
@@ -67,7 +79,6 @@ namespace DS_Gadget
             {
                 return;
             }
-            
         }
 
         private void SetEyeColor(Color clr)
@@ -78,13 +89,6 @@ namespace DS_Gadget
             nudBlue.Value = clr.B;
         }
 
-        private void pbxColorSelector_MouseDown(object sender, MouseEventArgs e)
-        {
-            var clr = PixelData.GetPixel(e.X, e.Y);
-            SetEyeColor(clr);
-        }
-
-
         private void UpdateTextBox()
         {
             var red = ((byte)nudRed.Value).ToString("X2");
@@ -94,31 +98,17 @@ namespace DS_Gadget
             SetEyeColor(Color.FromArgb((byte)nudRed.Value, (byte)nudGreen.Value, (byte)nudBlue.Value));
         }
 
-        private void nudRed_ValueChanged(object sender, EventArgs e)
+        private void nud_ValueChanged(object sender, EventArgs e)
+        {
+            RecalulateColors();
+            UpdateTextBox();
+        }
+
+        private void RecalulateColors()
         {
             Hook.EyeColorRed = cbxGlow.Checked ? (float)((nudRed.Value / 255) * 10) : (float)(nudRed.Value / 255);
-            if (ActiveControl == sender)
-            {
-                UpdateTextBox();
-            }
-        }
-
-        private void nudGreen_ValueChanged(object sender, EventArgs e)
-        {
             Hook.EyeColorGreen = cbxGlow.Checked ? (float)((nudGreen.Value / 255) * 10) : (float)(nudGreen.Value / 255);
-            if (ActiveControl == sender)
-            {
-                UpdateTextBox();
-            }
-        }
-
-        private void nudBlue_ValueChanged(object sender, EventArgs e)
-        {
             Hook.EyeColorBlue = cbxGlow.Checked ? (float)((nudBlue.Value / 255) * 10) : (float)(nudBlue.Value / 255);
-            if (ActiveControl == sender)
-            {
-                UpdateTextBox();
-            }
         }
 
         private void btnCancel_Click(object sender, EventArgs e)
@@ -136,7 +126,6 @@ namespace DS_Gadget
 
         private void txtHexColor_TextChanged(object sender, EventArgs e)
         {
-            
             var color = txtHexColor.Text.PadRight(6, '0');
 
             var red = byte.Parse(color.Substring(0, 2), System.Globalization.NumberStyles.HexNumber);
@@ -148,7 +137,7 @@ namespace DS_Gadget
                 var clr = Color.FromArgb(red, green, blue);
                 SetEyeColor(clr);
             }
-            
+
         }
 
         private void nud_Leave(object sender, EventArgs e)
@@ -156,6 +145,9 @@ namespace DS_Gadget
             UpdateTextBox();
         }
 
-        
+        private void cbxGlow_CheckedChanged(object sender, EventArgs e)
+        {
+            RecalulateColors();
+        }
     }
 }

@@ -79,7 +79,6 @@ namespace DS_Gadget
             this.pbxColorSelector.SizeMode = System.Windows.Forms.PictureBoxSizeMode.AutoSize;
             this.pbxColorSelector.TabIndex = 1;
             this.pbxColorSelector.TabStop = false;
-            this.pbxColorSelector.MouseDown += new System.Windows.Forms.MouseEventHandler(this.pbxColorSelector_MouseDown);
             this.pbxColorSelector.MouseMove += new System.Windows.Forms.MouseEventHandler(this.pbxColorSelector_MouseMove);
             // 
             // gbxColorSelector
@@ -143,7 +142,7 @@ namespace DS_Gadget
             this.nudBlue.Name = "nudBlue";
             this.nudBlue.Size = new System.Drawing.Size(120, 26);
             this.nudBlue.TabIndex = 2;
-            this.nudBlue.ValueChanged += new System.EventHandler(this.nudBlue_ValueChanged);
+            this.nudBlue.ValueChanged += new System.EventHandler(this.nud_ValueChanged);
             this.nudBlue.Leave += new System.EventHandler(this.nud_Leave);
             // 
             // nudGreen
@@ -157,7 +156,7 @@ namespace DS_Gadget
             this.nudGreen.Name = "nudGreen";
             this.nudGreen.Size = new System.Drawing.Size(120, 26);
             this.nudGreen.TabIndex = 1;
-            this.nudGreen.ValueChanged += new System.EventHandler(this.nudGreen_ValueChanged);
+            this.nudGreen.ValueChanged += new System.EventHandler(this.nud_ValueChanged);
             this.nudGreen.Leave += new System.EventHandler(this.nud_Leave);
             // 
             // nudRed
@@ -171,7 +170,7 @@ namespace DS_Gadget
             this.nudRed.Name = "nudRed";
             this.nudRed.Size = new System.Drawing.Size(120, 26);
             this.nudRed.TabIndex = 0;
-            this.nudRed.ValueChanged += new System.EventHandler(this.nudRed_ValueChanged);
+            this.nudRed.ValueChanged += new System.EventHandler(this.nud_ValueChanged);
             this.nudRed.Leave += new System.EventHandler(this.nud_Leave);
             // 
             // lblsmallScreen
@@ -206,6 +205,7 @@ namespace DS_Gadget
             this.cbxGlow.TabIndex = 7;
             this.cbxGlow.Text = "Glow";
             this.cbxGlow.UseVisualStyleBackColor = true;
+            this.cbxGlow.CheckedChanged += new System.EventHandler(this.cbxGlow_CheckedChanged);
             // 
             // txtHexColor
             // 
