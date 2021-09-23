@@ -31,6 +31,11 @@ You can also try adding DS Gadget as an exception to your antivirus
 **[Stagmattica](https://github.com/Stagmattica)** Helped me get started with DS Gadget   
 
 # Change Log  
+### Prerelease 0.14.5.1
+**Update to Resources/Equipment/Weapons/MeleeWeapons.txt**
+
+* Fixed Stick and Four King Sword IDs  
+
 ### Prerelease 0.14.5
 * **Update to Resources/Equipment/Weapons/MeleeWeapons.txt, Resources/Equipment/Armor/DarkSouls2Armor.txt, Resources/Equipment/DSItemCategories.txt, and Resources/Equipment/DSFashionCategories.txt**
 
