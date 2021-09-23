@@ -32,11 +32,21 @@ You can also try adding DS Gadget as an exception to your antivirus
 
 # Change Log  
 ### Prerelease 0.14.5
-* **Update to Resources/Equipment/Weapons/MeleeWeapons.txt**
+* **Update to Resources/Equipment/Weapons/MeleeWeapons.txt, Resources/Equipment/Armor/DarkSouls2Armor.txt, Resources/Equipment/DSItemCategories.txt, and Resources/Equipment/DSFashionCategories.txt**
 
 * NG+ support in the misc tab. Allows user to modify NG+  
 
-* Added 4 king sword and stick to weapons
+* Added 4 king sword and stick to weapons  
+
+* Added color selector for eyes and hair in Misc.  
+
+* Unhid DS2 armors.  
+
+* Added more options for the fashion menu in Misc.  
+
+* Fixed rare crashing bug  
+
+* Fixed Saved Positions not loading if DS Gadget launched from Windows Search
 
 ###  Prerelease 0.14.4.2)  
 * Hotfix for Heal Timer which allows the heal timer to heal to full HP when HP is buffed  
