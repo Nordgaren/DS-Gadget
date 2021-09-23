@@ -34,7 +34,7 @@
  352000   1 3 Demon Great Machete
  354000   1 1 Dragon Greatsword
  355000   1 1 Black Knight Greatsword
- 356000   1 3 4 Kings Sword
+ 356000   1 3 Four Kings Sword
  400000   1 3 Scimitar
  401000   1 3 Falchion
  402000   1 3 Shotel
