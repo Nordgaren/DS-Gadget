@@ -7,7 +7,7 @@
     <ProjectGuid>{F631457A-069E-4BC0-A080-ADF54735FCE3}</ProjectGuid>
     <OutputType>WinExe</OutputType>
     <RootNamespace>DS_Gadget</RootNamespace>
-    <AssemblyName>DS Gadget</AssemblyName>
+    <AssemblyName>DS Gadget Local Loader</AssemblyName>
     <TargetFrameworkVersion>v4.6.2</TargetFrameworkVersion>
     <FileAlignment>512</FileAlignment>
     <AutoGenerateBindingRedirects>true</AutoGenerateBindingRedirects>

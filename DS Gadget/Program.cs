@@ -131,7 +131,7 @@ namespace DS_Gadget
             settings.HotkeyItem = OldSettings.HotkeyItem;
             settings.FilterBrightnessB = OldSettings.FilterBrightnessB;
             settings.Save();
-
+            MessageBox.Show("Settings Successfully migrated");
 
 
 
