@@ -17,7 +17,6 @@
  210000   1 3 Darksword
  211000   1 1 Drake Sword
  212000   1 3 Straight Sword Hilt
- 213000   1 3 Stick
  300000   1 3 Bastard Sword
  301000   1 3 Claymore
  302000   1 3 Man-serpent Greatsword
@@ -34,7 +33,6 @@
  352000   1 3 Demon Great Machete
  354000   1 1 Dragon Greatsword
  355000   1 1 Black Knight Greatsword
- 356000   1 3 Four Kings Sword
  400000   1 3 Scimitar
  401000   1 3 Falchion
  402000   1 3 Shotel
@@ -102,6 +100,8 @@
 1151000   1 1 Lifehunt Scythe
 1600000   1 3 Whip
 1601000   1 3 Notched Whip
+2500000   1 1 Stick
+2501000   1 1 Four Kings Sword
 9010000   1 1 Gold Tracer
 9011000   1 1 Dark Silver Tracer
 9012000   1 1 Abyss Greatsword
