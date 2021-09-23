@@ -53,7 +53,14 @@ namespace DS_Gadget
         [STAThread]
         static void Main()
         {
+            //var UserConfig = ConfigurationManager.OpenExeConfiguration(ConfigurationUserLevel.PerUserRoamingAndLocal);
+            //var path = UserConfig.FilePath;
             Properties.Settings settings = Properties.Settings.Default;
+            if (settings.UpgradeRequired)
+            {
+                settings.Upgrade();
+                settings.UpgradeRequired = false;
+            }
             OldSettings.WindowLocation = settings.WindowLocation;
             OldSettings.HotkeyMoveswap = settings.HotkeyMoveswap;
             OldSettings.HealInterval = settings.HealInterval;
@@ -124,12 +131,8 @@ namespace DS_Gadget
             settings.HotkeyItem = OldSettings.HotkeyItem;
             settings.FilterBrightnessB = OldSettings.FilterBrightnessB;
             settings.Save();
-            //if (settings.UpgradeRequired)
-            //{
-            //    settings.Upgrade();
-            //    settings.UpgradeRequired = false;
-            //}
-            
+
+
 
 
             //Application.EnableVisualStyles();
