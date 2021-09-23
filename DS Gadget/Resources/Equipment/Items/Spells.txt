@@ -61,7 +61,7 @@
    5030  99 0 Miracle: Soothing Sunlight
    5040  99 0 Miracle: Replenishment
    5050  99 0 Miracle: Bountiful Sunlight
-   5100  99 0 Miracle: Gravelord Sword Strike
+   5100  1 0 Miracle: Gravelord Sword Strike
    5110  99 0 Miracle: Gravelord Sword Dance
    5200  99 0 Miracle: Escape Death (Cut Content)
    5210  99 0 Miracle: Homeward
@@ -71,7 +71,7 @@
    5320  99 0 Miracle: Emit Force
    5330  99 0 Miracle: Projected Heal
    5400  99 0 Miracle: Sacred Oath (Seek Guidance)
-   5500  99 0 Miracle: Lightning Spear
+   5500  1 0 Miracle: Lightning Spear
    5510  99 0 Miracle: Lightning Storm (Great Lightning Spear)
    5520  99 0 Miracle: Sunlight Slam
    5600  99 0 Miracle: Magic Barrier
@@ -79,7 +79,7 @@
    5700  99 0 Miracle: Karmic Balance
    5800  99 0 Miracle: Tranquil Walk of Peace
    5810  99 0 Miracle: Vow of Silence
-   5900  99 0 Miracle: Sunlight Blade
-   5910  99 0 Miracle: Darkmoon Blade
+   5900  1 0 Miracle: Sunlight Blade
+   5910  1 0 Miracle: Darkmoon Blade
    5920  99 0 Miracle: Martyrdom
    5850  99 0 Miracle: Karmic Reflection

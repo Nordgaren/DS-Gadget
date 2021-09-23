@@ -48,6 +48,7 @@ namespace DS_Gadget
                 }
             }
 
+
             cmbSlot.Items.Add("Hair");
             cmbSlot.Items.Add("Bolt 1");
             cmbSlot.Items.Add("Arrow 1");
