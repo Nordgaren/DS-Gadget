@@ -31,6 +31,11 @@ You can also try adding DS Gadget as an exception to your antivirus
 **[Stagmattica](https://github.com/Stagmattica)** Helped me get started with DS Gadget   
 
 # Change Log  
+### Prerelease 0.14.5.2
+**Update to Resources/Equipment/Items/Spells.txt**  
+
+* Limited Covenant spells to 1 only  
+
 ### Prerelease 0.14.5.1
 **Update to Resources/Equipment/Weapons/MeleeWeapons.txt**
 

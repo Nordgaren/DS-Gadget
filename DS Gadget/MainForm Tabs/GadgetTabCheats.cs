@@ -120,11 +120,7 @@ namespace DS_Gadget
                 Hook.PlayerDeadMode = true;
 
             if (Hook.ReadEventFlag(19900030))
-            {
                 cbxAllNoArrow.Checked = false;
-                cbxAllNoStamina.Checked = false;
-                cbxPlayerNoStamina.Checked = false;
-            }
 
             // Only start refill timer if enabled, health is lower than max and the timer isn't already going
             if (cbxRefill.Checked && (Hook.Health < Hook.HealthModMax) && !Timer.Enabled)
