@@ -51,7 +51,7 @@
             this.cbxQuickSelectBonfire = new System.Windows.Forms.CheckBox();
             this.lblSearch = new System.Windows.Forms.Label();
             this.nudSpeed = new System.Windows.Forms.NumericUpDown();
-            this.searchBox = new System.Windows.Forms.TextBox();
+            this.txtBonfireSearch = new System.Windows.Forms.TextBox();
             this.btnBonfireWarp = new System.Windows.Forms.Button();
             this.cbxSpeed = new System.Windows.Forms.CheckBox();
             this.cbxGravity = new System.Windows.Forms.CheckBox();
@@ -146,7 +146,7 @@
             gbxOther.Controls.Add(this.cbxQuickSelectBonfire);
             gbxOther.Controls.Add(this.lblSearch);
             gbxOther.Controls.Add(this.nudSpeed);
-            gbxOther.Controls.Add(this.searchBox);
+            gbxOther.Controls.Add(this.txtBonfireSearch);
             gbxOther.Controls.Add(this.btnBonfireWarp);
             gbxOther.Controls.Add(this.cbxSpeed);
             gbxOther.Controls.Add(this.cbxGravity);
@@ -209,14 +209,14 @@
             // 
             // searchBox
             // 
-            this.searchBox.Location = new System.Drawing.Point(8, 75);
-            this.searchBox.Name = "searchBox";
-            this.searchBox.Size = new System.Drawing.Size(463, 26);
-            this.searchBox.TabIndex = 7;
-            this.searchBox.Click += new System.EventHandler(this.searchBox_Click);
-            this.searchBox.TextChanged += new System.EventHandler(this.searchBox_TextChanged);
-            this.searchBox.Enter += new System.EventHandler(this.searchBox_Click);
-            this.searchBox.KeyDown += new System.Windows.Forms.KeyEventHandler(this.KeyPressed);
+            this.txtBonfireSearch.Location = new System.Drawing.Point(8, 75);
+            this.txtBonfireSearch.Name = "searchBox";
+            this.txtBonfireSearch.Size = new System.Drawing.Size(463, 26);
+            this.txtBonfireSearch.TabIndex = 7;
+            this.txtBonfireSearch.Click += new System.EventHandler(this.txtBonfireSearch_Click);
+            this.txtBonfireSearch.TextChanged += new System.EventHandler(this.txtBonfireSearch_TextChanged);
+            this.txtBonfireSearch.Enter += new System.EventHandler(this.txtBonfireSearch_Click);
+            this.txtBonfireSearch.KeyDown += new System.Windows.Forms.KeyEventHandler(this.KeyPressed);
             // 
             // btnBonfireWarp
             // 
@@ -1153,7 +1153,7 @@
         private System.Windows.Forms.Label ImportExportLabel;
         private System.Windows.Forms.ComboBox cmbTeamConfig;
         private System.Windows.Forms.Label Config;
-        private System.Windows.Forms.TextBox searchBox;
+        private System.Windows.Forms.TextBox txtBonfireSearch;
         private System.Windows.Forms.Label lblSearch;
         private System.Windows.Forms.CheckBox cbxQuickSelectBonfire;
     }

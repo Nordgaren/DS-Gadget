@@ -319,8 +319,8 @@
             this.searchBox.Name = "searchBox";
             this.searchBox.Size = new System.Drawing.Size(342, 26);
             this.searchBox.TabIndex = 34;
-            this.searchBox.Click += new System.EventHandler(this.searchBox_Click);
-            this.searchBox.TextChanged += new System.EventHandler(this.searchBox_TextChanged);
+            this.searchBox.Click += new System.EventHandler(this.txtBonfireSearch_Click);
+            this.searchBox.TextChanged += new System.EventHandler(this.txtBonfireSearch_TextChanged);
             this.searchBox.KeyDown += new System.Windows.Forms.KeyEventHandler(this.KeyPressed);
             // 
             // nudNewGame

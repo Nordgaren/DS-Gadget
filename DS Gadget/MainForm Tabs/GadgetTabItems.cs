@@ -83,7 +83,7 @@ namespace DS_Gadget
             HandleSearchLabel();
         }
 
-        private void searchBox_TextChanged(object sender, EventArgs e)
+        private void txtBonfireSearch_TextChanged(object sender, EventArgs e)
         {
             FilterItems();
         }
@@ -228,7 +228,7 @@ namespace DS_Gadget
         }
 
         //Give focus and select all
-        private void searchBox_Click(object sender, EventArgs e)
+        private void txtBonfireSearch_Click(object sender, EventArgs e)
         {
             searchBox.SelectAll();
             searchBox.Focus();

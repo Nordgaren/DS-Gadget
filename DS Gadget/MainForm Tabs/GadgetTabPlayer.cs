@@ -20,7 +20,7 @@ namespace DS_Gadget
 
         private List<SavedPos> Positions = new List<SavedPos>();
 
-        private List<TeamConfig> SavedConfigs;
+        private List<TeamConfig> KnownConfigs;
 
         public override void InitTab(MainForm parent)
         {
@@ -32,8 +32,8 @@ namespace DS_Gadget
             nudSpeed.Value = Settings.Speed;
             Positions = SavedPos.GetSavedPositions();
             UpdatePositions();
-            SavedConfigs = TeamConfig.GetConfigs();
-            foreach (var item in SavedConfigs)
+            KnownConfigs = TeamConfig.GetConfigs();
+            foreach (var item in KnownConfigs)
             {
                 cmbTeamConfig.Items.Add(item);
             }
@@ -41,15 +41,15 @@ namespace DS_Gadget
             cbxBonfire.Items.Add(lastSetBonfire); //add to end of filter
         }
 
-        private void searchBox_TextChanged(object sender, EventArgs e)
+        private void txtBonfireSearch_TextChanged(object sender, EventArgs e)
         {
             FilterBonfires();
         }
 
-        private void searchBox_Click(object sender, EventArgs e)
+        private void txtBonfireSearch_Click(object sender, EventArgs e)
         {
-            searchBox.SelectAll();
-            searchBox.Focus();
+            txtBonfireSearch.SelectAll();
+            txtBonfireSearch.Focus();
         }
 
         private void KeyDownListbox(KeyEventArgs e)
@@ -96,7 +96,7 @@ namespace DS_Gadget
         private void KeyPressed(object sender, KeyEventArgs e)
         {
             if (e.KeyCode == Keys.Escape)
-                searchBox.Clear();
+                txtBonfireSearch.Clear();
 
             KeyDownListbox(e);
         }
@@ -177,7 +177,7 @@ namespace DS_Gadget
             //go through bonfire resource and add to filter
             foreach (DSBonfire bonfire in DSBonfire.All)
             {
-                if (bonfire.ToString().ToLower().Contains(searchBox.Text.ToLower()))
+                if (bonfire.ToString().ToLower().Contains(txtBonfireSearch.Text.ToLower()))
                 {
                     cbxBonfire.Items.Add(bonfire);
                 }
@@ -187,7 +187,7 @@ namespace DS_Gadget
 
             cbxBonfire.SelectedIndex = 0;
 
-            if (searchBox.Text == "")
+            if (txtBonfireSearch.Text == "")
                 lblSearch.Visible = true;
             else
                 lblSearch.Visible = false;
@@ -255,7 +255,7 @@ namespace DS_Gadget
                 Hook.SetSpeed((float)nudSpeed.Value);
 
             //Check last known config to see if it's in the SavedConfigs, and re-enable auto config if it is.
-            if (lastKnownConfig != null && SavedConfigs.Any(c => c.ChrType == lastKnownConfig.ChrType && c.TeamType == lastKnownConfig.TeamType))
+            if (lastKnownConfig != null && KnownConfigs.Any(c => c.ChrType == lastKnownConfig.ChrType && c.TeamType == lastKnownConfig.TeamType))
                 DisableAutoConfig = false;
 
             var active = nudChrType == ActiveControl || nudTeamType == ActiveControl; // Check if either of the nuds are active control
@@ -278,13 +278,14 @@ namespace DS_Gadget
             //Set the new TeamConfig if selectedConfig is null and either chr or team type values don't match
             if (selectedConfig == null || selectedConfig.ChrType != nudChrType.Value || selectedConfig.TeamType != nudTeamType.Value)
             {
-                var result = SavedConfigs.FirstOrDefault(c => c.ChrType == nudChrType.Value && c.TeamType == nudTeamType.Value);
+                var result = KnownConfigs.FirstOrDefault(c => c.ChrType == nudChrType.Value && c.TeamType == nudTeamType.Value);
 
                 if (result == null)
                 {
                     //Add unknown config if the result is null
                     result = new TeamConfig($"Unknown: Chr: {nudChrType.Value} Team: {nudTeamType.Value}", (int)nudChrType.Value, (int)nudTeamType.Value);
                     cmbTeamConfig.Items.Add(result);
+                    KnownConfigs.Add(result);
                 }
                 //Update selected Item.
                 cmbTeamConfig.SelectedItem = result;

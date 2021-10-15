@@ -139,9 +139,9 @@
             this.searchBox.Name = "searchBox";
             this.searchBox.Size = new System.Drawing.Size(386, 26);
             this.searchBox.TabIndex = 16;
-            this.searchBox.Click += new System.EventHandler(this.searchBox_Click);
-            this.searchBox.TextChanged += new System.EventHandler(this.searchBox_TextChanged);
-            this.searchBox.Enter += new System.EventHandler(this.searchBox_Click);
+            this.searchBox.Click += new System.EventHandler(this.txtBonfireSearch_Click);
+            this.searchBox.TextChanged += new System.EventHandler(this.txtBonfireSearch_TextChanged);
+            this.searchBox.Enter += new System.EventHandler(this.txtBonfireSearch_Click);
             this.searchBox.KeyDown += new System.Windows.Forms.KeyEventHandler(this.KeyPressed);
             // 
             // lbxItems
