@@ -34,7 +34,11 @@ namespace DS_Gadget
                 {
                     var att = GetTxtResourceClass.RegexSplit(line, ",");
                     Array.ForEach<string>(att, x => att[Array.IndexOf<string>(att, x)] = x.Trim());
-                    All.Add(new DSItemCategory(att[0].Trim(), Convert.ToInt32(att[1].Trim(), 16), GetTxtResourceClass.GetTxtResource(att[2].Trim()), bool.Parse(att[3])));
+                    var name = att[0].Trim();
+                    var categoryID = Convert.ToInt32(att[1].Trim(), 16);
+                    var itemList = GetTxtResourceClass.GetTxtResource(att[2].Trim());
+                    var showIDs = bool.Parse(att[3]);
+                    All.Add(new DSItemCategory(name, categoryID, itemList, showIDs));
                 }
             };
         }
