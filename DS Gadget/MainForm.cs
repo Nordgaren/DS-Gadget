@@ -59,7 +59,7 @@ namespace DS_Gadget
             {
                 GitHubClient gitHubClient = new GitHubClient(new ProductHeaderValue("DS-Gadget-for-Remastest"));
                 Release release = await gitHubClient.Repository.Release.GetLatest("Nordgaren", "DS-Gadget");
-                Version gitVersion = Version.Parse(release.TagName);
+                Version gitVersion = Version.Parse(release.TagName.ToLower().Replace("v", ""));
                 Version exeVersion = Version.Parse(System.Windows.Forms.Application.ProductVersion);
                 if (gitVersion > exeVersion) //Compare latest version to current version
                 {
@@ -78,9 +78,14 @@ namespace DS_Gadget
                     labelCheckVersion.Text = "App version unreleased. Be wary of bugs!";
                 }
             }
-            catch (Exception ex)
+            catch (Exception ex) when(ex is HttpRequestException || ex is ApiException || ex is ArgumentException)
             {
                 labelCheckVersion.Text = "Current app version unknown";
+            }
+            catch (Exception ex)
+            {
+                labelCheckVersion.Text = "Something is very broke, contact DS Gadget repo owner";
+                MessageBox.Show(ex.Message);
             }
         }
 
