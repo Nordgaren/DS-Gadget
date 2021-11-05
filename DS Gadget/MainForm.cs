@@ -54,12 +54,13 @@ namespace DS_Gadget
             EnableTabs(false);
             InitAllTabs();
 
-            GitHubClient gitHubClient = new GitHubClient(new ProductHeaderValue("DS-Gadget"));
             try
             {
+                GitHubClient gitHubClient = new GitHubClient(new ProductHeaderValue("DS-Gadget"));
                 Release release = await gitHubClient.Repository.Release.GetLatest("kingborehaha", "DS-Gadget");
                 Version gitVersion = Version.Parse(release.TagName);
                 Version exeVersion = Version.Parse(System.Windows.Forms.Application.ProductVersion);
+                var lol = release.HtmlUrl;
                 if (gitVersion > exeVersion) //Compare latest version to current version
                 {
                     labelCheckVersion.Visible = false;
@@ -80,6 +81,10 @@ namespace DS_Gadget
             catch (Exception ex) when (ex is HttpRequestException || ex is ApiException || ex is ArgumentException)
             {
                 labelCheckVersion.Text = "Current app version unknown";
+            }
+            catch (Exception ex)
+            {
+
             }
         }
 
