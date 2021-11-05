@@ -119,8 +119,20 @@ namespace DS_Gadget
             if (cbxPlayerDeadMode.Checked && !Hook.PlayerDeadMode)
                 Hook.PlayerDeadMode = true;
 
-            if (Hook.ReadEventFlag(19900030))
+            if (Hook.Process.MainWindowTitle == "DARK SOULS - PHANTOM BREAK")
                 cbxAllNoArrow.Checked = false;
+
+            if (cbxAmmo.Checked)
+                Hook.GetItem(0x00000000, 2200000, 99);
+
+            if (cbxBolts.Checked)
+                SpawnBolts();
+
+            if (cbxArrows.Checked)
+                SpawnArrows();
+
+            if (cbxGreatArrrows.Checked)
+                SpawnGreatArrows();
 
             // Only start refill timer if enabled, health is lower than max and the timer isn't already going
             if (cbxRefill.Checked && (Hook.Health < Hook.HealthModMax) && !Timer.Enabled)
@@ -131,7 +143,7 @@ namespace DS_Gadget
 
         System.Timers.Timer Timer = new System.Timers.Timer();
 
-        private bool RefillTimer()
+        private void RefillTimer()
         {
             double time = (double)nudHealInterval.Value;
 
@@ -149,8 +161,6 @@ namespace DS_Gadget
                     hp = Hook.Health;
                 }
             }
-            //Hope returning bool fixes random crashes
-            return true;
         }
 
         private void RefillHP(object sender, ElapsedEventArgs e)
@@ -261,6 +271,37 @@ namespace DS_Gadget
         private void nudHealInterval_ValueChanged(object sender, EventArgs e)
         {
             Settings.HealInterval = nudHealInterval.Value;
+        }
+
+        private void SpawnGreatArrows()
+        {
+            Hook.GetItem(0x00000000, 2007000, 99);
+            Hook.GetItem(0x00000000, 2008000, 99);
+        }
+
+        private void SpawnArrows()
+        {
+            Hook.GetItem(0x00000000, 2000000, 99);
+            Hook.GetItem(0x00000000, 2001000, 99);
+            Hook.GetItem(0x00000000, 2002000, 99);
+            Hook.GetItem(0x00000000, 2003000, 99);
+            Hook.GetItem(0x00000000, 2004000, 99);
+            Hook.GetItem(0x00000000, 2005000, 99);
+            Hook.GetItem(0x00000000, 2006000, 99);
+            Hook.GetItem(0x00000000, 2202000, 99);
+            Hook.GetItem(0x00000000, 2302000, 99);
+        }
+
+        private void SpawnBolts()
+        {
+            Hook.GetItem(0x00000000, 2008000, 99);
+            Hook.GetItem(0x00000000, 2100000, 99);
+            Hook.GetItem(0x00000000, 2101000, 99);
+            Hook.GetItem(0x00000000, 2102000, 99);
+            Hook.GetItem(0x00000000, 2103000, 99);
+            Hook.GetItem(0x00000000, 2104000, 99);
+            Hook.GetItem(0x00000000, 2106000, 99);
+            Hook.GetItem(0x00000000, 2108000, 99);
         }
     }
 }

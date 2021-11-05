@@ -1,4 +1,5 @@
-﻿using System;
+﻿using Bluegrams.Application;
+using System;
 using System.Windows.Forms;
 
 namespace DS_Gadget
@@ -11,6 +12,7 @@ namespace DS_Gadget
         [STAThread]
         static void Main()
         {
+            PortableSettingsProvider.ApplyProvider(Properties.Settings.Default);
             Properties.Settings settings = Properties.Settings.Default;
             if (settings.UpgradeRequired)
             {

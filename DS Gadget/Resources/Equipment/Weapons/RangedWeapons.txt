@@ -10,3 +10,4 @@
 1252000   1 4 Avelyn
 1253000   1 4 Sniper Crossbow
 9021000   1 1 Gough's Greatbow
+1700000	  1 3 Gun

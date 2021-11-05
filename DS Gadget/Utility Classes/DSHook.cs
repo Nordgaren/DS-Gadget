@@ -57,7 +57,7 @@ namespace DS_Gadget
         public string Version { get; private set; }
 
         public DSHook(int refreshInterval, int minLifetime) :
-            base(refreshInterval, minLifetime, p => p.MainWindowTitle == "DARK SOULS")
+            base(refreshInterval, minLifetime, p => p.MainWindowTitle == "DARK SOULS" || p.MainWindowTitle == "DARK SOULS - PHANTOM BREAK")
         {
             Version = "None";
 

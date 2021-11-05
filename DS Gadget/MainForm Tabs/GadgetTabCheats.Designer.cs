@@ -31,6 +31,7 @@
             System.Windows.Forms.GroupBox gbxCheatEnemy;
             System.Windows.Forms.GroupBox gbxCheatAll;
             System.Windows.Forms.GroupBox gbxCheatPlayer;
+            System.Windows.Forms.GroupBox gbxRemastest;
             this.cbxAllNoAttack = new System.Windows.Forms.CheckBox();
             this.cbxAllNoMove = new System.Windows.Forms.CheckBox();
             this.cbxAllNoUpdateAI = new System.Windows.Forms.CheckBox();
@@ -52,18 +53,24 @@
             this.cbxPlayerHide = new System.Windows.Forms.CheckBox();
             this.cbxPlayerSilence = new System.Windows.Forms.CheckBox();
             this.cbxAllNoArrow = new System.Windows.Forms.CheckBox();
+            this.cbxGreatArrrows = new System.Windows.Forms.CheckBox();
+            this.cbxArrows = new System.Windows.Forms.CheckBox();
+            this.cbxBolts = new System.Windows.Forms.CheckBox();
+            this.cbxAmmo = new System.Windows.Forms.CheckBox();
             gbxCheatEnemy = new System.Windows.Forms.GroupBox();
             gbxCheatAll = new System.Windows.Forms.GroupBox();
             gbxCheatPlayer = new System.Windows.Forms.GroupBox();
+            gbxRemastest = new System.Windows.Forms.GroupBox();
             gbxCheatEnemy.SuspendLayout();
             gbxCheatAll.SuspendLayout();
             gbxCheatPlayer.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.nudHealInterval)).BeginInit();
+            gbxRemastest.SuspendLayout();
             this.SuspendLayout();
             // 
             // gbxCheatEnemy
             // 
-            gbxCheatEnemy.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
+            gbxCheatEnemy.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left)
             | System.Windows.Forms.AnchorStyles.Right)));
             gbxCheatEnemy.AutoSize = true;
             gbxCheatEnemy.Controls.Add(this.cbxAllNoAttack);
@@ -73,7 +80,7 @@
             gbxCheatEnemy.Margin = new System.Windows.Forms.Padding(4);
             gbxCheatEnemy.Name = "gbxCheatEnemy";
             gbxCheatEnemy.Padding = new System.Windows.Forms.Padding(4);
-            gbxCheatEnemy.Size = new System.Drawing.Size(339, 105);
+            gbxCheatEnemy.Size = new System.Drawing.Size(358, 103);
             gbxCheatEnemy.TabIndex = 19;
             gbxCheatEnemy.TabStop = false;
             gbxCheatEnemy.Text = "Enemies";
@@ -84,7 +91,7 @@
             this.cbxAllNoAttack.Location = new System.Drawing.Point(8, 23);
             this.cbxAllNoAttack.Margin = new System.Windows.Forms.Padding(4);
             this.cbxAllNoAttack.Name = "cbxAllNoAttack";
-            this.cbxAllNoAttack.Size = new System.Drawing.Size(88, 17);
+            this.cbxAllNoAttack.Size = new System.Drawing.Size(126, 24);
             this.cbxAllNoAttack.TabIndex = 11;
             this.cbxAllNoAttack.Text = "No Attacking";
             this.cbxAllNoAttack.UseVisualStyleBackColor = true;
@@ -96,7 +103,7 @@
             this.cbxAllNoMove.Location = new System.Drawing.Point(151, 23);
             this.cbxAllNoMove.Margin = new System.Windows.Forms.Padding(4);
             this.cbxAllNoMove.Name = "cbxAllNoMove";
-            this.cbxAllNoMove.Size = new System.Drawing.Size(93, 17);
+            this.cbxAllNoMove.Size = new System.Drawing.Size(133, 24);
             this.cbxAllNoMove.TabIndex = 12;
             this.cbxAllNoMove.Text = "No Movement";
             this.cbxAllNoMove.UseVisualStyleBackColor = true;
@@ -108,7 +115,7 @@
             this.cbxAllNoUpdateAI.Location = new System.Drawing.Point(8, 52);
             this.cbxAllNoUpdateAI.Margin = new System.Windows.Forms.Padding(4);
             this.cbxAllNoUpdateAI.Name = "cbxAllNoUpdateAI";
-            this.cbxAllNoUpdateAI.Size = new System.Drawing.Size(74, 17);
+            this.cbxAllNoUpdateAI.Size = new System.Drawing.Size(108, 24);
             this.cbxAllNoUpdateAI.TabIndex = 13;
             this.cbxAllNoUpdateAI.Text = "Disable AI";
             this.cbxAllNoUpdateAI.UseVisualStyleBackColor = true;
@@ -116,7 +123,7 @@
             // 
             // gbxCheatAll
             // 
-            gbxCheatAll.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
+            gbxCheatAll.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left)
             | System.Windows.Forms.AnchorStyles.Right)));
             gbxCheatAll.AutoSize = true;
             gbxCheatAll.Controls.Add(this.cbxAllNoDead);
@@ -127,7 +134,7 @@
             gbxCheatAll.Margin = new System.Windows.Forms.Padding(4);
             gbxCheatAll.Name = "gbxCheatAll";
             gbxCheatAll.Padding = new System.Windows.Forms.Padding(4);
-            gbxCheatAll.Size = new System.Drawing.Size(339, 103);
+            gbxCheatAll.Size = new System.Drawing.Size(358, 103);
             gbxCheatAll.TabIndex = 18;
             gbxCheatAll.TabStop = false;
             gbxCheatAll.Text = "Player + Enemies";
@@ -138,7 +145,7 @@
             this.cbxAllNoDead.Location = new System.Drawing.Point(8, 23);
             this.cbxAllNoDead.Margin = new System.Windows.Forms.Padding(4);
             this.cbxAllNoDead.Name = "cbxAllNoDead";
-            this.cbxAllNoDead.Size = new System.Drawing.Size(72, 17);
+            this.cbxAllNoDead.Size = new System.Drawing.Size(103, 24);
             this.cbxAllNoDead.TabIndex = 8;
             this.cbxAllNoDead.Text = "No Death";
             this.cbxAllNoDead.UseVisualStyleBackColor = true;
@@ -150,7 +157,7 @@
             this.cbxAllNoDamage.Location = new System.Drawing.Point(151, 23);
             this.cbxAllNoDamage.Margin = new System.Windows.Forms.Padding(4);
             this.cbxAllNoDamage.Name = "cbxAllNoDamage";
-            this.cbxAllNoDamage.Size = new System.Drawing.Size(83, 17);
+            this.cbxAllNoDamage.Size = new System.Drawing.Size(120, 24);
             this.cbxAllNoDamage.TabIndex = 9;
             this.cbxAllNoDamage.Text = "No Damage";
             this.cbxAllNoDamage.UseVisualStyleBackColor = true;
@@ -162,7 +169,7 @@
             this.cbxAllNoHit.Location = new System.Drawing.Point(8, 52);
             this.cbxAllNoHit.Margin = new System.Windows.Forms.Padding(4);
             this.cbxAllNoHit.Name = "cbxAllNoHit";
-            this.cbxAllNoHit.Size = new System.Drawing.Size(56, 17);
+            this.cbxAllNoHit.Size = new System.Drawing.Size(79, 24);
             this.cbxAllNoHit.TabIndex = 10;
             this.cbxAllNoHit.Text = "No Hit";
             this.cbxAllNoHit.UseVisualStyleBackColor = true;
@@ -174,7 +181,7 @@
             this.cbxAllNoStamina.Location = new System.Drawing.Point(151, 52);
             this.cbxAllNoStamina.Margin = new System.Windows.Forms.Padding(4);
             this.cbxAllNoStamina.Name = "cbxAllNoStamina";
-            this.cbxAllNoStamina.Size = new System.Drawing.Size(98, 17);
+            this.cbxAllNoStamina.Size = new System.Drawing.Size(146, 24);
             this.cbxAllNoStamina.TabIndex = 3;
             this.cbxAllNoStamina.Text = "Infinite Stamina";
             this.cbxAllNoStamina.UseVisualStyleBackColor = true;
@@ -182,7 +189,7 @@
             // 
             // gbxCheatPlayer
             // 
-            gbxCheatPlayer.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
+            gbxCheatPlayer.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left)
             | System.Windows.Forms.AnchorStyles.Right)));
             gbxCheatPlayer.AutoSize = true;
             gbxCheatPlayer.Controls.Add(this.nudHealInterval);
@@ -203,7 +210,7 @@
             gbxCheatPlayer.Margin = new System.Windows.Forms.Padding(4);
             gbxCheatPlayer.Name = "gbxCheatPlayer";
             gbxCheatPlayer.Padding = new System.Windows.Forms.Padding(4);
-            gbxCheatPlayer.Size = new System.Drawing.Size(339, 243);
+            gbxCheatPlayer.Size = new System.Drawing.Size(358, 244);
             gbxCheatPlayer.TabIndex = 17;
             gbxCheatPlayer.TabStop = false;
             gbxCheatPlayer.Text = "Player";
@@ -228,7 +235,7 @@
             0,
             65536});
             this.nudHealInterval.Name = "nudHealInterval";
-            this.nudHealInterval.Size = new System.Drawing.Size(62, 20);
+            this.nudHealInterval.Size = new System.Drawing.Size(62, 26);
             this.nudHealInterval.TabIndex = 20;
             this.nudHealInterval.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
             this.nudHealInterval.Value = new decimal(new int[] {
@@ -243,7 +250,7 @@
             this.cbxRefill.AutoSize = true;
             this.cbxRefill.Location = new System.Drawing.Point(8, 193);
             this.cbxRefill.Name = "cbxRefill";
-            this.cbxRefill.Size = new System.Drawing.Size(77, 17);
+            this.cbxRefill.Size = new System.Drawing.Size(111, 24);
             this.cbxRefill.TabIndex = 14;
             this.cbxRefill.Text = "Heal Timer";
             this.cbxRefill.UseVisualStyleBackColor = true;
@@ -254,7 +261,7 @@
             this.cbxPlayerNoHit.Location = new System.Drawing.Point(151, 52);
             this.cbxPlayerNoHit.Margin = new System.Windows.Forms.Padding(4);
             this.cbxPlayerNoHit.Name = "cbxPlayerNoHit";
-            this.cbxPlayerNoHit.Size = new System.Drawing.Size(56, 17);
+            this.cbxPlayerNoHit.Size = new System.Drawing.Size(79, 24);
             this.cbxPlayerNoHit.TabIndex = 18;
             this.cbxPlayerNoHit.Text = "No Hit";
             this.cbxPlayerNoHit.UseVisualStyleBackColor = true;
@@ -266,7 +273,7 @@
             this.cbxPlayerNoStamina.Location = new System.Drawing.Point(8, 80);
             this.cbxPlayerNoStamina.Margin = new System.Windows.Forms.Padding(4);
             this.cbxPlayerNoStamina.Name = "cbxPlayerNoStamina";
-            this.cbxPlayerNoStamina.Size = new System.Drawing.Size(98, 17);
+            this.cbxPlayerNoStamina.Size = new System.Drawing.Size(146, 24);
             this.cbxPlayerNoStamina.TabIndex = 11;
             this.cbxPlayerNoStamina.Text = "Infinite Stamina";
             this.cbxPlayerNoStamina.UseVisualStyleBackColor = true;
@@ -278,7 +285,7 @@
             this.cbxPlayerNoDamage.Location = new System.Drawing.Point(8, 52);
             this.cbxPlayerNoDamage.Margin = new System.Windows.Forms.Padding(4);
             this.cbxPlayerNoDamage.Name = "cbxPlayerNoDamage";
-            this.cbxPlayerNoDamage.Size = new System.Drawing.Size(83, 17);
+            this.cbxPlayerNoDamage.Size = new System.Drawing.Size(120, 24);
             this.cbxPlayerNoDamage.TabIndex = 17;
             this.cbxPlayerNoDamage.Text = "No Damage";
             this.cbxPlayerNoDamage.UseVisualStyleBackColor = true;
@@ -290,7 +297,7 @@
             this.cbxPlayerNoGoods.Location = new System.Drawing.Point(151, 137);
             this.cbxPlayerNoGoods.Margin = new System.Windows.Forms.Padding(4);
             this.cbxPlayerNoGoods.Name = "cbxPlayerNoGoods";
-            this.cbxPlayerNoGoods.Size = new System.Drawing.Size(103, 17);
+            this.cbxPlayerNoGoods.Size = new System.Drawing.Size(153, 24);
             this.cbxPlayerNoGoods.TabIndex = 10;
             this.cbxPlayerNoGoods.Text = "Unlimited Goods";
             this.cbxPlayerNoGoods.UseVisualStyleBackColor = true;
@@ -302,7 +309,7 @@
             this.cbxPlayerSuperArmor.Location = new System.Drawing.Point(151, 80);
             this.cbxPlayerSuperArmor.Margin = new System.Windows.Forms.Padding(4);
             this.cbxPlayerSuperArmor.Name = "cbxPlayerSuperArmor";
-            this.cbxPlayerSuperArmor.Size = new System.Drawing.Size(86, 17);
+            this.cbxPlayerSuperArmor.Size = new System.Drawing.Size(126, 24);
             this.cbxPlayerSuperArmor.TabIndex = 9;
             this.cbxPlayerSuperArmor.Text = "Infinite Poise";
             this.cbxPlayerSuperArmor.UseVisualStyleBackColor = true;
@@ -314,7 +321,7 @@
             this.cbxPlayerDeadMode.Location = new System.Drawing.Point(8, 23);
             this.cbxPlayerDeadMode.Margin = new System.Windows.Forms.Padding(4);
             this.cbxPlayerDeadMode.Name = "cbxPlayerDeadMode";
-            this.cbxPlayerDeadMode.Size = new System.Drawing.Size(72, 17);
+            this.cbxPlayerDeadMode.Size = new System.Drawing.Size(103, 24);
             this.cbxPlayerDeadMode.TabIndex = 8;
             this.cbxPlayerDeadMode.Text = "No Death";
             this.cbxPlayerDeadMode.UseVisualStyleBackColor = true;
@@ -326,7 +333,7 @@
             this.cbxAllNoMagic.Location = new System.Drawing.Point(151, 165);
             this.cbxAllNoMagic.Margin = new System.Windows.Forms.Padding(4);
             this.cbxAllNoMagic.Name = "cbxAllNoMagic";
-            this.cbxAllNoMagic.Size = new System.Drawing.Size(100, 17);
+            this.cbxAllNoMagic.Size = new System.Drawing.Size(148, 24);
             this.cbxAllNoMagic.TabIndex = 0;
             this.cbxAllNoMagic.Text = "Unlimited Spells";
             this.cbxAllNoMagic.UseVisualStyleBackColor = true;
@@ -338,7 +345,7 @@
             this.cbxPlayerNoDead.Location = new System.Drawing.Point(151, 23);
             this.cbxPlayerNoDead.Margin = new System.Windows.Forms.Padding(4);
             this.cbxPlayerNoDead.Name = "cbxPlayerNoDead";
-            this.cbxPlayerNoDead.Size = new System.Drawing.Size(124, 17);
+            this.cbxPlayerNoDead.Size = new System.Drawing.Size(180, 24);
             this.cbxPlayerNoDead.TabIndex = 1;
             this.cbxPlayerNoDead.Text = "No Death, Ignore Kill";
             this.cbxPlayerNoDead.UseVisualStyleBackColor = true;
@@ -350,7 +357,7 @@
             this.cbxPlayerExterminate.Location = new System.Drawing.Point(8, 137);
             this.cbxPlayerExterminate.Margin = new System.Windows.Forms.Padding(4);
             this.cbxPlayerExterminate.Name = "cbxPlayerExterminate";
-            this.cbxPlayerExterminate.Size = new System.Drawing.Size(81, 17);
+            this.cbxPlayerExterminate.Size = new System.Drawing.Size(120, 24);
             this.cbxPlayerExterminate.TabIndex = 2;
             this.cbxPlayerExterminate.Text = "Exterminate";
             this.cbxPlayerExterminate.UseVisualStyleBackColor = true;
@@ -362,7 +369,7 @@
             this.cbxPlayerHide.Location = new System.Drawing.Point(8, 108);
             this.cbxPlayerHide.Margin = new System.Windows.Forms.Padding(4);
             this.cbxPlayerHide.Name = "cbxPlayerHide";
-            this.cbxPlayerHide.Size = new System.Drawing.Size(64, 17);
+            this.cbxPlayerHide.Size = new System.Drawing.Size(91, 24);
             this.cbxPlayerHide.TabIndex = 6;
             this.cbxPlayerHide.Text = "Invisible";
             this.cbxPlayerHide.UseVisualStyleBackColor = true;
@@ -374,7 +381,7 @@
             this.cbxPlayerSilence.Location = new System.Drawing.Point(151, 108);
             this.cbxPlayerSilence.Margin = new System.Windows.Forms.Padding(4);
             this.cbxPlayerSilence.Name = "cbxPlayerSilence";
-            this.cbxPlayerSilence.Size = new System.Drawing.Size(52, 17);
+            this.cbxPlayerSilence.Size = new System.Drawing.Size(75, 24);
             this.cbxPlayerSilence.TabIndex = 7;
             this.cbxPlayerSilence.Text = "Silent";
             this.cbxPlayerSilence.UseVisualStyleBackColor = true;
@@ -386,21 +393,84 @@
             this.cbxAllNoArrow.Location = new System.Drawing.Point(8, 165);
             this.cbxAllNoArrow.Margin = new System.Windows.Forms.Padding(4);
             this.cbxAllNoArrow.Name = "cbxAllNoArrow";
-            this.cbxAllNoArrow.Size = new System.Drawing.Size(101, 17);
+            this.cbxAllNoArrow.Size = new System.Drawing.Size(151, 24);
             this.cbxAllNoArrow.TabIndex = 5;
             this.cbxAllNoArrow.Text = "Unlimited Ammo";
             this.cbxAllNoArrow.UseVisualStyleBackColor = true;
             this.cbxAllNoArrow.CheckedChanged += new System.EventHandler(this.cbxAllNoArrow_CheckedChanged);
             // 
+            // gbxRemastest
+            // 
+            gbxRemastest.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left)
+            | System.Windows.Forms.AnchorStyles.Right)));
+            gbxRemastest.AutoSize = true;
+            gbxRemastest.Controls.Add(this.cbxGreatArrrows);
+            gbxRemastest.Controls.Add(this.cbxArrows);
+            gbxRemastest.Controls.Add(this.cbxBolts);
+            gbxRemastest.Controls.Add(this.cbxAmmo);
+            gbxRemastest.Location = new System.Drawing.Point(4, 454);
+            gbxRemastest.Margin = new System.Windows.Forms.Padding(4);
+            gbxRemastest.Name = "gbxRemastest";
+            gbxRemastest.Padding = new System.Windows.Forms.Padding(4);
+            gbxRemastest.Size = new System.Drawing.Size(358, 103);
+            gbxRemastest.TabIndex = 21;
+            gbxRemastest.TabStop = false;
+            gbxRemastest.Text = "Remastest";
+            // 
+            // cbxGreatArrrows
+            // 
+            this.cbxGreatArrrows.AutoSize = true;
+            this.cbxGreatArrrows.Location = new System.Drawing.Point(151, 52);
+            this.cbxGreatArrrows.Margin = new System.Windows.Forms.Padding(4);
+            this.cbxGreatArrrows.Name = "cbxGreatArrrows";
+            this.cbxGreatArrrows.Size = new System.Drawing.Size(168, 24);
+            this.cbxGreatArrrows.TabIndex = 14;
+            this.cbxGreatArrrows.Text = "Refill Great Arrows";
+            this.cbxGreatArrrows.UseVisualStyleBackColor = true;
+            // 
+            // cbxArrows
+            // 
+            this.cbxArrows.AutoSize = true;
+            this.cbxArrows.Location = new System.Drawing.Point(151, 23);
+            this.cbxArrows.Margin = new System.Windows.Forms.Padding(4);
+            this.cbxArrows.Name = "cbxArrows";
+            this.cbxArrows.Size = new System.Drawing.Size(123, 24);
+            this.cbxArrows.TabIndex = 13;
+            this.cbxArrows.Text = "Refill Arrows";
+            this.cbxArrows.UseVisualStyleBackColor = true;
+            // 
+            // cbxBolts
+            // 
+            this.cbxBolts.AutoSize = true;
+            this.cbxBolts.Location = new System.Drawing.Point(8, 52);
+            this.cbxBolts.Margin = new System.Windows.Forms.Padding(4);
+            this.cbxBolts.Name = "cbxBolts";
+            this.cbxBolts.Size = new System.Drawing.Size(110, 24);
+            this.cbxBolts.TabIndex = 12;
+            this.cbxBolts.Text = "Refill Bolts";
+            this.cbxBolts.UseVisualStyleBackColor = true;
+            // 
+            // cbxAmmo
+            // 
+            this.cbxAmmo.AutoSize = true;
+            this.cbxAmmo.Location = new System.Drawing.Point(8, 23);
+            this.cbxAmmo.Margin = new System.Windows.Forms.Padding(4);
+            this.cbxAmmo.Name = "cbxAmmo";
+            this.cbxAmmo.Size = new System.Drawing.Size(158, 24);
+            this.cbxAmmo.TabIndex = 11;
+            this.cbxAmmo.Text = "Refill Ammunition";
+            this.cbxAmmo.UseVisualStyleBackColor = true;
+            // 
             // GadgetTabCheats
             // 
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Inherit;
             this.AutoSize = true;
+            this.Controls.Add(gbxRemastest);
             this.Controls.Add(gbxCheatEnemy);
             this.Controls.Add(gbxCheatAll);
             this.Controls.Add(gbxCheatPlayer);
             this.Name = "GadgetTabCheats";
-            this.Size = new System.Drawing.Size(347, 459);
+            this.Size = new System.Drawing.Size(366, 561);
             gbxCheatEnemy.ResumeLayout(false);
             gbxCheatEnemy.PerformLayout();
             gbxCheatAll.ResumeLayout(false);
@@ -408,6 +478,8 @@
             gbxCheatPlayer.ResumeLayout(false);
             gbxCheatPlayer.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.nudHealInterval)).EndInit();
+            gbxRemastest.ResumeLayout(false);
+            gbxRemastest.PerformLayout();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -436,5 +508,9 @@
         private System.Windows.Forms.CheckBox cbxAllNoArrow;
         private System.Windows.Forms.CheckBox cbxRefill;
         private System.Windows.Forms.NumericUpDown nudHealInterval;
+        private System.Windows.Forms.CheckBox cbxAmmo;
+        private System.Windows.Forms.CheckBox cbxGreatArrrows;
+        private System.Windows.Forms.CheckBox cbxArrows;
+        private System.Windows.Forms.CheckBox cbxBolts;
     }
 }

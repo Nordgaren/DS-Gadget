@@ -208,12 +208,17 @@ namespace DS_Gadget
         //Apply hair to currently loaded character
         public void CreateItem()
         {
+            
             //Check if the button is enabled and the selected item isn't null
             if (btnCreate.Enabled && lbxItems.SelectedItem != null)
             {
                 _ = ChangeColor(Color.DarkGray);
                 DSItem item = lbxItems.SelectedItem as DSItem;
+                
                 int id = item.ID;
+                if (DSItem.NO.Contains(id))
+                    return;
+
                 if (item.UpgradeType == DSItem.Upgrade.PyroFlame || item.UpgradeType == DSItem.Upgrade.PyroFlameAscended)
                     id += (int)nudUpgrade.Value * 100;
                 else
