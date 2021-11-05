@@ -31,6 +31,15 @@ You can also try adding DS Gadget as an exception to your antivirus
 **[Stagmattica](https://github.com/Stagmattica)** Helped me get started with DS Gadget   
 
 # Change Log  
+### Release 1.0
+**Please update all files this patch** 
+
+* Added refill by ammo type.  
+
+* Renamed exe.  
+
+* Made user settings local. Please run the settings migrator to get your settings back!  
+
 ### Prerelease 0.14.5.2
 **Update to Resources/Equipment/Items/Spells.txt**  
 
