@@ -3,6 +3,7 @@ using System;
 using System.Diagnostics;
 using System.Drawing;
 using System.Net.Http;
+using System.Reflection;
 using System.Windows.Forms;
 
 namespace DS_Gadget
@@ -54,10 +55,9 @@ namespace DS_Gadget
             EnableTabs(false);
             InitAllTabs();
 
-            GitHubClient gitHubClient = new GitHubClient(new ProductHeaderValue("DS-Gadget-for-Remastest"));
             try
             {
-
+                GitHubClient gitHubClient = new GitHubClient(new ProductHeaderValue("DS-Gadget-for-Remastest"));
                 Release release = await gitHubClient.Repository.Release.GetLatest("Nordgaren", "DS-Gadget");
                 Version gitVersion = Version.Parse(release.TagName);
                 Version exeVersion = Version.Parse(System.Windows.Forms.Application.ProductVersion);
@@ -78,7 +78,7 @@ namespace DS_Gadget
                     labelCheckVersion.Text = "App version unreleased. Be wary of bugs!";
                 }
             }
-            catch (Exception ex) when (ex is HttpRequestException || ex is ApiException || ex is ArgumentException)
+            catch (Exception ex)
             {
                 labelCheckVersion.Text = "Current app version unknown";
             }

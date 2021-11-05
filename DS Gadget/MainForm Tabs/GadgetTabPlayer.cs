@@ -33,10 +33,16 @@ namespace DS_Gadget
             Positions = SavedPos.GetSavedPositions();
             UpdatePositions();
             SavedConfigs = TeamConfig.GetConfigs();
+            foreach (var item in TeamConfig.ArenaPlus)
+            {
+                SavedConfigs.Add(item);
+            }
             foreach (var item in SavedConfigs)
             {
                 cmbTeamConfig.Items.Add(item);
             }
+            
+            cmbTeamConfig.SelectedIndex = 0;
             lastSetBonfire = new DSBonfire(-1, "Last Set: None"); //last set bonfire (default values)
             cbxBonfire.Items.Add(lastSetBonfire); //add to end of filter
         }
@@ -275,8 +281,11 @@ namespace DS_Gadget
                 return;
 
             var selectedConfig = cmbTeamConfig.SelectedItem as TeamConfig;
+
+            if (selectedConfig == null)
+                return;
             //Set the new TeamConfig if selectedConfig is null and either chr or team type values don't match
-            if (selectedConfig == null || selectedConfig.ChrType != nudChrType.Value || selectedConfig.TeamType != nudTeamType.Value)
+            if (selectedConfig.ChrType != nudChrType.Value || selectedConfig.TeamType != nudTeamType.Value)
             {
                 var result = SavedConfigs.FirstOrDefault(c => c.ChrType == nudChrType.Value && c.TeamType == nudTeamType.Value);
 
@@ -285,6 +294,7 @@ namespace DS_Gadget
                     //Add unknown config if the result is null
                     result = new TeamConfig($"Unknown: Chr: {nudChrType.Value} Team: {nudTeamType.Value}", (int)nudChrType.Value, (int)nudTeamType.Value);
                     cmbTeamConfig.Items.Add(result);
+                    SavedConfigs.Add(result);
                 }
                 //Update selected Item.
                 cmbTeamConfig.SelectedItem = result;
@@ -570,6 +580,9 @@ namespace DS_Gadget
             if (Hook.Loaded)
             {
                 var config = cmbTeamConfig.SelectedItem as TeamConfig;
+                if (TeamConfig.ArenaPlus.Contains(config))
+                    return;
+
                 if (!string.IsNullOrWhiteSpace(config.Name))
                 {
                     Hook.ChrType = config.ChrType;

@@ -49,5 +49,14 @@ namespace DS_Gadget
 
             return teamConfig;
         }
+
+        public static List<TeamConfig> ArenaPlus = new List<TeamConfig>()
+        {
+            new TeamConfig("Arena+ Waiting(use orb in lobby)", 0, 4),
+            new TeamConfig("Arena+ Host(use orb in lobby)", 0, 1),
+            new TeamConfig("Arena+ Red(use orb in lobby)", 2, 6),
+            new TeamConfig("Arena+ FFA(use orb in lobby)", 2, 16),
+            new TeamConfig("Arena+ FFA Host(use orb in lobby)", 0, 16)
+        };
     }
 }
