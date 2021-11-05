@@ -58,9 +58,8 @@ namespace DS_Gadget
             {
                 GitHubClient gitHubClient = new GitHubClient(new ProductHeaderValue("DS-Gadget"));
                 Release release = await gitHubClient.Repository.Release.GetLatest("kingborehaha", "DS-Gadget");
-                Version gitVersion = Version.Parse(release.TagName);
+                Version gitVersion = Version.Parse(release.TagName.ToLower().Replace("v", ""));
                 Version exeVersion = Version.Parse(System.Windows.Forms.Application.ProductVersion);
-                var lol = release.HtmlUrl;
                 if (gitVersion > exeVersion) //Compare latest version to current version
                 {
                     labelCheckVersion.Visible = false;
@@ -84,7 +83,7 @@ namespace DS_Gadget
             }
             catch (Exception ex)
             {
-
+                labelCheckVersion.Text = "Something is very broke, contact DS Gadget repo owner";
             }
         }
 
