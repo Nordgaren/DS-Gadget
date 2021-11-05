@@ -1,5 +1,0 @@
-﻿mov esi, [0x{0:X}]
-mov edi, 0x1
-push edi
-call 0x{1:X}
-ret

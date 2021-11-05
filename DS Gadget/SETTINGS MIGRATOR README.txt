@@ -1,0 +1,2 @@
+﻿Add the DS Gadget.exe in this zip to your current DS Gadget folder. You should get a popup saying the settings have migrated.
+Now launch DS Gadget for Remastest, and you should have your settings back! They will be attached to your new settings file in your DS Gadget folder.

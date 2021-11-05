@@ -95,7 +95,7 @@ namespace DS_Gadget
             OldSettings.FilterContrastB = settings.FilterContrastB;
             OldSettings.HotkeyItem = settings.HotkeyItem;
             OldSettings.FilterBrightnessB = settings.FilterBrightnessB;
-            PortableSettingsProvider.SettingsFileName = "DS Gadget For Remastest.config";
+            PortableSettingsProvider.SettingsFileName = "DS Gadget.config";
             PortableSettingsProvider.ApplyProvider(Properties.Settings.Default);
             settings.WindowLocation = OldSettings.WindowLocation;
             settings.HotkeyMoveswap = OldSettings.HotkeyMoveswap;
