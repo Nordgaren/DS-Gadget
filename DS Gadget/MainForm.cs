@@ -84,6 +84,7 @@ namespace DS_Gadget
             catch (Exception ex)
             {
                 labelCheckVersion.Text = "Something is very broke, contact DS Gadget repo owner";
+                MessageBox.Show(ex.Message);
             }
         }
 
