@@ -38,7 +38,7 @@ You can also try adding DS Gadget as an exception to your antivirus
 
 * Renamed exe.  
 
-* Made user settings local. Please run the settings migrator to get your settings back!  
+* Made user settings local. Please run the settings migrator to get your settings back! (Instructions in the Settings Migrator Zip)
 
 ### Prerelease 0.14.5.2
 **Update to Resources/Equipment/Items/Spells.txt**  
