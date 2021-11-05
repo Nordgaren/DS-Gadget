@@ -12,6 +12,7 @@ namespace DS_Gadget
         [STAThread]
         static void Main()
         {
+            PortableSettingsProvider.SettingsFileName = "DS Gadget For Remastest.config";
             PortableSettingsProvider.ApplyProvider(Properties.Settings.Default);
             Properties.Settings settings = Properties.Settings.Default;
             if (settings.UpgradeRequired)
