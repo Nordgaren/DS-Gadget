@@ -31,6 +31,13 @@ You can also try adding DS Gadget as an exception to your antivirus
 **[Stagmattica](https://github.com/Stagmattica)** Helped me get started with DS Gadget   
 
 # Change Log  
+### Release 1.1 and 1.2
+**Update to Resources/Equipment/Items/Spells.txt and Resources/Equipment/Items/UseableItems.txt PLEASE COPY THESE OVER**  
+
+* Fixed minor bug with saved configs for multiplayer config
+
+* Updated Spells.txt and UseableItems.txt
+
 ### Release 1.0
 **Please update all files this patch** 
 

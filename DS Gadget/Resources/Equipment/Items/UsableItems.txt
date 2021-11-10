@@ -18,8 +18,8 @@
     360   1 0 TTT Queue Match
     368   1 0 White Eye Orb
     371   1 0 Binoculars
-    377  99 0 Dragon Head Stone
-    378  99 0 Dragon Torso Stone
+    377   1 0 Dragon Head Stone
+    378   1 0 Dragon Torso Stone
     385   1 0 Dried Finger
     510   1 0 Hello Carving
     511   1 0 Thank you Carving

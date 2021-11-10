@@ -196,6 +196,28 @@ namespace DS_Gadget
         {
             _ = ChangeColor(Color.DarkGray);
             CreateItem();
+            
+            //Mule Meme
+            //foreach (DSItemCategory category in cmbCategory.Items)
+            //{
+            //    cmbCategory.SelectedItem = category;
+
+            //    foreach (DSItem item in category.Items)
+            //    {
+            //        lbxItems.SelectedItem = item;
+            //        int id = item.ID;
+            //        if (item.UpgradeType == DSItem.Upgrade.PyroFlame || item.UpgradeType == DSItem.Upgrade.PyroFlameAscended)
+            //            id += (int)nudUpgrade.Value * 100;
+            //        else
+            //            id += (int)nudUpgrade.Value;
+            //        if (item.UpgradeType == DSItem.Upgrade.Infusable || item.UpgradeType == DSItem.Upgrade.InfusableRestricted)
+            //        {
+            //            DSInfusion infusion = cmbInfusion.SelectedItem as DSInfusion;
+            //            id += infusion.Value;
+            //        }
+            //        Hook.GetItem(item.CategoryID, id, (int)nudQuantity.Value);
+            //    }
+            //}
         }
 
         //I think this is for safety so you don't spawn two items (not my code) - Nord
