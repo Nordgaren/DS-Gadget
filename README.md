@@ -31,6 +31,10 @@ You can also try adding DS Gadget as an exception to your antivirus
 **[Stagmattica](https://github.com/Stagmattica)** Helped me get started with DS Gadget   
 
 # Change Log  
+### Release 1.3
+
+* Fixed so that char type, team type and play region are no longer editable while in Arena+
+
 ### Release 1.1 and 1.2
 **Update to Resources/Equipment/Items/Spells.txt and Resources/Equipment/Items/UseableItems.txt PLEASE COPY THESE OVER**  
 
