@@ -31,6 +31,11 @@ You can also try adding DS Gadget as an exception to your antivirus
 **[Stagmattica](https://github.com/Stagmattica)** Helped me get started with DS Gadget   
 
 # Change Log  
+### Release 1.4
+**Update to Resources/Equipment/Armor/DemonSoulsArmor.txt and Resources/Equipment/Armor/DarkSouls2Armor.txt PLEASE COPY THESE OVER**  
+
+* Fixed MP IDs for A+ for patch 2.0.2
+
 ### Release 1.3
 
 * Fixed so that char type, team type and play region are no longer editable while in Arena+ use [MTD Swapper](https://github.com/Nordgaren/MTD-Swapper) if you want to turn red phantoms human in Arena+
