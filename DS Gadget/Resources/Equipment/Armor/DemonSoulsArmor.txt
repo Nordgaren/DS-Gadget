@@ -8,16 +8,16 @@
  3102000  1 2 Binded Cross - F
  3202000  1 2 Binded Gloves - F
  3002000  1 2 Binded Hood - F
- 3300200  1 2 Black Boots
- 3200200  1 2 Black Gloves
- 3100200  1 2 Black Leather
+ 3300200  1 2 Black Boots (DeS)
+ 3200200  1 2 Black Gloves (DeS)
+ 3100200  1 2 Black Leather Clothes (DeS)
  3100800  1 2 Brushwood Armor
  3200800  1 2 Brushwood Gauntlets
  3000800  1 2 Brushwood Helmet
  3300800  1 2 Brushwood Leggings
- 3200400  1 2 Chain Gloves
- 3000400  1 2 Chain Helmet
- 3100400  1 2 Chain Mail
+ 3200400  1 2 Chain Gloves (DeS)
+ 3000400  1 2 Chain Helmet (DeS)
+ 3100400  1 2 Chain Mail (DeS)
  3100600  1 2 Coat of Plate
  3100900  1 2 Dark Silver Armor - M
  3200900  1 2 Dark Silver Gauntlets - M
@@ -36,11 +36,11 @@
  3001000  1 2 Gloom Helmet
  3301000  1 2 Gloom Leggings
  3000000  1 2 Gold Mask
- 3300400  1 2 Hard Leather Boots
- 3100300  1 2 Leather Armor
- 3300300  1 2 Leather Boots
- 3000300  1 2 Leather Cap
- 3200300  1 2 Leather Gloves
+ 3300400  1 2 Hard Leather Boots (DeS)
+ 3100300  1 2 Leather Armor (DeS)
+ 3300300  1 2 Leather Boots (DeS)
+ 3000300  1 2 Leather Cap (DeS)
+ 3200300  1 2 Leather Gloves (DeS)
  3200500  1 2 Mirdan Gauntlets
  3000500  1 2 Mirdan Helmet
  3300500  1 2 Mirdan Leggings

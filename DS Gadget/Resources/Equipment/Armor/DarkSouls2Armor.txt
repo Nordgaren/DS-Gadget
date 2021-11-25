@@ -39,10 +39,10 @@
  4081000  1 2 Drakeblood Armor
  4082000  1 2 Drakeblood Gauntlets
  4083000  1 2 Drakeblood Leggings
- 4090000  1 2 Shadow Mask
- 4091000  1 2 Shadow Top
- 4092000  1 2 Shadow Gauntlets
- 4093000  1 2 Shadow Leggings
+ 4090000  1 2 Shadow Mask (DS2)
+ 4091000  1 2 Shadow Top (DS2)
+ 4092000  1 2 Shadow Gauntlets (DS2)
+ 4093000  1 2 Shadow Leggings (DS2)
  4100000  1 2 Falconer Helm
  4101000  1 2 Falconer Armor
  4102000  1 2 Falconer Gauntlets
@@ -92,10 +92,10 @@
  4211000  1 2 Alonne's Armor
  4212000  1 2 Alonne's Gauntlets
  4213000  1 2 Alonne's Leggings
- 4220000  1 2 Black Hood
- 4221000  1 2 Black Robes
- 4222000  1 2 Black Gloves
- 4223000  1 2 Black Boots
+ 4220000  1 2 Black Hood (DS2)
+ 4221000  1 2 Black Robes (DS2)
+ 4222000  1 2 Black Gloves (DS2)
+ 4223000  1 2 Black Boots (DS2)
  4230000  1 2 Charred Loyce Helm
  4231000  1 2 Charred Loyce Armor
  4232000  1 2 Charred Loyce Gauntlets
@@ -103,7 +103,7 @@
  4240000  1 2 Grave Warden Mask
  4241000  1 2 Grave Warden Top
  4242000  1 2 Grave Warden Cuffs
- 4243000  1 2 Grave Warden Bottoms
+ 4243000  1 2 Grave Warden Bottoms0
  4250000  1 2 Ivory King Helm
  4251000  1 2 Ivory King Armor
  4252000  1 2 Ivory King Gauntlets
