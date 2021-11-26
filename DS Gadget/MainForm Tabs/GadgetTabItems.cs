@@ -238,8 +238,6 @@ namespace DS_Gadget
                 DSItem item = lbxItems.SelectedItem as DSItem;
                 
                 int id = item.ID;
-                if (DSItem.NO.Contains(id))
-                    return;
 
                 if (item.UpgradeType == DSItem.Upgrade.PyroFlame || item.UpgradeType == DSItem.Upgrade.PyroFlameAscended)
                     id += (int)nudUpgrade.Value * 100;

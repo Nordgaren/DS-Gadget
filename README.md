@@ -31,6 +31,10 @@ You can also try adding DS Gadget as an exception to your antivirus
 **[Stagmattica](https://github.com/Stagmattica)** Helped me get started with DS Gadget   
 
 # Change Log  
+### Release 1.5
+
+* Removed anti-item spawn code
+
 ### Release 1.4
 **Update to Resources/Equipment/Armor/DemonSoulsArmor.txt and Resources/Equipment/Armor/DarkSouls2Armor.txt PLEASE COPY THESE OVER**  
 
