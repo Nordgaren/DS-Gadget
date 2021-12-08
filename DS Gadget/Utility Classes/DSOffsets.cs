@@ -130,6 +130,14 @@ namespace DS_Gadget
             PlaySpeed = 0x64,
         }
 
+        public const string BaseAAoB = "8B 76 0C 89 35 ? ? ? ? 33 C0";
+        public const int BaseAAoBOffset = 0x5;
+        public const int BaseAAoBOffset2 = 0x0;
+        public const int CurrentAnimAOBOffset1 = 0x10;
+        public const int CurrentAnimAOBOffset2 = 0x38;
+        public const int CurrentAnimAOBOffset3 = 0x46C;
+        public const int CurrentAnimAOBOffset4 = 0x60;
+
         [Flags]
         public enum CharMapFlags : uint
         {
