@@ -46,9 +46,10 @@ namespace DS_Gadget
         private PHPointer Unknown4;
 
         private PHPointer BaseA;
-        private PHPointer BaseAn1;
-        private PHPointer BaseAn2;
         private PHPointer CurrentAnim;
+
+        private PHPointer BaseB;
+        private PHPointer BodyProportions;
 
         private PHPointer FuncItemGet;
         private PHPointer FuncLevelUp;
@@ -98,8 +99,11 @@ namespace DS_Gadget
             Unknown3 = RegisterAbsoluteAOB(DSOffsets.Unknown3AOB, DSOffsets.Unknown3AOBOffset, DSOffsets.Unknown3Offset1);
             Unknown4 = RegisterAbsoluteAOB(DSOffsets.Unknown4AOB, DSOffsets.Unknown4AOBOffset, DSOffsets.Unknown4Offset1, DSOffsets.Unknown4Offset2);
 
-            BaseA = RegisterAbsoluteAOB(DSOffsets.BaseAAoB, DSOffsets.BaseAAoBOffset, DSOffsets.BaseAAoBOffset2);
+            BaseA = RegisterAbsoluteAOB(DSOffsets.BaseAAoB, DSOffsets.BaseAAoBOffset1, DSOffsets.BaseAAoBOffset2);
             CurrentAnim = CreateChildPointer(BaseA, (int)DSOffsets.CurrentAnimAOBOffset1, (int)DSOffsets.CurrentAnimAOBOffset2, (int)DSOffsets.CurrentAnimAOBOffset3);
+
+            BaseB = RegisterAbsoluteAOB(DSOffsets.BaseBAoB, DSOffsets.BaseBAoBOffset1, DSOffsets.BaseBAoBOffset2);
+            BodyProportions = CreateChildPointer(BaseB, DSOffsets.BodyProportionsOffset);
 
             FuncItemGet = RegisterAbsoluteAOB(DSOffsets.FuncItemGetAOB);
             FuncLevelUp = RegisterAbsoluteAOB(DSOffsets.FuncLevelUpAOB);
@@ -219,6 +223,8 @@ namespace DS_Gadget
             PosZ = z;
         }
 
+        
+
         public float PosX
         {
             get => CharPosData.ReadSingle((int)DSOffsets.CharPosData.PosX);
@@ -326,6 +332,15 @@ namespace DS_Gadget
         {
             get => CharData2.ReadByte((int)DSOffsets.CharData2.Physique);
             set => CharData2.WriteByte((int)DSOffsets.CharData2.Physique, value);
+        }
+
+        internal void ChangePhysique(float head, float chest, float waist, float hands, float legs)
+        {
+            BodyProportions.WriteSingle((int)DSOffsets.BodyProportions.Head, head);
+            BodyProportions.WriteSingle((int)DSOffsets.BodyProportions.Chest, chest);
+            BodyProportions.WriteSingle((int)DSOffsets.BodyProportions.Abdomen, waist);
+            BodyProportions.WriteSingle((int)DSOffsets.BodyProportions.Arms, hands);
+            BodyProportions.WriteSingle((int)DSOffsets.BodyProportions.Legs, legs);
         }
 
         public int SoulLevel

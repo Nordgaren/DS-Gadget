@@ -131,12 +131,28 @@ namespace DS_Gadget
         }
 
         public const string BaseAAoB = "8B 76 0C 89 35 ? ? ? ? 33 C0";
-        public const int BaseAAoBOffset = 0x5;
+        public const int BaseAAoBOffset1 = 0x5;
         public const int BaseAAoBOffset2 = 0x0;
         public const int CurrentAnimAOBOffset1 = 0x10;
         public const int CurrentAnimAOBOffset2 = 0x38;
         public const int CurrentAnimAOBOffset3 = 0x46C;
         public const int CurrentAnimAOBOffset4 = 0x60;
+
+        public const string BaseBAoB = "A1 ? ? ? ? 8B 40 34 53 32";
+        public const int BaseBAoBOffset1 = 0x1;
+        public const int BaseBAoBOffset2 = 0x0;
+
+        public const int BodyProportionsOffset = 0x8;
+
+        public enum BodyProportions
+        {
+            Head = 0x2ac,
+            Chest = 0x2b0,
+            Abdomen = 0x2b4,
+            Arms = 0x2b8,
+            Legs = 0x2bc
+        }
+
 
         [Flags]
         public enum CharMapFlags : uint

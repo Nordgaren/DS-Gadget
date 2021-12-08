@@ -283,7 +283,9 @@ namespace DS_Gadget
                 {
                     if (Hook.Loaded)
                     {
-                        Hook.Physique = (cmbPhysique.SelectedItem as DSPhysique).ID;
+                        var dsPhysique = cmbPhysique.SelectedItem as DSPhysique;
+                        Hook.Physique = dsPhysique.ID;
+                        Hook.ChangePhysique(dsPhysique.Head, dsPhysique.Chest, dsPhysique.Waist, dsPhysique.Hands, dsPhysique.Legs);
                     }
                     else
                     {

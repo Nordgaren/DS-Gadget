@@ -1,9 +1,10 @@
-0 Average
-1 Slim
-2 Very Slim
-3 Large
-4 Very Large
-5 Large Upper Body
-6 Large Lower Body
-7 Top-heavy
-8 Tiny Head
+//Format: body type; name:; head; chest; waist; hands; legs;
+0 Average: 0 0 0 0 0
+1 Slim: -.5 -.5 -.5 -.5 -.5
+2 Very Slim: -1 -1 -1 -1 -1
+3 Large: .5 .5 .5 .5 .5
+4 Very Large: 1 1 1 1 1
+5 Large Upper Body: 0 1 0 1 0
+6 Large Lower Body: 0 0 1 0 1
+7 Top-heavy: 1 0 0 0 0
+8 Tiny Head: -1 0 0 0 0
