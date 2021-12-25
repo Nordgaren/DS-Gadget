@@ -306,12 +306,18 @@ namespace DS_Gadget
 
         private void cbxInfiniteDurability_CheckedChanged(object sender, EventArgs e)
         {
-            Hook.InfiniteDurabilityToggle(cbxInfiniteDurability.Checked);
+            if (Hook.Loaded)
+                Hook.InfiniteDurabilityToggle(cbxInfiniteDurability.Checked);
+            else
+                cbxInfiniteDurability.Checked = false;
         }
 
         private void cbxInfiniteDurabilitySpec_CheckedChanged(object sender, EventArgs e)
         {
-            Hook.InfiniteDurabilitySpecToggle(cbxInfiniteDurabilitySpec.Checked);
+            if (Hook.Loaded)
+                Hook.InfiniteDurabilitySpecToggle(cbxInfiniteDurabilitySpec.Checked);
+            else
+                cbxInfiniteDurabilitySpec.Checked = false;
         }
     }
 }
