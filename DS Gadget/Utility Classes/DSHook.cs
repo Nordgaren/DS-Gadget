@@ -246,66 +246,42 @@ namespace DS_Gadget
         internal void InfiniteDurabilitySpecToggle(bool enable)
         {
             if (enable)
-                EnableInfiniteDurabilitySpec();
+                EnableDurability(ref InfiniteDurabilitySpecPtr, InfiniteDurabilitySpec, Properties.Resources.InfiniteDurabilitySpec, Properties.Resources.InfiniteDurabilitySpecInject);
             else
-                DisableInfiniteDurabilitySpec();
-        }
-        private void EnableInfiniteDurabilitySpec()
-        {
-            var asm = string.Format(Properties.Resources.InfiniteDurabilitySpec,
-               0xFF00);
-
-            var bytes = FasmNet.Assemble("use32\norg 0x0\n" + asm); // Have to get the bytes once to calculate the total size of bytes
-            InfiniteDurabilitySpecPtr = Allocate((uint)bytes.Length, Kernel32.PAGE_EXECUTE_READWRITE);
-            asm = string.Format(Properties.Resources.InfiniteDurabilitySpec,
-               GetRelativeOffset(InfiniteDurabilitySpecPtr, InfiniteDurabilitySpec.Resolve() + 0x5));
-            bytes = FasmNet.Assemble("use32\norg 0x0\n" + asm);
-            Kernel32.WriteBytes(Handle, InfiniteDurabilitySpecPtr, bytes);
-
-            var asmInject = string.Format(Properties.Resources.InfiniteDurabilitySpecInject,
-             GetRelativeOffset(InfiniteDurabilitySpec.Resolve(), InfiniteDurabilitySpecPtr));
-            bytes = FasmNet.Assemble("use32\norg 0x0\n" + asmInject);
-            InfiniteDurabilitySpec.WriteBytes(0x0, bytes);
-        }
-        private void DisableInfiniteDurabilitySpec()
-        {
-            var bytes = new byte[] { 0x89, 0x50, 0x14, 0xB0, 0x01 };
-            InfiniteDurabilitySpec.WriteBytes(0x0, bytes);
-            Free(InfiniteDurabilitySpecPtr);
-            InfiniteDurabilitySpecPtr = IntPtr.Zero;
+                DisableDurability(ref InfiniteDurabilitySpecPtr, InfiniteDurabilitySpec, new byte[] { 0x89, 0x50, 0x14, 0xB0, 0x01 });
         }
 
         IntPtr InfiniteDurabilityPtr;
         internal void InfiniteDurabilityToggle(bool enable)
         {
             if (enable)
-                EnableInfiniteDurability();
+                EnableDurability(ref InfiniteDurabilityPtr, InfiniteDurability, Properties.Resources.InfiniteDurability, Properties.Resources.InfiniteDurabilityInject);
             else
-                DisableInfiniteDurability();
+                DisableDurability(ref InfiniteDurabilityPtr, InfiniteDurability, new byte[] { 0x89, 0x53, 0x14, 0x3B, 0x71, 0x10 });
         }
-        private void EnableInfiniteDurability()
+        private void EnableDurability(ref IntPtr durabilityPtr, PHPointer pHPointer, string newCode, string injectCode)
         {
-            var asm = string.Format(Properties.Resources.InfiniteDurability,
+            var asm = string.Format(newCode,
                0xFF00);
-
             var bytes = FasmNet.Assemble("use32\norg 0x0\n" + asm); // Have to get the bytes once to calculate the total size of bytes
-            InfiniteDurabilityPtr = Allocate((uint)bytes.Length, Kernel32.PAGE_EXECUTE_READWRITE);
-            asm = string.Format(Properties.Resources.InfiniteDurability,
-               GetRelativeOffset(InfiniteDurabilityPtr, InfiniteDurability.Resolve() + 0x6));
-            bytes = FasmNet.Assemble("use32\norg 0x0\n" + asm);
-            Kernel32.WriteBytes(Handle, InfiniteDurabilityPtr, bytes);
+            durabilityPtr = Allocate((uint)bytes.Length, Kernel32.PAGE_EXECUTE_READWRITE);
 
-            var asmInject = string.Format(Properties.Resources.InfiniteDurabilityInject,
-             GetRelativeOffset(InfiniteDurability.Resolve(), InfiniteDurabilityPtr));
-            bytes = FasmNet.Assemble("use32\norg 0x0\n" + asmInject);
-            InfiniteDurability.WriteBytes(0x0, bytes);
+            var asmInject = string.Format(injectCode,
+             GetRelativeOffset(pHPointer.Resolve(), durabilityPtr)); 
+            var injectBytes = FasmNet.Assemble("use32\norg 0x0\n" + asmInject); //Get the size of inject code,
+           
+            asm = string.Format(Properties.Resources.InfiniteDurability,
+               GetRelativeOffset(durabilityPtr, pHPointer.Resolve() + injectBytes.Length));
+            bytes = FasmNet.Assemble("use32\norg 0x0\n" + asm);
+            Kernel32.WriteBytes(Handle, durabilityPtr, bytes);
+
+            pHPointer.WriteBytes(0x0, injectBytes);
         }
-        private void DisableInfiniteDurability()
+        private void DisableDurability(ref IntPtr durabilityPtr, PHPointer pHPointer, byte[] bytes)
         {
-            var bytes = new byte[] { 0x89, 0x53, 0x14, 0x3B, 0x71, 0x10 };
-            InfiniteDurability.WriteBytes(0x0, bytes);
-            Free(InfiniteDurabilityPtr);
-            InfiniteDurabilityPtr = IntPtr.Zero;
+            pHPointer.WriteBytes(0x0, bytes);
+            Free(durabilityPtr);
+            durabilityPtr = IntPtr.Zero;
         }
         private int GetRelativeOffset(IntPtr source, IntPtr dest)
         {
