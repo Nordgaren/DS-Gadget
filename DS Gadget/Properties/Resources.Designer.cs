@@ -19,7 +19,7 @@ namespace DS_Gadget.Properties {
     // class via a tool like ResGen or Visual Studio.
     // To add or remove a member, edit your .ResX file then rerun ResGen
     // with the /str option, or rebuild your VS project.
-    [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Resources.Tools.StronglyTypedResourceBuilder", "16.0.0.0")]
+    [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Resources.Tools.StronglyTypedResourceBuilder", "17.0.0.0")]
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
     [global::System.Runtime.CompilerServices.CompilerGeneratedAttribute()]
     internal class Resources {
@@ -70,6 +70,55 @@ namespace DS_Gadget.Properties {
         internal static string BonfireWarp {
             get {
                 return ResourceManager.GetString("BonfireWarp", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to cmp [ebx+0x14],edx
+        ///jle originalcode
+        ///mov edx,[ebx+0x14]
+        ///originalcode:
+        ///mov [ebx+0x14],edx
+        ///cmp esi,[ecx+0x10]
+        ///jmp 0x{0:X}.
+        /// </summary>
+        internal static string InfiniteDurability {
+            get {
+                return ResourceManager.GetString("InfiniteDurability", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to jmp 0x{0:X}
+        ///nop.
+        /// </summary>
+        internal static string InfiniteDurabilityInject {
+            get {
+                return ResourceManager.GetString("InfiniteDurabilityInject", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to cmp [eax+0x14],edx
+        ///jle originalcode
+        ///mov edx,[eax+0x14]
+        ///originalcode:
+        ///mov [eax+0x14],edx
+        ///mov al,0x1
+        ///jmp 0x{0:X}.
+        /// </summary>
+        internal static string InfiniteDurabilitySpec {
+            get {
+                return ResourceManager.GetString("InfiniteDurabilitySpec", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to jmp 0x{0:X}.
+        /// </summary>
+        internal static string InfiniteDurabilitySpecInject {
+            get {
+                return ResourceManager.GetString("InfiniteDurabilitySpecInject", resourceCulture);
             }
         }
         

@@ -87,7 +87,6 @@ namespace DS_Gadget
                 nudInt.Value = Hook.Intelligence;
                 nudFth.Value = Hook.Faith;
                 Updating = false;
-
             }
             // Race condition when checking if the game is still loaded; doesn't really matter
             catch (ArgumentOutOfRangeException) 

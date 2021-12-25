@@ -1,0 +1,7 @@
+﻿cmp [ebx+0x14],edx
+jle originalcode
+mov edx,[ebx+0x14]
+originalcode:
+mov [ebx+0x14],edx
+cmp esi,[ecx+0x10]
+jmp 0x{0:X}

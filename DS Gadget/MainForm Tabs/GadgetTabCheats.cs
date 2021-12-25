@@ -303,5 +303,15 @@ namespace DS_Gadget
             Hook.GetItem(0x00000000, 2106000, 99);
             Hook.GetItem(0x00000000, 2108000, 99);
         }
+
+        private void cbxInfiniteDurability_CheckedChanged(object sender, EventArgs e)
+        {
+            Hook.InfiniteDurabilityToggle(cbxInfiniteDurability.Checked);
+        }
+
+        private void cbxInfiniteDurabilitySpec_CheckedChanged(object sender, EventArgs e)
+        {
+            Hook.InfiniteDurabilitySpecToggle(cbxInfiniteDurabilitySpec.Checked);
+        }
     }
 }

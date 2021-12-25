@@ -59,6 +59,8 @@ namespace DS_Gadget
         private PHPointer FuncItemDropUnknown1;
         private PHPointer FuncItemDropUnknown2;
 
+        private PHPointer InfiniteDurability;
+        private PHPointer InfiniteDurabilitySpec;
 
         public int ID => Process?.Id ?? -1;
         public string Version { get; private set; }
@@ -112,6 +114,9 @@ namespace DS_Gadget
             FuncItemDrop = RegisterAbsoluteAOB(DSOffsets.FuncItemDropAOB);
             FuncItemDropUnknown1 = RegisterAbsoluteAOB(DSOffsets.FuncItemDropUnknown1AOB, DSOffsets.FuncItemDropUnknown1AOBOffset);
             FuncItemDropUnknown2 = RegisterAbsoluteAOB(DSOffsets.FuncItemDropUnknown2AOB, DSOffsets.FuncItemDropUnknown2AOBOffset);
+
+            InfiniteDurability = RegisterAbsoluteAOB(DSOffsets.InfiniteDurabilityAoB);
+            InfiniteDurabilitySpec = RegisterAbsoluteAOB(DSOffsets.InfiniteDurabilitySpecAoB);
 
             OnHooked += DSHook_OnHooked;
             OnUnhooked += DSHook_OnUnhooked;
@@ -235,6 +240,76 @@ namespace DS_Gadget
         {
             get => CharPosData.ReadSingle((int)DSOffsets.CharPosData.PosY);
             set => CharPosData.WriteSingle((int)DSOffsets.CharPosData.PosY, value);
+        }
+
+        IntPtr InfiniteDurabilitySpecPtr;
+        internal void InfiniteDurabilitySpecToggle(bool enable)
+        {
+            if (enable)
+                EnableInfiniteDurabilitySpec();
+            else
+                DisableInfiniteDurabilitySpec();
+        }
+        private void EnableInfiniteDurabilitySpec()
+        {
+            var asm = string.Format(Properties.Resources.InfiniteDurabilitySpec,
+               0xFF00);
+
+            var bytes = FasmNet.Assemble("use32\norg 0x0\n" + asm); // Have to get the bytes once to calculate the total size of bytes
+            InfiniteDurabilitySpecPtr = Allocate((uint)bytes.Length, Kernel32.PAGE_EXECUTE_READWRITE);
+            asm = string.Format(Properties.Resources.InfiniteDurabilitySpec,
+               GetRelativeOffset(InfiniteDurabilitySpecPtr, InfiniteDurabilitySpec.Resolve() + 0x5));
+            bytes = FasmNet.Assemble("use32\norg 0x0\n" + asm);
+            Kernel32.WriteBytes(Handle, InfiniteDurabilitySpecPtr, bytes);
+
+            var asmInject = string.Format(Properties.Resources.InfiniteDurabilitySpecInject,
+             GetRelativeOffset(InfiniteDurabilitySpec.Resolve(), InfiniteDurabilitySpecPtr));
+            bytes = FasmNet.Assemble("use32\norg 0x0\n" + asmInject);
+            InfiniteDurabilitySpec.WriteBytes(0x0, bytes);
+        }
+        private void DisableInfiniteDurabilitySpec()
+        {
+            var bytes = new byte[] { 0x89, 0x50, 0x14, 0xB0, 0x01 };
+            InfiniteDurabilitySpec.WriteBytes(0x0, bytes);
+            Free(InfiniteDurabilitySpecPtr);
+            InfiniteDurabilitySpecPtr = IntPtr.Zero;
+        }
+
+        IntPtr InfiniteDurabilityPtr;
+        internal void InfiniteDurabilityToggle(bool enable)
+        {
+            if (enable)
+                EnableInfiniteDurability();
+            else
+                DisableInfiniteDurability();
+        }
+        private void EnableInfiniteDurability()
+        {
+            var asm = string.Format(Properties.Resources.InfiniteDurability,
+               0xFF00);
+
+            var bytes = FasmNet.Assemble("use32\norg 0x0\n" + asm); // Have to get the bytes once to calculate the total size of bytes
+            InfiniteDurabilityPtr = Allocate((uint)bytes.Length, Kernel32.PAGE_EXECUTE_READWRITE);
+            asm = string.Format(Properties.Resources.InfiniteDurability,
+               GetRelativeOffset(InfiniteDurabilityPtr, InfiniteDurability.Resolve() + 0x6));
+            bytes = FasmNet.Assemble("use32\norg 0x0\n" + asm);
+            Kernel32.WriteBytes(Handle, InfiniteDurabilityPtr, bytes);
+
+            var asmInject = string.Format(Properties.Resources.InfiniteDurabilityInject,
+             GetRelativeOffset(InfiniteDurability.Resolve(), InfiniteDurabilityPtr));
+            bytes = FasmNet.Assemble("use32\norg 0x0\n" + asmInject);
+            InfiniteDurability.WriteBytes(0x0, bytes);
+        }
+        private void DisableInfiniteDurability()
+        {
+            var bytes = new byte[] { 0x89, 0x53, 0x14, 0x3B, 0x71, 0x10 };
+            InfiniteDurability.WriteBytes(0x0, bytes);
+            Free(InfiniteDurabilityPtr);
+            InfiniteDurabilityPtr = IntPtr.Zero;
+        }
+        private int GetRelativeOffset(IntPtr source, IntPtr dest)
+        {
+            return dest.ToInt32() - source.ToInt32();
         }
 
         public float PosZ
@@ -955,7 +1030,7 @@ namespace DS_Gadget
 
         public void ResetAnim()
         {
-            CurrentAnim.WriteInt32(0x60, 1);
+            CurrentAnim.WriteInt32(0x60, -1);
             CharData1.WriteInt32((int)DSOffsets.CharData1.ForcePlayAnimation1, 1);
         }
 

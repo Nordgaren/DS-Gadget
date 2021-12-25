@@ -31,7 +31,6 @@
             System.Windows.Forms.GroupBox gbxCheatEnemy;
             System.Windows.Forms.GroupBox gbxCheatAll;
             System.Windows.Forms.GroupBox gbxCheatPlayer;
-            System.Windows.Forms.GroupBox gbxRemastest;
             this.cbxAllNoAttack = new System.Windows.Forms.CheckBox();
             this.cbxAllNoMove = new System.Windows.Forms.CheckBox();
             this.cbxAllNoUpdateAI = new System.Windows.Forms.CheckBox();
@@ -53,24 +52,28 @@
             this.cbxPlayerHide = new System.Windows.Forms.CheckBox();
             this.cbxPlayerSilence = new System.Windows.Forms.CheckBox();
             this.cbxAllNoArrow = new System.Windows.Forms.CheckBox();
+            this.gbxRemastest = new System.Windows.Forms.GroupBox();
             this.cbxGreatArrrows = new System.Windows.Forms.CheckBox();
             this.cbxArrows = new System.Windows.Forms.CheckBox();
             this.cbxBolts = new System.Windows.Forms.CheckBox();
             this.cbxAmmo = new System.Windows.Forms.CheckBox();
+            this.groupBox1 = new System.Windows.Forms.GroupBox();
+            this.cbxInfiniteDurabilitySpec = new System.Windows.Forms.CheckBox();
+            this.cbxInfiniteDurability = new System.Windows.Forms.CheckBox();
             gbxCheatEnemy = new System.Windows.Forms.GroupBox();
             gbxCheatAll = new System.Windows.Forms.GroupBox();
             gbxCheatPlayer = new System.Windows.Forms.GroupBox();
-            gbxRemastest = new System.Windows.Forms.GroupBox();
             gbxCheatEnemy.SuspendLayout();
             gbxCheatAll.SuspendLayout();
             gbxCheatPlayer.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.nudHealInterval)).BeginInit();
-            gbxRemastest.SuspendLayout();
+            this.gbxRemastest.SuspendLayout();
+            this.groupBox1.SuspendLayout();
             this.SuspendLayout();
             // 
             // gbxCheatEnemy
             // 
-            gbxCheatEnemy.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left)
+            gbxCheatEnemy.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
             gbxCheatEnemy.AutoSize = true;
             gbxCheatEnemy.Controls.Add(this.cbxAllNoAttack);
@@ -80,7 +83,7 @@
             gbxCheatEnemy.Margin = new System.Windows.Forms.Padding(4);
             gbxCheatEnemy.Name = "gbxCheatEnemy";
             gbxCheatEnemy.Padding = new System.Windows.Forms.Padding(4);
-            gbxCheatEnemy.Size = new System.Drawing.Size(358, 103);
+            gbxCheatEnemy.Size = new System.Drawing.Size(367, 103);
             gbxCheatEnemy.TabIndex = 19;
             gbxCheatEnemy.TabStop = false;
             gbxCheatEnemy.Text = "Enemies";
@@ -123,7 +126,7 @@
             // 
             // gbxCheatAll
             // 
-            gbxCheatAll.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left)
+            gbxCheatAll.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
             gbxCheatAll.AutoSize = true;
             gbxCheatAll.Controls.Add(this.cbxAllNoDead);
@@ -134,7 +137,7 @@
             gbxCheatAll.Margin = new System.Windows.Forms.Padding(4);
             gbxCheatAll.Name = "gbxCheatAll";
             gbxCheatAll.Padding = new System.Windows.Forms.Padding(4);
-            gbxCheatAll.Size = new System.Drawing.Size(358, 103);
+            gbxCheatAll.Size = new System.Drawing.Size(367, 103);
             gbxCheatAll.TabIndex = 18;
             gbxCheatAll.TabStop = false;
             gbxCheatAll.Text = "Player + Enemies";
@@ -189,7 +192,7 @@
             // 
             // gbxCheatPlayer
             // 
-            gbxCheatPlayer.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left)
+            gbxCheatPlayer.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
             gbxCheatPlayer.AutoSize = true;
             gbxCheatPlayer.Controls.Add(this.nudHealInterval);
@@ -210,7 +213,7 @@
             gbxCheatPlayer.Margin = new System.Windows.Forms.Padding(4);
             gbxCheatPlayer.Name = "gbxCheatPlayer";
             gbxCheatPlayer.Padding = new System.Windows.Forms.Padding(4);
-            gbxCheatPlayer.Size = new System.Drawing.Size(358, 244);
+            gbxCheatPlayer.Size = new System.Drawing.Size(367, 244);
             gbxCheatPlayer.TabIndex = 17;
             gbxCheatPlayer.TabStop = false;
             gbxCheatPlayer.Text = "Player";
@@ -401,21 +404,21 @@
             // 
             // gbxRemastest
             // 
-            gbxRemastest.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left)
+            this.gbxRemastest.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
-            gbxRemastest.AutoSize = true;
-            gbxRemastest.Controls.Add(this.cbxGreatArrrows);
-            gbxRemastest.Controls.Add(this.cbxArrows);
-            gbxRemastest.Controls.Add(this.cbxBolts);
-            gbxRemastest.Controls.Add(this.cbxAmmo);
-            gbxRemastest.Location = new System.Drawing.Point(4, 454);
-            gbxRemastest.Margin = new System.Windows.Forms.Padding(4);
-            gbxRemastest.Name = "gbxRemastest";
-            gbxRemastest.Padding = new System.Windows.Forms.Padding(4);
-            gbxRemastest.Size = new System.Drawing.Size(358, 103);
-            gbxRemastest.TabIndex = 21;
-            gbxRemastest.TabStop = false;
-            gbxRemastest.Text = "Remastest";
+            this.gbxRemastest.AutoSize = true;
+            this.gbxRemastest.Controls.Add(this.cbxGreatArrrows);
+            this.gbxRemastest.Controls.Add(this.cbxArrows);
+            this.gbxRemastest.Controls.Add(this.cbxBolts);
+            this.gbxRemastest.Controls.Add(this.cbxAmmo);
+            this.gbxRemastest.Location = new System.Drawing.Point(4, 524);
+            this.gbxRemastest.Margin = new System.Windows.Forms.Padding(4);
+            this.gbxRemastest.Name = "gbxRemastest";
+            this.gbxRemastest.Padding = new System.Windows.Forms.Padding(4);
+            this.gbxRemastest.Size = new System.Drawing.Size(367, 103);
+            this.gbxRemastest.TabIndex = 21;
+            this.gbxRemastest.TabStop = false;
+            this.gbxRemastest.Text = "Remastest";
             // 
             // cbxGreatArrrows
             // 
@@ -461,16 +464,57 @@
             this.cbxAmmo.Text = "Refill Ammunition";
             this.cbxAmmo.UseVisualStyleBackColor = true;
             // 
+            // groupBox1
+            // 
+            this.groupBox1.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
+            this.groupBox1.AutoSize = true;
+            this.groupBox1.Controls.Add(this.cbxInfiniteDurabilitySpec);
+            this.groupBox1.Controls.Add(this.cbxInfiniteDurability);
+            this.groupBox1.Location = new System.Drawing.Point(4, 454);
+            this.groupBox1.Margin = new System.Windows.Forms.Padding(4);
+            this.groupBox1.Name = "groupBox1";
+            this.groupBox1.Padding = new System.Windows.Forms.Padding(4);
+            this.groupBox1.Size = new System.Drawing.Size(367, 74);
+            this.groupBox1.TabIndex = 22;
+            this.groupBox1.TabStop = false;
+            this.groupBox1.Text = "Infinite Durability";
+            // 
+            // cbxInfiniteDurabilitySpec
+            // 
+            this.cbxInfiniteDurabilitySpec.AutoSize = true;
+            this.cbxInfiniteDurabilitySpec.Location = new System.Drawing.Point(151, 23);
+            this.cbxInfiniteDurabilitySpec.Margin = new System.Windows.Forms.Padding(4);
+            this.cbxInfiniteDurabilitySpec.Name = "cbxInfiniteDurabilitySpec";
+            this.cbxInfiniteDurabilitySpec.Size = new System.Drawing.Size(208, 24);
+            this.cbxInfiniteDurabilitySpec.TabIndex = 13;
+            this.cbxInfiniteDurabilitySpec.Text = "Infinite Durability Special";
+            this.cbxInfiniteDurabilitySpec.UseVisualStyleBackColor = true;
+            this.cbxInfiniteDurabilitySpec.CheckedChanged += new System.EventHandler(this.cbxInfiniteDurabilitySpec_CheckedChanged);
+            // 
+            // cbxInfiniteDurability
+            // 
+            this.cbxInfiniteDurability.AutoSize = true;
+            this.cbxInfiniteDurability.Location = new System.Drawing.Point(8, 23);
+            this.cbxInfiniteDurability.Margin = new System.Windows.Forms.Padding(4);
+            this.cbxInfiniteDurability.Name = "cbxInfiniteDurability";
+            this.cbxInfiniteDurability.Size = new System.Drawing.Size(152, 24);
+            this.cbxInfiniteDurability.TabIndex = 11;
+            this.cbxInfiniteDurability.Text = "Infinite Durability";
+            this.cbxInfiniteDurability.UseVisualStyleBackColor = true;
+            this.cbxInfiniteDurability.CheckedChanged += new System.EventHandler(this.cbxInfiniteDurability_CheckedChanged);
+            // 
             // GadgetTabCheats
             // 
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Inherit;
             this.AutoSize = true;
-            this.Controls.Add(gbxRemastest);
+            this.Controls.Add(this.groupBox1);
+            this.Controls.Add(this.gbxRemastest);
             this.Controls.Add(gbxCheatEnemy);
             this.Controls.Add(gbxCheatAll);
             this.Controls.Add(gbxCheatPlayer);
             this.Name = "GadgetTabCheats";
-            this.Size = new System.Drawing.Size(366, 561);
+            this.Size = new System.Drawing.Size(375, 641);
             gbxCheatEnemy.ResumeLayout(false);
             gbxCheatEnemy.PerformLayout();
             gbxCheatAll.ResumeLayout(false);
@@ -478,8 +522,10 @@
             gbxCheatPlayer.ResumeLayout(false);
             gbxCheatPlayer.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.nudHealInterval)).EndInit();
-            gbxRemastest.ResumeLayout(false);
-            gbxRemastest.PerformLayout();
+            this.gbxRemastest.ResumeLayout(false);
+            this.gbxRemastest.PerformLayout();
+            this.groupBox1.ResumeLayout(false);
+            this.groupBox1.PerformLayout();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -512,5 +558,9 @@
         private System.Windows.Forms.CheckBox cbxGreatArrrows;
         private System.Windows.Forms.CheckBox cbxArrows;
         private System.Windows.Forms.CheckBox cbxBolts;
+        private System.Windows.Forms.GroupBox gbxRemastest;
+        private System.Windows.Forms.GroupBox groupBox1;
+        private System.Windows.Forms.CheckBox cbxInfiniteDurabilitySpec;
+        private System.Windows.Forms.CheckBox cbxInfiniteDurability;
     }
 }

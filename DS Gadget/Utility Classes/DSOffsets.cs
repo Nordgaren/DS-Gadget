@@ -407,5 +407,8 @@ namespace DS_Gadget
         public const string FuncItemDropUnknown2AOB = "D9 E8 8B 1D ? ? ? ? 83 EC 08 D9 54 24 04 D9 1C 24 8D 44 24 20 6A 03 8B D3";
         public const int FuncItemDropUnknown2AOBOffset = 4;
 
+        public const string InfiniteDurabilityAoB = "89 53 14 3B 71 10";
+        public const string InfiniteDurabilitySpecAoB = "89 50 14 B0 01 C2 04 00 CC";
+
     }
 }

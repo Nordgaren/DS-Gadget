@@ -100,6 +100,9 @@ namespace DS_Gadget
                 settings.WindowLocation = Location;
             else
                 settings.WindowLocation = RestoreBounds.Location;
+
+            Hook.InfiniteDurabilityToggle(false);
+            Hook.InfiniteDurabilitySpecToggle(false);
         }
 
         private void MainForm_FormClosed(object sender, FormClosedEventArgs e)
