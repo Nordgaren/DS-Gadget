@@ -306,7 +306,7 @@ namespace DS_Gadget
 
         private void cbxInfiniteDurability_CheckedChanged(object sender, EventArgs e)
         {
-            if (Hook.Loaded)
+            if (Hook.Hooked)
                 Hook.InfiniteDurabilityToggle(cbxInfiniteDurability.Checked);
             else
                 cbxInfiniteDurability.Checked = false;
@@ -314,7 +314,7 @@ namespace DS_Gadget
 
         private void cbxInfiniteDurabilitySpec_CheckedChanged(object sender, EventArgs e)
         {
-            if (Hook.Loaded)
+            if (Hook.Hooked)
                 Hook.InfiniteDurabilitySpecToggle(cbxInfiniteDurabilitySpec.Checked);
             else
                 cbxInfiniteDurabilitySpec.Checked = false;
