@@ -92,6 +92,11 @@ namespace DS_Gadget
                 gadgetTabCheats.ToggleAI();
             }));
 
+            hotkeys.Add(new GadgetHotkey("HealTimer", txtHealTimer, tabPageHotkeys, () =>
+            {
+                gadgetTabCheats.ToggleHealTimer();
+            }));
+
             /* Template :^
             hotkeys.Add(new GadgetHotkey("Hotkey", textBoxHotkey, tabPageHotkeys, () =>
             {

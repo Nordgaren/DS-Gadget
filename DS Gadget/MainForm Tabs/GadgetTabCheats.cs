@@ -106,6 +106,11 @@ namespace DS_Gadget
                 Hook.SetAllNoUpdateAI(true);
         }
 
+        internal void ToggleHealTimer()
+        {
+            cbxRefill.Checked = !cbxRefill.Checked;
+        }
+
         internal void ToggleAI()
         {
             cbxAllNoUpdateAI.Checked = !cbxAllNoUpdateAI.Checked;

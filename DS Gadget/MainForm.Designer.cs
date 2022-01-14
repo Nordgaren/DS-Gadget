@@ -57,6 +57,8 @@
             this.txtHotkeyItem = new System.Windows.Forms.TextBox();
             this.lblHotkeyAI = new System.Windows.Forms.Label();
             this.txtHotkeyAI = new System.Windows.Forms.TextBox();
+            this.lblHealTimer = new System.Windows.Forms.Label();
+            this.txtHealTimer = new System.Windows.Forms.TextBox();
             this.labelHotkeyDeath = new System.Windows.Forms.Label();
             this.textBoxHotkeyDeath = new System.Windows.Forms.TextBox();
             this.labelHotkeyDown = new System.Windows.Forms.Label();
@@ -330,6 +332,8 @@
             // 
             this.tabPageHotkeys.Controls.Add(this.lblHotkeyItem);
             this.tabPageHotkeys.Controls.Add(this.txtHotkeyItem);
+            this.tabPageHotkeys.Controls.Add(this.lblHealTimer);
+            this.tabPageHotkeys.Controls.Add(this.txtHealTimer);
             this.tabPageHotkeys.Controls.Add(this.lblHotkeyAI);
             this.tabPageHotkeys.Controls.Add(this.txtHotkeyAI);
             this.tabPageHotkeys.Controls.Add(this.labelHotkeyDeath);
@@ -380,7 +384,7 @@
             this.lblHotkeyItem.Size = new System.Drawing.Size(139, 17);
             this.lblHotkeyItem.TabIndex = 32;
             this.lblHotkeyItem.Text = "Create Selected Item";
-            this.toolTip1.SetToolTip(this.lblHotkeyItem, "Escape sitting bonfire animation without leaving bonfire");
+            this.toolTip1.SetToolTip(this.lblHotkeyItem, "Spawn selected item in Item tab");
             // 
             // txtHotkeyItem
             // 
@@ -401,7 +405,7 @@
             this.lblHotkeyAI.Size = new System.Drawing.Size(139, 17);
             this.lblHotkeyAI.TabIndex = 32;
             this.lblHotkeyAI.Text = "Toggle AI";
-            this.toolTip1.SetToolTip(this.lblHotkeyAI, "Escape sitting bonfire animation without leaving bonfire");
+            this.toolTip1.SetToolTip(this.lblHotkeyAI, "Toggle NPC AI");
             // 
             // txtHotkeyAI
             // 
@@ -412,6 +416,27 @@
             this.txtHotkeyAI.Size = new System.Drawing.Size(132, 22);
             this.txtHotkeyAI.TabIndex = 31;
             this.txtHotkeyAI.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
+            // 
+            // lblHealTimer
+            // 
+            this.lblHealTimer.AutoSize = true;
+            this.lblHealTimer.Location = new System.Drawing.Point(145, 531);
+            this.lblHealTimer.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.lblHealTimer.Name = "lblHealTimer";
+            this.lblHealTimer.Size = new System.Drawing.Size(139, 17);
+            this.lblHealTimer.TabIndex = 34;
+            this.lblHealTimer.Text = "Heal Timer";
+            this.toolTip1.SetToolTip(this.lblHealTimer, "Enable/Disable heal timer in cheats tab");
+            // 
+            // txtHealTimer
+            // 
+            this.txtHealTimer.Cursor = System.Windows.Forms.Cursors.Default;
+            this.txtHealTimer.Location = new System.Drawing.Point(8, 528);
+            this.txtHealTimer.Margin = new System.Windows.Forms.Padding(4);
+            this.txtHealTimer.Name = "txtHealTimer";
+            this.txtHealTimer.Size = new System.Drawing.Size(132, 22);
+            this.txtHealTimer.TabIndex = 33;
+            this.txtHealTimer.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
             // 
             // labelHotkeyDeath
             // 
@@ -865,6 +890,8 @@
         private System.Windows.Forms.Label lblHotkeyItem;
         private System.Windows.Forms.TextBox txtHotkeyItem;
         private System.Windows.Forms.Label lblHotkeyAI;
+        private System.Windows.Forms.TextBox txtHealTimer;
+        private System.Windows.Forms.Label lblHealTimer;
         private System.Windows.Forms.TextBox txtHotkeyAI;
         private GadgetTabItems gadgetTabItems;
         private GadgetTabPlayer gadgetTabPlayer;

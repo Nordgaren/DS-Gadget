@@ -490,5 +490,17 @@ namespace DS_Gadget.Properties {
                 this["SearchAllFashion"] = value;
             }
         }
+        
+        [global::System.Configuration.UserScopedSettingAttribute()]
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+        [global::System.Configuration.DefaultSettingValueAttribute("27")]
+        public int HealTimer {
+            get {
+                return ((int)(this["HealTimer"]));
+            }
+            set {
+                this["HealTimer"] = value;
+            }
+        }
     }
 }
