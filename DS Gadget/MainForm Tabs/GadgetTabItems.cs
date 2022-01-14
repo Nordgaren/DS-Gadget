@@ -15,10 +15,20 @@ namespace DS_Gadget
         public override void InitTab(MainForm parent)
         {
             base.InitTab(parent);
+            SearchAllCheckbox.Checked = Settings.SearchAllChecked;
+            maxUpgrade.Checked = Settings.MaxChecked;
+            cbxQuantityRestrict.Checked = Settings.RestrictCheched;
             DSItemCategory.GetItemCategories();
             foreach (DSItemCategory category in DSItemCategory.All)
                 cmbCategory.Items.Add(category);
             cmbCategory.SelectedIndex = 0;
+        }
+
+        public override void SaveTab()
+        {
+            Settings.SearchAllChecked = SearchAllCheckbox.Checked;
+            Settings.MaxChecked = maxUpgrade.Checked;
+            Settings.RestrictCheched = cbxQuantityRestrict.Checked;
         }
 
         private void cmbCategory_SelectedIndexChanged(object sender, EventArgs e)

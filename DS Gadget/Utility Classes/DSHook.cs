@@ -270,7 +270,7 @@ namespace DS_Gadget
              GetRelativeOffset(pHPointer.Resolve(), durabilityPtr)); 
             var injectBytes = FasmNet.Assemble("use32\norg 0x0\n" + asmInject); //Get the size of inject code,
            
-            asm = string.Format(Properties.Resources.InfiniteDurability,
+            asm = string.Format(newCode,
                GetRelativeOffset(durabilityPtr, pHPointer.Resolve() + injectBytes.Length));
             bytes = FasmNet.Assemble("use32\norg 0x0\n" + asm);
             Kernel32.WriteBytes(Handle, durabilityPtr, bytes);

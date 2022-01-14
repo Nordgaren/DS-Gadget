@@ -35,6 +35,7 @@ namespace DS_Gadget
         public override void InitTab(MainForm parent)
         {
             base.InitTab(parent);
+            SearchAllCheckbox.Checked = Settings.SearchAllFashion;
             DSFashionCategory.GetItemCategories();
             foreach (DSFashionCategory category in DSFashionCategory.All)
             {
@@ -48,13 +49,17 @@ namespace DS_Gadget
                 }
             }
 
-
             cmbSlot.Items.Add("Hair");
             cmbSlot.Items.Add("Bolt 1");
             cmbSlot.Items.Add("Arrow 1");
 
             cmbSlot.SelectedIndex = 0;
             cmbCategory.SelectedIndex = 0;
+        }
+
+        public override void SaveTab()
+        {
+            Settings.SearchAllFashion = SearchAllCheckbox.Checked;
         }
 
         public override void UpdateTab()

@@ -27,6 +27,7 @@ namespace DS_Gadget
             base.InitTab(parent);
             playerState.Set = false;
             cbxStoreState.Checked = Settings.StoreHP;
+            cbxQuickSelectBonfire.Checked = Settings.QuickSelectbonfireChecked;
             foreach (DSBonfire bonfire in DSBonfire.All)
                 cbxBonfire.Items.Add(bonfire);
             nudSpeed.Value = Settings.Speed;
@@ -157,6 +158,7 @@ namespace DS_Gadget
         {
             Settings.StoreHP = cbxStoreState.Checked;
             Settings.Speed = nudSpeed.Value;
+            Settings.QuickSelectbonfireChecked = cbxQuickSelectBonfire.Checked;
         }
 
         public override void ReloadTab()
