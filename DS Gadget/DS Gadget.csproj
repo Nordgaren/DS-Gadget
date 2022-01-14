@@ -237,6 +237,9 @@
     <Content Include="Resources\Assembly\InfiniteDurabilityInject.txt" />
     <Content Include="Resources\Assembly\InfiniteDurability.txt" />
     <Content Include="Resources\Assembly\InfiniteDurabilitySpec.txt" />
+    <None Include="Resources\Equipment\Weapons\Firearms.txt">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
     <Content Include="Resources\Systems\TeamConfigs.txt">
       <CopyToOutputDirectory>Always</CopyToOutputDirectory>
     </Content>

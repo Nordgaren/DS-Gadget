@@ -31,6 +31,16 @@ You can also try adding DS Gadget as an exception to your antivirus
 **[Stagmattica](https://github.com/Stagmattica)** Helped me get started with DS Gadget   
 
 # Change Log  
+### Release 1.6
+
+* Refill Timer hotkey
+
+* Infinite Durability cheats (regular and special attack)
+
+* fixed the stand up cheat
+
+* Added guns and new armors to the items menu  
+
 ### Release 1.5
 
 * Removed anti-item spawn code
