@@ -42,6 +42,8 @@ You can also try adding DS Gadget as an exception to your antivirus
 
 * Added guns and new armors to the items menu  
 
+* Physique now updates in realtime  
+
 ### Release 1.5
 
 * Removed anti-item spawn code
