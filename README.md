@@ -29,6 +29,7 @@ You can also try adding DS Gadget as an exception to your antivirus
 **[King Borehaha](https://github.com/kingborehaha/)** Implimenting features, great suggestions and helping to polish my features  
 **[InfernoPlus](https://github.com/infernoplus/)** Author of Dark Souls Remastest, also answers my dumb questions :fatcat:  
 **[Stagmattica](https://github.com/Stagmattica)** Helped me get started with DS Gadget   
+**149** Did the research for the Phsyiques feature (changing physique now updates without reload when you change it)  
 
 # Change Log  
 ### Release 1.6
