@@ -6,7 +6,7 @@ namespace DS_Gadget
 {
     class DSPhysique : IComparable<DSPhysique>
     {
-        private static Regex PhysiqueEntryRx = new Regex(@"^(?<id>\d+) (?<name>.*:+) (?<head>\S+) (?<chest>\S+) (?<waist>\S+) (?<hands>\S+) (?<legs>\S+)$");
+        private static readonly Regex PhysiqueEntryRx = new Regex(@"^(?<id>\d+) (?<name>[a-zA-Z- ]+) (?<head>[0-9.-]+) (?<chest>[0-9.-]+) (?<waist>[0-9.-]+) (?<hands>[0-9.-]+) (?<legs>[0-9.-]+)$", RegexOptions.CultureInvariant);
 
         public byte ID { get; }
         public string Name { get; }
@@ -42,12 +42,12 @@ namespace DS_Gadget
                 {
                     Match match = PhysiqueEntryRx.Match(line);
                     byte id = byte.Parse(match.Groups["id"].Value);
-                    string name = match.Groups["name"].Value.Replace(":", "");
-                    float head = float.Parse(match.Groups["head"].Value);
-                    float chest =float.Parse(match.Groups["chest"].Value);
-                    float waist =float.Parse(match.Groups["waist"].Value);
-                    float hands =float.Parse(match.Groups["hands"].Value);
-                    float legs = float.Parse(match.Groups["legs"].Value);
+                    string name = match.Groups["name"].Value;
+                    float head = Convert.ToSingle(match.Groups["head"].Value);
+                    float chest =Convert.ToSingle(match.Groups["chest"].Value);
+                    float waist =Convert.ToSingle(match.Groups["waist"].Value);
+                    float hands =Convert.ToSingle(match.Groups["hands"].Value);
+                    float legs = Convert.ToSingle(match.Groups["legs"].Value);
                     all.Add(new DSPhysique(id, name, head, chest, waist, hands, legs));
                 };
             }

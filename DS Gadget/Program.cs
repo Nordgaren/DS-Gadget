@@ -12,20 +12,36 @@ namespace DS_Gadget
         [STAThread]
         static void Main()
         {
-            PortableSettingsProvider.SettingsFileName = "DS Gadget.config";
-            PortableSettingsProvider.ApplyProvider(Properties.Settings.Default);
-            Properties.Settings settings = Properties.Settings.Default;
-            if (settings.UpgradeRequired)
+            
+            try
             {
-                settings.Upgrade();
-                settings.UpgradeRequired = false;
+                PortableSettingsProvider.SettingsFileName = "DS Gadget.config";
+                PortableSettingsProvider.ApplyProvider(Properties.Settings.Default);
+                Properties.Settings settings = Properties.Settings.Default;
+                if (settings.UpgradeRequired)
+                {
+                    settings.Upgrade();
+                    settings.UpgradeRequired = false;
+                }
+
+                Application.EnableVisualStyles();
+                Application.SetCompatibleTextRenderingDefault(false);
+                Application.Run(new MainForm());
+                settings.Save();
+
+            }
+            catch (Exception ex)
+            {
+                GadgetLogger.Log($"Exception: ");
+                GadgetLogger.Log(ex.Message);
+                GadgetLogger.Log(ex.StackTrace);
+                GadgetLogger.Log($"Raw: ");
+                GadgetLogger.Log(ex.ToString());
+                GadgetLogger.Flush();
+                MessageBox.Show("Exception. Please see GadgetLog.txt for more information!", "Exception", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                throw ex;
             }
 
-            Application.EnableVisualStyles();
-            Application.SetCompatibleTextRenderingDefault(false);
-            Application.Run(new MainForm());
-
-            settings.Save();
         }
     }
 }

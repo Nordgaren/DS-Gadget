@@ -1,10 +1,10 @@
-//Format: body type; name:; head; chest; waist; hands; legs;
-0 Average: 0 0 0 0 0
-1 Slim: -.5 -.5 -.5 -.5 -.5
-2 Very Slim: -1 -1 -1 -1 -1
-3 Large: .5 .5 .5 .5 .5
-4 Very Large: 1 1 1 1 1
-5 Large Upper Body: 0 1 0 1 0
-6 Large Lower Body: 0 0 1 0 1
-7 Top-heavy: 1 0 0 0 0
-8 Tiny Head: -1 0 0 0 0
+//Format: body type; name; head; chest; waist; hands; legs; Make sure you include the full floaing point number, not just the value after the deciaml (Causes crash for some users)
+0 Average 0 0 0 0 0
+1 Slim -0.5 -0.5 -0.5 -0.5 -0.5
+2 Very Slim -1 -1 -1 -1 -1
+3 Large 0.5 0.5 0.5 0.5 0.5
+4 Very Large 1 1 1 1 1
+5 Large Upper Body 0 1 0 1 0
+6 Large Lower Body 0 0 1 0 1
+7 Top-heavy 1 0 0 0 0
+8 Tiny Head -1 0 0 0 0
