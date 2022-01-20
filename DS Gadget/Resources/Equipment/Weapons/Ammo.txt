@@ -17,3 +17,4 @@
 2104000 999 0 Bolt - Lightning
 2106000 999 0 Bolt - Blunt
 2108000 999 0 Bolt - Splintering
+2200000 999 0 ??? - Ammo
