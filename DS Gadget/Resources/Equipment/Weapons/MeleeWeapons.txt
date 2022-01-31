@@ -110,4 +110,4 @@
 9019000   1 3 Guardian Tail
 9020000   1 1 Obsidian Greatsword
 1396000   1 0 Skull Lantern
-2502000   1 3 Energy Sword
+2502000   1 1 Energy Sword
