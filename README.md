@@ -32,6 +32,12 @@ You can also try adding DS Gadget as an exception to your antivirus
 **149** Did the research for the Phsyiques feature (changing physique now updates without reload when you change it)  
 
 # Change Log  
+### Release 1.7
+
+* Hair RGB option  
+
+* Fixed some people not able to parse the floats in the physiques text file  
+
 ### Release 1.6
 
 * Refill Timer hotkey
