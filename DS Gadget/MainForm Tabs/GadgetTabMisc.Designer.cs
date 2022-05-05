@@ -41,6 +41,10 @@
             this.btnApplyHair = new System.Windows.Forms.Button();
             this.lbxItems = new System.Windows.Forms.ListBox();
             this.groupBoxFashion = new System.Windows.Forms.GroupBox();
+            this.nudEyeSpeed = new System.Windows.Forms.NumericUpDown();
+            this.cbxEyeRandom = new System.Windows.Forms.CheckBox();
+            this.nudHairSpeed = new System.Windows.Forms.NumericUpDown();
+            this.cbxHairRandom = new System.Windows.Forms.CheckBox();
             this.pnlEyeColor = new System.Windows.Forms.Panel();
             this.lblEye = new System.Windows.Forms.Label();
             this.pnlHairColor = new System.Windows.Forms.Panel();
@@ -58,6 +62,8 @@
             lblSlot = new System.Windows.Forms.Label();
             gbxEventFlags.SuspendLayout();
             this.groupBoxFashion.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.nudEyeSpeed)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.nudHairSpeed)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.nudNewGame)).BeginInit();
             this.SuspendLayout();
             // 
@@ -213,6 +219,10 @@
             // 
             // groupBoxFashion
             // 
+            this.groupBoxFashion.Controls.Add(this.nudEyeSpeed);
+            this.groupBoxFashion.Controls.Add(this.cbxEyeRandom);
+            this.groupBoxFashion.Controls.Add(this.nudHairSpeed);
+            this.groupBoxFashion.Controls.Add(this.cbxHairRandom);
             this.groupBoxFashion.Controls.Add(this.pnlEyeColor);
             this.groupBoxFashion.Controls.Add(this.lblEye);
             this.groupBoxFashion.Controls.Add(this.pnlHairColor);
@@ -233,6 +243,59 @@
             this.groupBoxFashion.TabIndex = 29;
             this.groupBoxFashion.TabStop = false;
             this.groupBoxFashion.Text = "Fashion";
+            // 
+            // nudEyeSpeed
+            // 
+            this.nudEyeSpeed.DecimalPlaces = 2;
+            this.nudEyeSpeed.Location = new System.Drawing.Point(282, 426);
+            this.nudEyeSpeed.Name = "nudEyeSpeed";
+            this.nudEyeSpeed.Size = new System.Drawing.Size(96, 26);
+            this.nudEyeSpeed.TabIndex = 49;
+            this.nudEyeSpeed.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
+            this.nudEyeSpeed.Value = new decimal(new int[] {
+            1,
+            0,
+            0,
+            0});
+            this.nudEyeSpeed.ValueChanged += new System.EventHandler(this.nudEyeSpeed_ValueChanged);
+            // 
+            // cbxEyeRandom
+            // 
+            this.cbxEyeRandom.AutoSize = true;
+            this.cbxEyeRandom.CheckAlign = System.Drawing.ContentAlignment.MiddleRight;
+            this.cbxEyeRandom.Location = new System.Drawing.Point(297, 404);
+            this.cbxEyeRandom.Name = "cbxEyeRandom";
+            this.cbxEyeRandom.Size = new System.Drawing.Size(96, 24);
+            this.cbxEyeRandom.TabIndex = 48;
+            this.cbxEyeRandom.Text = "Random";
+            this.cbxEyeRandom.UseVisualStyleBackColor = true;
+            this.cbxEyeRandom.CheckedChanged += new System.EventHandler(this.cbxEyeRandom_CheckedChanged);
+            // 
+            // nudHairSpeed
+            // 
+            this.nudHairSpeed.DecimalPlaces = 2;
+            this.nudHairSpeed.Location = new System.Drawing.Point(87, 425);
+            this.nudHairSpeed.Name = "nudHairSpeed";
+            this.nudHairSpeed.Size = new System.Drawing.Size(96, 26);
+            this.nudHairSpeed.TabIndex = 47;
+            this.nudHairSpeed.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
+            this.nudHairSpeed.Value = new decimal(new int[] {
+            1,
+            0,
+            0,
+            0});
+            this.nudHairSpeed.ValueChanged += new System.EventHandler(this.nudHairSpeed_ValueChanged);
+            // 
+            // cbxHairRandom
+            // 
+            this.cbxHairRandom.AutoSize = true;
+            this.cbxHairRandom.Location = new System.Drawing.Point(87, 404);
+            this.cbxHairRandom.Name = "cbxHairRandom";
+            this.cbxHairRandom.Size = new System.Drawing.Size(96, 24);
+            this.cbxHairRandom.TabIndex = 46;
+            this.cbxHairRandom.Text = "Random";
+            this.cbxHairRandom.UseVisualStyleBackColor = true;
+            this.cbxHairRandom.CheckedChanged += new System.EventHandler(this.cbxHairRandom_CheckedChanged);
             // 
             // pnlEyeColor
             // 
@@ -361,6 +424,8 @@
             gbxEventFlags.PerformLayout();
             this.groupBoxFashion.ResumeLayout(false);
             this.groupBoxFashion.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.nudEyeSpeed)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.nudHairSpeed)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.nudNewGame)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
@@ -389,5 +454,9 @@
         private System.Windows.Forms.Panel pnlHairColor;
         private System.Windows.Forms.Panel pnlEyeColor;
         private System.Windows.Forms.Label lblEye;
+        private System.Windows.Forms.CheckBox cbxHairRandom;
+        private System.Windows.Forms.NumericUpDown nudHairSpeed;
+        private System.Windows.Forms.NumericUpDown nudEyeSpeed;
+        private System.Windows.Forms.CheckBox cbxEyeRandom;
     }
 }
