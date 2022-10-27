@@ -1,5 +1,6 @@
 ﻿using System;
 using System.Collections.Generic;
+using System.Globalization;
 using System.Text.RegularExpressions;
 
 namespace DS_Gadget
@@ -43,11 +44,11 @@ namespace DS_Gadget
                     Match match = PhysiqueEntryRx.Match(line);
                     byte id = byte.Parse(match.Groups["id"].Value);
                     string name = match.Groups["name"].Value;
-                    float head = Convert.ToSingle(match.Groups["head"].Value);
-                    float chest =Convert.ToSingle(match.Groups["chest"].Value);
-                    float waist =Convert.ToSingle(match.Groups["waist"].Value);
-                    float hands =Convert.ToSingle(match.Groups["hands"].Value);
-                    float legs = Convert.ToSingle(match.Groups["legs"].Value);
+                    float head = Convert.ToSingle(match.Groups["head"].Value, CultureInfo.InvariantCulture);
+                    float chest =Convert.ToSingle(match.Groups["chest"].Value, CultureInfo.InvariantCulture);
+                    float waist =Convert.ToSingle(match.Groups["waist"].Value, CultureInfo.InvariantCulture);
+                    float hands =Convert.ToSingle(match.Groups["hands"].Value, CultureInfo.InvariantCulture);
+                    float legs = Convert.ToSingle(match.Groups["legs"].Value, CultureInfo.InvariantCulture);
                     all.Add(new DSPhysique(id, name, head, chest, waist, hands, legs));
                 };
             }
